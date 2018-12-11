@@ -4,6 +4,10 @@ import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.extension.activerecord.Model;
 import java.time.LocalDateTime;
 import com.baomidou.mybatisplus.annotation.TableId;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import java.io.Serializable;
 
 /**
@@ -14,6 +18,9 @@ import java.io.Serializable;
  * @author Bean
  * @since 2018-12-11
  */
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class ShareBlogsGive extends Model<ShareBlogsGive> {
 
     private static final long serialVersionUID = 1L;
@@ -40,50 +47,9 @@ public class ShareBlogsGive extends Model<ShareBlogsGive> {
     private LocalDateTime creationDate;
 
 
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
-
-    public String getBlogsId() {
-        return blogsId;
-    }
-
-    public void setBlogsId(String blogsId) {
-        this.blogsId = blogsId;
-    }
-
-    public String getGiveUserId() {
-        return giveUserId;
-    }
-
-    public void setGiveUserId(String giveUserId) {
-        this.giveUserId = giveUserId;
-    }
-
-    public LocalDateTime getCreationDate() {
-        return creationDate;
-    }
-
-    public void setCreationDate(LocalDateTime creationDate) {
-        this.creationDate = creationDate;
-    }
-
     @Override
     protected Serializable pkVal() {
         return this.id;
     }
 
-    @Override
-    public String toString() {
-        return "ShareBlogsGive{" +
-        "id=" + id +
-        ", blogsId=" + blogsId +
-        ", giveUserId=" + giveUserId +
-        ", creationDate=" + creationDate +
-        "}";
-    }
 }
