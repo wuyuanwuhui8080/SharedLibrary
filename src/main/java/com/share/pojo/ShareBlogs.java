@@ -62,77 +62,9 @@ public class ShareBlogs extends Model<ShareBlogs> {
     private String blogsDigest;
 
 
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
-
-    public String getUserId() {
-        return userId;
-    }
-
-    public void setUserId(String userId) {
-        this.userId = userId;
-    }
-
-    public String getContent() {
-        return content;
-    }
-
-    public void setContent(String content) {
-        this.content = content;
-    }
-
-    public LocalDateTime getCreationDate() {
-        return creationDate;
-    }
-
-    public void setCreationDate(LocalDateTime creationDate) {
-        this.creationDate = creationDate;
-    }
-
-    public LocalDateTime getUpdateDate() {
-        return updateDate;
-    }
-
-    public void setUpdateDate(LocalDateTime updateDate) {
-        this.updateDate = updateDate;
-    }
-
-    public String getBlogsTitle() {
-        return blogsTitle;
-    }
-
-    public void setBlogsTitle(String blogsTitle) {
-        this.blogsTitle = blogsTitle;
-    }
-
-    public String getBlogsDigest() {
-        return blogsDigest;
-    }
-
-    public void setBlogsDigest(String blogsDigest) {
-        this.blogsDigest = blogsDigest;
-    }
 
     @Override
     protected Serializable pkVal() {
         return this.id;
-    }
-
-    @Override
-    public String toString() {
-        return "ShareBlogs{" +
-        "id=" + id +
-        ", userId=" + userId +
-        ", content=" + content +
-        ", creationDate=" + creationDate +
-        ", updateDate=" + updateDate +
-        ", blogsTitle=" + blogsTitle +
-        ", blogsDigest=" + blogsDigest +
-        "}";
     }
 }
