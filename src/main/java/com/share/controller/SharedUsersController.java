@@ -5,17 +5,18 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import org.springframework.stereotype.Controller;
 
+
 /**
- * <p>
- *  前端控制器
- * </p>
  *
- * @author Bean
- * @since 2018-12-11
+ * 对用户页面进行数据传输
+ *
+ * @author 博博大人
+ * @time 2018/12/13 8:47
  */
 @Controller
 @RequestMapping("/sharedUsers")
 public class SharedUsersController {
+
 
 }
 
