@@ -110,19 +110,19 @@
                     <a href="mailbox.html"><i class="fa fa-envelope"></i> <span class="nav-label">信箱 </span><span
                             class="label label-warning pull-right">16</span></a>
                     <ul class="nav nav-second-level">
-                        <li><a class="J_menuItem" href="mailbox.html">收件箱</a>
+                        <li><a class="J_menuItem" href="${basePath}/sharedEmail/emailIndex">收件箱</a>
                         </li>
-                        <li><a class="J_menuItem" href="mail_detail.html">查看邮件</a>
+                        <li><a class="J_menuItem" href="${basePath}/sharedEmail/emailAdd">查看邮件</a>
                         </li>
-                        <li><a class="J_menuItem" href="mail_compose.html">写信</a>
+                        <li><a class="J_menuItem" href="">写信</a>
                         </li>
                     </ul>
                 </li>
                 <li>
-                    <a href="#"><i class="fa fa-edit"></i> <span class="nav-label">表单</span><span
+                    <a href="#"><i class="fa fa-edit"></i> <span class="nav-label">用户管理</span><span
                             class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
-                        <li><a class="J_menuItem" href="form_basic.html">基本表单</a>
+                        <li><a class="J_menuItem" href="${basePath}/sharedUsers/goUserList">全部用户</a>
                         </li>
                         <li><a class="J_menuItem" href="form_validate.html">表单验证</a>
                         </li>

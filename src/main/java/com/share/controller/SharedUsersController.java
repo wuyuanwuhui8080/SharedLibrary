@@ -129,5 +129,10 @@ public class SharedUsersController {
         }
     }
 
+    @GetMapping("/goUserList")
+    public String goUserList(){
+        return  "background/users/userList";
+    }
+
 }
 

@@ -10,8 +10,8 @@
 ;!function(win, undefined){
 
 var config = {
-    msgurl: 'mailbox.html?msg=',
-    chatlogurl: 'mailbox.html?user=',
+    msgurl: 'email_List.ftl?msg=',
+    chatlogurl: 'email_List.ftl?user=',
     aniTime: 200,
     right: -232,
     api: {

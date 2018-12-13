@@ -1,5 +1,8 @@
 <#-- 取得 应用的绝对根路径 -->
 <#assign basePath=springMacroRequestContext.contextPath>
+
+
+
  <link rel="shortcut icon" href="favicon.ico">
 <link href="${basePath}/css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
     <link href="${basePath}/css/font-awesome.min.css?v=4.4.0" rel="stylesheet">
@@ -15,5 +18,10 @@
     <!-- 自定义js -->
     <script src="${basePath}/js/hplus.js?v=4.1.0"></script>
     <script type="text/javascript" src="${basePath}/js/contabs.js"></script>
+<script type="text/javascript" src="http://tajs.qq.com/stats?sId=9051096" charset="UTF-8"></script>
     <!-- 第三方插件 -->
     <script src="${basePath}/js/plugins/pace/pace.min.js"></script>
+<!-- 自定义js -->
+    <script src="${basePath}/js/content.js?v=1.0.0"></script>
+
+<script src="${basePath}/js/plugins/iCheck/icheck.min.js"></script>
