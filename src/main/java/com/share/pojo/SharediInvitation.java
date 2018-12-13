@@ -9,10 +9,11 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
+import java.util.Date;
 
 /**
  * <p>
- * 
+ * 帖子表
  * </p>
  *
  * @author Bean
@@ -44,12 +45,12 @@ public class SharediInvitation extends Model<SharediInvitation> {
     /**
      * 创建时间
      */
-    private LocalDateTime creationDate;
+    private Date creationDate;
 
     /**
      * 修改时间
      */
-    private LocalDateTime updateDate;
+    private Date updateDate;
 
     /**
      * 分类（对应sharedl_classify主键）

@@ -9,10 +9,11 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
+import java.util.Date;
 
 /**
  * <p>
- * 
+ * 博客点赞表
  * </p>
  *
  * @author Bean
@@ -44,7 +45,7 @@ public class ShareBlogsGive extends Model<ShareBlogsGive> {
     /**
      * 创建时间
      */
-    private LocalDateTime creationDate;
+    private Date creationDate;
 
 
     @Override

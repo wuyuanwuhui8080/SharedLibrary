@@ -10,10 +10,11 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
+import java.util.Date;
 
 /**
  * <p>
- * 
+ * 用户表
  * </p>
  *
  * @author Bean
@@ -62,7 +63,7 @@ public class SharedUsers extends Model<SharedUsers> {
     /**
      * 出生日期
      */
-    private LocalDateTime birthday;
+    private Date birthday;
 
     /**
      * 用户头像
@@ -82,12 +83,18 @@ public class SharedUsers extends Model<SharedUsers> {
     /**
      * 创建时间
      */
-    private LocalDateTime creationDate;
+    private Date creationDate;
 
     /**
      * 修改时间
      */
-    private LocalDateTime updateDate;
+    private Date updateDate;
+
+    /**
+     * 性别
+     */
+    @TableField("sex")
+    private Integer sex;
 
     /**
      * 违规次数

@@ -9,10 +9,11 @@ import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
 import java.io.Serializable;
+import java.util.Date;
 
 /**
  * <p>
- * 
+ * 帖子分类
  * </p>
  *
  * @author Bean
@@ -44,12 +45,12 @@ public class SharedlClassify extends Model<SharedlClassify> {
     /**
      * 创建时间
      */
-    private LocalDateTime creationDate;
+    private Date creationDate;
 
     /**
      * 修改时间
      */
-    private LocalDateTime updateDate;
+    private Date updateDate;
 
 
     @Override

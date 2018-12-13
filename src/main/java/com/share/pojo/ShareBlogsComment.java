@@ -9,10 +9,11 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
+import java.util.Date;
 
 /**
  * <p>
- * 
+ * 博客评论表
  * </p>
  *
  * @author Bean
@@ -49,7 +50,7 @@ public class ShareBlogsComment extends Model<ShareBlogsComment> {
     /**
      * 评论时间
      */
-    private LocalDateTime commentDate;
+    private Date commentDate;
 
 
 
