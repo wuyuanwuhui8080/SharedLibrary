@@ -17,7 +17,7 @@ public class CopyUtils {
      *
      * @param source 需要copy的属性
      * @param dest   赋值的属性
-     * @throws Exception
+     * @throws Exception 异常
      */
     public static void Copy(Object source, Object dest) throws Exception {
         // 获取属性
