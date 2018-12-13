@@ -13,7 +13,6 @@ import java.util.Objects;
  * @time 2018/12/13 8:55
  */
 @Data
-@NoArgsConstructor
 public class ReturnResult implements Serializable {
 
     private int status;
@@ -68,4 +67,7 @@ public class ReturnResult implements Serializable {
         this.data = data;
     }
 
+    public ReturnResult(){
+
+    }
 }
