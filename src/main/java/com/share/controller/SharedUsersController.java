@@ -1,6 +1,7 @@
 package com.share.controller;
 
 
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import org.springframework.stereotype.Controller;
@@ -17,6 +18,15 @@ import org.springframework.stereotype.Controller;
 @RequestMapping("/sharedUsers")
 public class SharedUsersController {
 
+    @GetMapping("/")
+    public String index(){
+        return  "background/index";
+    }
+
+    @GetMapping("/goLogin")
+    public String goLogin(){
+        return  "background/users/login";
+    }
 
 }
 
