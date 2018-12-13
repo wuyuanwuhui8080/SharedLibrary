@@ -20,7 +20,7 @@ public class MyBatisPlusGenerator {
 				config.setActiveRecord(true) // 是否支持AR模式
 					  .setAuthor("Bean") // 作者
 					  //.setOutputDir("D:\\workspace_mp\\mp03\\src\\main\\java") // 生成路径
-					  .setOutputDir("C:\\Users\\博博\\Desktop\\SharedLibrary\\src\\main\\java") // 生成路径
+					  .setOutputDir("E:\\ideaxml\\SharedLibrary\\src\\main\\java") // 生成路径
 					  .setFileOverride(true)  // 文件覆盖
 					  .setIdType(IdType.UUID) // 主键策略
 					  .setServiceName("%sService")  // 设置生成的service接口的名字的首字母是否为I
