@@ -22,11 +22,11 @@
             <ul class="nav" id="side-menu">
                 <li class="nav-header">
                     <div class="dropdown profile-element">
-                        <span><img alt="image" class="img-circle" src="img/profile_small.jpg"/></span>
+                        <span><img alt="image" class="img-circle" width="38%" src="${basePath}/images/${users.headImg}"/></span>
                         <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                                 <span class="clear">
-                               <span class="block m-t-xs"><strong class="font-bold">Beaut-zihan</strong></span>
-                                <span class="text-muted text-xs block">超级管理员<b class="caret"></b></span>
+                               <span class="block m-t-xs"><strong class="font-bold">欢迎你：</strong></span>
+                                <span class="text-muted text-xs block">${users.realName}
                                 </span>
                         </a>
                         <ul class="dropdown-menu animated fadeInRight m-t-xs">
@@ -39,7 +39,7 @@
                             <li><a class="J_menuItem" href="mailbox.html">信箱</a>
                             </li>
                             <li class="divider"></li>
-                            <li><a href="${basePath}/sharedUsers/goLogin">安全退出</a>
+                            <li><a href="${basePath}/loginOut">安全退出</a>
                             </li>
                         </ul>
                     </div>

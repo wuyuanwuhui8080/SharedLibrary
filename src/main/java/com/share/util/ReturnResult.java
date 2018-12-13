@@ -61,6 +61,15 @@ public class ReturnResult implements Serializable {
         return new ReturnResult(500, message);
     }
 
+    /**
+     * 返回默认失败状态
+     *
+     * @param ReturnResult
+     */
+    public static ReturnResult error() {
+        return new ReturnResult(500);
+    }
+
     public ReturnResult(String message, int status, Object data) {
         this.msg = message;
         this.status = status;

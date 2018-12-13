@@ -17,7 +17,11 @@
             <li><a href="list.html">学无止境</a></li>
             <li><a href="info.html">生活</a></li>
             <li><a href="shareinfo.html">发表文章</a></li>
-            <li><a href="gbook.html">用户管理</a></li>
+            <li><a href="gbook.html">用户管理</a>
+
+  <@shiro.guest>
+            您当前是游客，<a href="${request.contextPath}/onLogin" >登录</a>
+  </@shiro.guest>
             <li><a href="gbook.html">个人中心</a></li>
             <li><a href="about.html">关于我们</a></li>
         </ul>

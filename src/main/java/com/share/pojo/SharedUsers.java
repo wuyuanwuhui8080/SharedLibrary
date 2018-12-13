@@ -8,6 +8,7 @@ import com.baomidou.mybatisplus.annotation.TableField;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -53,7 +54,7 @@ public class SharedUsers extends Model<SharedUsers> {
     /**
      * 电话
      */
-    private Integer phone;
+    private String phone;
 
     /**
      * 角色外键 （对应sharedl_position的id）
@@ -63,6 +64,7 @@ public class SharedUsers extends Model<SharedUsers> {
     /**
      * 出生日期
      */
+    @DateTimeFormat(pattern="yyyy-MM-dd")
     private Date birthday;
 
     /**
@@ -83,11 +85,13 @@ public class SharedUsers extends Model<SharedUsers> {
     /**
      * 创建时间
      */
+    @DateTimeFormat(pattern="yyyy-MM-dd hh:mm:ss")
     private Date creationDate;
 
     /**
      * 修改时间
      */
+    @DateTimeFormat(pattern="yyyy-MM-dd hh:mm:ss")
     private Date updateDate;
 
     /**

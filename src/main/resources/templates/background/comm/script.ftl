@@ -10,8 +10,10 @@
     <script src="${basePath}/js/plugins/metisMenu/jquery.metisMenu.js"></script>
     <script src="${basePath}/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
     <script src="${basePath}/js/plugins/layer/layer.min.js"></script>
+    <script src="${basePath}/js/jsUtil.js"></script>
+    <script src="${basePath}/js/jquery.form.js"></script>
     <!-- 自定义js -->
-    <script src="${basePath}/s/hplus.js?v=4.1.0"></script>
+    <script src="${basePath}/js/hplus.js?v=4.1.0"></script>
     <script type="text/javascript" src="${basePath}/js/contabs.js"></script>
     <!-- 第三方插件 -->
     <script src="${basePath}/js/plugins/pace/pace.min.js"></script>
