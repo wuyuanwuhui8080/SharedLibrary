@@ -6,9 +6,11 @@ import java.time.LocalDateTime;
 import com.baomidou.mybatisplus.annotation.TableId;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
+import java.util.Date;
 
 /**
  * <p>
@@ -18,6 +20,7 @@ import java.io.Serializable;
  * @author Bean
  * @since 2018-12-13
  */
+@EqualsAndHashCode(callSuper = true)
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -44,7 +47,7 @@ public class SharedEmail extends Model<SharedEmail> {
     /**
      * 发送时间
      */
-    private LocalDateTime creationDate;
+    private Date creationDate;
 
     /**
      * 摘要
@@ -55,6 +58,18 @@ public class SharedEmail extends Model<SharedEmail> {
      * 内容
      */
     private String emailContent;
+
+    /**
+     * 邮件状态
+     */
+    private Integer state;
+
+    //--------------------------拓展列------------------------------
+
+    /**
+     * 发件人姓名
+     */
+    private String friendName;
 
 
     @Override

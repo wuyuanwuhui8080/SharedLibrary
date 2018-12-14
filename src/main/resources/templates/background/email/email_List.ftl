@@ -23,7 +23,7 @@
                         <ul class="folder-list m-b-md" style="padding: 0">
                             <li>
                                 <a href="email_List.ftl"> <i class="fa fa-inbox "></i> 收件箱 <span
-                                        class="label label-warning pull-right">16</span>
+                                        class="label label-warning pull-right">${emailSum}</span>
                                 </a>
                             </li>
                             <li>
@@ -98,7 +98,7 @@
                     </div>
                 </form>
                 <h2>
-                    收件箱 (16)
+                    收件箱 (${emailSum})
                 </h2>
                 <div class="mail-tools tooltip-demo m-t-md">
                     <div class="btn-group pull-right">
@@ -127,183 +127,31 @@
 
                 <table class="table table-hover table-mail">
                     <tbody>
-                    <tr class="unread">
-                        <td class="check-mail">
-                            <input type="checkbox" class="i-checks">
-                        </td>
-                        <td class="mail-ontact"><a href="email_detail.ftl">支付宝</a>
-                        </td>
-                        <td class="mail-subject"><a href="email_detail.ftl">支付宝提醒</a>
-                        </td>
-                        <td class=""><i class="fa fa-paperclip"></i>
-                        </td>
-                        <td class="text-right mail-date">昨天 10:20</td>
-                    </tr>
-                    <tr class="unread">
-                        <td class="check-mail">
-                            <input type="checkbox" class="i-checks" checked>
-                        </td>
-                        <td class="mail-ontact"><a href="email_detail.ftl">Amaze UI</a>
-                        </td>
-                        <td class="mail-subject"><a href="email_detail.ftl">Amaze UI Beta2 发布</a>
-                        </td>
-                        <td class=""></td>
-                        <td class="text-right mail-date">上午10:57</td>
-                    </tr>
-                    <tr class="read">
-                        <td class="check-mail">
-                            <input type="checkbox" class="i-checks">
-                        </td>
-                        <td class="mail-ontact"><a href="email_detail.ftl">WordPress</a> <span
-                                class="label label-warning pull-right">验证邮件</span>
-                        </td>
-                        <td class="mail-subject"><a href="email_detail.ftl">wp-user-frontend-pro v2.1.9</a>
-                        </td>
-                        <td class=""></td>
-                        <td class="text-right mail-date">上午9:21</td>
-                    </tr>
-                    <tr class="read">
-                        <td class="check-mail">
-                            <input type="checkbox" class="i-checks">
-                        </td>
-                        <td class="mail-ontact"><a href="email_detail.ftl">淘宝网</a>
-                        </td>
-                        <td class="mail-subject"><a href="email_detail.ftl">史上最全！淘宝双11红包疯抢攻略！</a>
-                        </td>
-                        <td class=""></td>
-                        <td class="text-right mail-date">中午12:24</td>
-                    </tr>
-                    <tr class="read">
-                        <td class="check-mail">
-                            <input type="checkbox" class="i-checks">
-                        </td>
-                        <td class="mail-ontact"><a href="email_detail.ftl">淘宝网</a> <span
-                                class="label label-danger pull-right">AD</span>
-                        </td>
-                        <td class="mail-subject"><a href="email_detail.ftl">亲，双11来啦！帮你挑货，还送你4999元红包！仅此一次！</a>
-                        </td>
-                        <td class=""><i class="fa fa-paperclip"></i>
-                        </td>
-                        <td class="text-right mail-date">上午6:48</td>
-                    </tr>
-                    <tr class="read">
-                        <td class="check-mail">
-                            <input type="checkbox" class="i-checks">
-                        </td>
-                        <td class="mail-ontact"><a href="email_detail.ftl">支付宝</a>
-                        </td>
-                        <td class="mail-subject"><a href="email_detail.ftl">支付宝提醒</a>
-                        </td>
-                        <td class=""><i class="fa fa-paperclip"></i>
-                        </td>
-                        <td class="text-right mail-date">昨天 10:20</td>
-                    </tr>
-                    <tr class="read">
-                        <td class="check-mail">
-                            <input type="checkbox" class="i-checks">
-                        </td>
-                        <td class="mail-ontact"><a href="email_detail.ftl">Amaze UI</a>
-                        </td>
-                        <td class="mail-subject"><a href="email_detail.ftl">Amaze UI Beta2 发布</a>
-                        </td>
-                        <td class=""></td>
-                        <td class="text-right mail-date">上午10:57</td>
-                    </tr>
-                    <tr class="read">
-                        <td class="check-mail">
-                            <input type="checkbox" class="i-checks">
-                        </td>
-                        <td class="mail-ontact"><a href="email_detail.ftl">WordPress</a> <span
-                                class="label label-warning pull-right">验证邮件</span>
-                        </td>
-                        <td class="mail-subject"><a href="email_detail.ftl">wp-user-frontend-pro v2.1.9</a>
-                        </td>
-                        <td class=""></td>
-                        <td class="text-right mail-date">上午9:21</td>
-                    </tr>
-                    <tr class="read">
-                        <td class="check-mail">
-                            <input type="checkbox" class="i-checks">
-                        </td>
-                        <td class="mail-ontact"><a href="email_detail.ftl">淘宝网</a>
-                        </td>
-                        <td class="mail-subject"><a href="email_detail.ftl">史上最全！淘宝双11红包疯抢攻略！</a>
-                        </td>
-                        <td class=""></td>
-                        <td class="text-right mail-date">中午12:24</td>
-                    </tr>
-                    <tr class="read">
-                        <td class="check-mail">
-                            <input type="checkbox" class="i-checks">
-                        </td>
-                        <td class="mail-ontact"><a href="email_detail.ftl">淘宝网</a> <span
-                                class="label label-danger pull-right">AD</span>
-                        </td>
-                        <td class="mail-subject"><a href="email_detail.ftl">亲，双11来啦！帮你挑货，还送你4999元红包！仅此一次！</a>
-                        </td>
-                        <td class=""><i class="fa fa-paperclip"></i>
-                        </td>
-                        <td class="text-right mail-date">上午6:48</td>
-                    </tr>
-                    <tr class="read">
-                        <td class="check-mail">
-                            <input type="checkbox" class="i-checks">
-                        </td>
-                        <td class="mail-ontact"><a href="email_detail.ftl">支付宝</a>
-                        </td>
-                        <td class="mail-subject"><a href="email_detail.ftl">支付宝提醒</a>
-                        </td>
-                        <td class=""><i class="fa fa-paperclip"></i>
-                        </td>
-                        <td class="text-right mail-date">昨天 10:20</td>
-                    </tr>
-                    <tr class="read">
-                        <td class="check-mail">
-                            <input type="checkbox" class="i-checks">
-                        </td>
-                        <td class="mail-ontact"><a href="email_detail.ftl">Amaze UI</a>
-                        </td>
-                        <td class="mail-subject"><a href="email_detail.ftl">Amaze UI Beta2 发布</a>
-                        </td>
-                        <td class=""></td>
-                        <td class="text-right mail-date">上午10:57</td>
-                    </tr>
-                    <tr class="read">
-                        <td class="check-mail">
-                            <input type="checkbox" class="i-checks">
-                        </td>
-                        <td class="mail-ontact"><a href="email_detail.ftl">WordPress</a> <span
-                                class="label label-warning pull-right">验证邮件</span>
-                        </td>
-                        <td class="mail-subject"><a href="email_detail.ftl">wp-user-frontend-pro v2.1.9</a>
-                        </td>
-                        <td class=""></td>
-                        <td class="text-right mail-date">上午9:21</td>
-                    </tr>
-                    <tr class="read">
-                        <td class="check-mail">
-                            <input type="checkbox" class="i-checks">
-                        </td>
-                        <td class="mail-ontact"><a href="email_detail.ftl">淘宝网</a>
-                        </td>
-                        <td class="mail-subject"><a href="email_detail.ftl">史上最全！淘宝双11红包疯抢攻略！</a>
-                        </td>
-                        <td class=""></td>
-                        <td class="text-right mail-date">中午12:24</td>
-                    </tr>
-                    <tr class="read">
-                        <td class="check-mail">
-                            <input type="checkbox" class="i-checks">
-                        </td>
-                        <td class="mail-ontact"><a href="email_detail.ftl">淘宝网</a> <span
-                                class="label label-danger pull-right">AD</span>
-                        </td>
-                        <td class="mail-subject"><a href="email_detail.ftl">亲，双11来啦！帮你挑货，还送你4999元红包！仅此一次！</a>
-                        </td>
-                        <td class=""><i class="fa fa-paperclip"></i>
-                        </td>
-                        <td class="text-right mail-date">上午6:48</td>
-                    </tr>
+                    <#if (emailList?size > 0)>
+                        <#list emailList as email>
+                               <tr class="unread">
+                                   <td class="check-mail">
+                                       <input type="checkbox" class="i-checks">
+                                   </td>
+                                   <td class="mail-ontact"><a href="email_detail.ftl">${email.friendName}</a>
+                                   </td>
+                                   <td class="mail-subject"><a href="email_detail.ftl">${email.emailDigest}</a>
+                                   </td>
+                            <#if (email.state==2)>
+                                <td class="">
+                                    <span class="label label-warning pull-right"><i class="fa fa-paperclip"></i>&nbsp;&nbsp;未读邮件</span>
+                                </td>
+                            <#else>
+                                <td class=""></td>
+                            </#if>
+                                   <td class="text-right mail-date">${email.creationDate?date}</td>
+                               </tr>
+                        </#list>
+                    <#else>
+                        <tr align="center">
+                            <td colspan="7">没有邮件</td>
+                        </tr>
+                    </#if>
                     </tbody>
                 </table>
 

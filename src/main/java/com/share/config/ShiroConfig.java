@@ -102,7 +102,7 @@ public class ShiroConfig {
         linkedHashMap.put("/js/**", "anon");
 
         //其他接口全部拦截
-//        linkedHashMap.put("/**", "authc");
+        linkedHashMap.put("/**", "authc");
         //把写的权限map set进值
         shiroFilterFactoryBean.setFilterChainDefinitionMap(linkedHashMap);
         System.out.println("结束拦截器");

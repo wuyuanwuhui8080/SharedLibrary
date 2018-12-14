@@ -2,12 +2,7 @@ package com.share.controller;
 
 
 import com.share.ControllerUtil.CaptchaController;
-import com.share.pojo.ShareBlogs;
-import com.share.pojo.SharedFans;
 import com.share.pojo.SharedUsers;
-import com.share.service.ShareBlogsService;
-import com.share.service.SharedAttentionService;
-import com.share.service.SharedFansService;
 import com.share.service.SharedUsersService;
 import com.share.util.ReturnResult;
 import lombok.extern.log4j.Log4j2;
@@ -15,15 +10,12 @@ import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.IncorrectCredentialsException;
 import org.apache.shiro.authc.UnknownAccountException;
 import org.apache.shiro.authc.UsernamePasswordToken;
-import org.apache.shiro.authz.annotation.RequiresRoles;
 import org.apache.shiro.subject.Subject;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpSession;
-import java.util.List;
 
 
 /**
@@ -40,39 +32,16 @@ public class SharedUsersController {
     @Resource
     private SharedUsersService usersService;
 
-    @Resource
-    private SharedFansService fansService;
-
-    @Resource
-    private SharedAttentionService attentionService;
-
-    @Resource
-    private ShareBlogsService blogsService;
-
     @GetMapping("/adminUser")
     public String index() {
         return "background/index";
     }
 
-    /**
-     * 重定向到主页
-     *
-     * @return
-     */
     @GetMapping("/goIndex")
-    public String goIndex() {
-        return "redirect:/sharedUsers/adminUser";
+    public String goIndex(){
+        return  "redirect:/sharedUsers/adminUser";
     }
 
-    /**
-     * 执行登录操作
-     *
-     * @param userName 用户名
-     * @param password 密码
-     * @param captcha  验证码
-     * @param session  成功后放进session
-     * @return
-     */
     @PostMapping("/doLogin")
     @ResponseBody
     public ReturnResult doLogin(String userName, String password, String captcha, HttpSession session) {
@@ -88,7 +57,7 @@ public class SharedUsersController {
         // 把账号密码塞入UsernamePasswordToken里
         UsernamePasswordToken usernamePasswordToken = new UsernamePasswordToken(userName, password);
         // 允许缓存
-//        usernamePasswordToken.setRememberMe(true);
+        usernamePasswordToken.setRememberMe(true);
 
         try {
             // 执行登录
@@ -162,40 +131,9 @@ public class SharedUsersController {
     }
 
     @GetMapping("/goUserList")
-    public String goUserList() {
-        return "background/users/userList";
+    public String goUserList(){
+        return  "background/users/userList";
     }
 
-
-    /**
-     * 查看用户资料
-     *
-     * @return
-     */
-    @GetMapping("/lookProfile/{usersId}")
-    public String lookProfile(@PathVariable String usersId, Model model) {
-        Integer getFensCuont = fansService.getFensCount(usersId);
-        Integer getAttention = attentionService.getUsersIdAttention(usersId);
-        Integer getBlogs = blogsService.getCountForBlogsByUsersId(usersId);
-        List<ShareBlogs> blogsList = blogsService.getFindListForBlogsByUsersId(usersId);
-        model.addAttribute("getFensCuont",getFensCuont);
-        model.addAttribute("blogsList",blogsList);
-        model.addAttribute("getFensCuont",getFensCuont);
-        model.addAttribute("getAttention",getAttention);
-        return "background/users/profile";
-    }
-
-    /**
-     * 执行用户注销操作
-     * 注销成功后重定向到登录页面
-     *
-     * @return
-     */
-    @GetMapping("/loginOut")
-    public String loginOut() {
-        Subject subject = SecurityUtils.getSubject();
-        subject.logout();
-        return "redirect:/sharedUsers/goLogin";
-    }
 }
 
