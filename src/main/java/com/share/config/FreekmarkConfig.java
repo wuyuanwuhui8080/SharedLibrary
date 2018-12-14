@@ -16,22 +16,6 @@ import javax.annotation.PostConstruct;
 @Component
 public class FreekmarkConfig {
 
-
-   /* @Bean
-    public FreeMarkerConfigurer freeMarkerConfigurer(){
-        FreeMarkerConfigurer configurer = new FreeMarkerConfigurer();
-        configurer.setTemplateLoaderPath("classpath:/templates");
-        Map<String, Object> variables = new HashMap<>(1);
-        variables.put("shiro", new ShiroTags());
-        configurer.setFreemarkerVariables(variables);
-        System.out.println();
-        Properties settings = new Properties();
-        settings.setProperty("default_encoding", "utf-8");
-        settings.setProperty("number_format", "0.##");
-        configurer.setFreemarkerSettings(settings);
-        return configurer;
-    }*/
-
     @Autowired
     private FreeMarkerConfigurer freeMarkerConfigurer;
     @PostConstruct
