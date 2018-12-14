@@ -1,4 +1,4 @@
-package com.share.controller;
+package com.share.ControllerUtil;
 
 import com.share.util.CaptchaUtil;
 import org.springframework.stereotype.Controller;
@@ -22,6 +22,13 @@ public class CaptchaController {
 
     public static final String KEY_CAPTCHA = "KEY_CAPTCHA";
 
+    /**
+     *  用来生成验证码的方法
+     * @param request
+     * @param response
+     * @throws ServletException
+     * @throws IOException
+     */
     @RequestMapping("/Captcha.jpg")
     public void getCaptcha(HttpServletRequest request, HttpServletResponse response)throws ServletException, IOException {
         // 设置相应类型,告诉浏览器输出的内容为图片

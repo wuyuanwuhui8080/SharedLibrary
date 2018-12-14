@@ -1,7 +1,6 @@
 package com.share.pojo;
 
 import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.extension.activerecord.Model;
 import java.time.LocalDateTime;
 import com.baomidou.mybatisplus.annotation.TableId;
@@ -10,20 +9,19 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
-import java.util.Date;
 
 /**
  * <p>
- * 粉丝表
+ *  关注人的实体
  * </p>
  *
  * @author Bean
- * @since 2018-12-11
+ * @since 2018-12-14
  */
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class SharedFans extends Model<SharedFans> {
+public class SharedAttention extends Model<SharedAttention> {
 
     private static final long serialVersionUID = 1L;
 
@@ -36,30 +34,28 @@ public class SharedFans extends Model<SharedFans> {
     /**
      * 自己的id
      */
-    @TableField(value = "me_id")
     private String meId;
 
     /**
-     * 粉丝id
+     * 关注人的id
      */
-    @TableField(value = "fans_id")
-    private String fansId;
+    private String attentionId;
 
     /**
      * 创建时间
      */
-    private Date creationDate;
+    private LocalDateTime creationDate;
 
     /**
      * 修改时间
      */
-    private Date updateDate;
-
+    private LocalDateTime updateDate;
 
 
     @Override
     protected Serializable pkVal() {
         return this.id;
     }
+
 
 }

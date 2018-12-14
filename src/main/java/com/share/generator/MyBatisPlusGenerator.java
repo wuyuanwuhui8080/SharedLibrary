@@ -41,7 +41,7 @@ public class MyBatisPlusGenerator {
 				stConfig.setCapitalMode(true) //全局大写命名
 						.setNaming(NamingStrategy.underline_to_camel) // 数据库表映射到实体的命名策略
 						//.setTablePrefix("tbl_")
-						.setInclude("shared_email");  // 生成的表
+						.setInclude("shared_attention");  // 生成的表
 				
 				//4. 包名策略配置 
 				PackageConfig pkConfig = new PackageConfig();

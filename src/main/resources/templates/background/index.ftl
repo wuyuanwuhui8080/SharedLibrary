@@ -21,29 +21,28 @@
         <div class="sidebar-collapse">
             <ul class="nav" id="side-menu">
                 <li class="nav-header">
-                    <div class="dropdown profile-element">
-                        <span><img alt="image" class="img-circle" width="38%" src="${basePath}/images/${users.headImg}"/></span>
+                    <div class="dropdown profile-element" style="text-align: center;">
+                        <span><img alt="image" class="img-circle" width="70px" src="${basePath}/images/${users.headImg}"/></span>
                         <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                                 <span class="clear">
-                               <span class="block m-t-xs"><strong class="font-bold">欢迎你：</strong></span>
-                                <span class="text-muted text-xs block">${users.realName}
-                                </span>
+                               <span class="block m-t-xs"><strong class="font-bold">欢迎你：${users.realName}</strong></span>
                         </a>
                         <ul class="dropdown-menu animated fadeInRight m-t-xs">
                             <li><a class="J_menuItem" href="form_avatar.html">修改头像</a>
                             </li>
-                            <li><a class="J_menuItem" href="profile.html">个人资料</a>
+                            <li><a class="J_menuItem" href="${basePath}/sharedUsers/lookProfile/${users.id}">个人资料</a>
                             </li>
                             <li><a class="J_menuItem" href="contacts.html">联系我们</a>
                             </li>
                             <li><a class="J_menuItem" href="mailbox.html">信箱</a>
                             </li>
                             <li class="divider"></li>
-                            <li><a href="${basePath}/loginOut">安全退出</a>
+                            <li><a href="${basePath}/sharedUsers/loginOut">安全退出</a>
                             </li>
                         </ul>
                     </div>
-                    <div class="logo-element">H+
+                    <div class="logo-element">
+                       <a href="#"><img class="img-circle" src="${basePath}/images/${users.headImg}" width="50px" ></a>
                     </div>
                 </li>
                 <li>

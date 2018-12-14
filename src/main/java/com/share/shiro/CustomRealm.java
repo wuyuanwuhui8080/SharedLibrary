@@ -81,7 +81,7 @@ public class CustomRealm extends AuthorizingRealm {
         } else if (users.getPositionId() == PositionConstant.ADMIN_USER) {
             roles.add(PositionNameConstant.ADMIN_NAME_USER);
         }
-        log.info("授权完成！当前用户是{0},权限是{1}", userName, roles.toArray());
+        log.info("授权完成！当前用户是{},权限是{}", userName, roles.toArray());
         return new SimpleAuthorizationInfo(roles);
     }
 }

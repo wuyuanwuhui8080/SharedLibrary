@@ -6,11 +6,14 @@ import org.apache.shiro.mgt.SecurityManager;
 import org.apache.shiro.spring.LifecycleBeanPostProcessor;
 import org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor;
 import org.apache.shiro.spring.web.ShiroFilterFactoryBean;
+import org.apache.shiro.web.filter.authc.LogoutFilter;
 import org.apache.shiro.web.mgt.DefaultWebSecurityManager;
 import org.springframework.aop.framework.autoproxy.DefaultAdvisorAutoProxyCreator;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+import javax.servlet.Filter;
+import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
@@ -66,10 +69,14 @@ public class ShiroConfig {
         //setLoginUrl 如果不设置值，默认会寻找web工程下的/login.jsp 页面或者/login映射
         shiroFilterFactoryBean.setLoginUrl("/sharediInvitation/goIndex");
         //登录成功跳转的urls
-        shiroFilterFactoryBean.setSuccessUrl("/sharedUsers/goIndex");
+//        shiroFilterFactoryBean.setSuccessUrl("/sharedUsers/goIndex");
         //设置无权限时跳转的url;
         shiroFilterFactoryBean.setUnauthorizedUrl("/403.jsp");
-
+     /*   shiroFilterFactoryBean.setFilterChainDefinitions("/sharedUsers/goLogin = authc");
+        shiroFilterFactoryBean.setFilterChainDefinitions("/logout = logout");
+        Map<String,Filter> logout = new HashMap<String, Filter>();
+        logout.put("logout", logoutFilter());
+        shiroFilterFactoryBean.setFilters(logout);*/
         //设置拦截器
         Map<String, String> linkedHashMap = new LinkedHashMap<>();
         //开放登录接口
@@ -95,7 +102,7 @@ public class ShiroConfig {
         linkedHashMap.put("/js/**", "anon");
 
         //其他接口全部拦截
-        linkedHashMap.put("/**", "authc");
+//        linkedHashMap.put("/**", "authc");
         //把写的权限map set进值
         shiroFilterFactoryBean.setFilterChainDefinitionMap(linkedHashMap);
         System.out.println("结束拦截器");
@@ -167,6 +174,7 @@ public class ShiroConfig {
     public SessionIdGenerator sessionIdGenerator() {
         return new JavaUuidSessionIdGenerator();
     }*/
+
 
 
 }

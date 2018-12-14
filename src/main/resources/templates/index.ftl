@@ -2,49 +2,19 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>首页_杨青个人博客 - 一个站在web前端设计之路的女技术员个人博客网站</title>
-    <meta name="keywords" content="个人博客,杨青个人博客,个人博客模板,杨青"/>
-    <meta name="description" content="杨青个人博客，是一个站在web前端设计之路的女程序员个人网站，提供个人博客模板免费资源下载的个人原创网站。"/>
+    <title>首页</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <#include "reception/comm/script.ftl">
 </head>
 <body>
-<header>
-    <div id="mnav">
-        <div class="logo"><a href="/">论坛博客</a></div>
-        <h2 id="mnavh"><span class="navicon"></span></h2>
-        <ul id="starlist">
-            <li><a href="list.html">学无止境</a></li>
-            <li><a href="info.html">生活</a></li>
-            <li><a href="shareinfo.html">发表文章</a></li>
-            <li><a href="gbook.html">用户管理</a>
-
-  <@shiro.guest>
-            您当前是游客，<a href="${request.contextPath}/onLogin" >登录</a>
-  </@shiro.guest>
-            <li><a href="gbook.html">个人中心</a></li>
-            <li><a href="about.html">关于我们</a></li>
-        </ul>
-    </div>
-    <script>
-        window.onload = function () {
-            var oH2 = document.getElementById("mnavh");
-            var oUl = document.getElementById("starlist");
-            oH2.onclick = function () {
-                var style = oUl.style;
-                style.display = style.display == "block" ? "none" : "block";
-                oH2.className = style.display == "block" ? "open" : ""
-            }
-        }
-    </script>
-</header>
 <div class="line46"></div>
+<#include "reception/comm/header.ftl">
 <article>
     <div class="pics">
         <ul>
-            <li><i><a href="/"><img src="images/t01.jpg"></a></i><span>这组图片中的静物等非常的日系</span></li>
-            <li><i><a href="/"><img src="images/t04.jpg"></a></i><span>这组图片中的静物等非常的日系</span></li>
-            <li><i><a href="/"><img src="images/t03.jpg"></a></i><span>这组图片中的静物等非常的日系</span></li>
+            <li><i><a href="/"><img src="${basePath}/images/t01.jpg"></a></i><span>这组图片中的静物等非常的日系</span></li>
+            <li><i><a href="/"><img src="${basePath}/images/t04.jpg"></a></i><span>这组图片中的静物等非常的日系</span></li>
+            <li><i><a href="/"><img src="${basePath}/images/t03.jpg"></a></i><span>这组图片中的静物等非常的日系</span></li>
         </ul>
     </div>
     <div class="blank"></div>
@@ -142,15 +112,22 @@
         </div>
     </div>
     <div class="rightbox">
-        <div class="aboutme">
-            <h2 class="ab_title">用户资料</h2>
-            <div class="avatar"><img src="images/bd978735b33f496792673949e70fb2eb!400x400.jpeg"/></div>
-            <div class="ab_con">
-                <p>网名：你的男孩</p>
-                <p>职业：java工程师 </p>
-                <p>邮箱：mhb0409@qq.com</p>
-            </div>
-        </div>
+            <@shiro.guest>
+
+            </@shiro.guest>
+<@shiro.user>
+<div class="aboutme">
+    <h2 class="ab_title">用户资料</h2>
+    <div class="avatar"><img src="${basePath}/images/${users.headImg}" /></div>
+    <div class="ab_con">
+        <p>姓名：${users.realName}</p>
+        <p>年龄：${users.age} </p>
+        <p>电话：${users.phone}</p>
+    </div>
+</div>
+</@shiro.user>
+
+
         <div class="blank"></div>
         <div class="search">
             <form action="/e/search/index.php" method="post" name="searchform" id="searchform">
@@ -194,8 +171,6 @@
          </div> -->
     </div>
 </article>
-<footer>
-    <p>Design by <a href="/">论坛博客</a> <a href="/">蜀ICP备11002373号-1</a> @2018</p>
-</footer>
+<#include "reception/comm/footer.ftl">
 </body>
 </html>
