@@ -22,7 +22,8 @@
             <ul class="nav" id="side-menu">
                 <li class="nav-header">
                     <div class="dropdown profile-element">
-                        <span><img alt="image" class="img-circle" width="38%" src="${basePath}/images/${users.headImg}"/></span>
+                        <span><img alt="image" class="img-circle" width="38%"
+                                   src="${basePath}/images/${users.headImg}"/></span>
                         <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                                 <span class="clear">
                                <span class="block m-t-xs"><strong class="font-bold">欢迎你：</strong></span>
@@ -105,19 +106,22 @@
                         </li>
                     </ul>
                 </li>
-
                 <li>
-                    <a href="mailbox.html"><i class="fa fa-envelope"></i> <span class="nav-label">信箱 </span><span
-                            class="label label-warning pull-right">16</span></a>
+                    <a href="mailbox.html"><i class="fa fa-envelope"></i>
+                        <span class="nav-label">信箱 </span>
+                        <#if (emailSum==0)>
+                            <span class="fa arrow"></span>
+                        <#else>
+                            <span class="label label-warning pull-right">${emailSum}</span>
+                        </#if>
+
+                    </a>
                     <ul class="nav nav-second-level">
-                        <li><a class="J_menuItem" href="${basePath}/sharedEmail/emailIndex">收件箱</a>
-                        </li>
-                        <li><a class="J_menuItem" href="${basePath}/sharedEmail/emailAdd">查看邮件</a>
-                        </li>
-                        <li><a class="J_menuItem" href="">写信</a>
-                        </li>
+                        <li><a class="J_menuItem" href="${basePath}/sharedEmail/emailIndex">收件箱</a></li>
+                        <li><a class="J_menuItem" href="${basePath}/sharedEmail/emailLook">写信</a></li>
                     </ul>
                 </li>
+
                 <li>
                     <a href="#"><i class="fa fa-edit"></i> <span class="nav-label">用户管理</span><span
                             class="fa arrow"></span></a>
