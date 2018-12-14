@@ -3,6 +3,7 @@ package com.share.controller;
 
 import com.share.ControllerUtil.CaptchaController;
 import com.share.pojo.SharedUsers;
+import com.share.service.SharedEmailService;
 import com.share.service.SharedUsersService;
 import com.share.util.ReturnResult;
 import lombok.extern.log4j.Log4j2;
@@ -28,7 +29,8 @@ import javax.servlet.http.HttpSession;
 @Controller
 @RequestMapping("/sharedUsers")
 public class SharedUsersController {
-
+    @Resource
+    private SharedEmailService sharedEmailService;
     @Resource
     private SharedUsersService usersService;
 
@@ -66,7 +68,10 @@ public class SharedUsersController {
             // 查看是否认证成功 成功 true 否则false
             if (subject.isAuthenticated()) {
                 SharedUsers users = usersService.getSharedUsersByUserName(userName);
+                int emailSum = sharedEmailService.getUnreadEmailCount(users.getId());
                 session.setAttribute("users", users);
+                session.setAttribute("emailSum", emailSum);
+
                 return ReturnResult.ok();
             } else {
                 return ReturnResult.error("登录失败！");
