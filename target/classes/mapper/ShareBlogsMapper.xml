@@ -4,18 +4,34 @@
 
     <!-- 通用查询映射结果 -->
     <resultMap id="BaseResultMap" type="com.share.pojo.ShareBlogs">
-        <id column="id" property="id" />
-        <result column="user_id" property="userId" />
-        <result column="content" property="content" />
-        <result column="creation_date" property="creationDate" />
-        <result column="update_date" property="updateDate" />
-        <result column="blogs_title" property="blogsTitle" />
-        <result column="blogs_digest" property="blogsDigest" />
+        <id column="id" property="id"/>
+        <result column="user_id" property="userId"/>
+        <result column="content" property="content"/>
+        <result column="creation_date" property="creationDate"/>
+        <result column="update_date" property="updateDate"/>
+        <result column="blogs_title" property="blogsTitle"/>
+        <result column="blogs_digest" property="blogsDigest"/>
+        <association property="users" javaType="com.share.pojo.SharedUsers">
+            <result column="head_img" property="headImg"/>
+            <result column="realName" property="realName"/>
+        </association>
     </resultMap>
 
     <!-- 通用查询结果列 -->
     <sql id="Base_Column_List">
         id, user_id, content, creation_date, update_date, blogs_title, blogs_digest
     </sql>
+    <!--根据查询的list集合查询博客-->
+    <select id="findListByUserId" resultMap="BaseResultMap">
+        SELECT  (SELECT realName FROM shared_users u WHERE u.id = b.user_id) AS realName,
+        (SELECT head_img FROM shared_users u WHERE u.id = b.user_id) AS head_img,
+                b.blogs_title,b.creation_date,b.blogs_digest
+        FROM  share_blogs b
+        WHERE b.user_id IN
+        <foreach collection="list" item="userId" open="(" close=")" separator=",">
+            #{userId}
+        </foreach>
+        ORDER BY b.creation_date DESC
+    </select>
 
 </mapper>

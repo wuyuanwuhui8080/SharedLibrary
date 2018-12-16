@@ -21,19 +21,16 @@
         <div class="sidebar-collapse">
             <ul class="nav" id="side-menu">
                 <li class="nav-header">
-                    <div class="dropdown profile-element">
-                        <span><img alt="image" class="img-circle" width="38%"
-                                   src="${basePath}/images/${users.headImg}"/></span>
+                    <div class="dropdown profile-element" style="text-align: center;">
+                        <span><img alt="image" class="img-circle" width="70px" src="${basePath}/images/${users.headImg}"/></span>
                         <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                                 <span class="clear">
-                               <span class="block m-t-xs"><strong class="font-bold">欢迎你：</strong></span>
-                                <span class="text-muted text-xs block">${users.realName}
-                                </span>
+                               <span class="block m-t-xs"><strong class="font-bold">欢迎你：${users.realName}</strong></span>
                         </a>
                         <ul class="dropdown-menu animated fadeInRight m-t-xs">
                             <li><a class="J_menuItem" href="form_avatar.html">修改头像</a>
                             </li>
-                            <li><a class="J_menuItem" href="profile.html">个人资料</a>
+                            <li><a class="J_menuItem" href="${basePath}/sharedUsers/lookProfile/${users.id}">个人资料</a>
                             </li>
                             <li><a class="J_menuItem" href="contacts.html">联系我们</a>
                             </li>
@@ -44,7 +41,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="logo-element">H+
+                    <div class="logo-element"><a href="#"><img class="img-circle" src="${basePath}/images/${users.headImg}" width="50px" ></a>
                     </div>
                 </li>
                 <li>
@@ -55,65 +52,40 @@
                     </a>
                     <ul class="nav nav-second-level">
                         <li>
-                            <a class="J_menuItem" href="index_v1.html" data-index="0">主页示例一</a>
-                        </li>
-                        <li>
-                            <a class="J_menuItem" href="index_v2.html">主页示例二</a>
-                        </li>
-                        <li>
-                            <a class="J_menuItem" href="index_v3.html">主页示例三</a>
-                        </li>
-                        <li>
-                            <a class="J_menuItem" href="index_v4.html">主页示例四</a>
-                        </li>
-                        <li>
-                            <a href="index_v5.html" target="_blank">主页示例五</a>
+                            <a class="J_menuItem" href="${basePath}/sharedUsers/GoIndex" data-index="0">最近事情</a>
                         </li>
                     </ul>
 
                 </li>
                 <li>
-                    <a class="J_menuItem" href="layouts.html"><i class="fa fa-columns"></i> <span
-                            class="nav-label">布局</span></a>
-                </li>
-                <li>
                     <a href="#">
                         <i class="fa fa fa-bar-chart-o"></i>
-                        <span class="nav-label">统计图表</span>
+                        <span class="nav-label">好友管理</span>
                         <span class="fa arrow"></span>
                     </a>
                     <ul class="nav nav-second-level">
                         <li>
-                            <a class="J_menuItem" href="graph_echarts.html">百度ECharts</a>
+                            <a class="J_menuItem" href="${basePath}/sharedFriends/goSearchFriend">查找好友</a>
                         </li>
                         <li>
-                            <a class="J_menuItem" href="graph_flot.html">Flot</a>
+                            <a class="J_menuItem" href="graph_flot.html">全部好友</a>
                         </li>
                         <li>
-                            <a class="J_menuItem" href="graph_morris.html">Morris.js</a>
+                            <a class="J_menuItem" href="graph_morris.html">好友博客</a>
                         </li>
                         <li>
-                            <a class="J_menuItem" href="graph_rickshaw.html">Rickshaw</a>
-                        </li>
-                        <li>
-                            <a class="J_menuItem" href="graph_peity.html">Peity</a>
-                        </li>
-                        <li>
-                            <a class="J_menuItem" href="graph_sparkline.html">Sparkline</a>
-                        </li>
-                        <li>
-                            <a class="J_menuItem" href="graph_metrics.html">图表组合</a>
+                            <a class="J_menuItem" href="graph_rickshaw.html">好友聊天</a>
                         </li>
                     </ul>
                 </li>
                 <li>
                     <a href="mailbox.html"><i class="fa fa-envelope"></i>
                         <span class="nav-label">信箱 </span>
-                        <#if (emailSum==0)>
+                       <#-- <#if (emailSum==0)>
                             <span class="fa arrow"></span>
                         <#else>
                             <span class="label label-warning pull-right">${emailSum}</span>
-                        </#if>
+                        </#if>-->
 
                     </a>
                     <ul class="nav nav-second-level">
@@ -464,10 +436,6 @@
                             </li>
                         </ul>
                     </li>
-                    <li class="hidden-xs">
-                        <a href="index_v1.html" class="J_menuItem" data-index="0"><i class="fa fa-cart-arrow-down"></i>
-                            购买</a>
-                    </li>
                     <li class="dropdown hidden-xs">
                         <a class="right-sidebar-toggle" aria-expanded="false">
                             <i class="fa fa-tasks"></i> 主题
@@ -481,7 +449,7 @@
             </button>
             <nav class="page-tabs J_menuTabs">
                 <div class="page-tabs-content">
-                    <a href="javascript:;" class="active J_menuTab" data-id="index_v1.html">首页</a>
+                    <a href="javascript:;" class="active J_menuTab" data-id="${basePath}/sharedUsers/GoIndex">首页</a>
                 </div>
             </nav>
             <button class="roll-nav roll-right J_tabRight"><i class="fa fa-forward"></i>
@@ -503,8 +471,8 @@
             <a href="login.html" class="roll-nav roll-right J_tabExit"><i class="fa fa fa-sign-out"></i> 退出</a>
         </div>
         <div class="row J_mainContent" id="content-main">
-            <iframe class="J_iframe" name="iframe0" width="100%" height="100%" src="index_v1.html?v=4.0" frameborder="0"
-                    data-id="index_v1.html" seamless></iframe>
+            <iframe class="J_iframe" name="iframe0" width="100%" height="100%" src="${basePath}/sharedUsers/GoIndex" frameborder="0"
+                    data-id="${basePath}/sharedUsers/GoIndex" seamless></iframe>
         </div>
         <div class="footer">
             <div class="pull-right">&copy; 2014-2015 <a href="http://www.zi-han.net/" target="_blank">zihan's blog</a>

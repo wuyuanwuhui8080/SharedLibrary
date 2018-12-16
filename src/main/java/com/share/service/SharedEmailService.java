@@ -6,12 +6,10 @@ import com.baomidou.mybatisplus.extension.service.IService;
 import java.util.List;
 
 /**
- * <p>
- *  服务类
- * </p>
+ * 邮件业务接口
  *
- * @author Bean
- * @since 2018-12-13
+ * @author 牛子豪
+ * @time 2018/12/15 15:38
  */
 public interface SharedEmailService extends IService<SharedEmail> {
 

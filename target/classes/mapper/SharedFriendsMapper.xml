@@ -15,8 +15,10 @@
     <sql id="Base_Column_List">
         id, me_id, friends_id, creation_date, update_date
     </sql>
-    <select id="findListByUserId" resultType="java.lang.String">
 
+    <!--根据传入的用户id查询所有的好友id-->
+    <select id="findListByUserId" resultType="java.lang.String">
+      SELECT friends_id FROM  shared_friends  WHERE me_id = #{usersId}
     </select>
 
 </mapper>

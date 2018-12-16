@@ -80,13 +80,14 @@ public class SharedUsers extends Model<SharedUsers> {
      */
     private String headImg;
 
+
     /**
-     * 封号的次数
+     * 对应shared_state的主键
      */
     private Integer stateId;
 
     /**
-     * 对应shared_state的主键
+     * 封号的次数
      */
     private Integer stopNum;
 

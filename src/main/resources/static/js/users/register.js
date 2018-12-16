@@ -10,14 +10,24 @@ var option = {
     dataType: "json",
     success: function (date) {
         if (date.status == 200) {
-            alert("注册成功！");
-            location.href = path + "/sharedUsers/goLogin";
+            swal({
+                title: "注册成功！",
+                type: "success",
+            }, function () {
+                location.href = path + "/sharedUsers/goLogin";
+            });
         } else {
-            alert(date.msg)
+            swal({
+                title: date.msg,
+                type: "error",
+            });
         }
     },
     error: function () {
-        alert("服务器出错，请联系管理员!");
+        swal({
+            title: "服务器出错，请联系管理员!",
+            type: "error",
+        });
     }
 }
 
@@ -30,7 +40,10 @@ function sumitfrom() {
     if (userNameblur() && password1blur() && password2blur() && birthdayblur() && phoneblur()) {
         $("#registerFromId").ajaxSubmit(option);
     } else {
-        alert("格式不正确！");
+        swal({
+            title: "格式不正确！",
+            type: "error",
+        });
         return false;
     }
 

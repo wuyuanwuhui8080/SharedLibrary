@@ -1,5 +1,6 @@
 package com.share.config;
-import com.jagregory.shiro.freemarker.ShiroTags;
+
+import com.share.shiro.ShiroTags;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer;
@@ -8,6 +9,7 @@ import javax.annotation.PostConstruct;
 
 /**
  * Freekmark 配置类
+ *
  * @author 博博
  * @Title: FreekmarkConfig
  * @ProjectName SharedLibrary
@@ -18,9 +20,10 @@ public class FreekmarkConfig {
 
     @Autowired
     private FreeMarkerConfigurer freeMarkerConfigurer;
+
     @PostConstruct
-    public void setSharedViariable()  {
-        freeMarkerConfigurer.getConfiguration().setSharedVariable("shiro",new ShiroTags());
+    public void setSharedViariable() {
+        freeMarkerConfigurer.getConfiguration().setSharedVariable("shiro", new ShiroTags());
         freeMarkerConfigurer.getConfiguration().setNumberFormat("#");
     }
 }

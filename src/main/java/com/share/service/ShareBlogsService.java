@@ -17,13 +17,20 @@ public interface ShareBlogsService extends IService<ShareBlogs> {
      * @param userId 传入的用户id
      * @return
      */
-    public Integer getCountForBlogsByUsersId(String userId);
+    Integer getCountForBlogsByUsersId(String userId);
 
     /**
      * 获取传入的用户id下的所有博客
      * @param userId 传入用户的id
      * @return
      */
-    public List<ShareBlogs> getFindListForBlogsByUsersId(String userId);
+    List<ShareBlogs> getFindListForBlogsByUsersId(String userId);
+
+    /**
+     * 查询朋友以及自己的全部博客
+     * @param userId 自己的id
+     * @return
+     */
+    List<ShareBlogs> findListFriendsByUsersId(String userId);
 
 }

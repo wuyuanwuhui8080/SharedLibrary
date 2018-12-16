@@ -1,6 +1,7 @@
 package com.share.pojo;
 
 import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.extension.activerecord.Model;
 import java.time.LocalDateTime;
 import com.baomidou.mybatisplus.annotation.TableId;
@@ -45,11 +46,13 @@ public class ShareBlogs extends Model<ShareBlogs> {
     /**
      * 创建时间
      */
+    @TableField(update = "now()")
     private Date creationDate;
 
     /**
      * 修改时间
      */
+    @TableField(update = "now()")
     private Date updateDate;
 
     /**
@@ -62,6 +65,8 @@ public class ShareBlogs extends Model<ShareBlogs> {
      */
     private String blogsDigest;
 
+    @TableField(exist = false)
+    private SharedUsers  users;
 
 
     @Override

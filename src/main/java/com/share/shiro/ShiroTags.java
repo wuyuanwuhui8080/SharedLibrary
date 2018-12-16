@@ -1,7 +1,7 @@
 package com.share.shiro;
 
+import com.jagregory.shiro.freemarker.UserTag;
 import freemarker.template.SimpleHash;
-import org.apache.shiro.web.tags.*;
 
 /**
  *
@@ -14,15 +14,15 @@ import org.apache.shiro.web.tags.*;
  */
 public class ShiroTags extends SimpleHash {
     public ShiroTags() {
-        put("authenticated", new AuthenticatedTag());
-        put("guest", new GuestTag());
-        put("hasAnyRoles", new HasAnyRolesTag());
-        put("hasPermission", new HasPermissionTag());
-        put("hasRole", new HasRoleTag());
-        put("lacksPermission", new LacksPermissionTag());
-        put("lacksRole", new LacksRoleTag());
-        put("notAuthenticated", new NotAuthenticatedTag());
-        put("principal", new PrincipalTag());
-        put("user", new UserTag());
+        this.put("authenticated", new com.jagregory.shiro.freemarker.AuthenticatedTag());
+        this.put("guest", new com.jagregory.shiro.freemarker.GuestTag());
+        this.put("hasAnyRoles", new com.jagregory.shiro.freemarker.HasAnyRolesTag());
+        this.put("hasPermission", new com.jagregory.shiro.freemarker.HasPermissionTag());
+        this.put("hasRole", new com.jagregory.shiro.freemarker.HasRoleTag());
+        this.put("lacksPermission", new com.jagregory.shiro.freemarker.LacksPermissionTag());
+        this.put("lacksRole", new com.jagregory.shiro.freemarker.LacksRoleTag());
+        this.put("notAuthenticated", new com.jagregory.shiro.freemarker.NotAuthenticatedTag());
+        this.put("principal", new com.jagregory.shiro.freemarker.PrincipalTag());
+        this.put("user", new UserTag());
     }
 }
