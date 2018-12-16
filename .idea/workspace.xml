@@ -5,16 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a0d261ad-a2f4-4e31-bd12-bdaf4948317b" name="默认更改列表" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/eclipseCodeFormatter.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/rebel.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/js/users/friends.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/templates/background/users/friends.ftl" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/templates/background/users/timeline.ftl" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/share/util/JsonUtil.java" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__aopalliance_aopalliance_1_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__aopalliance_aopalliance_1_0.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_2_3.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_2_3.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_core_1_2_3.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_core_1_2_3.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_druid_1_1_9.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_druid_1_1_9.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_druid_1_1_9.xml" afterPath="" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_druid_spring_boot_starter_1_1_9.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_druid_spring_boot_starter_1_1_9.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_fastjson_1_2_31.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_fastjson_1_2_31.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_baomidou_mybatis_plus_3_0_6.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_baomidou_mybatis_plus_3_0_6.xml" />
@@ -118,7 +113,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_2_0_4_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_2_0_4_RELEASE.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_2_0_4_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_2_0_4_RELEASE.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_configuration_processor_2_0_4_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_configuration_processor_2_0_4_RELEASE.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_devtools_2_0_4_RELEASE.xml" afterPath="" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_2_0_4_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_2_0_4_RELEASE.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_aop_2_0_4_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_aop_2_0_4_RELEASE.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_data_redis_2_0_4_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_data_redis_2_0_4_RELEASE.xml" />
@@ -154,46 +148,789 @@
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_xmlunit_xmlunit_core_2_5_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_xmlunit_xmlunit_core_2_5_1.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_yaml_snakeyaml_1_19.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_yaml_snakeyaml_1_19.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__redis_clients_jedis_2_9_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__redis_clients_jedis_2_9_0.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/SharedLibrary.iml" afterPath="$PROJECT_DIR$/SharedLibrary.iml" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/share/config/FreekmarkConfig.java" afterPath="$PROJECT_DIR$/src/main/java/com/share/config/FreekmarkConfig.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/share/controller/SharedFriendsController.java" afterPath="$PROJECT_DIR$/src/main/java/com/share/controller/SharedFriendsController.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/share/controller/SharedUsersController.java" afterPath="$PROJECT_DIR$/src/main/java/com/share/controller/SharedUsersController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/share/mapper/ShareBlogsMapper.java" afterPath="$PROJECT_DIR$/src/main/java/com/share/mapper/ShareBlogsMapper.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/share/mapper/SharedFriendsMapper.java" afterPath="$PROJECT_DIR$/src/main/java/com/share/mapper/SharedFriendsMapper.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/share/pojo/ShareBlogs.java" afterPath="$PROJECT_DIR$/src/main/java/com/share/pojo/ShareBlogs.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/share/pojo/SharedUsers.java" afterPath="$PROJECT_DIR$/src/main/java/com/share/pojo/SharedUsers.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/share/service/ShareBlogsService.java" afterPath="$PROJECT_DIR$/src/main/java/com/share/service/ShareBlogsService.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/share/service/SharedEmailService.java" afterPath="$PROJECT_DIR$/src/main/java/com/share/service/SharedEmailService.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/share/service/SharedFriendsService.java" afterPath="$PROJECT_DIR$/src/main/java/com/share/service/SharedFriendsService.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/share/service/impl/ShareBlogsServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/share/service/impl/ShareBlogsServiceImpl.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/share/service/impl/SharedFriendsServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/share/service/impl/SharedFriendsServiceImpl.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/share/shiro/ShiroTags.java" afterPath="$PROJECT_DIR$/src/main/java/com/share/shiro/ShiroTags.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/ShareBlogsMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapper/ShareBlogsMapper.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/SharedFriendsMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapper/SharedFriendsMapper.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/jsUtil.js" afterPath="$PROJECT_DIR$/src/main/resources/static/js/jsUtil.js" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/users/register.js" afterPath="$PROJECT_DIR$/src/main/resources/static/js/users/register.js" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/background/comm/script.ftl" afterPath="$PROJECT_DIR$/src/main/resources/templates/background/comm/script.ftl" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/background/index.ftl" afterPath="$PROJECT_DIR$/src/main/resources/templates/background/index.ftl" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/background/users/login.ftl" afterPath="$PROJECT_DIR$/src/main/resources/templates/background/users/login.ftl" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/background/users/profile.ftl" afterPath="$PROJECT_DIR$/src/main/resources/templates/background/users/profile.ftl" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/share/config/FreekmarkConfig.class" afterPath="$PROJECT_DIR$/target/classes/com/share/config/FreekmarkConfig.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/share/controller/SharedFriendsController.class" afterPath="$PROJECT_DIR$/target/classes/com/share/controller/SharedFriendsController.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/share/controller/SharedUsersController.class" afterPath="$PROJECT_DIR$/target/classes/com/share/controller/SharedUsersController.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/share/mapper/ShareBlogsMapper.class" afterPath="$PROJECT_DIR$/target/classes/com/share/mapper/ShareBlogsMapper.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/share/mapper/SharedFriendsMapper.class" afterPath="$PROJECT_DIR$/target/classes/com/share/mapper/SharedFriendsMapper.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/share/pojo/ShareBlogs.class" afterPath="$PROJECT_DIR$/target/classes/com/share/pojo/ShareBlogs.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/share/pojo/SharedUsers.class" afterPath="$PROJECT_DIR$/target/classes/com/share/pojo/SharedUsers.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/share/service/ShareBlogsService.class" afterPath="$PROJECT_DIR$/target/classes/com/share/service/ShareBlogsService.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/share/service/SharedFriendsService.class" afterPath="$PROJECT_DIR$/target/classes/com/share/service/SharedFriendsService.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/share/service/impl/ShareBlogsServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/share/service/impl/ShareBlogsServiceImpl.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/share/service/impl/SharedFriendsServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/share/service/impl/SharedFriendsServiceImpl.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/share/shiro/ShiroTags.class" afterPath="$PROJECT_DIR$/target/classes/com/share/shiro/ShiroTags.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapper/ShareBlogsMapper.xml" afterPath="$PROJECT_DIR$/target/classes/mapper/ShareBlogsMapper.xml" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapper/SharedFriendsMapper.xml" afterPath="$PROJECT_DIR$/target/classes/mapper/SharedFriendsMapper.xml" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/background/index.ftl" afterPath="$PROJECT_DIR$/target/classes/templates/background/index.ftl" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/background/users/profile.ftl" afterPath="$PROJECT_DIR$/target/classes/templates/background/users/profile.ftl" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/share/service/SharedUsersService.java" afterPath="$PROJECT_DIR$/src/main/java/com/share/service/SharedUsersService.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/share/service/SharedlPositionService.java" afterPath="$PROJECT_DIR$/src/main/java/com/share/service/SharedlPositionService.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/share/service/impl/SharedUsersServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/share/service/impl/SharedUsersServiceImpl.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/share/service/impl/SharedlPositionServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/share/service/impl/SharedlPositionServiceImpl.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/share/util/StringUtils.java" afterPath="$PROJECT_DIR$/src/main/java/com/share/util/StringUtils.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/background/users/userList.ftl" afterPath="$PROJECT_DIR$/src/main/resources/templates/background/users/userList.ftl" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/share/ControllerUtil/CaptchaController.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/share/ControllerUtil/ErrorController.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/share/SharedlibraryApplication.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/share/aop/LoggingAspect.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/share/config/FreekmarkConfig.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/share/config/MyExceptionResolver.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/share/config/RedisConfig.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/share/config/ShiroConfig.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/share/config/SpringBootConfig.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/share/constant/PositionConstant.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/share/constant/PositionNameConstant.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/share/constant/StateConstant.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/share/controller/ShareBlogsCommentController.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/share/controller/ShareBlogsCommentReplyController.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/share/controller/ShareBlogsController.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/share/controller/ShareBlogsGiveController.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/share/controller/ShareBlogsInvitationReplyController.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/share/controller/SharedAttentionController.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/share/controller/SharedEmailController.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/share/controller/SharedFansController.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/share/controller/SharedFriendsController.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/share/controller/SharedStateController.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/share/controller/SharedUsersController.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/share/controller/SharediInvitationCommentController.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/share/controller/SharediInvitationController.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/share/controller/SharediInvitationGiveController.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/share/controller/SharedlClassifyController.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/share/controller/SharedlFriendRequestController.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/share/controller/SharedlPositionController.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/share/generator/MyBatisPlusGenerator.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/share/mapper/ShareBlogsCommentMapper.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/share/mapper/ShareBlogsCommentReplyMapper.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/share/mapper/ShareBlogsGiveMapper.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/share/mapper/ShareBlogsInvitationReplyMapper.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/share/mapper/ShareBlogsMapper.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/share/mapper/SharedAttentionMapper.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/share/mapper/SharedEmailMapper.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/share/mapper/SharedFansMapper.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/share/mapper/SharedFriendsMapper.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/share/mapper/SharedStateMapper.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/share/mapper/SharedUsersMapper.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/share/mapper/SharediInvitationCommentMapper.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/share/mapper/SharediInvitationGiveMapper.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/share/mapper/SharediInvitationMapper.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/share/mapper/SharedlClassifyMapper.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/share/mapper/SharedlFriendRequestMapper.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/share/mapper/SharedlPositionMapper.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/share/pojo/ShareBlogs.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/share/pojo/ShareBlogsComment.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/share/pojo/ShareBlogsCommentReply.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/share/pojo/ShareBlogsGive.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/share/pojo/ShareBlogsInvitationReply.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/share/pojo/SharedAttention.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/share/pojo/SharedEmail.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/share/pojo/SharedFans.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/share/pojo/SharedFriends.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/share/pojo/SharedState.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/share/pojo/SharedUsers.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/share/pojo/SharediInvitation.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/share/pojo/SharediInvitationComment.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/share/pojo/SharediInvitationGive.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/share/pojo/SharedlClassify.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/share/pojo/SharedlFriendRequest.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/share/pojo/SharedlPosition.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/share/service/ShareBlogsCommentReplyService.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/share/service/ShareBlogsCommentService.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/share/service/ShareBlogsGiveService.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/share/service/ShareBlogsInvitationReplyService.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/share/service/ShareBlogsService.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/share/service/SharedAttentionService.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/share/service/SharedEmailService.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/share/service/SharedFansService.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/share/service/SharedFriendsService.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/share/service/SharedStateService.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/share/service/SharedUsersService.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/share/service/SharediInvitationCommentService.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/share/service/SharediInvitationGiveService.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/share/service/SharediInvitationService.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/share/service/SharedlClassifyService.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/share/service/SharedlFriendRequestService.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/share/service/SharedlPositionService.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/share/service/impl/ShareBlogsCommentReplyServiceImpl.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/share/service/impl/ShareBlogsCommentServiceImpl.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/share/service/impl/ShareBlogsGiveServiceImpl.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/share/service/impl/ShareBlogsInvitationReplyServiceImpl.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/share/service/impl/ShareBlogsServiceImpl.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/share/service/impl/SharedAttentionServiceImpl.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/share/service/impl/SharedEmailServiceImpl.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/share/service/impl/SharedFansServiceImpl.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/share/service/impl/SharedFriendsServiceImpl.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/share/service/impl/SharedStateServiceImpl.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/share/service/impl/SharedUsersServiceImpl.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/share/service/impl/SharediInvitationCommentServiceImpl.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/share/service/impl/SharediInvitationGiveServiceImpl.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/share/service/impl/SharediInvitationServiceImpl.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/share/service/impl/SharedlClassifyServiceImpl.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/share/service/impl/SharedlFriendRequestServiceImpl.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/share/service/impl/SharedlPositionServiceImpl.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/share/shiro/CustomRealm.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/share/shiro/ShiroTags.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/share/util/CaptchaUtil.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/share/util/CopyUtils.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/share/util/RedisUtil.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/share/util/ReturnResult.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/share/util/ShiroMd5.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/share/util/ShiroSessionListener.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/share/util/StringUtils.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/ShareBlogsCommentMapper.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/ShareBlogsCommentReplyMapper.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/ShareBlogsGiveMapper.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/ShareBlogsInvitationReplyMapper.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/ShareBlogsMapper.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/SharedAttentionMapper.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/SharedEmailMapper.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/SharedFansMapper.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/SharedFriendsMapper.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/SharedStateMapper.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/SharedUsersMapper.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/SharediInvitationCommentMapper.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/SharediInvitationGiveMapper.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/SharediInvitationMapper.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/SharedlClassifyMapper.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/SharedlFriendRequestMapper.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/SharedlPositionMapper.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/__MACOSX/css/._.DS_Store" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/__MACOSX/docs/._.DS_Store" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/__MACOSX/img/._.DS_Store" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/__MACOSX/img/._pay.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/__MACOSX/js/._.DS_Store" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/__MACOSX/js/plugins/._.DS_Store" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/__MACOSX/js/plugins/bootstrap-table/._.DS_Store" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/__MACOSX/js/plugins/echarts/._.DS_Store" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/__MACOSX/js/plugins/echarts/._echarts-all.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/__MACOSX/js/plugins/layer/._.DS_Store" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/__MACOSX/js/plugins/layer/._extend" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/__MACOSX/js/plugins/layer/._layer.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/__MACOSX/js/plugins/layer/extend/._layer.ext.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/__MACOSX/js/plugins/suggest/._.DS_Store" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/__MACOSX/js/plugins/suggest/._bootstrap-suggest.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/__MACOSX/js/plugins/suggest/._data.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/__MACOSX/js/plugins/webuploader/._.DS_Store" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/__MACOSX/js/plugins/webuploader/._README.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/__MACOSX/js/plugins/webuploader/._Uploader.swf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/__MACOSX/js/plugins/webuploader/._webuploader.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/__MACOSX/js/plugins/webuploader/._webuploader.custom.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/__MACOSX/js/plugins/webuploader/._webuploader.custom.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/__MACOSX/js/plugins/webuploader/._webuploader.fis.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/__MACOSX/js/plugins/webuploader/._webuploader.flashonly.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/__MACOSX/js/plugins/webuploader/._webuploader.flashonly.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/__MACOSX/js/plugins/webuploader/._webuploader.html5only.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/__MACOSX/js/plugins/webuploader/._webuploader.html5only.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/__MACOSX/js/plugins/webuploader/._webuploader.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/__MACOSX/js/plugins/webuploader/._webuploader.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/__MACOSX/js/plugins/webuploader/._webuploader.noimage.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/__MACOSX/js/plugins/webuploader/._webuploader.noimage.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/__MACOSX/js/plugins/webuploader/._webuploader.nolog.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/__MACOSX/js/plugins/webuploader/._webuploader.nolog.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/__MACOSX/js/plugins/webuploader/._webuploader.withoutimage.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/__MACOSX/js/plugins/webuploader/._webuploader.withoutimage.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/animate.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/base.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/bootstrap-rtl.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/bootstrap.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/bootstrap.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/demo/webuploader-demo.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/font-awesome.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/font-awesome.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/index.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/login.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/m.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/patterns/header-profile-skin-1.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/patterns/header-profile-skin-3.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/patterns/header-profile.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/patterns/shattered.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/plugins/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/plugins/blueimp/css/blueimp-gallery-indicator.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/plugins/blueimp/css/blueimp-gallery-video.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/plugins/blueimp/css/blueimp-gallery.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/plugins/blueimp/css/blueimp-gallery.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/plugins/blueimp/css/demo.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/plugins/blueimp/img/error.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/plugins/blueimp/img/error.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/plugins/blueimp/img/loading.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/plugins/blueimp/img/play-pause.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/plugins/blueimp/img/play-pause.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/plugins/blueimp/img/video-play.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/plugins/blueimp/img/video-play.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/plugins/bootstrap-table/bootstrap-table.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/plugins/chosen/chosen-sprite.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/plugins/chosen/chosen-sprite@2x.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/plugins/chosen/chosen.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/plugins/clockpicker/clockpicker.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/plugins/codemirror/ambiance.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/plugins/codemirror/codemirror.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/plugins/colorpicker/css/bootstrap-colorpicker.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/plugins/colorpicker/img/bootstrap-colorpicker/alpha-horizontal.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/plugins/colorpicker/img/bootstrap-colorpicker/alpha.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/plugins/colorpicker/img/bootstrap-colorpicker/hue-horizontal.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/plugins/colorpicker/img/bootstrap-colorpicker/hue.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/plugins/colorpicker/img/bootstrap-colorpicker/saturation.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/plugins/cropper/cropper.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/plugins/dataTables/dataTables.bootstrap.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/plugins/datapicker/datepicker3.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/plugins/dropzone/basic.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/plugins/dropzone/dropzone.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/plugins/duallistbox/bootstrap-duallistbox.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/plugins/footable/fonts/footable.eot" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/plugins/footable/fonts/footable.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/plugins/footable/fonts/footable.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/plugins/footable/fonts/footable.woff" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/plugins/footable/footable.core.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/plugins/fullcalendar/fullcalendar.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/plugins/fullcalendar/fullcalendar.print.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/plugins/iCheck/custom.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/plugins/iCheck/green.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/plugins/iCheck/green@2x.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/plugins/images/sort_asc.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/plugins/images/sort_desc.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/plugins/images/sprite-skin-flat.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/plugins/images/spritemap.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/plugins/images/spritemap@2x.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/plugins/ionRangeSlider/ion.rangeSlider.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/plugins/ionRangeSlider/ion.rangeSlider.skinFlat.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/plugins/jQueryUI/images/ui-bg_flat_0_aaaaaa_40x100.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/plugins/jQueryUI/images/ui-bg_flat_75_ffffff_40x100.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/plugins/jQueryUI/images/ui-icons_222222_256x240.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/plugins/jQueryUI/images/ui-icons_454545_256x240.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/plugins/jQueryUI/images/ui-icons_888888_256x240.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/plugins/jQueryUI/jquery-ui-1.10.4.custom.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/plugins/jasny/jasny-bootstrap.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/plugins/jqgrid/ui.jqgrid.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/plugins/jsTree/32px.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/plugins/jsTree/style.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/plugins/jsTree/throbber.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/plugins/markdown/bootstrap-markdown.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/plugins/morris/morris-0.4.3.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/plugins/multiselect/bootstrap-multiselect.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/plugins/nouslider/jquery.nouislider.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/plugins/plyr/plyr.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/plugins/plyr/sprite.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/plugins/simditor/simditor.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/plugins/steps/jquery.steps.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/plugins/summernote/summernote-bs3.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/plugins/summernote/summernote.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/plugins/sweetalert/sweetalert.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/plugins/switchery/switchery.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/plugins/toastr/toastr.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/plugins/treeview/bootstrap-treeview.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/plugins/webuploader/webuploader.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/style.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/docs/img/index_4.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/docs/img/page.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/docs/img/preview.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/docs/img/rtl_support.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/docs/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/docs/js/prettify.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/docs/js/prettify.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/fonts/FontAwesome.otf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/fonts/fontawesome-webfont.eot" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/fonts/fontawesome-webfont.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/fonts/fontawesome-webfont.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/fonts/fontawesome-webfont.woff" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/fonts/fontawesome-webfont.woff2" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/fonts/glyphicons-halflings-regular.eot" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/fonts/glyphicons-halflings-regular.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/fonts/glyphicons-halflings-regular.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/fonts/glyphicons-halflings-regular.woff" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/fonts/glyphicons-halflings-regular.woff2" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/images/5794.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/images/ad01.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/images/ad300x100.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/images/alipay.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/images/alipayimg.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/images/author2.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/images/b01.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/images/b02.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/images/b03.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/images/b04.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/images/b05.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/images/b06.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/images/b07.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/images/bd978735b33f496792673949e70fb2eb!400x400.jpeg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/images/close.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/images/date.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/images/datepng.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/images/grwx.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/images/lanmbq.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/images/like.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/images/logo.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/images/navline.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/images/newsbg01.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/images/newsbg02.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/images/newsbg03 (1).png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/images/newsbg03.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/images/newsbg04.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/images/radio1.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/images/radio2.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/images/t01.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/images/t02.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/images/t03.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/images/t04.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/images/tbg.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/images/v1.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/images/v2.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/images/wechat.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/images/weipayimg.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/images/wx.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/images/zsm.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/img/a1.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/img/a2.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/img/a3.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/img/a4.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/img/a5.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/img/a6.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/img/a7.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/img/a8.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/img/a9.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/img/bg.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/img/browser.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/img/browser.psd" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/img/iconfont-logo.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/img/icons.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/img/index.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/img/index_4.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/img/loading-upload.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/img/locked.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/img/login-background.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/img/p1.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/img/p2.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/img/p3.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/img/p_big1.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/img/p_big2.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/img/p_big3.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/img/pay.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/img/profile.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/img/profile_big.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/img/profile_small.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/img/progress.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/img/qr_code.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/img/sprite-skin-flat.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/img/success.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/img/user.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/img/webuploader.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/img/wenku_logo.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/bootstrap.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/bootstrap.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/contabs.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/content.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/demo/bootstrap-table-demo.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/demo/bootstrap_table_test.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/demo/bootstrap_table_test2.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/demo/echarts-demo.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/demo/flot-demo.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/demo/form-advanced-demo.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/demo/form-validate-demo.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/demo/layer-demo.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/demo/morris-demo.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/demo/peity-demo.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/demo/photos.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/demo/rickshaw-demo.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/demo/sparkline-demo.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/demo/table_base.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/demo/treeview-demo.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/demo/webuploader-demo.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/hplus.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/jquery-2.1.1.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/jquery-ui-1.10.4.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/jquery-ui.custom.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/jquery.form.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/jquery.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/jquery.min.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/jsUtil.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/modernizr.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/page.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/page2.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/beautifyhtml/beautifyhtml.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/blueimp/jquery.blueimp-gallery.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/bootstrap-table/bootstrap-table-mobile.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/bootstrap-table/bootstrap-table.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/bootstrap-table/locale/bootstrap-table-zh-CN.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/bootstrap-table/locale/bootstrap-table-zh-CN.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/chartJs/Chart.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/chosen/chosen.jquery.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/clockpicker/clockpicker.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/codemirror.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/apl/apl.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/apl/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/asterisk/asterisk.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/asterisk/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/clike/clike.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/clike/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/clike/scala.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/clojure/clojure.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/clojure/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/cobol/cobol.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/cobol/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/coffeescript/coffeescript.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/coffeescript/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/commonlisp/commonlisp.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/commonlisp/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/css/css.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/css/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/css/less.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/css/less_test.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/css/scss.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/css/scss_test.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/css/test.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/cypher/cypher.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/cypher/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/d/d.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/d/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/dart/dart.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/dart/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/diff/diff.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/diff/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/django/django.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/django/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/dockerfile/dockerfile.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/dockerfile/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/dtd/dtd.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/dtd/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/dylan/dylan.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/dylan/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/ebnf/ebnf.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/ebnf/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/ecl/ecl.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/ecl/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/eiffel/eiffel.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/eiffel/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/erlang/erlang.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/erlang/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/fortran/fortran.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/fortran/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/gas/gas.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/gas/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/gfm/gfm.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/gfm/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/gfm/test.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/gherkin/gherkin.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/gherkin/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/go/go.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/go/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/groovy/groovy.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/groovy/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/haml/haml.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/haml/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/haml/test.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/haskell/haskell.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/haskell/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/haxe/haxe.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/haxe/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/htmlembedded/htmlembedded.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/htmlembedded/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/htmlmixed/htmlmixed.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/htmlmixed/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/http/http.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/http/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/idl/idl.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/idl/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/jade/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/jade/jade.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/javascript/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/javascript/javascript.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/javascript/json-ld.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/javascript/test.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/javascript/typescript.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/jinja2/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/jinja2/jinja2.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/julia/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/julia/julia.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/kotlin/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/kotlin/kotlin.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/livescript/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/livescript/livescript.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/lua/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/lua/lua.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/markdown/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/markdown/markdown.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/markdown/test.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/meta.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/mirc/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/mirc/mirc.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/mllike/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/mllike/mllike.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/modelica/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/modelica/modelica.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/nginx/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/nginx/nginx.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/ntriples/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/ntriples/ntriples.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/octave/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/octave/octave.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/pascal/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/pascal/pascal.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/pegjs/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/pegjs/pegjs.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/perl/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/perl/perl.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/php/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/php/php.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/php/test.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/pig/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/pig/pig.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/properties/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/properties/properties.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/puppet/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/puppet/puppet.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/python/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/python/python.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/q/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/q/q.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/r/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/r/r.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/rpm/changes/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/rpm/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/rpm/rpm.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/rst/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/rst/rst.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/ruby/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/ruby/ruby.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/ruby/test.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/rust/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/rust/rust.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/sass/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/sass/sass.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/scheme/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/scheme/scheme.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/shell/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/shell/shell.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/shell/test.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/sieve/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/sieve/sieve.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/slim/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/slim/slim.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/slim/test.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/smalltalk/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/smalltalk/smalltalk.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/smarty/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/smarty/smarty.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/smartymixed/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/smartymixed/smartymixed.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/solr/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/solr/solr.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/soy/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/soy/soy.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/sparql/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/sparql/sparql.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/spreadsheet/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/spreadsheet/spreadsheet.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/sql/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/sql/sql.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/stex/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/stex/stex.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/stex/test.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/tcl/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/tcl/tcl.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/textile/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/textile/test.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/textile/textile.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/tiddlywiki/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/tiddlywiki/tiddlywiki.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/tiddlywiki/tiddlywiki.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/tiki/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/tiki/tiki.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/tiki/tiki.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/toml/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/toml/toml.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/tornado/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/tornado/tornado.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/turtle/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/turtle/turtle.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/vb/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/vb/vb.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/vbscript/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/vbscript/vbscript.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/velocity/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/velocity/velocity.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/verilog/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/verilog/test.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/verilog/verilog.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/xml/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/xml/test.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/xml/xml.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/xquery/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/xquery/test.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/xquery/xquery.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/yaml/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/yaml/yaml.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/z80/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/z80/z80.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/colorpicker/bootstrap-colorpicker.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/cropper/cropper.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/dataTables/dataTables.bootstrap.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/dataTables/jquery.dataTables.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/datapicker/bootstrap-datepicker.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/diff_match_patch/diff_match_patch.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/dropzone/dropzone.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/duallistbox/jquery.bootstrap-duallistbox.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/easypiechart/jquery.easypiechart.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/echarts/echarts-all.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/fancybox/blank.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/fancybox/fancybox_loading.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/fancybox/fancybox_loading@2x.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/fancybox/fancybox_overlay.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/fancybox/fancybox_sprite.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/fancybox/fancybox_sprite@2x.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/fancybox/jquery.fancybox.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/fancybox/jquery.fancybox.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/flot/curvedLines.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/flot/jquery.flot.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/flot/jquery.flot.pie.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/flot/jquery.flot.resize.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/flot/jquery.flot.spline.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/flot/jquery.flot.symbol.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/flot/jquery.flot.tooltip.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/footable/footable.all.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/fullcalendar/fullcalendar.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/fullcalendar/moment.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/gritter/images/gritter-light.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/gritter/images/gritter.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/gritter/images/ie-spacer.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/gritter/jquery.gritter.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/gritter/jquery.gritter.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/iCheck/icheck.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/ionRangeSlider/ion.rangeSlider.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/ionRangeSlider/jasny/jasny-bootstrap.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/jasny/jasny-bootstrap.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/jeditable/jquery.jeditable.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/jqgrid/i18n/grid.locale-cn.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/jqgrid/jquery.jqGrid.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/jquery-ui/jquery-ui.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/jsKnob/jquery.knob.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/jsTree/jstree.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/jsTree/jstree.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/jvectormap/jquery-jvectormap-world-mill-en.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/layer/extend/layer.ext.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/layer/laydate/laydate.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/layer/laydate/need/laydate.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/layer/laydate/skins/default/icon.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/layer/laydate/skins/default/laydate.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/layer/layer.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/layer/layim/data/chatlog.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/layer/layim/data/friend.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/layer/layim/data/group.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/layer/layim/data/groups.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/layer/layim/layim.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/layer/layim/layim.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/layer/layim/loading.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/layer/skin/default/icon-ext.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/layer/skin/default/icon.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/layer/skin/default/icon_ext.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/layer/skin/default/loading-0.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/layer/skin/default/loading-1.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/layer/skin/default/loading-2.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/layer/skin/default/textbg.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/layer/skin/default/xubox_ico0.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/layer/skin/default/xubox_loading0.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/layer/skin/default/xubox_loading1.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/layer/skin/default/xubox_loading2.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/layer/skin/default/xubox_loading3.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/layer/skin/default/xubox_title0.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/layer/skin/layer.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/layer/skin/layer.ext.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/layer/skin/moon/default.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/layer/skin/moon/style.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/markdown/bootstrap-markdown.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/markdown/bootstrap-markdown.zh.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/markdown/markdown.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/markdown/to-markdown.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/metisMenu/jquery.metisMenu.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/morris/morris.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/morris/raphael-2.1.0.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/multiselect/bootstrap-multiselect.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/nestable/jquery.nestable.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/nouslider/jquery.nouislider.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/pace/pace.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/peity/jquery.peity.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/plyr/plyr.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/preetyTextDiff/jquery.pretty-text-diff.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/prettyfile/bootstrap-prettyfile.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/rickshaw/rickshaw.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/rickshaw/vendor/d3.v3.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/simditor/hotkeys.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/simditor/hotkeys.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/simditor/jquery.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/simditor/module.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/simditor/module.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/simditor/simditor.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/simditor/simditor.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/simditor/uploader.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/simditor/uploader.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/slimscroll/jquery.slimscroll.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/sparkline/jquery.sparkline.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/staps/jquery.steps.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/suggest/bootstrap-suggest.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/suggest/data.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/summernote/summernote-zh-CN.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/summernote/summernote.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/sweetalert/sweetalert.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/switchery/switchery.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/toastr/toastr.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/treeview/bootstrap-treeview.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/validate/additional-methods.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/validate/jquery.validate.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/validate/messages_zh.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/webuploader/README.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/webuploader/Uploader.swf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/webuploader/webuploader.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/webuploader/webuploader.custom.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/webuploader/webuploader.custom.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/webuploader/webuploader.fis.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/webuploader/webuploader.flashonly.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/webuploader/webuploader.flashonly.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/webuploader/webuploader.html5only.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/webuploader/webuploader.html5only.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/webuploader/webuploader.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/webuploader/webuploader.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/webuploader/webuploader.noimage.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/webuploader/webuploader.noimage.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/webuploader/webuploader.nolog.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/webuploader/webuploader.nolog.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/webuploader/webuploader.withoutimage.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/webuploader/webuploader.withoutimage.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/users/register.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/welcome.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/plugins/fullavatareditor/asp.net/c#/Upload.aspx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/plugins/fullavatareditor/asp.net/c#/Upload.aspx.cs" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/plugins/fullavatareditor/asp.net/c#/bin/Newtonsoft.Json.dll" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/plugins/fullavatareditor/asp.net/vb/Upload.aspx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/plugins/fullavatareditor/asp.net/vb/Upload.aspx.vb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/plugins/fullavatareditor/asp.net/vb/bin/Newtonsoft.Json.dll" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/plugins/fullavatareditor/asp/Upload.asp" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/plugins/fullavatareditor/asp/Upload.asp.cls" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/plugins/fullavatareditor/crossdomain.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/plugins/fullavatareditor/expressInstall.swf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/plugins/fullavatareditor/fullAvatarEditor.swf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/plugins/fullavatareditor/jsp/WEB-INF/lib/commons-fileupload-1.3.jar" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/plugins/fullavatareditor/jsp/WEB-INF/lib/fastjson-1.1.9.jar" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/plugins/fullavatareditor/jsp/upload.jsp" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/plugins/fullavatareditor/php/upload.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/plugins/fullavatareditor/scripts/fullAvatarEditor.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/plugins/fullavatareditor/scripts/jQuery.Cookie.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/plugins/fullavatareditor/scripts/jQuery.Drag.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/plugins/fullavatareditor/scripts/jQuery.Resize.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/plugins/fullavatareditor/scripts/jQuery.dialog.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/plugins/fullavatareditor/scripts/swfobject.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/plugins/fullavatareditor/scripts/test.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/plugins/fullavatareditor/simpleDemo.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/403.ftl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/404.ftl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/500.ftl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/background/comm/script.ftl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/background/email/email_List.ftl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/background/email/email_detail.ftl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/background/email/email_simditor.ftl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/background/index.ftl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/background/users/login.ftl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/background/users/profile.ftl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/background/users/register.ftl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/background/users/userList.ftl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/index.ftl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/reception/about.ftl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/reception/comm/footer.ftl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/reception/comm/header.ftl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/reception/comm/script.ftl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/reception/info.ftl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/reception/list.ftl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/reception/share.ftl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/reception/shareinfo.ftl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/share/sharedlibrary/SharedlibraryApplicationTests.class" afterPath="" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -303,58 +1040,61 @@
       <file leaf-file-name="login.ftl" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/background/users/login.ftl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="84" column="19" lean-forward="true" selection-start-line="84" selection-start-column="19" selection-end-line="84" selection-end-column="19" />
+            <state relative-caret-position="480">
+              <caret line="84" column="19" lean-forward="false" selection-start-line="84" selection-start-column="19" selection-end-line="84" selection-end-column="19" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="register.ftl" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/background/users/register.ftl">
+      <file leaf-file-name="script.ftl" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/background/comm/script.ftl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1530">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="412">
+              <caret line="30" column="28" lean-forward="false" selection-start-line="30" selection-start-column="28" selection-end-line="30" selection-end-column="28" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="register.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/users/register.js">
+      <file leaf-file-name="SharedUsersController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/share/controller/SharedUsersController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3685">
-              <caret line="46" column="21" lean-forward="false" selection-start-line="46" selection-start-column="21" selection-end-line="46" selection-end-column="21" />
+            <state relative-caret-position="1935">
+              <caret line="227" column="5" lean-forward="true" selection-start-line="227" selection-start-column="5" selection-end-line="227" selection-end-column="5" />
+              <folding>
+                <element signature="e#6242#6243#0" expanded="true" />
+                <element signature="e#6293#6294#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SharedlibraryApplication.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/share/SharedlibraryApplication.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="profile.ftl" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/background/users/profile.ftl">
+      <file leaf-file-name="ShiroTags.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/share/shiro/ShiroTags.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3727">
-              <caret line="0" column="15" lean-forward="true" selection-start-line="0" selection-start-column="15" selection-end-line="0" selection-end-column="15" />
+            <state relative-caret-position="180">
+              <caret line="15" column="23" lean-forward="false" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SharedFriendsService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/share/service/SharedFriendsService.java">
+      <file leaf-file-name="SharedState.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/share/pojo/SharedState.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="503">
-              <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SharedUsersService.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/share/service/SharedUsersService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="16" column="27" lean-forward="true" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
+            <state relative-caret-position="180">
+              <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -363,45 +1103,40 @@
       <file leaf-file-name="jsUtil.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/jsUtil.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="407">
-              <caret line="145" column="52" lean-forward="true" selection-start-line="145" selection-start-column="52" selection-end-line="145" selection-end-column="52" />
+            <state relative-caret-position="424">
+              <caret line="147" column="39" lean-forward="true" selection-start-line="147" selection-start-column="39" selection-end-line="147" selection-end-column="39" />
               <folding>
-                <marker date="1544945817873" expanded="true" signature="5354:5492" ph="..." />
+                <marker date="1544949758245" expanded="true" signature="5354:5492" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="friends.ftl" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/background/users/friends.ftl">
+      <file leaf-file-name="userList.ftl" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/background/users/userList.ftl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="443">
-              <caret line="38" column="46" lean-forward="true" selection-start-line="38" selection-start-column="46" selection-end-line="38" selection-end-column="46" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="30">
+              <caret line="9" column="7" lean-forward="false" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SharedFriendsController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/share/controller/SharedFriendsController.java">
+      <file leaf-file-name="SharedFans.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/share/pojo/SharedFans.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="21" column="5" lean-forward="true" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
-              <folding>
-                <element signature="e#423#424#0" expanded="true" />
-                <element signature="e#473#474#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="180">
+              <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="friends.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/users/friends.js">
+      <file leaf-file-name="SharediInvitationComment.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/share/pojo/SharediInvitationComment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="9" column="40" lean-forward="false" selection-start-line="9" selection-start-column="40" selection-end-line="9" selection-end-column="40" />
+            <state relative-caret-position="180">
+              <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -462,7 +1197,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/share/pojo/SharediInvitationComment.java" />
         <option value="$PROJECT_DIR$/src/main/resources/application.yml" />
         <option value="$PROJECT_DIR$/src/main/java/com/share/util/StringUtils.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/share/service/SharedUsersService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/share/pojo/SharedEmail.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/share/service/impl/SharedEmailServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/share/mapper/SharedEmailMapper.java" />
@@ -484,7 +1218,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/share/config/FreekmarkConfig.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/background/users/timeline.html" />
-        <option value="$PROJECT_DIR$/src/main/java/com/share/controller/SharedUsersController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/background/users/friends.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/background/users/profile.ftl" />
         <option value="$PROJECT_DIR$/src/main/java/com/share/controller/SharedFriendsController.java" />
@@ -497,6 +1230,11 @@
         <option value="$PROJECT_DIR$/src/main/resources/static/js/users/register.js" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/background/users/friends.ftl" />
         <option value="$PROJECT_DIR$/src/main/java/com/share/service/SharedFriendsService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/share/service/SharedUsersService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/share/service/impl/SharedUsersServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/share/service/SharedlPositionService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/share/service/impl/SharedlPositionServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/share/controller/SharedUsersController.java" />
       </list>
     </option>
   </component>
@@ -515,9 +1253,7 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="localRepository" value="C:\Users\mhb\.m2\repository" />
-        <option name="mavenHome" value="E:/maven/apache-maven-3.5.0" />
-        <option name="userSettingsFile" value="C:\Users\mhb\.m2\settings.xml" />
+        <option name="mavenHome" value="F:/Maven/apache-maven-3.5.0" />
       </MavenGeneralSettings>
     </option>
     <option name="importingSettings">
@@ -687,6 +1423,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="AndroidView" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -738,7 +1477,49 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="share" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SharedLibrary" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SharedLibrary" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="share" type="462c0819:PsiDirectoryNode" />
               <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SharedLibrary" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SharedLibrary" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="share" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="impl" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SharedLibrary" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SharedLibrary" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="share" type="462c0819:PsiDirectoryNode" />
+              <item name="util" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SharedLibrary" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SharedLibrary" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="share" type="462c0819:PsiDirectoryNode" />
+              <item name="util" type="462c0819:PsiDirectoryNode" />
+              <item name="JsonUtil" type="1a9f42e2:ClassTreeNode" />
             </path>
             <path>
               <item name="SharedLibrary" type="b2602c69:ProjectViewProjectNode" />
@@ -815,9 +1596,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -832,25 +1610,26 @@
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544781701540" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/SQL Dialect" value="MySQL" />
     <property name="last_opened_file_path" value="$USER_HOME$/Desktop/eclipsePuls.xml" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gant" />
     <property name="RequestMappingsPanelWidth2" value="75" />
     <property name="RequestMappingsPanelOrder2" value="2" />
-    <property name="project.structure.last.edited" value="Problems" />
-    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.19551282" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\博博\Desktop\SharedLibrary\src\main\resources\mapper" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.share" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\JavaWork\IdeaWork\web\SharedLibrary\src\main\java\com\share\util" />
+      <recent name="F:\JavaWork\IdeaWork\web\SharedLibrary\src\main\resources\templates\background\users" />
       <recent name="E:\ideaxm\SharedLibrary\src\main\resources\templates\background\users" />
       <recent name="E:\ideaxm\SharedLibrary\src\main\java\com\share\controller" />
       <recent name="C:\Users\Administrator\Desktop\SharedLibrary\src\main\resources\templates\background\email" />
-      <recent name="C:\Users\博博\Desktop\SharedLibrary\src\main\java\com\share" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\博博\Desktop\SharedLibrary\src\main\resources\mapper" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -945,7 +1724,7 @@
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.share.SharedlibraryApplication" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
-      <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
+      <option name="ALTERNATIVE_JRE_PATH" value="1.8 (1)" />
       <additionalParameters>
         <param>
           <option name="enabled" value="true" />
@@ -1041,6 +1820,7 @@
       <workItem from="1544885307546" duration="1183000" />
       <workItem from="1544934395306" duration="326000" />
       <workItem from="1544935173378" duration="9931000" />
+      <workItem from="1544949782976" duration="659000" />
     </task>
     <task id="LOCAL-00001" summary="完成邮箱查询,邮箱表增加字段state,页面展示成功">
       <created>1544780773011</created>
@@ -1074,7 +1854,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52577000" />
+    <option name="totallyTimeSpent" value="53236000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1087,24 +1867,19 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Key Promoter X" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="FindBugs-IDEA" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290398" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290398" sideWeight="0.50214595" order="13" side_tool="true" content_ui="tabs" />
-      <window_info id="JRebel Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3265306" sideWeight="0.5104167" order="14" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="JRebel Executor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32912844" sideWeight="0.49166667" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="调色板" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2374269" sideWeight="0.48958334" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="JRebel Setup Guide" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3203125" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290398" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="调试" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30725622" sideWeight="0.49583334" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3282532" sideWeight="0.49785408" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="调试" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23770492" sideWeight="0.49583334" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32786885" sideWeight="0.49785408" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290398" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -1113,19 +1888,25 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32786885" sideWeight="0.49356222" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290398" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290398" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28165236" sideWeight="0.46746576" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290398" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.277897" sideWeight="0.46746576" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="JRebel" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26979166" sideWeight="0.53253424" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="设计器" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
+      <window_info id="Key Promoter X" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="FindBugs-IDEA" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290398" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="JRebel Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3265306" sideWeight="0.5104167" order="14" side_tool="true" content_ui="tabs" />
+      <window_info id="JRebel Executor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32912844" sideWeight="0.49166667" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2374269" sideWeight="0.48958334" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="JRebel Setup Guide" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3203125" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="JRebel" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26979166" sideWeight="0.53253424" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -1233,62 +2014,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/share/mapper/SharedAttentionMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="13" column="17" lean-forward="false" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/SharedFriendsMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="19" column="4" lean-forward="false" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/share/mapper/SharedFriendsMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="20" column="17" lean-forward="false" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/share/service/SharedAttentionService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/share/service/ShareBlogsService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="26" column="21" lean-forward="false" selection-start-line="26" selection-start-column="21" selection-end-line="26" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/share/mapper/ShareBlogsMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="21" column="38" lean-forward="false" selection-start-line="21" selection-start-column="38" selection-end-line="21" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/share/service/impl/ShareBlogsServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="65" column="0" lean-forward="false" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/share/pojo/SharedUsers.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="80" column="26" lean-forward="false" selection-start-line="80" selection-start-column="19" selection-end-line="80" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/share/pojo/ShareBlogs.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="164">
@@ -1325,29 +2050,10 @@
       </provider>
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/net/mingsoft/shiro-freemarker-tags/0.1/shiro-freemarker-tags-0.1.jar!/com/jagregory/shiro/freemarker/ShiroTags.class" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/share/shiro/ShiroTags.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="20" column="60" lean-forward="false" selection-start-line="20" selection-start-column="60" selection-end-line="20" selection-end-column="60" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/SharedlClassifyMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/share/service/SharedlPositionService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="13" column="17" lean-forward="false" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1404,22 +2110,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/share/controller/SharedUsersController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="209" column="42" lean-forward="false" selection-start-line="209" selection-start-column="42" selection-end-line="209" selection-end-column="42" />
-          <folding>
-            <element signature="e#5603#5604#0" expanded="true" />
-            <element signature="e#5654#5655#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/content.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="224">
           <caret line="10" column="3" lean-forward="true" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1427,7 +2121,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="194">
           <caret line="9" column="5" lean-forward="true" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1435,9 +2128,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1445,7 +2135,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="224">
           <caret line="10" column="13" lean-forward="true" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1453,9 +2142,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1463,9 +2149,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1473,9 +2156,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1483,9 +2163,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1493,7 +2170,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
           <caret line="0" column="1589" lean-forward="true" selection-start-line="0" selection-start-column="1589" selection-end-line="0" selection-end-column="1589" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1501,7 +2177,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-330">
           <caret line="7" column="32" lean-forward="true" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="36" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1509,7 +2184,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1517,7 +2191,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="314">
           <caret line="37" column="23" lean-forward="true" selection-start-line="37" selection-start-column="23" selection-end-line="37" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1525,7 +2198,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="266">
           <caret line="4" column="24486" lean-forward="false" selection-start-line="4" selection-start-column="24458" selection-end-line="4" selection-end-column="24486" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1534,40 +2206,6 @@
         <state relative-caret-position="780">
           <caret line="104" column="52" lean-forward="false" selection-start-line="104" selection-start-column="52" selection-end-line="104" selection-end-column="52" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/background/index.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="279" column="68" lean-forward="true" selection-start-line="279" selection-start-column="68" selection-end-line="279" selection-end-column="68" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/background/users/userList.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="9" column="7" lean-forward="true" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/background/comm/script.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="653">
-          <caret line="30" column="28" lean-forward="false" selection-start-line="30" selection-start-column="28" selection-end-line="30" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/jsUtil.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="407">
-          <caret line="145" column="52" lean-forward="true" selection-start-line="145" selection-start-column="52" selection-end-line="145" selection-end-column="52" />
-          <folding>
-            <marker date="1544945817873" expanded="true" signature="5354:5492" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1581,23 +2219,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/users/register.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3685">
+        <state relative-caret-position="1380">
           <caret line="46" column="21" lean-forward="false" selection-start-line="46" selection-start-column="21" selection-end-line="46" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/background/users/login.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="84" column="19" lean-forward="true" selection-start-line="84" selection-start-column="19" selection-end-line="84" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/background/users/register.ftl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1530">
+        <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
@@ -1605,26 +2235,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/background/users/profile.ftl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3727">
-          <caret line="0" column="15" lean-forward="true" selection-start-line="0" selection-start-column="15" selection-end-line="0" selection-end-column="15" />
+        <state relative-caret-position="0">
+          <caret line="0" column="15" lean-forward="false" selection-start-line="0" selection-start-column="15" selection-end-line="0" selection-end-column="15" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/background/users/friends.ftl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="443">
-          <caret line="38" column="46" lean-forward="true" selection-start-line="38" selection-start-column="46" selection-end-line="38" selection-end-column="46" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="1140">
+          <caret line="38" column="46" lean-forward="false" selection-start-line="38" selection-start-column="46" selection-end-line="38" selection-end-column="46" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/share/controller/SharedFriendsController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="21" column="5" lean-forward="true" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
+        <state relative-caret-position="480">
+          <caret line="21" column="5" lean-forward="false" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
           <folding>
             <element signature="e#423#424#0" expanded="true" />
             <element signature="e#473#474#0" expanded="true" />
@@ -1634,16 +2262,152 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/share/service/SharedFriendsService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="503">
-          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+        <state relative-caret-position="510">
+          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/background/index.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="472">
+          <caret line="100" column="90" lean-forward="false" selection-start-line="100" selection-start-column="80" selection-end-line="100" selection-end-column="90" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/share/util/StringUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-232">
+          <caret line="20" column="13" lean-forward="false" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/share/service/SharedUsersService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="16" column="27" lean-forward="true" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
+        <state relative-caret-position="265">
+          <caret line="29" column="12" lean-forward="false" selection-start-line="29" selection-start-column="12" selection-end-line="29" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/share/util/JsonUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/share/service/impl/SharedUsersServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="76" column="38" lean-forward="false" selection-start-line="76" selection-start-column="38" selection-end-line="76" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/share/service/SharedlPositionService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="12" column="3" lean-forward="false" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/share/service/impl/SharedlPositionServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="11" column="10" lean-forward="false" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
+          <folding>
+            <element signature="e#621#622#0" expanded="true" />
+            <element signature="e#656#657#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/share/controller/SharedUsersController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1935">
+          <caret line="227" column="5" lean-forward="true" selection-start-line="227" selection-start-column="5" selection-end-line="227" selection-end-column="5" />
+          <folding>
+            <element signature="e#6242#6243#0" expanded="true" />
+            <element signature="e#6293#6294#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/share/shiro/ShiroTags.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="15" column="23" lean-forward="false" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/share/pojo/SharedState.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/share/pojo/SharedFans.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/share/pojo/SharediInvitationComment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/share/SharedlibraryApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/jsUtil.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="424">
+          <caret line="147" column="39" lean-forward="true" selection-start-line="147" selection-start-column="39" selection-end-line="147" selection-end-column="39" />
+          <folding>
+            <marker date="1544949758245" expanded="true" signature="5354:5492" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/background/users/userList.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="9" column="7" lean-forward="false" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/background/users/login.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="84" column="19" lean-forward="false" selection-start-line="84" selection-start-column="19" selection-end-line="84" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/background/comm/script.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="412">
+          <caret line="30" column="28" lean-forward="false" selection-start-line="30" selection-start-column="28" selection-end-line="30" selection-end-column="28" />
           <folding />
         </state>
       </provider>
@@ -1688,7 +2452,7 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
-          <last-edited>1.7</last-edited>
+          <last-edited>1.8 (1)</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

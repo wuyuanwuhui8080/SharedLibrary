@@ -13,76 +13,108 @@
 
     <#include "../comm/script.ftl">
     <!--[if lt IE 9]>
-    <meta http-equiv="refresh" content="0;ie.html" />
+    <meta http-equiv="refresh" content="0;ie.html"/>
     <![endif]-->
-    <script>if(window.top !== window.self){ window.top.location = window.location;}</script>
+    <script>if (window.top !== window.self) {
+        window.top.location = window.location;
+    }</script>
 </head>
 
 <body class="gray-bg">
 
-    <div class="middle-box text-center loginscreen  animated fadeInDown">
+<div class="middle-box text-center loginscreen  animated fadeInDown">
+    <div>
         <div>
-            <div>
 
-                <h1 class="logo-name">V</h1>
+            <h1 class="logo-name">V</h1>
 
-            </div>
-            <h3>欢迎使用内部博客</h3>
-
-            <form class="m-t" method="post" role="form" action="${basePath}/sharedUsers/doLogin">
-                <div class="form-group">
-                    <input type="email" class="form-control" name="userName" id="userName" placeholder="用户名" required="">
-                </div>
-                <div class="form-group">
-                    <input type="password" class="form-control" name="password" id="password" placeholder="密码" required="">
-                </div>
-                <div class="form-group">
-                验证码：<input type="text" id="captcha" name="captcha"/><a href="javascript:refreshCaptcha()"><img alt="验证码" src="${basePath}/Captcha.jpg"  title="点击更换" id="captcha_img"/></a>
-                </div>
-            </form>
-            <button type="submit" onclick="sumitFrom();" class="btn btn-primary block full-width m-b">登 录</button>
-            <p class="text-muted text-center"> <a href="login.ftl#"><small>忘记密码了？</small></a> | <a href="${basePath}/sharedUsers/goRegister">注册一个新账号</a>
-            </p>
         </div>
+        <h3>欢迎使用内部博客</h3>
+
+        <form class="m-t" method="post" role="form" action="${basePath}/sharedUsers/doLogin">
+            <div class="form-group">
+                <input type="email" class="form-control" name="userName" id="userName" placeholder="用户名" required="">
+            </div>
+            <i id='icon'></i>
+            <div class="form-group">
+                <input type="password" class="form-control" name="password" id="password" placeholder="密码" required="">
+            </div>
+            <div class="form-group">
+                验证码：<input type="text" id="captcha" name="captcha"/><a href="javascript:refreshCaptcha()"><img alt="验证码"
+                                                                                                               src="${basePath}/Captcha.jpg"
+                                                                                                               title="点击更换"
+                                                                                                               id="captcha_img"/></a>
+            </div>
+        </form>
+        <button type="submit" onclick="sumitFrom();" class="btn btn-primary block full-width m-b">登 录</button>
+        <p class="text-muted text-center"><a href="login.ftl#">
+            <small>忘记密码了？</small>
+        </a> | <a href="${basePath}/sharedUsers/goRegister">注册一个新账号</a>
+        </p>
     </div>
+</div>
 
 </body>
-
+<#-- <div class="ibox-content">
+                        <div class="spiner-example">
+                            <div class="sk-spinner sk-spinner-three-bounce">
+                                <div class="sk-bounce1"></div>
+                                <div class="sk-bounce2"></div>
+                                <div class="sk-bounce3"></div>
+                            </div>
+                        </div>
+                    </div>-->
 </html>
 <script>
-    function refreshCaptcha(){
-        $("#captcha_img").attr("src","/Captcha.jpg?id=" + new Date() + Math.floor(Math.random()*24));
+    function refreshCaptcha() {
+        $("#captcha_img").attr("src", "/Captcha.jpg?id=" + new Date() + Math.floor(Math.random() * 24));
     }
+
     var option = {
+        beforeSend: function () {
+            $("body").append(app.loads());
+        },
         dataType: "json",
         success: function (date) {
             if (date.status == 200) {
-                alert("登录成功!");
-                location.href =  "/sharedUsers/goIndex";
+                swal({
+                    title: "登录成功！",
+                    type: "success",
+                }, function () {
+                    location.href = "/sharedUsers/goIndex";
+                });
             } else {
-                alert(date.msg)
+                swal({
+                    title: date.msg,
+                    type: "error"
+                });
+
                 document.getElementById("captcha").value = "";
                 refreshCaptcha();
             }
+        },
+        complete: function () {
+            $("#ibox").remove();
         },
         error: function () {
             alert("服务器出错，请联系管理员!");
         }
     }
-    function  sumitFrom() {
+
+    function sumitFrom() {
         var userName = document.getElementById("userName").value;
         var password = document.getElementById("password").value;
         var captcha = document.getElementById("captcha").value;
-        if(app.isNull(userName)){
+        if (app.isNull(userName)) {
             alert("用户名不能为空！");
             return false;
-        }else if(app.isNull(password)){
+        } else if (app.isNull(password)) {
             alert("密码不能为空！");
             return false;
-        }else if(app.isNull(captcha)){
+        } else if (app.isNull(captcha)) {
             alert("验证码不能为空！");
             return false;
-        }else {
+        } else {
             $("form").ajaxSubmit(option);
             return false;
         }

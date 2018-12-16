@@ -8,9 +8,11 @@ import com.share.mapper.SharedUsersMapper;
 import com.share.service.SharedUsersService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.share.util.ShiroMd5;
+import com.share.util.StringUtils;
 import org.springframework.stereotype.Service;
 
 import java.util.Date;
+import java.util.List;
 
 /**
  * 用户实现类，负责用户的一切操作
@@ -62,5 +64,23 @@ public class SharedUsersServiceImpl extends ServiceImpl<SharedUsersMapper, Share
         QueryWrapper<SharedUsers> wrapper = new QueryWrapper<>();
         wrapper.eq("userName",userName);
         return super.getOne(wrapper);
+    }
+
+    /**
+     * 根据用户名或真实姓名查询用户列表
+     * @param name 传入的字符串
+     * @author cll 陈留领
+     * @return
+     */
+    @Override
+    public List<SharedUsers> findUsersListByUserNameOrRealName(String name, Integer position) {
+        QueryWrapper<SharedUsers> wrapper = new QueryWrapper<>();
+        if(StringUtils.isNotNull(name)){
+            wrapper.like("userName",name).or().like("realName",name);
+        }
+        if(position != null && !position.equals("")){
+            wrapper.eq("position_id",position);
+        }
+        return super.list(wrapper);
     }
 }

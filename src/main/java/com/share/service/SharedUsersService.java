@@ -3,6 +3,8 @@ package com.share.service;
 import com.share.pojo.SharedUsers;
 import com.baomidou.mybatisplus.extension.service.IService;
 
+import java.util.List;
+
 /**
  * Users业务接口
  *
@@ -34,5 +36,12 @@ public interface SharedUsersService extends IService<SharedUsers> {
      * @return SharedUsers
      */
     SharedUsers getSharedUsersByUserName(String userName);
+
+    /**
+     *根据用户名或真实姓名查询用户列表
+     * @author cll 陈留领
+     * @time 2018/12/15 16:05
+     */
+    public List<SharedUsers> findUsersListByUserNameOrRealName(String name, Integer position);
 
 }

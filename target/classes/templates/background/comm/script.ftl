@@ -25,3 +25,7 @@
     <script src="${basePath}/js/content.js?v=1.0.0"></script>
 
 <script src="${basePath}/js/plugins/iCheck/icheck.min.js"></script>
+ <!-- Sweet alert -->
+    <script src="${basePath}/js/plugins/sweetalert/sweetalert.min.js"></script>
+<!-- Sweet Alert -->
+    <link href="${basePath}/css/plugins/sweetalert/sweetalert.css" rel="stylesheet">

@@ -5,10 +5,8 @@ import com.share.ControllerUtil.CaptchaController;
 import com.share.pojo.ShareBlogs;
 import com.share.pojo.SharedFans;
 import com.share.pojo.SharedUsers;
-import com.share.service.ShareBlogsService;
-import com.share.service.SharedAttentionService;
-import com.share.service.SharedFansService;
-import com.share.service.SharedUsersService;
+import com.share.pojo.SharedlPosition;
+import com.share.service.*;
 import com.share.util.ReturnResult;
 import lombok.extern.log4j.Log4j2;
 import org.apache.shiro.SecurityUtils;
@@ -48,6 +46,9 @@ public class SharedUsersController {
 
     @Resource
     private ShareBlogsService blogsService;
+
+    @Resource
+    private SharedlPositionService positionServicel;
 
     @GetMapping("/adminUser")
     public String index() {
@@ -161,8 +162,24 @@ public class SharedUsersController {
         }
     }
 
+    /**
+     * 根据条件查询 有则查询条件， 无则查询所有
+     *
+     * @author cll
+     * @time 2018/12/15 15:49
+     */
     @GetMapping("/goUserList")
-    public String goUserList() {
+    public String goUserList(@RequestParam(value = "name", required = false) String name,
+                             @RequestParam(value = "position", required = false) Integer position, Model model) {
+        // 查询所有职位
+        List<SharedlPosition> positionList = positionServicel.findList();
+
+        // 查询所有用户
+        List<SharedUsers> usersList = usersService.findUsersListByUserNameOrRealName(name,position);
+        model.addAttribute("usersList", usersList);
+        model.addAttribute("positionList", positionList);
+        model.addAttribute("position", position);
+        model.addAttribute("name", name);
         return "background/users/userList";
     }
 
