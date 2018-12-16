@@ -80,6 +80,13 @@ public class SharedFriendsController {
 		}
 	}
 
+	/**
+	 * 查看用户详细
+	 * 
+	 * @param userName
+	 * @return
+	 * @throws Exception
+	 */
 	@GetMapping("/userDetails")
 	@ResponseBody
 	public SharedUsersVO userDetails(String userName) throws Exception {
