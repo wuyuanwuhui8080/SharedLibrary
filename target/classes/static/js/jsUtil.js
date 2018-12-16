@@ -135,5 +135,16 @@ window.app = {
             case 'username':
                 return /^[a-zA-Z0-9_-]{4,16}$/.test(str);
         }
+    },
+    loads: function () {
+        return '<div class="ibox-content" id="ibox" style="position:fixed;top:30%;z-index:1200;background:url(/wap/images/loading.gif) top center no-repeat;width:100%;height:140px;margin:auto auto;">\n' +
+            '                        <div class="spiner-example">\n' +
+            '                            <div class="sk-spinner sk-spinner-three-bounce">\n' +
+            '                                <div class="sk-bounce1"></div>\n' +
+            '                                <div class="sk-bounce2"></div>\n' +
+            '                                <div class="sk-bounce3"></div>\n' +
+            '                            </div>\n' +
+            '                        </div>\n' +
+            '                    </div>';
     }
 };
