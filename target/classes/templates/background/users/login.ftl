@@ -106,13 +106,22 @@
         var password = document.getElementById("password").value;
         var captcha = document.getElementById("captcha").value;
         if (app.isNull(userName)) {
-            alert("用户名不能为空！");
+            swal({
+                title: "用户名不能为空！",
+                type: "error"
+            });
             return false;
         } else if (app.isNull(password)) {
-            alert("密码不能为空！");
+            swal({
+                title: "密码不能为空！",
+                type: "error"
+            });
             return false;
         } else if (app.isNull(captcha)) {
-            alert("验证码不能为空！");
+            swal({
+                title: "验证码不能为空！",
+                type: "error"
+            });
             return false;
         } else {
             $("form").ajaxSubmit(option);

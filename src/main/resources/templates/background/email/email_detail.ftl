@@ -8,8 +8,6 @@
 
     <title>H+ 后台主题UI框架 - 查看邮件</title>
     <#include "../comm/script.ftl">
-    <link href="css/font-awesome.css?v=4.4.0" rel="stylesheet">
-    <link href="css/plugins/iCheck/custom.css" rel="stylesheet">
 </head>
 
 <body class="gray-bg">

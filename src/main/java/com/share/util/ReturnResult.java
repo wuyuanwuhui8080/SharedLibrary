@@ -1,10 +1,9 @@
 package com.share.util;
 
-import lombok.Data;
-import lombok.NoArgsConstructor;
-
 import java.io.Serializable;
-import java.util.Objects;
+import java.util.List;
+
+import lombok.Data;
 
 /**
  * 对json数据返回
@@ -16,22 +15,24 @@ import java.util.Objects;
 public class ReturnResult implements Serializable {
 
     private int status;
-    private Object data;
+	private String data;
     private String msg;
+	private List<?> list;
 
     public ReturnResult(int status, String msg) {
         this.status = status;
         this.msg = msg;
     }
 
-    public ReturnResult(int status) {
+	public ReturnResult(int status, List<?> list) {
+        this.status = status;
+		this.list = list;
+    }
+
+	public ReturnResult(int status) {
         this.status = status;
     }
 
-    public ReturnResult(int status, Objects data) {
-        this.data = data;
-        this.status = status;
-    }
 
 
     /**
@@ -48,8 +49,8 @@ public class ReturnResult implements Serializable {
      *
      * @param ReturnResult
      */
-    public static ReturnResult okAndObj(Objects obj) {
-        return new ReturnResult(200, obj);
+	public static ReturnResult okAndList(List<?> list) {
+		return new ReturnResult(200, list);
     }
 
     /**
@@ -70,7 +71,7 @@ public class ReturnResult implements Serializable {
         return new ReturnResult(500);
     }
 
-    public ReturnResult(String message, int status, Object data) {
+	public ReturnResult(String message, int status, String data) {
         this.msg = message;
         this.status = status;
         this.data = data;

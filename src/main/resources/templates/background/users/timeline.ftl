@@ -9,7 +9,6 @@
 
     <title>最近事情</title>
     <#include "../comm/script.ftl">
-    <link href="css/plugins/iCheck/custom.css" rel="stylesheet">
 </head>
 
 <body class="gray-bg">

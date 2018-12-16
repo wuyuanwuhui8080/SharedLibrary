@@ -1,7 +1,5 @@
 package com.share.constant;
 
-import javafx.geometry.Pos;
-
 /**
  * 职位常量类
  *
@@ -15,7 +13,10 @@ public final class PositionConstant {
     private PositionConstant() {
     }
 
+	// 普通用户
     public static final int NORMAL_USER = 1;
+	// 扫地僧
     public static final int SWEEPING_USER = 2;
+	// 管理员
     public static final int ADMIN_USER = 3;
 }

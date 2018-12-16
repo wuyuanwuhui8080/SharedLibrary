@@ -1,9 +1,9 @@
 package com.share.service;
 
-import com.share.pojo.SharedFriends;
-import com.baomidou.mybatisplus.extension.service.IService;
-
 import java.util.List;
+
+import com.baomidou.mybatisplus.extension.service.IService;
+import com.share.pojo.SharedFriends;
 
 /**
  * 好友业务接口
@@ -18,5 +18,6 @@ public interface SharedFriendsService extends IService<SharedFriends> {
      * @return
      */
     List<String> getListUsersId(String userId);
+
 
 }

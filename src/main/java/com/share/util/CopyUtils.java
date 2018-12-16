@@ -1,11 +1,11 @@
 package com.share.util;
 
-import org.springframework.beans.BeanUtils;
-
 import java.beans.BeanInfo;
 import java.beans.Introspector;
 import java.beans.PropertyDescriptor;
 import java.util.Objects;
+
+import org.springframework.beans.BeanUtils;
 
 /**
  * 属性的copy
@@ -60,7 +60,7 @@ public class CopyUtils {
      * @param bean1 被copy属性的类
      * @param bean2 获取copy属性的类
      */
-    public static  void BeanCopy(Objects bean1,Objects bean2){
+	public static void BeanCopy(Objects bean1, Objects bean2) throws Exception {
         BeanUtils.copyProperties(bean1,bean2);
     }
 
