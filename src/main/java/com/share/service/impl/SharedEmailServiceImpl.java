@@ -28,12 +28,24 @@ public class SharedEmailServiceImpl extends ServiceImpl<SharedEmailMapper, Share
     private SharedEmailMapper sharedEmailMapper;
 
     @Override
-    public List<SharedEmail> getEmail(String id) {
-        return sharedEmailMapper.getEmail(id);
+    public List<SharedEmail> getEmaiListlByUserId(String id) {
+        return sharedEmailMapper.getEmaiListlByUserId(id);
+    }
+
+    @Override
+    public SharedEmail getEmailById(String id) {
+
+        return sharedEmailMapper.getEmailById(id);
     }
 
     @Override
     public int getUnreadEmailCount(String id) {
         return sharedEmailMapper.getUnreadEmailCount(id);
+    }
+
+
+    @Override
+    public int updateState(List<String> idList) {
+        return sharedEmailMapper.updateState(idList);
     }
 }

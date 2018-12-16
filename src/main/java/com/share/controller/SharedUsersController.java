@@ -69,8 +69,8 @@ public class SharedUsersController {
             if (subject.isAuthenticated()) {
                 SharedUsers users = usersService.getSharedUsersByUserName(userName);
                 int emailSum = sharedEmailService.getUnreadEmailCount(users.getId());
-                session.setAttribute("users", users);
                 session.setAttribute("emailSum", emailSum);
+                session.setAttribute("users", users);
 
                 return ReturnResult.ok();
             } else {

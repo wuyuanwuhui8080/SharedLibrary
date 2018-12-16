@@ -103,26 +103,17 @@
 
 
                     <h3>
-                        <span class="font-noraml">主题： </span>幼儿园亲子班（园中园）项目方案
+                        <span class="font-noraml">主题： </span>${email.emailDigest}
                     </h3>
                     <h5>
-                        <span class="pull-right font-noraml">2014年10月28日(星期二) 晚上8:20</span>
-                        <span class="font-noraml">发件人： </span>i@zi-han.net
+                        <span class="pull-right font-noraml">${email.creationDate?date}</span>
+                        <span class="font-noraml">发件人： </span>${email.friend_name}
                     </h5>
                 </div>
             </div>
             <div class="mail-box">
-
-
                 <div class="mail-body">
-                    <h4>尊敬的幼儿园园长朋友：</h4>
-                    <p>
-                        贝贝聪教育，因您而精彩！由于婴幼教育一体化更符合婴幼儿成长需求，是全球早教专家、心理学家普遍推崇的一种办园模式。在美国、日本、英国、意大利、新加坡等国家及我国香港、台湾等地区，幼儿园普遍开设了亲子班，美国幼儿园开亲子班的比率为87%，意大利比率为83%。香港、台湾地区分别为74%、76%。2003年3月4日，国务院办公厅转发了教育部等10部门（单位）《关于幼儿教育改革与发展的指导意见》，强调发展0－6岁婴幼儿教育。在《幼儿园教育指导纲要（试行）》中已明确指出幼儿园教育要与0-3岁教育做好衔接。北京、上海等地要求在2013年，65%的公立一级幼儿园开设亲子班或园中园。
-                    </p>
-
-                    <p class="text-right">
-                        贝贝聪教育科技发展有限公司
-                    </p>
+                   ${email.emailContent}
                 </div>
                 <div class="mail-attachment">
                     <p>
@@ -190,8 +181,6 @@
                     </button>
                 </div>
                 <div class="clearfix"></div>
-
-
             </div>
         </div>
     </div>

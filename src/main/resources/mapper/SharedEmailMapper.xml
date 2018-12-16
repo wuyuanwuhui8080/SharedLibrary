@@ -8,18 +8,11 @@
     </sql>
 
     <resultMap id="friendName" type="com.share.pojo.SharedEmail">
-        <result property="friendName" column="realName"/>
+        <result property="friend_name" column="realName"/>
     </resultMap>
 
-    <select id="getEmail" resultMap="friendName">
-        SELECT e.id,
-               u.realName AS realName,
-               e.me_id,
-               e.friends_id,
-               e.creation_date,
-               e.email_digest,
-               e.email_content,
-               e.state
+    <select id="getEmaiListlByUserId" resultMap="friendName">
+        SELECT e.id, u.realName AS realName, e.creation_date, e.email_digest, e.state
         FROM shared_email AS e,
                 shared_users AS u
                 WHERE
@@ -30,8 +23,32 @@
     <select id="getUnreadEmailCount" resultType="int">
         SELECT COUNT(1)
         FROM shared_email
-        WHERE me_id =#{id}
+        WHERE me_id = #{id}
           AND state = 2
+    </select>
+    <update id="updateState">
+        UPDATE sharedlibrary.shared_email
+        SET state = 1
+        WHERE id IN
+        <foreach collection="idList" item="id" separator="," open="(" close=")">
+            #{id}
+        </foreach>
+    </update>
+
+    <select id="getEmailById" resultMap="friendName">
+        SELECT e.id,
+               e.friends_id,
+               e.me_id,
+               u.realName AS realName,
+               e.creation_date,
+               e.email_digest,
+               e.state,
+               e.email_content
+        FROM shared_email AS e,
+                shared_users AS u
+                WHERE
+                e.friends_id = u.id
+                AND e.id = #{id}
     </select>
 
 </mapper>

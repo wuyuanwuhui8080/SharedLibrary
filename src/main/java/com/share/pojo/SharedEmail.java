@@ -69,7 +69,7 @@ public class SharedEmail extends Model<SharedEmail> {
     /**
      * 发件人姓名
      */
-    private String friendName;
+    private String friend_name;
 
 
     @Override
