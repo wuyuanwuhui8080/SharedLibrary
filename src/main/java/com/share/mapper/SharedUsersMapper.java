@@ -3,6 +3,8 @@ package com.share.mapper;
 import com.share.pojo.SharedUsers;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
+import java.util.List;
+
 /**
  * <p>
  *  Mapper 接口

@@ -6,6 +6,8 @@ import com.share.service.SharedlPositionService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 /**
  * <p>
  *  服务实现类
@@ -17,4 +19,12 @@ import org.springframework.stereotype.Service;
 @Service
 public class SharedlPositionServiceImpl extends ServiceImpl<SharedlPositionMapper, SharedlPosition> implements SharedlPositionService {
 
+    /**
+     * 查询所有职位
+     * @return
+     */
+    @Override
+    public List<SharedlPosition> findList() {
+        return super.list();
+    }
 }
