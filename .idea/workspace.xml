@@ -11,6 +11,12 @@
       <change afterPath="$PROJECT_DIR$/src/main/resources/templates/background/email/email_ListTop.ftl" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/templates/background/email/email_StateList.ftl" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/templates/background/email/email_left.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/email/Email_Haveread.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/email/Email_SelState.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/templates/background/email/email_Index.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/templates/background/email/email_ListTop.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/templates/background/email/email_StateList.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/templates/background/email/email_left.ftl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__aopalliance_aopalliance_1_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__aopalliance_aopalliance_1_0.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_2_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_2_3.xml" afterDir="false" />
@@ -176,7 +182,6 @@
       <change beforePath="$PROJECT_DIR$/target/classes/com/share/pojo/SharedEmail.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/share/pojo/SharedEmail.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/share/service/SharedEmailService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/share/service/SharedEmailService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/share/service/impl/SharedEmailServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/share/service/impl/SharedEmailServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapper/ShareBlogsMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/ShareBlogsMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/mapper/SharedEmailMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/SharedEmailMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/static/css/bootstrap.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/bootstrap.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/layer/layim/layim.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/plugins/layer/layim/layim.js" afterDir="false" />
@@ -295,8 +300,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/background/email/email_ListTop.ftl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="549">
-              <caret line="19" column="32" lean-forward="true" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
+            <state relative-caret-position="318">
+              <caret line="12" column="22" lean-forward="true" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -577,7 +582,7 @@
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://C:/Users/Administrator/Desktop/SharedLibrary/src/main/java/com/share/controller/SharedEmailController.java&#10;page&#9;PSI&#9;JAVA://com.github.pagehelper.Page&#10;emailIndex&#9;PSI&#9;JAVA://com.share.controller.SharedEmailController#emailIndex&#10;getSharedUsersByUserName&#9;ACTION&#9;null&#10;doLogin&#9;PSI&#9;JAVA://com.share.controller.SharedUsersController#doLogin&#10;login&#9;null&#9;null" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545057981417" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545058302446" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/SQL Dialect" value="MySQL" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
@@ -700,7 +705,7 @@
       <workItem from="1544670963660" duration="4590000" />
       <workItem from="1544764816146" duration="15524000" />
       <workItem from="1544793532232" duration="454000" />
-      <workItem from="1545025809963" duration="17604000" />
+      <workItem from="1545025809963" duration="17895000" />
     </task>
     <task id="LOCAL-00001" summary="完成邮箱查询,邮箱表增加字段state,页面展示成功">
       <created>1544780773011</created>
@@ -734,7 +739,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46245000" />
+    <option name="totallyTimeSpent" value="46536000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -747,9 +752,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1064" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25550187" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25550187" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -767,7 +771,7 @@
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32911393" />
       <window_info anchor="bottom" id="Messages" order="7" weight="0.32911393" />
       <window_info anchor="bottom" id="Spring" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.31760645" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.31760645" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5002684" side_tool="true" weight="0.52704257" />
       <window_info anchor="bottom" id="Java Enterprise" order="11" weight="0.32911393" />
       <window_info anchor="bottom" id="Version Control" order="12" weight="0.7295742" />
@@ -1221,8 +1225,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/background/email/email_ListTop.ftl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="549">
-          <caret line="19" column="32" lean-forward="true" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
+        <state relative-caret-position="318">
+          <caret line="12" column="22" lean-forward="true" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
         </state>
       </provider>
     </entry>
