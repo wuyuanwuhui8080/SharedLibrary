@@ -26,9 +26,24 @@
         WHERE me_id = #{id}
           AND state = 2
     </select>
+
+    <select id="getDelEmailCount" resultType="int">
+        SELECT COUNT(1)
+        FROM shared_email
+        WHERE me_id = #{id}
+          AND state = 4
+    </select>
+
+    <select id="getMajorEmailCount" resultType="int">
+        SELECT COUNT(1)
+        FROM shared_email
+        WHERE me_id = #{id}
+          AND state = 3
+    </select>
+
     <update id="updateState">
         UPDATE sharedlibrary.shared_email
-        SET state = 1
+        SET state = #{state}
         WHERE id IN
         <foreach collection="idList" item="id" separator="," open="(" close=")">
             #{id}
@@ -50,5 +65,15 @@
                 e.friends_id = u.id
                 AND e.id = #{id}
     </select>
+    <select id="getStateEmail" resultMap="friendName">
+        SELECT e.id, u.realName AS realName, e.creation_date, e.email_digest, e.state
+        FROM shared_email AS e,
+                shared_users AS u
+                WHERE
+                e.friends_id = u.id
+                AND e.state = #{state}
+                LIMIT 0, 50;
+    </select>
+
 
 </mapper>

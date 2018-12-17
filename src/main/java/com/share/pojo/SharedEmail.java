@@ -2,7 +2,9 @@ package com.share.pojo;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.extension.activerecord.Model;
+
 import java.time.LocalDateTime;
+
 import com.baomidou.mybatisplus.annotation.TableId;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -60,7 +62,12 @@ public class SharedEmail extends Model<SharedEmail> {
     private String emailContent;
 
     /**
-     * 邮件状态
+     * 读取状态(
+     * 1:已读,
+     * 2:未读,
+     * 3:重要,
+     * 4:删除,
+     * 5:草稿)
      */
     private Integer state;
 

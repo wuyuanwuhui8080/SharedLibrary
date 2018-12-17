@@ -13,6 +13,7 @@ import org.springframework.stereotype.Controller;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpSession;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -41,50 +42,36 @@ public class SharedEmailController {
         SharedUsers users = (SharedUsers) session.getAttribute("users");
         //查询邮箱集合
         List<SharedEmail> emailList = sharedEmailService.getEmaiListlByUserId(users.getId());
-        model.addAttribute("emailList", emailList);
+        //未读邮件数量
         int emailSum = sharedEmailService.getUnreadEmailCount(users.getId());
-        session.removeAttribute("emailSum");
+        //删除邮件数量
+        int emailDelSum = sharedEmailService.getDelEmailCount(users.getId());
+        //重要邮件数量
+        int emailMajorSum = sharedEmailService.getMajorEmailCount(users.getId());
+        model.addAttribute("emailList", emailList);
+        model.addAttribute("state", 0);
         session.setAttribute("emailSum", emailSum);
-        return "background/email/email_List";
+        session.setAttribute("emailDelSum", emailDelSum);
+        session.setAttribute("emailMajorSum", emailMajorSum);
+        return "background/email/email_Index";
     }
 
     /**
      * 更改选中邮箱状态为已读
-     * 未完成
      * 返回页面无法显示
      *
-     * @param ids     id
-     * @param session
+     * @param ids id
      * @return
      */
-    @GetMapping("/emailUpState")
-    public String emailUpState(String[] ids, HttpSession session) {
-        SharedUsers users = (SharedUsers) session.getAttribute("users");
+    @GetMapping("/emailUpState/{ids}/{state}")
+    public String emailUpState(@PathVariable(value = "ids") String[] ids, @PathVariable String state, Model model) {
         List<String> idList = Arrays.asList(ids);
-        int flg = sharedEmailService.updateState(idList);
+        int flg = sharedEmailService.updateState(idList, state);
         if (flg > 0) {//成功
-            //查询邮箱集合
-            List<SharedEmail> emailList = sharedEmailService.getEmaiListlByUserId(users.getId());
-            StringBuffer msg = new StringBuffer();
-            for (SharedEmail email : emailList) {
-                msg.append("<tr class='read'>");
-                msg.append("<td class='check-mail'>");
-                msg.append("<input type='checkbox' name='email_id' value='" + email.getId() + "' class='i-checks'></td>");
-                msg.append("<td class='mail-ontact'><a href='email_detail.ftl'>" + email.getFriend_name() + "</a>");
-                msg.append("<#if (" + email.getState() + "==2)>");
-                msg.append("<span class='label label-warning pull-right'>未读邮件</span>");
-                msg.append("<#else>");
-                msg.append(" < span class='label label-warning pull-right' ></span > ");
-                msg.append("</#if>");
-                msg.append("</td>");
-                msg.append("<td class='mail-subject'><a href='email_detail.ftl'>" + email.getEmailContent() + "</a></td>");
-                msg.append("<td class=''></td>");
-                msg.append("<td class='text-right mail-date'>" + email.getCreationDate() + "?date</td>");
-                msg.append("</tr>");
-            }
-            return msg.toString();
+            return "redirect:/sharedEmail/emailIndex";
         } else {//失败
-            return "标记已读失败!";
+            model.addAttribute("errer", "标记已读失败!");
+            return "forward:/sharedEmail/emailIndex";
         }
     }
 
@@ -106,11 +93,43 @@ public class SharedEmailController {
      * @return
      */
     @RequestMapping("/emailLook/{id}")
-    String emailLook(@PathVariable(value = "id") String id, Model model) {
+    public String emailLook(@PathVariable(value = "id") String id, Model model) {
         SharedEmail email = sharedEmailService.getEmailById(id);
+        //是未读邮件改变状态
+        if (email.getState() == 2) {
+            sharedEmailService.updateState(Arrays.asList(id), Integer.toString(1));
+        }
         model.addAttribute("email", email);
         return "background/email/email_detail";
     }
+
+    /**
+     * 获取有状态邮件集合
+     *
+     * @return 邮件集合
+     */
+    @RequestMapping("/emailState/{state}")
+    public String getMajorEmail(@PathVariable String state, HttpSession session, Model model) {
+        SharedUsers users = (SharedUsers) session.getAttribute("users");
+        //查询重要邮箱集合
+        List<SharedEmail> emailList = sharedEmailService.getStateEmail(users.getId(), state);
+        String bt = "";
+        model.addAttribute("emailList", emailList);
+        if ("3".equals(state)) {
+            //3:重要
+            bt = "重要";
+        } else if ("4".equals(state)) {
+            //4:删除
+            bt = "删除";
+        } else if ("5".equals(state)) {
+            //5:草稿
+            bt = "草稿";
+        }
+        model.addAttribute("state", 1);
+        model.addAttribute("bt", bt);
+        return "background/email/email_Index";
+    }
+
 
 }
 

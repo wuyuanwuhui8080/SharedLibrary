@@ -68,10 +68,7 @@ public class SharedUsersController {
             // 查看是否认证成功 成功 true 否则false
             if (subject.isAuthenticated()) {
                 SharedUsers users = usersService.getSharedUsersByUserName(userName);
-                int emailSum = sharedEmailService.getUnreadEmailCount(users.getId());
-                session.setAttribute("emailSum", emailSum);
                 session.setAttribute("users", users);
-
                 return ReturnResult.ok();
             } else {
                 return ReturnResult.error("登录失败！");

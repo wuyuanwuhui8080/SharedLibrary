@@ -109,11 +109,7 @@
                 <li>
                     <a href="mailbox.html"><i class="fa fa-envelope"></i>
                         <span class="nav-label">信箱 </span>
-                        <#if (emailSum==0)>
-                            <span class="fa arrow"></span>
-                        <#else>
-                            <span class="label label-warning pull-right">${emailSum}</span>
-                        </#if>
+                        <span class="fa arrow"></span>
 
                     </a>
                     <ul class="nav nav-second-level">
