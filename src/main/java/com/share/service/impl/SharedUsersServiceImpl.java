@@ -1,18 +1,19 @@
 package com.share.service.impl;
 
-import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.share.constant.PositionConstant;
-import com.share.constant.StateConstant;
-import com.share.pojo.SharedUsers;
-import com.share.mapper.SharedUsersMapper;
-import com.share.service.SharedUsersService;
-import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.share.util.ShiroMd5;
-import com.share.util.StringUtils;
-import org.springframework.stereotype.Service;
-
 import java.util.Date;
 import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.share.constant.PositionConstant;
+import com.share.constant.StateConstant;
+import com.share.mapper.SharedUsersMapper;
+import com.share.pojo.SharedUsers;
+import com.share.service.SharedUsersService;
+import com.share.util.ShiroMd5;
+import com.share.util.StringUtils;
 
 /**
  * 用户实现类，负责用户的一切操作
@@ -83,4 +84,15 @@ public class SharedUsersServiceImpl extends ServiceImpl<SharedUsersMapper, Share
         }
         return super.list(wrapper);
     }
+
+	/**
+	 *
+	 * @param users
+	 * @return
+	 */
+	@Override
+	public Boolean updateUserHeadImg(SharedUsers users) {
+		return super.updateById(users);
+	}
+
 }

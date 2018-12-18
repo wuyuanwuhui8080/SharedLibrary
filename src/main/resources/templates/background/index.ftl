@@ -6,10 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="renderer" content="webkit">
 
-    <title>H+ 后台主题UI框架 - 主页</title>
+    <title>主页</title>
 
     <meta name="keywords" content="内部后台">
     <#include "comm/script.ftl">
+    <script src="${basePath}/js/custom_up_img.js"></script>
 </head>
 
 <body class="fixed-sidebar full-height-layout gray-bg" style="overflow:hidden">
@@ -22,13 +23,14 @@
             <ul class="nav" id="side-menu">
                 <li class="nav-header">
                     <div class="dropdown profile-element" style="text-align: center;">
-                        <span><img alt="image" class="img-circle" width="70px" src="${basePath}/images/${users.headImg}"/></span>
+                        <span id="MyLiImg"><img alt="image" class="img-circle" width="70px"
+                                                src="${basePath}/images/${users.headImg}"/></span>
                         <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                                 <span class="clear">
                                <span class="block m-t-xs"><strong class="font-bold">欢迎你：${users.realName}</strong></span>
                         </a>
                         <ul class="dropdown-menu animated fadeInRight m-t-xs">
-                            <li><a class="J_menuItem" href="form_avatar.html">修改头像</a>
+                            <li><a id="modal-926547" href="${basePath}/sharedUsers/goUpload" class="J_menuItem">修改头像</a>
                             </li>
                             <li><a class="J_menuItem" href="${basePath}/sharedUsers/lookProfile/${users.id}">个人资料</a>
                             </li>
@@ -41,7 +43,10 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="logo-element"><a href="#"><img class="img-circle" src="${basePath}/images/${users.headImg}" width="50px" ></a>
+                    <!-- 模态框（Modal） -->
+                    <div id="modelHeadImgId" class="logo-element"><a href="#"><img class="img-circle"
+                                                                                   src="${basePath}/images/${users.headImg}"
+                                                                                   width="50px"></a>
                     </div>
                 </li>
                 <li>
@@ -59,13 +64,13 @@
                 </li>
                 <li>
                     <a href="#">
-                        <i class="fa fa fa-bar-chart-o"></i>
+                        <i class="fa fa-user"></i>
                         <span class="nav-label">好友管理</span>
                         <span class="fa arrow"></span>
                     </a>
                     <ul class="nav nav-second-level">
                         <li>
-                            <a class="J_menuItem" href="${basePath}/sharedFriends/goSearchFriend">查找好友</a>
+                            <a class=" J_menuItem" href="${basePath}/sharedFriends/goSearchFriend">查找好友</a>
                         </li>
                         <li>
                             <a class="J_menuItem" href="graph_flot.html">全部好友</a>

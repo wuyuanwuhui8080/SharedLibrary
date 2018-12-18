@@ -1,3 +1,5 @@
+web:
+  upload-path: E:/img
 
 spring:
   freemarker:
@@ -8,6 +10,10 @@ spring:
     password: root
     url: jdbc:mysql://127.0.0.1:3306/sharedlibrary?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&serverTimezone=UTC
     driver-class-name: com.mysql.jdbc.Driver
+  resources:
+    static-locations: classpath:/META-INF/resources/,classpath:/resources/,classpath:/static/,classpath:/public/,file:${web.upload-path}
+  mvc:
+    static-path-pattern: /**
 #设置tomcat端口
 server:
   port: 8080
@@ -43,5 +49,3 @@ logging:
 #  configuration:
 #    map-underscore-to-camel-case: true
 #    cache-enabled: false
-
-

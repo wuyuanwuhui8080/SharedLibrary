@@ -177,6 +177,7 @@ $(function () {
                             '  <td class="client-avatar" colspan="4" align="center">\n' +
                             ' 没有此用户哦...</td>';
                     }
+                    $("#fendIDFriend").html(date.list.length + "个好友");
                     $("#tbodyId").html(tr);
                 },
                 complete: function () { // 不管请求成功还是失败都会执行

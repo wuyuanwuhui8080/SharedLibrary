@@ -1,9 +1,9 @@
 package com.share.service;
 
-import com.share.pojo.SharedUsers;
-import com.baomidou.mybatisplus.extension.service.IService;
-
 import java.util.List;
+
+import com.baomidou.mybatisplus.extension.service.IService;
+import com.share.pojo.SharedUsers;
 
 /**
  * Users业务接口
@@ -42,6 +42,14 @@ public interface SharedUsersService extends IService<SharedUsers> {
      * @author cll 陈留领
      * @time 2018/12/15 16:05
      */
-    public List<SharedUsers> findUsersListByUserNameOrRealName(String name, Integer position);
+	List<SharedUsers> findUsersListByUserNameOrRealName(String name,
+			Integer position);
 
+	/**
+	 * 修改头像
+	 * 
+	 * @param users
+	 * @return
+	 */
+	Boolean updateUserHeadImg(SharedUsers users);
 }

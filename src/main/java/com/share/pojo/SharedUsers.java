@@ -99,6 +99,7 @@ public class SharedUsers extends Model<SharedUsers> {
     /**
      * 修改时间
      */
+	@TableField(update = "now()")
     @DateTimeFormat(pattern = "yyyy-MM-dd hh:mm:ss")
     private Date updateDate;
 
