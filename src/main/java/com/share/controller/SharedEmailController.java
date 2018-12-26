@@ -1,6 +1,8 @@
 package com.share.controller;
 
 
+import com.baomidou.mybatisplus.core.conditions.query.EmptyWrapper;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.share.pojo.SharedEmail;
 import com.share.pojo.SharedUsers;
 import com.share.service.SharedEmailService;
@@ -15,6 +17,7 @@ import javax.annotation.Resource;
 import javax.servlet.http.HttpSession;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -41,13 +44,27 @@ public class SharedEmailController {
     public String emailIndex(HttpSession session, Model model) {
         SharedUsers users = (SharedUsers) session.getAttribute("users");
         //查询邮箱集合
-        List<SharedEmail> emailList = sharedEmailService.getEmaiListlByUserId(users.getId());
+        //List<SharedEmail> emailList = sharedEmailService.getEmaiListlByUserId(users.getId());
+        List<SharedEmail> emailList = sharedEmailService.list(new QueryWrapper<SharedEmail>().eq("me_id", users.getId()));
         //未读邮件数量
-        int emailSum = sharedEmailService.getUnreadEmailCount(users.getId());
+        //int emailSum = sharedEmailService.getUnreadEmailCount(users.getId());
+        int emailSum = sharedEmailService.count(
+                new QueryWrapper<SharedEmail>()
+                        .eq("me_id", users.getId())
+                        .eq("state", 2)
+        );
         //删除邮件数量
-        int emailDelSum = sharedEmailService.getDelEmailCount(users.getId());
+        int emailDelSum = sharedEmailService.count(
+                new QueryWrapper<SharedEmail>()
+                        .eq("me_id", users.getId())
+                        .eq("state", 4)
+        );
         //重要邮件数量
-        int emailMajorSum = sharedEmailService.getMajorEmailCount(users.getId());
+        int emailMajorSum = sharedEmailService.count(
+                new QueryWrapper<SharedEmail>()
+                        .eq("me_id", users.getId())
+                        .eq("state", 3)
+        );
         model.addAttribute("emailList", emailList);
         model.addAttribute("state", 0);
         session.setAttribute("emailSum", emailSum);
@@ -94,10 +111,13 @@ public class SharedEmailController {
      */
     @RequestMapping("/emailLook/{id}")
     public String emailLook(@PathVariable(value = "id") String id, Model model) {
-        SharedEmail email = sharedEmailService.getEmailById(id);
+        //SharedEmail email = sharedEmailService.getEmailById(id);
+        SharedEmail email = sharedEmailService.getById(id);
         //是未读邮件改变状态
         if (email.getState() == 2) {
-            sharedEmailService.updateState(Arrays.asList(id), Integer.toString(1));
+            //sharedEmailService.updateState(Collections.singletonList(id), Integer.toString(1));
+            email.setState(1);
+            sharedEmailService.update(email, new QueryWrapper<SharedEmail>().eq("id", id));
         }
         model.addAttribute("email", email);
         return "background/email/email_detail";
@@ -112,7 +132,11 @@ public class SharedEmailController {
     public String getMajorEmail(@PathVariable String state, HttpSession session, Model model) {
         SharedUsers users = (SharedUsers) session.getAttribute("users");
         //查询重要邮箱集合
-        List<SharedEmail> emailList = sharedEmailService.getStateEmail(users.getId(), state);
+        //List<SharedEmail> emailList = sharedEmailService.getStateEmail(users.getId(), state);
+        List<SharedEmail> emailList = sharedEmailService.list(new QueryWrapper<SharedEmail>()
+                .eq("me_id", users.getId())
+                .eq("state", state)
+        );
         String bt = "";
         model.addAttribute("emailList", emailList);
         if ("3".equals(state)) {

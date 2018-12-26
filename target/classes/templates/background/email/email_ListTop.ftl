@@ -19,7 +19,6 @@
             <#elseif bt=="删除">
                 (${emailDelSum})
             </#if>
-
         </#if>
     </h2>
     <div class="mail-tools tooltip-demo m-t-md">

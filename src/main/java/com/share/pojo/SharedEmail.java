@@ -1,6 +1,7 @@
 package com.share.pojo;
 
 import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.extension.activerecord.Model;
 
 import java.time.LocalDateTime;
@@ -74,9 +75,16 @@ public class SharedEmail extends Model<SharedEmail> {
     //--------------------------拓展列------------------------------
 
     /**
+     * 收件人姓名
+     */
+    private String meName;
+
+    /**
      * 发件人姓名
      */
-    private String friend_name;
+    private String friendsName;
+
+
 
 
     @Override

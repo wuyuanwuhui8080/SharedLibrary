@@ -20,27 +20,6 @@
                 LIMIT 0, 50;
     </select>
 
-    <select id="getUnreadEmailCount" resultType="int">
-        SELECT COUNT(1)
-        FROM shared_email
-        WHERE me_id = #{id}
-          AND state = 2
-    </select>
-
-    <select id="getDelEmailCount" resultType="int">
-        SELECT COUNT(1)
-        FROM shared_email
-        WHERE me_id = #{id}
-          AND state = 4
-    </select>
-
-    <select id="getMajorEmailCount" resultType="int">
-        SELECT COUNT(1)
-        FROM shared_email
-        WHERE me_id = #{id}
-          AND state = 3
-    </select>
-
     <update id="updateState">
         UPDATE sharedlibrary.shared_email
         SET state = #{state}

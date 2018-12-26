@@ -37,7 +37,7 @@
                     </h3>
                     <h5>
                         <span class="pull-right font-noraml">${email.creationDate?date}</span>
-                        <span class="font-noraml">发件人： </span>${email.friend_name}
+                        <span class="font-noraml">发件人： </span>${email.friendsName}
                     </h5>
                 </div>
             </div>

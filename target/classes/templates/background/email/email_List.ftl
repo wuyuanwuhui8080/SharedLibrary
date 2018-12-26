@@ -12,7 +12,7 @@
                                         <input type="checkbox" name="email_id" value="${email.id}" class="i-checks">
                                     </td>
                                     <td class="mail-ontact"><a
-                                            href="/sharedEmail/emailLook/${email.id}">${email.friend_name}</a>
+                                            href="/sharedEmail/emailLook/${email.id}">${email.friendsName}</a>
                                     <#if (email.state==1)>
                                         <span class="label label-warning pull-right"></span>
                                     <#elseif (email.state==2)>

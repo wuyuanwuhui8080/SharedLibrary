@@ -32,30 +32,6 @@ public interface SharedEmailService extends IService<SharedEmail> {
     SharedEmail getEmailById(String id);
 
     /**
-     * 根据用户id获取未读邮件数量
-     *
-     * @param id 用户id
-     * @return 未读邮件数量
-     */
-    int getUnreadEmailCount(String id);
-
-    /**
-     * 根据用户id获取草稿邮件数量
-     *
-     * @param id 用户id
-     * @return 草稿邮件数量
-     */
-    int getDelEmailCount(String id);
-
-    /**
-     * 根据用户id获取重要邮件数量
-     *
-     * @param id 用户id
-     * @return 重要邮件数量
-     */
-    int getMajorEmailCount(String id);
-
-    /**
      * 根据选中的邮箱,更改邮件状态
      *
      * @param idList 选中的邮箱id
