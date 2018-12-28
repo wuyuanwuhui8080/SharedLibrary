@@ -47,7 +47,8 @@
                 <span id="password2SpanId"></span>
             </div>
             <div class="form-group">
-                <input id="hello" style="width: 100%" class="laydate-icon form-control layer-date" placeholder="请输入生日">
+                <input id="birthday" name="birthday" style="width: 100%" class="laydate-icon form-control layer-date"
+                       placeholder="请输入生日">
                 <span id="birthdaySpanId"></span>
             </div>
             <div class="form-group">
@@ -87,7 +88,7 @@
  <script>
      //外部js调用
      laydate({
-         elem: '#hello', //目标元素。由于laydate.js封装了一个轻量级的选择器引擎，因此elem还允许你传入class、tag但必须按照这种方式 '#id .class'
+         elem: '#birthday', //目标元素。由于laydate.js封装了一个轻量级的选择器引擎，因此elem还允许你传入class、tag但必须按照这种方式 '#id .class'
          event: 'focus' //响应事件。如果没有传入event，则按照默认的click
      });
 

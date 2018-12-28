@@ -7,6 +7,8 @@ import org.springframework.web.multipart.MultipartFile;
 import sun.misc.BASE64Decoder;
 
 /**
+ * 用来吧Base64的字符串转换成MultiparFile对象
+ *
  * @author 博博
  * @Title: BASE64DecodedMultipartFile
  * @ProjectName SharedLibrary

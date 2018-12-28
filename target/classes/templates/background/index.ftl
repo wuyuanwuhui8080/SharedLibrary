@@ -73,10 +73,13 @@
                             <a class=" J_menuItem" href="${basePath}/sharedFriends/goSearchFriend">查找好友</a>
                         </li>
                         <li>
-                            <a class="J_menuItem" href="graph_flot.html">全部好友</a>
+                            <a class="J_menuItem" href="${basePath}/sharedFriends/goListFriendList/${users.id}">全部好友</a>
                         </li>
                         <li>
-                            <a class="J_menuItem" href="graph_morris.html">好友博客</a>
+                            <a class="J_menuItem" href="${basePath}/shareBlogs/goBlos/${users.id}">好友博客</a>
+                        </li>
+                        <li>
+                            <a class="J_menuItem" href="graph_morris.html">好友请求</a>
                         </li>
                         <li>
                             <a class="J_menuItem" href="graph_rickshaw.html">好友聊天</a>
@@ -325,29 +328,24 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="#"><i class="fa fa-picture-o"></i> <span class="nav-label">相册</span><span
+                    <a href="#"><i class="fa fa-picture-o"></i> <span class="nav-label">休闲游戏</span><span
                             class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
-                        <li><a class="J_menuItem" href="basic_gallery.html">基本图库</a>
+                        <li><a class="J_menuItem" href="${basePath}/gogluttonous">贪吃蛇</a>
                         </li>
-                        <li><a class="J_menuItem" href="carousel.html">图片切换</a>
+                        <li><a class="J_menuItem" href="${basePath}/goAAutomobile">竞速赛车</a>
                         </li>
-                        <li><a class="J_menuItem" href="blueimp.html">Blueimp相册</a>
+                        <li><a class="J_menuItem" href="${basePath}/gozombie">植物大战僵尸</a>
+                        </li>
+                        <li><a class="J_menuItem" href="${basePath}/goFragment">打砖块</a>
+                        </li>
+                        <li><a class="J_menuItem" href="${basePath}/godonkeyJump">秃驴跳跃</a>
                         </li>
                     </ul>
                 </li>
                 <li>
                     <a class="J_menuItem" href="css_animation.html"><i class="fa fa-magic"></i> <span class="nav-label">CSS动画</span></a>
                 </li>
-                <li>
-                    <a href="#"><i class="fa fa-cutlery"></i> <span class="nav-label">工具 </span><span
-                            class="fa arrow"></span></a>
-                    <ul class="nav nav-second-level">
-                        <li><a class="J_menuItem" href="form_builder.html">表单构建器</a>
-                        </li>
-                    </ul>
-                </li>
-
             </ul>
         </div>
     </nav>

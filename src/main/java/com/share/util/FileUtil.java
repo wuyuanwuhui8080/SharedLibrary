@@ -1,6 +1,8 @@
 package com.share.util;
 
-import java.io.*;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.Arrays;
 
 import org.springframework.util.ResourceUtils;
@@ -19,7 +21,7 @@ import lombok.extern.log4j.Log4j2;
 @Log4j2
 public class FileUtil {
 
-	public static ReturnResult fileUpload(MultipartFile file)
+	public static ReturnResult fileUpload(MultipartFile file, String img)
 			throws FileNotFoundException {
 		File path = new File(ResourceUtils.getURL("classpath:").getPath());
 
@@ -49,6 +51,10 @@ public class FileUtil {
 		try {
 
 			file.transferTo(dest);
+			// 根据传入的字符串判断是不是系统默认头像 不是的话就是已经换过其他头像，然后就把之前的头像删除
+			if (!img.equals("bd978735b33f496792673949e70fb2eb!400x400.jpeg")) {
+				delFile(filePath + img);
+			}
 			return ReturnResult.okAndList(Arrays.asList(fileUUIDName));
 		} catch (IllegalStateException e) {
 			e.printStackTrace();
@@ -59,53 +65,19 @@ public class FileUtil {
 	}
 
 	/**
-	 * 保存文件，直接以multipartFile形式
-	 *
-	 * @param multipartFile
-	 * @param path
-	 *            文件保存绝对路径
-	 * @return 返回文件名
-	 * @throws IOException
-	 */
-	public static String saveImg(MultipartFile multipartFile, String path)
-			throws IOException {
-		File file = new File(path);
-		if (!file.exists()) {
-			file.mkdirs();
-		}
-		FileInputStream fileInputStream = (FileInputStream) multipartFile
-				.getInputStream();
-		String fileName = StringUtils.randomUUID() + ".png";
-		BufferedOutputStream bos = new BufferedOutputStream(
-				new FileOutputStream(path + File.separator + fileName));
-		byte[] bs = new byte[1024];
-		int len;
-		while ((len = fileInputStream.read(bs)) != -1) {
-			bos.write(bs, 0, len);
-		}
-		bos.flush();
-		bos.close();
-		return fileName;
-	}
-
-	/*
-	 * public static Integer fileUpdaload(MultipartFile file) { String
-	 * oldFileName = file.getOriginalFilename();// 原文件名 String prefix =
-	 * FilenameUtils.getExtension(oldFileName);// 原文件后缀 int fileSize = 500000;
-	 * if (file.getSize() > fileSize) {// 上传大小不能超过500k return -1; } else if
-	 * (prefix.equalsIgnoreCase("jpg") || prefix.equalsIgnoreCase("png") ||
-	 * prefix.equalsIgnoreCase("jpeg") || prefix.equalsIgnoreCase("pneg")) {//
-	 * 校验上传图片的格式 String fileName = System.currentTimeMillis() +
-	 * StringUtils.randomUUID() + ".jpg";// 上传到服务器图片的名称 File targetFile = new
-	 * File(resourceLocation, fileName); if (!targetFile.exists()) {
-	 * targetFile.mkdirs(); }
+	 * 通过文件绝对路径 删除单个文件
 	 * 
-	 * try { file.transferTo(targetFile); } catch (Exception e) {
-	 * e.printStackTrace(); return 0; }
-	 *//*
-		 * isPicPath = path + File.separator + fileName; logoPicPath1 =
-		 * request.getContextPath() + "/statics/uploadfiles/" + fileName;
-		 *//*
-			 * } return 1; }
-			 */
+	 * @param filePath
+	 */
+	public static boolean delFile(String filePath) {
+		File delFile = new File(filePath);
+		if (delFile.isFile() && delFile.exists()) {
+			delFile.delete();
+			log.info("删除文件成功");
+			return true;
+		} else {
+			log.info("没有该文件，删除失败");
+			return false;
+		}
+	}
 }

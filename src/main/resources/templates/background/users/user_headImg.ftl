@@ -23,6 +23,7 @@
 <body class="gray-bg">
 <div class="wrapper wrapper-content">
     <input type="hidden" value="${users.id}" id="userId"/>
+    <input type="hidden" value="${users.headImg}" id="userImg"/>
     <input type="hidden" value="${basePath}" id="path"/>
     <div class="row">
         <div class="col-sm-12">

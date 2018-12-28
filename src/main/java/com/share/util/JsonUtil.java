@@ -1,8 +1,8 @@
 package com.share.util;
 
-import com.alibaba.fastjson.JSON;
-
 import java.util.List;
+
+import com.alibaba.fastjson.JSON;
 
 /**
  *
@@ -40,8 +40,8 @@ public class JsonUtil {
      * @param json
      * @return
      */
-    public static List<?> JSONList(String json){
-        return  JSON.parseArray(json);
+	public static List<?> JSONList(String json, Class<?> className) {
+		return JSON.parseArray(json, className);
     }
 
 }

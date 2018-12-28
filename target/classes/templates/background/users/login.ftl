@@ -33,7 +33,7 @@
 
         <form class="m-t" method="post" role="form" action="${basePath}/sharedUsers/doLogin">
             <div class="form-group">
-                <input type="email" class="form-control" name="userName" id="userName" placeholder="用户名" required="">
+                <input type="text" class="form-control" name="userName" id="userName" placeholder="用户名" required="">
             </div>
             <i id='icon'></i>
             <div class="form-group">
@@ -45,8 +45,8 @@
                                                                                                                title="点击更换"
                                                                                                                id="captcha_img"/></a>
             </div>
+            <button type="submit" id="sumitIdLogin" class="btn btn-primary block full-width m-b">登 录</button>
         </form>
-        <button type="submit" onclick="sumitFrom();" class="btn btn-primary block full-width m-b">登 录</button>
         <p class="text-muted text-center"><a href="login.ftl#">
             <small>忘记密码了？</small>
         </a> | <a href="${basePath}/sharedUsers/goRegister">注册一个新账号</a>
@@ -65,6 +65,14 @@
                         </div>
                     </div>-->
 </html>
+<script>
+    $(function () {
+        $("#sumitIdLogin").click(function () {
+            sumitFrom();
+            return false;
+        });
+    });
+</script>
 <script>
     function refreshCaptcha() {
         $("#captcha_img").attr("src", "/Captcha.jpg?id=" + new Date() + Math.floor(Math.random() * 24));

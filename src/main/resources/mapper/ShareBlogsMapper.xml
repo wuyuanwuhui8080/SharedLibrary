@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.share.mapper.ShareBlogsMapper">
+<mapper namespace="com.share.blogs.mapper.ShareBlogsMapper">
 
     <!-- 通用查询映射结果 -->
     <resultMap id="BaseResultMap" type="com.share.pojo.ShareBlogs">
@@ -9,12 +9,44 @@
         <result column="content" property="content"/>
         <result column="creation_date" property="creationDate"/>
         <result column="update_date" property="updateDate"/>
-        <result column="blogs_title" property="blogsTitle"/>
-        <result column="blogs_digest" property="blogsDigest"/>
+        <result column="GETCOUNT" property="blogsGiveCount"/>
         <association property="users" javaType="com.share.pojo.SharedUsers">
+            <id column="userId" property="id"/>
             <result column="head_img" property="headImg"/>
             <result column="realName" property="realName"/>
         </association>
+        <collection property="blogsGive" ofType="com.share.pojo.ShareBlogsGive">
+            <result property="giveUserId" column="USERGIVEID"/>
+        </collection>
+    </resultMap>
+
+    <resultMap id="findListByUsersIdToBlosgsAndCommAndUsersMap" type="com.share.vo.BlosAndUsersAndCommAndGiva">
+        <result column="b_id" property="blosId"/>
+        <result column="b_content" property="blosContent"/>
+        <result column="b_date" property="blosDate"/>
+        <result column="blogsId" property="blosUserId"/>
+        <result column="blogsImg" property="blosUserImg"/>
+        <result column="blogsName" property="blosUserRealName"/>
+
+        <result column="mIds" property="blosCommId"/>
+        <result column="commentRetext" property="blosCommRetext"/>
+        <result column="commDate" property="blosCommDate"/>
+        <result column="commrealid" property="blosCommUsersId"/>
+        <result column="commrealImg" property="blosCommUsersImg"/>
+        <result column="commrealName" property="blosCommUsersRealName"/>
+
+        <result column="r_id" property="blosCommReplyId"/>
+        <result column="rRetext" property="blosCommReplyRetext"/>
+        <result column="rDate" property="blosCommReplyDate"/>
+        <result column="replyid" property="blosCommReplyUsersId"/>
+        <result column="replyImg" property="blosCommReplyUsersImg"/>
+        <result column="replyName" property="blosCommReplyUsersRealName"/>
+
+        <result column="giveCount" property="giveCount"/>
+        <collection property="blogsGiveBOList" ofType="com.share.bo.BlogsGiveBO">
+            <result property="giveId" column="g_id"/>
+            <result property="giveUserid" column="giveUserId"/>
+        </collection>
     </resultMap>
 
     <!-- 通用查询结果列 -->
@@ -23,15 +55,112 @@
     </sql>
     <!--根据查询的list集合查询博客-->
     <select id="findListByUserId" resultMap="BaseResultMap">
-        SELECT  (SELECT realName FROM shared_users u WHERE u.id = b.user_id) AS realName,
-        (SELECT head_img FROM shared_users u WHERE u.id = b.user_id) AS head_img,
-                b.blogs_title,b.creation_date,b.blogs_digest
-        FROM  share_blogs b
+        SELECT
+        (SELECT
+        COUNT(1)
+        FROM share_blogs_give g
+        WHERE g.blogs_id = b.id) AS GETCOUNT,
+        (SELECT
+        realName
+        FROM shared_users u
+        WHERE u.id = b.user_id) AS realName,
+        (SELECT
+        head_img
+        FROM shared_users u
+        WHERE u.id = b.user_id) AS head_img,
+        (SELECT
+        id
+        FROM shared_users u
+        WHERE u.id = b.user_id) AS userId,
+        b.creation_date,
+        b.content,b.id,
+        u.id as USERGIVEID
+        FROM share_blogs b
+        LEFT join share_blogs_give g
+        on g.blogs_id = b.id
+        LEFT join shared_users u
+        on u.id = g.give_user_id
         WHERE b.user_id IN
-        <foreach collection="list" item="userId" open="(" close=")" separator=",">
+        <foreach collection="userId" item="userId" open="(" close=")" separator=",">
             #{userId}
         </foreach>
         ORDER BY b.creation_date DESC
+        LIMIT #{pageIndex},#{pageSize}
     </select>
 
+    <select id="findListByUsersIdToBlosgsAndCommAndUsers" resultMap="findListByUsersIdToBlosgsAndCommAndUsersMap">
+        SELECT
+        (SELECT
+        sa.realName
+        FROM share_blogs_comment m
+        WHERE
+        m.comment_user_id = sa.id ) AS commrealName,
+        (SELECT
+        sa.head_img
+        FROM share_blogs_comment m
+        WHERE m.comment_user_id = sa.id ) AS commrealImg,
+        (SELECT
+        sa.id
+        FROM share_blogs_comment m
+        WHERE m.comment_user_id = sa.id ) AS commrealid,
+        (SELECT
+        rep.realName
+        FROM share_blogs_comment_reply r
+        WHERE r.comment_user_id = rep.id) AS replyName,
+        (SELECT
+        rep.head_img
+        FROM share_blogs_comment_reply r
+        WHERE r.comment_user_id = rep.id) AS replyImg,
+        (SELECT
+        rep.id
+        FROM share_blogs_comment_reply r
+        WHERE r.comment_user_id = rep.id) AS replyid,
+        (SELECT
+        u.realName
+        FROM share_blogs b
+        WHERE b.user_id = u.id) AS blogsName,
+        (SELECT
+        u.head_img
+        FROM share_blogs b
+        WHERE b.user_id = u.id) AS blogsImg,
+        (SELECT
+        u.id
+        FROM share_blogs b
+        WHERE b.user_id = u.id) AS blogsId,
+        (SELECT
+        COUNT(1)
+        FROM share_blogs_give g
+        WHERE g.blogs_id = b.id) AS giveCount,
+        g.id AS g_id,
+        g.give_user_id AS giveUserId,
+        r.comment_retext AS rRetext
+        ,r.comment_date AS rDate,
+        m.comment_retext AS commentRetext
+        ,b.content AS b_content,
+        b.creation_date AS b_date
+        ,b.id AS b_id,m.id AS mIds
+        ,m.comment_date AS commDate
+        ,r.id AS r_id
+        FROM share_blogs b
+        LEFT JOIN shared_users u
+        ON u.id = b.user_id
+        LEFT JOIN share_blogs_comment m
+        ON m.blogs_id = b.id
+        LEFT JOIN share_blogs_comment_reply r
+        ON r.comment_id = m.id
+        LEFT JOIN shared_users sa
+        ON sa.id=m.comment_user_id
+        LEFT JOIN share_blogs_give g
+        ON g.blogs_id=b.id
+        LEFT JOIN shared_users rep
+        ON rep.id=r.comment_user_id
+        LEFT JOIN shared_users shus
+        ON shus.id = g.give_user_id
+        WHERE b.user_id IN
+        <foreach collection="blogsList" item="blogsList" close=")" open="(" separator=",">
+            #{blogsList}
+        </foreach>
+        ORDER by b.creation_date desc
+        limit #{pageIndex},#{pageSize}
+    </select>
 </mapper>

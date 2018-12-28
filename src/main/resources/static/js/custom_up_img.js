@@ -80,7 +80,7 @@ $(function () {
         }
 
         $modal.modal();
-
+        var imgSrc = $("#userImg").val();
         var url = app.path() + "/sharedUsers/uploadHeadImg";
         var canvas = $("#image").cropper('getCroppedCanvas');
         var data = canvas.toDataURL(); //转成base64
@@ -89,7 +89,7 @@ $(function () {
             url: url,
             dataType: 'json',
             type: "POST",
-            data: {"image": data.toString(), userId: userId},
+            data: {"image": data.toString(), userId: userId, userImg: imgSrc},
             success: function (date) {
                 $modal.modal('close');
                 if (date.status == 200) {
