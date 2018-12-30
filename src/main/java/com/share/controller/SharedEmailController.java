@@ -1,23 +1,21 @@
 package com.share.controller;
 
 
-import com.baomidou.mybatisplus.core.conditions.query.EmptyWrapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.share.pojo.SharedEmail;
 import com.share.pojo.SharedUsers;
 import com.share.service.SharedEmailService;
+import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import org.springframework.stereotype.Controller;
-
 import javax.annotation.Resource;
 import javax.servlet.http.HttpSession;
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 
 /**
@@ -44,10 +42,16 @@ public class SharedEmailController {
     public String emailIndex(HttpSession session, Model model) {
         SharedUsers users = (SharedUsers) session.getAttribute("users");
         //查询邮箱集合
-        //List<SharedEmail> emailList = sharedEmailService.getEmaiListlByUserId(users.getId());
-        List<SharedEmail> emailList = sharedEmailService.list(new QueryWrapper<SharedEmail>().eq("me_id", users.getId()));
+        // List<SharedEmail> emailList = sharedEmailService.list(new QueryWrapper<SharedEmail>().eq("me_id", users.getId()));
+        IPage<SharedEmail> page = new Page<>(1, 8);
+        page= sharedEmailService.page(page,
+                new QueryWrapper<SharedEmail>()
+                .eq("me_id", users.getId())
+                .orderByDesc("creation_date")
+        );
+        page.setTotal((long) page.getRecords().size());
+
         //未读邮件数量
-        //int emailSum = sharedEmailService.getUnreadEmailCount(users.getId());
         int emailSum = sharedEmailService.count(
                 new QueryWrapper<SharedEmail>()
                         .eq("me_id", users.getId())
@@ -65,7 +69,7 @@ public class SharedEmailController {
                         .eq("me_id", users.getId())
                         .eq("state", 3)
         );
-        model.addAttribute("emailList", emailList);
+        model.addAttribute("page", page);
         model.addAttribute("state", 0);
         session.setAttribute("emailSum", emailSum);
         session.setAttribute("emailDelSum", emailDelSum);
@@ -74,7 +78,7 @@ public class SharedEmailController {
     }
 
     /**
-     * 更改选中邮箱状态为已读
+     * 更改选中邮箱状态
      * 返回页面无法显示
      *
      * @param ids id
@@ -86,6 +90,9 @@ public class SharedEmailController {
         int flg = sharedEmailService.updateState(idList, state);
         if (flg > 0) {//成功
             return "redirect:/sharedEmail/emailIndex";
+        } else if (flg == -1) {
+            model.addAttribute("errer", "!");
+            return "forward:/sharedEmail/emailIndex";
         } else {//失败
             model.addAttribute("errer", "标记已读失败!");
             return "forward:/sharedEmail/emailIndex";
@@ -115,7 +122,6 @@ public class SharedEmailController {
         SharedEmail email = sharedEmailService.getById(id);
         //是未读邮件改变状态
         if (email.getState() == 2) {
-            //sharedEmailService.updateState(Collections.singletonList(id), Integer.toString(1));
             email.setState(1);
             sharedEmailService.update(email, new QueryWrapper<SharedEmail>().eq("id", id));
         }
@@ -132,7 +138,6 @@ public class SharedEmailController {
     public String getMajorEmail(@PathVariable String state, HttpSession session, Model model) {
         SharedUsers users = (SharedUsers) session.getAttribute("users");
         //查询重要邮箱集合
-        //List<SharedEmail> emailList = sharedEmailService.getStateEmail(users.getId(), state);
         List<SharedEmail> emailList = sharedEmailService.list(new QueryWrapper<SharedEmail>()
                 .eq("me_id", users.getId())
                 .eq("state", state)
@@ -152,6 +157,16 @@ public class SharedEmailController {
         model.addAttribute("state", 1);
         model.addAttribute("bt", bt);
         return "background/email/email_Index";
+    }
+
+    @RequestMapping("/findEmail/{text}")
+    public String findEmail(@PathVariable String text) {
+        Page<SharedEmail> page = new Page<>(1, 2);
+
+        sharedEmailService.pageMaps(page, new QueryWrapper<SharedEmail>().eq("", text));
+
+
+        return "";
     }
 
 

@@ -7,19 +7,6 @@
         id, me_id, friends_id, creation_date, email_digest, email_content, state
     </sql>
 
-    <resultMap id="friendName" type="com.share.pojo.SharedEmail">
-        <result property="friend_name" column="realName"/>
-    </resultMap>
-
-    <select id="getEmaiListlByUserId" resultMap="friendName">
-        SELECT e.id, u.realName AS realName, e.creation_date, e.email_digest, e.state
-        FROM shared_email AS e,
-                shared_users AS u
-                WHERE
-                e.friends_id = u.id
-                LIMIT 0, 50;
-    </select>
-
     <update id="updateState">
         UPDATE sharedlibrary.shared_email
         SET state = #{state}
@@ -29,30 +16,6 @@
         </foreach>
     </update>
 
-    <select id="getEmailById" resultMap="friendName">
-        SELECT e.id,
-               e.friends_id,
-               e.me_id,
-               u.realName AS realName,
-               e.creation_date,
-               e.email_digest,
-               e.state,
-               e.email_content
-        FROM shared_email AS e,
-                shared_users AS u
-                WHERE
-                e.friends_id = u.id
-                AND e.id = #{id}
-    </select>
-    <select id="getStateEmail" resultMap="friendName">
-        SELECT e.id, u.realName AS realName, e.creation_date, e.email_digest, e.state
-        FROM shared_email AS e,
-                shared_users AS u
-                WHERE
-                e.friends_id = u.id
-                AND e.state = #{state}
-                LIMIT 0, 50;
-    </select>
 
 
 </mapper>

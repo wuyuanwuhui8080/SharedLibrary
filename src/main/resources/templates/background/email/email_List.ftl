@@ -1,11 +1,11 @@
 <div class="col-sm-9 animated fadeInRight">
-    <#--引入邮件列表Top-->
+<#--引入邮件列表Top-->
    <#include "email_ListTop.ftl">
     <div class="mail-box">
         <table class="table table-hover table-mail">
             <tbody id="emailList">
-                    <#if (emailList?size > 0)>
-                        <#list emailList as email>
+                    <#if (page.records?size > 0)>
+                        <#list page.records as email>
                             <#if (email.state != 4 && email.state != 5)>
                                 <tr class="<#if (email.state==3)>unread</#if><#if (email.state!=3)>read</#if>">
                                     <td class="check-mail">
@@ -34,5 +34,13 @@
                     </#if>
             </tbody>
         </table>
+
+        <div class="btn-group btn-group-justified" role="group" aria-label="...">
+            <div class="btn-group" role="group">
+                <div dir="ltr" style="text-align:center" class="ui-paging-info">第 ${page.current} 页 | 共 ${page.total} 条 | 共 ${page.pages} 页　</div>
+            </div>
+        </div>
+        <#include "email_page.ftl"/>
     </div>
+
 </div>

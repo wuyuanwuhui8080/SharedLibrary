@@ -5,6 +5,14 @@ var path = document.getElementById("path").value;
 var have_read = $("#have_read");
 var major = $("#major");
 var delEmail = $("#del");
+var refresh = $("#Refresh");
+
+/**
+ *刷新邮箱界面
+ */
+refresh.click(function () {
+    location.href = "/sharedEmail/emailIndex";
+})
 
 /**
  * 更改邮件状态为已读
@@ -14,7 +22,11 @@ var delEmail = $("#del");
 have_read.click(function () {
     var ids = "";
     ids = getChecked(ids);
-    location.href = "/sharedEmail/emailUpState/" + ids + "/" + 1;
+    if (ids === "") {
+        return null;
+    } else {
+        location.href = "/sharedEmail/emailUpState/" + ids + "/" + 1;
+    }
 });
 
 /**
@@ -26,7 +38,11 @@ have_read.click(function () {
 major.click(function () {
     var ids = "";
     ids = getChecked(ids);
-    location.href = "/sharedEmail/emailUpState/" + ids + "/" + 3;
+    if (ids === "") {
+        return null;
+    } else {
+        location.href = "/sharedEmail/emailUpState/" + ids + "/" + 3;
+    }
 });
 
 /**
@@ -37,7 +53,12 @@ major.click(function () {
 delEmail.click(function () {
     var ids = "";
     ids = getChecked(ids);
-    location.href = "/sharedEmail/emailUpState/" + ids + "/" + 4;
+    if (ids === "") {
+        return null;
+    } else {
+        location.href = "/sharedEmail/emailUpState/" + ids + "/" + 4;
+    }
+
 });
 
 /**
