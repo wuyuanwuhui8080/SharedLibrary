@@ -1,7 +1,11 @@
 package com.share.mapper;
 
-import com.share.pojo.SharedEmail;
+import com.baomidou.mybatisplus.core.conditions.Wrapper;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.share.ControllerUtil.EmailPage;
+import com.share.pojo.SharedEmail;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
@@ -23,4 +27,13 @@ public interface SharedEmailMapper extends BaseMapper<SharedEmail> {
      * @return 是否成功
      */
     int updateState(@Param("idList") List<String> idList, @Param("state") String state);
+
+    /**
+     * 分页查询数据
+     *
+     * @param page    分页数据
+     * @param wrapper 条件
+     * @return 邮件集合
+     */
+    IPage selectSharedEmailList(Page page, @Param("ew") Wrapper wrapper);
 }

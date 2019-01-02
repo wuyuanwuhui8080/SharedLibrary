@@ -4,7 +4,7 @@
 
     <!-- 通用查询结果列 -->
     <sql id="Base_Column_List">
-        id, me_id, friends_id, creation_date, email_digest, email_content, state
+        id, me_id, friends_id, creation_date, email_digest, email_content, state, friends_name, me_name
     </sql>
 
     <update id="updateState">
@@ -16,6 +16,15 @@
         </foreach>
     </update>
 
+
+    <select id="selectSharedEmailList" resultType="com.share.pojo.SharedEmail">
+        SELECT
+        <include refid="Base_Column_List"/>
+        FROM shared_email
+        <where>
+            ${ew.sqlSegment}
+        </where>
+    </select>
 
 
 </mapper>

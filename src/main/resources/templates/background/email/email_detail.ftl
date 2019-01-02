@@ -30,8 +30,6 @@
                     查看邮件
                 </h2>
                 <div class="mail-tools tooltip-demo m-t-md">
-
-
                     <h3>
                         <span class="font-noraml">主题： </span>${email.emailDigest}
                     </h3>
@@ -45,19 +43,17 @@
                 <div class="mail-body">
                    ${email.emailContent}
                 </div>
-                <div class="mail-attachment">
+                <#--<div class="mail-attachment">
                     <p>
                         <span><i class="fa fa-paperclip"></i> 2 个附件 - </span>
                         <a href="email_detail.ftl#">下载全部</a> |
                         <a href="email_detail.ftl#">预览全部图片</a>
                     </p>
-
                     <div class="attachment">
                         <div class="file-box">
                             <div class="file">
                                 <a href="email_detail.ftl#">
                                     <span class="corner"></span>
-
                                     <div class="icon">
                                         <i class="fa fa-file"></i>
                                     </div>
@@ -99,7 +95,7 @@
                         </div>
                         <div class="clearfix"></div>
                     </div>
-                </div>
+                </div>-->
                 <div class="mail-body text-right tooltip-demo">
                     <a class="btn btn-sm btn-white" href="mail_compose.html"><i class="fa fa-reply"></i> 回复</a>
                     <a class="btn btn-sm btn-white" href="mail_compose.html"><i class="fa fa-arrow-right"></i> 下一封</a>

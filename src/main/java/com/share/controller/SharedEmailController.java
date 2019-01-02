@@ -4,9 +4,12 @@ package com.share.controller;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.github.pagehelper.PageHelper;
+import com.share.ControllerUtil.EmailPage;
 import com.share.pojo.SharedEmail;
 import com.share.pojo.SharedUsers;
 import com.share.service.SharedEmailService;
+import com.share.service.SharedUsersService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,6 +19,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpSession;
 import java.util.Arrays;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -32,6 +36,8 @@ public class SharedEmailController {
 
     @Resource
     private SharedEmailService sharedEmailService;
+    @Resource
+    private SharedUsersService sharedUsersService;
 
     /**
      * 看邮件列表
@@ -39,23 +45,33 @@ public class SharedEmailController {
      * @return
      */
     @GetMapping("/emailIndex")
-    public String emailIndex(HttpSession session, Model model) {
+    public String emailIndex(HttpSession session, Model model, EmailPage page) {
         SharedUsers users = (SharedUsers) session.getAttribute("users");
         //查询邮箱集合
-        // List<SharedEmail> emailList = sharedEmailService.list(new QueryWrapper<SharedEmail>().eq("me_id", users.getId()));
-        IPage<SharedEmail> page = new Page<>(1, 8);
-        page= sharedEmailService.page(page,
+        IPage iPage = sharedEmailService.selectSharedEmailList(page,
                 new QueryWrapper<SharedEmail>()
-                .eq("me_id", users.getId())
-                .orderByDesc("creation_date")
+                        .eq("me_id", users.getId())
+                        .orderByDesc("creation_date")
         );
-        page.setTotal((long) page.getRecords().size());
-
+        page = new EmailPage(iPage.getCurrent(), iPage.getSize(), iPage.getTotal(), iPage.getPages());
+        page.setRecords(iPage.getRecords());
         //未读邮件数量
         int emailSum = sharedEmailService.count(
                 new QueryWrapper<SharedEmail>()
                         .eq("me_id", users.getId())
                         .eq("state", 2)
+        );
+        //发送邮件数量
+        /*int emailFaSum = sharedEmailService.count(
+                new QueryWrapper<SharedEmail>()
+                        .eq("me_id", users.getId())
+                // TODO: 2019\1\2 0002 我发送的邮件,但是自己删除之后收件人也删除了,朋友删除自己没删除也没了
+        );*/
+        //草稿邮件数量
+        int emailDraftSum = sharedEmailService.count(
+                new QueryWrapper<SharedEmail>()
+                        .eq("me_id", users.getId())
+                        .eq("state", 5)
         );
         //删除邮件数量
         int emailDelSum = sharedEmailService.count(
@@ -72,6 +88,8 @@ public class SharedEmailController {
         model.addAttribute("page", page);
         model.addAttribute("state", 0);
         session.setAttribute("emailSum", emailSum);
+        session.setAttribute("emailDraftSum", emailDraftSum);
+      /*  session.setAttribute("emailFaSum", emailFaSum);*/
         session.setAttribute("emailDelSum", emailDelSum);
         session.setAttribute("emailMajorSum", emailMajorSum);
         return "background/email/email_Index";
@@ -105,9 +123,28 @@ public class SharedEmailController {
      *
      * @return
      */
-    @GetMapping("/emailAdd")
-    public String emailAdd() {
-        return "background/email/email_detail";
+    @RequestMapping("/emailAdd")
+    public String emailAdd(HttpSession session, SharedEmail email,Model model) {
+        //获取当前用户ID
+        SharedUsers users = (SharedUsers) session.getAttribute("users");
+        //获取发送人名字
+        SharedUsers friend = sharedUsersService.getOne(
+                new QueryWrapper<SharedUsers>()
+                        .eq("userName", email.getFriendsName())
+        );
+        email.setCreationDate(new Date());
+        email.setState(2);
+        email.setMeId(friend.getId());
+        email.setMeName(users.getUserName());
+        email.setFriendsId(users.getId());
+        boolean save = sharedEmailService.save(email);
+        if (save) {
+            return "redirect:/sharedEmail/emailIndex";
+        } else {
+            model.addAttribute("state", 2);
+            model.addAttribute("email",email);
+            return "background/email/email_Index";
+        }
     }
 
 
@@ -135,15 +172,19 @@ public class SharedEmailController {
      * @return 邮件集合
      */
     @RequestMapping("/emailState/{state}")
-    public String getMajorEmail(@PathVariable String state, HttpSession session, Model model) {
+    public String getMajorEmail(@PathVariable String state, HttpSession session, Model model, EmailPage page) {
         SharedUsers users = (SharedUsers) session.getAttribute("users");
         //查询重要邮箱集合
-        List<SharedEmail> emailList = sharedEmailService.list(new QueryWrapper<SharedEmail>()
-                .eq("me_id", users.getId())
-                .eq("state", state)
+        IPage iPage = sharedEmailService.selectSharedEmailList(page,
+                new QueryWrapper<SharedEmail>()
+                        .eq("me_id", users.getId())
+                        .eq("state", state)
+                        .orderByDesc("creation_date")
         );
+        page = new EmailPage(iPage.getCurrent(), iPage.getSize(), iPage.getTotal(), iPage.getPages());
+        page.setRecords(iPage.getRecords());
         String bt = "";
-        model.addAttribute("emailList", emailList);
+        model.addAttribute("page", page);
         if ("3".equals(state)) {
             //3:重要
             bt = "重要";
@@ -167,6 +208,17 @@ public class SharedEmailController {
 
 
         return "";
+    }
+
+    @RequestMapping("/emailCompose")
+    public String toEmailCompose(Model model) {
+        model.addAttribute("state", 2);
+        SharedEmail sharedEmail = new SharedEmail();
+        sharedEmail.setFriendsName("");
+        sharedEmail.setEmailContent("");
+        sharedEmail.setEmailDigest("");
+        model.addAttribute("email",sharedEmail);
+        return "background/email/email_Index";
     }
 
 

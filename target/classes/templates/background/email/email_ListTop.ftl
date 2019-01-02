@@ -18,19 +18,14 @@
                 (${emailMajorSum})
             <#elseif bt=="删除">
                 (${emailDelSum})
+            <#elseif bt=="草稿">
+                (${emailDraftSum})
             </#if>
         </#if>
     </h2>
     <div class="mail-tools tooltip-demo m-t-md">
-        <div class="btn-group pull-right">
-            <button class="btn btn-white btn-sm"><i class="fa fa-arrow-left"></i>
-            </button>
-            <button class="btn btn-white btn-sm"><i class="fa fa-arrow-right"></i>
-            </button>
-        </div>
         <button class="btn btn-white btn-sm" id="Refresh" data-toggle="tooltip" data-placement="left"
-                title="刷新邮件列表"><i
-                class="fa fa-refresh"></i> 刷新
+                title="刷新邮件列表"><i class="fa fa-refresh"></i> 刷新
         </button>
         <button class="btn btn-white btn-sm" id="have_read" data-toggle="tooltip" data-placement="top"
                 title="标为已读"><i class="fa fa-eye"></i>

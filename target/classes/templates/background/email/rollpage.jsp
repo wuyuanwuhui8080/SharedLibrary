@@ -21,5 +21,4 @@
 				第 ${param.currentPageNo }页/共${param.totalPageCount }页
 		</div> 
 </body>
-<script type="text/javascript" src="${pageContext.request.contextPath }/statics/js/rollpage.js"></script>
 </html>

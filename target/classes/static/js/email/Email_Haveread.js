@@ -7,6 +7,7 @@ var major = $("#major");
 var delEmail = $("#del");
 var refresh = $("#Refresh");
 
+
 /**
  *刷新邮箱界面
  */

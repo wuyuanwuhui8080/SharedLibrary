@@ -19,9 +19,12 @@
     <#--根据state判断显示那种列表-->
          <#if state==0>
              <#include "email_List.ftl">
-         <#else >
+         <#elseif state ==1>
              <#include "email_StateList.ftl">
+         <#elseif state ==2 >
+             <#include "email_compose.ftl">
          </#if>
+
     </div>
 </div>
 
@@ -35,6 +38,10 @@
 </script>
 <script src="${basePath}/js/email/Email_Haveread.js"></script>
 <script src="${basePath}/js/email/Email_SelState.js"></script>
+<script src="${basePath}/js/email/Email_Page.js"></script>
+<!-- 注意， 只需要引用 JS，无需引用任何 CSS ！！！-->
+<script src="${basePath}/js/email/wangEditor.js"></script>
+<script src="${basePath}/js/email/Email_Submit.js"></script>
 </body>
 
 </html>

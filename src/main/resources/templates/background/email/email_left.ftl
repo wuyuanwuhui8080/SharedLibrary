@@ -2,38 +2,46 @@
     <div class="ibox float-e-margins">
         <div class="ibox-content mailbox-content">
             <div class="file-manager">
-                <a class="btn btn-block btn-primary compose-mail" href="mail_compose.html">写信</a>
+                <a class="btn btn-block btn-primary compose-mail" href="${basePath}/sharedEmail/emailCompose">写信</a>
                 <div class="space-25"></div>
                 <h5>文件夹</h5>
                 <ul class="folder-list m-b-md" style="padding: 0">
                     <li>
                         <a href="/sharedEmail/emailIndex"> <i class="fa fa-inbox "></i> 收件箱
                             <#if (emailSum==0)>
-                                <span class="fa arrow"></span>
                             <#else>
                                 <span class="label label-warning pull-right">${emailSum}</span>
                             </#if>
                         </a>
                     </li>
-                    <li>
-                        <a href="email_Index.ftl"> <i class="fa fa-envelope-o"></i> 发信</a>
-                    </li>
+                <#-- <li>
+                     <a href="email_Index.ftl"> <i class="fa fa-envelope-o"></i> 发信
+                     <#if (emailSum==0)>
+                             <span class="fa arrow"></span>
+                     <#else>
+                             <span class="label label-warning pull-right">${emailFaSum}</span>
+                     </#if>
+                     </a>
+                 </li>-->
                     <li>
                         <a id="selMajor" href="javaScript:void();"> <i class="fa fa-certificate"></i> 重要
-                            <#if (emailSum==0)>
-                                <span class="fa arrow"></span>
+                            <#if (emailMajorSum==0)>
                             <#else>
                                 <span class="label label-danger pull-right">${emailMajorSum}</span>
                             </#if>
                         </a>
                     </li>
                     <li>
-                        <a id="selDraft" href="javaScript:void();"> <i class="fa fa-file-text-o"></i> 草稿</a>
+                        <a id="selDraft" href="javaScript:void();"> <i class="fa fa-file-text-o"></i> 草稿
+                            <#if (emailDraftSum==0)>
+                            <#else>
+                                    <span class="label label-default pull-right">${emailDraftSum}</span>
+                            </#if>
+                        </a>
                     </li>
                     <li>
                     <a id="selDel" href="javaScript:void();"> <i class="fa fa-trash-o"></i> 垃圾箱
-                        <#if (emailSum==0)>
-                            <span class="fa arrow"></span>
+                        <#if (emailDelSum==0)>
                         <#else>
                             <span class="label label-default pull-right">${emailDelSum}</span></a>
                         </#if>
