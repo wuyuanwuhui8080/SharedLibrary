@@ -18,13 +18,13 @@ emailContent.val(editor.txt.html());
 //发送邮件
 function fareply() {
     var compose = $("#compose");
-    var friendsName = $("#friendsName").val();
+    var receiveName = $("#receiveName").val();
     var emailDigest = $("#emailDigest").val();
     var error = $("#error");
-    if (friendsName.length <= 0) {
+    if (receiveName.length === 0) {
         error.html("发送人未填写!");
         return false;
-    } else if (emailDigest.length <= 0) {
+    } else if (emailDigest.length === 0) {
         error.html("主题未填写!");
         return false;
     } else {
@@ -32,12 +32,21 @@ function fareply() {
     }
 }
 
-//取消发送
-function fatimes() {
-
-}
-
 //存为草稿
 function fapencil() {
-
+    var draft = $("#draft");
+    var compose = $("#compose");
+    var receiveName = $("#receiveName").val();
+    var emailDigest = $("#emailDigest").val();
+    var error = $("#error");
+    if (receiveName.length === 0) {
+        error.html("发送人未填写!");
+        return false;
+    } else if (emailDigest.length === 0) {
+        error.html("主题未填写!");
+        return false;
+    } else {
+        draft.val("draft");
+        compose.submit();
+    }
 }

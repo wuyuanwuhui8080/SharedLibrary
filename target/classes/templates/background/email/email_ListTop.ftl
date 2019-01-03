@@ -31,12 +31,10 @@
                 title="标为已读"><i class="fa fa-eye"></i>
         </button>
         <button class="btn btn-white btn-sm" id="major" data-toggle="tooltip" data-placement="top"
-                title="标为重要">
-            <i class="fa fa-exclamation"></i>
+                title="标为重要"><i class="fa fa-exclamation"></i>
         </button>
         <button class="btn btn-white btn-sm" id="del" data-toggle="tooltip" data-placement="top"
-                title="删除邮件">
-            <i class="fa fa-trash-o"></i>
+                title="删除邮件"><i class="fa fa-trash-o"></i>
         </button>
     </div>
 </div>

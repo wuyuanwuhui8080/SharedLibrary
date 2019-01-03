@@ -12,7 +12,7 @@
                                         <input type="checkbox" name="email_id" value="${email.id}" class="i-checks">
                                     </td>
                                     <td class="mail-ontact"><a
-                                            href="/sharedEmail/emailLook/${email.id}">${email.friendsName}</a>
+                                            href="/sharedReceiveMail/emailLook/${email.id}">${email.hairName}</a>
                                     <#if (email.state==1)>
                                     <#elseif (email.state==2)>
                                         <span class="label label-warning pull-right">未读邮件</span>

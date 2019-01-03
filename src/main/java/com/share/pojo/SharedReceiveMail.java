@@ -1,36 +1,26 @@
 package com.share.pojo;
 
 import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.extension.activerecord.Model;
-
 import java.time.LocalDateTime;
-
 import com.baomidou.mybatisplus.annotation.TableId;
-import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
 import java.util.Date;
 
 /**
  * <p>
- * 用户邮箱
+ * 邮件收件表
  * </p>
  *
- * @author Bean
- * @since 2018-12-13
+ * @author 牛自豪
+ * @since 2019-01-03
  */
-@EqualsAndHashCode(callSuper = true)
 @Data
-@NoArgsConstructor
-@AllArgsConstructor
-public class SharedEmail extends Model<SharedEmail> {
+public class SharedReceiveMail extends Model<SharedReceiveMail> {
 
     private static final long serialVersionUID = 1L;
-
 
     /**
      * 邮箱id
@@ -42,6 +32,11 @@ public class SharedEmail extends Model<SharedEmail> {
      * 发件人id
      */
     private String hairId;
+
+    /**
+     * 发件人UserName
+     */
+    private String hairName;
 
     /**
      * 收件人id
@@ -64,18 +59,9 @@ public class SharedEmail extends Model<SharedEmail> {
     private String emailContent;
 
     /**
-     * 读取状态(
-     * 5:草稿)
+     * 读取状态(1:已读,2:未读,3:重要4:删除)
      */
     private Integer state;
-
-    //--------------------------拓展列------------------------------
-
-    /**
-     * 收件人姓名
-     */
-    private String receiveName;
-
 
     @Override
     protected Serializable pkVal() {

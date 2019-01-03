@@ -2,27 +2,21 @@
     <div class="ibox float-e-margins">
         <div class="ibox-content mailbox-content">
             <div class="file-manager">
-                <a class="btn btn-block btn-primary compose-mail" href="${basePath}/sharedEmail/emailCompose">写信</a>
+                <a class="btn btn-block btn-primary compose-mail" href="${basePath}/sharedReceiveMail/emailCompose">写信</a>
                 <div class="space-25"></div>
                 <h5>文件夹</h5>
                 <ul class="folder-list m-b-md" style="padding: 0">
                     <li>
-                        <a href="/sharedEmail/emailIndex"> <i class="fa fa-inbox "></i> 收件箱
+                        <a href="/sharedReceiveMail/emailIndex"> <i class="fa fa-inbox "></i> 收件箱
                             <#if (emailSum==0)>
                             <#else>
                                 <span class="label label-warning pull-right">${emailSum}</span>
                             </#if>
                         </a>
                     </li>
-                <#-- <li>
-                     <a href="email_Index.ftl"> <i class="fa fa-envelope-o"></i> 发信
-                     <#if (emailSum==0)>
-                             <span class="fa arrow"></span>
-                     <#else>
-                             <span class="label label-warning pull-right">${emailFaSum}</span>
-                     </#if>
-                     </a>
-                 </li>-->
+                    <li>
+                        <a id="selFa" href="javaScript:void();"> <i class="fa fa-envelope-o"></i> 发信</a>
+                    </li>
                     <li>
                         <a id="selMajor" href="javaScript:void();"> <i class="fa fa-certificate"></i> 重要
                             <#if (emailMajorSum==0)>

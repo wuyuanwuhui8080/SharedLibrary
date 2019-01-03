@@ -4,27 +4,8 @@
 
     <!-- 通用查询结果列 -->
     <sql id="Base_Column_List">
-        id, me_id, friends_id, creation_date, email_digest, email_content, state, friends_name, me_name
+        id, hair_id, receive_id, receive_name, creation_date, email_digest, email_content, state
     </sql>
-
-    <update id="updateState">
-        UPDATE sharedlibrary.shared_email
-        SET state = #{state}
-        WHERE id IN
-        <foreach collection="idList" item="id" separator="," open="(" close=")">
-            #{id}
-        </foreach>
-    </update>
-
-
-    <select id="selectSharedEmailList" resultType="com.share.pojo.SharedEmail">
-        SELECT
-        <include refid="Base_Column_List"/>
-        FROM shared_email
-        <where>
-            ${ew.sqlSegment}
-        </where>
-    </select>
 
 
 </mapper>

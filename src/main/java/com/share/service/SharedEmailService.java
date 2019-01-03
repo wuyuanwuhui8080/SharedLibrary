@@ -6,6 +6,7 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.share.ControllerUtil.EmailPage;
 import com.share.pojo.SharedEmail;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.share.pojo.SharedReceiveMail;
 import javafx.scene.control.Pagination;
 import org.apache.ibatis.annotations.Param;
 
@@ -23,21 +24,12 @@ public interface SharedEmailService extends IService<SharedEmail> {
 
 
     /**
-     * 根据选中的邮箱,更改邮件状态
-     *
-     * @param idList 选中的邮箱id
-     * @return 是否成功
+     * 发送邮件
+     * @param email 发件对象
+     * @param receiveMail 收件对象
+     * @return 成功或失败
      */
-    int updateState(List<String> idList, String state);
-
-    /**
-     * 分页查询数据
-     *
-     * @param page    分页数据
-     * @param wrapper 条件
-     * @return 邮件集合
-     */
-    IPage selectSharedEmailList(Page<SharedEmail> page, Wrapper wrapper) ;
+    boolean saveEmail(SharedEmail email, SharedReceiveMail receiveMail);
 
 
 }

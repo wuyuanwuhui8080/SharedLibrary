@@ -12,7 +12,7 @@ var refresh = $("#Refresh");
  *刷新邮箱界面
  */
 refresh.click(function () {
-    location.href = "/sharedEmail/emailIndex";
+    location.href = "/sharedReceiveMail/emailIndex";
 })
 
 /**
@@ -26,7 +26,7 @@ have_read.click(function () {
     if (ids === "") {
         return null;
     } else {
-        location.href = "/sharedEmail/emailUpState/" + ids + "/" + 1;
+        location.href = "/sharedReceiveMail/emailUpState/" + ids + "/" + 1;
     }
 });
 
@@ -42,7 +42,7 @@ major.click(function () {
     if (ids === "") {
         return null;
     } else {
-        location.href = "/sharedEmail/emailUpState/" + ids + "/" + 3;
+        location.href = "/sharedReceiveMail/emailUpState/" + ids + "/" + 3;
     }
 });
 
@@ -57,7 +57,7 @@ delEmail.click(function () {
     if (ids === "") {
         return null;
     } else {
-        location.href = "/sharedEmail/emailUpState/" + ids + "/" + 4;
+        location.href = "/sharedReceiveMail/emailUpState/" + ids + "/" + 4;
     }
 
 });
