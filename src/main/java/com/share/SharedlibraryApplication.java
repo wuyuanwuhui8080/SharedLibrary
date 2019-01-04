@@ -10,7 +10,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @time 2018/12/13 9:07
  */
 @SpringBootApplication
-@MapperScan(basePackages = {"com.share.mapper"})
+@MapperScan(basePackages = { "com.share.blogs.mapper",
+		"com.share.invitation.mapper", "com.share.users.mapper" })
 public class SharedlibraryApplication {
 
 	public static void main(String[] args) {

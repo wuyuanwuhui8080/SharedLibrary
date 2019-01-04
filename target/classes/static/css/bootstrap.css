@@ -4903,8 +4903,8 @@ a.label:focus {
   background-color: #ec971f;
 }
 .label-danger {
-  background-color: #d9534f;
-}
+   background-color: #d9534f;
+ }
 .label-danger[href]:hover,
 .label-danger[href]:focus {
   background-color: #c9302c;

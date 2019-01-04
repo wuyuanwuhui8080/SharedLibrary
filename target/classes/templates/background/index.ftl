@@ -6,10 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="renderer" content="webkit">
 
-    <title>H+ 后台主题UI框架 - 主页</title>
+    <title>主页</title>
 
     <meta name="keywords" content="内部后台">
     <#include "comm/script.ftl">
+    <script src="${basePath}/js/custom_up_img.js"></script>
 </head>
 
 <body class="fixed-sidebar full-height-layout gray-bg" style="overflow:hidden">
@@ -22,13 +23,14 @@
             <ul class="nav" id="side-menu">
                 <li class="nav-header">
                     <div class="dropdown profile-element" style="text-align: center;">
-                        <span><img alt="image" class="img-circle" width="70px" src="${basePath}/images/${users.headImg}"/></span>
+                        <span id="MyLiImg"><img alt="image" class="img-circle" width="70px"
+                                                src="${basePath}/images/${users.headImg}"/></span>
                         <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                                 <span class="clear">
                                <span class="block m-t-xs"><strong class="font-bold">欢迎你：${users.realName}</strong></span>
                         </a>
                         <ul class="dropdown-menu animated fadeInRight m-t-xs">
-                            <li><a class="J_menuItem" href="form_avatar.html">修改头像</a>
+                            <li><a id="modal-926547" href="${basePath}/sharedUsers/goUpload" class="J_menuItem">修改头像</a>
                             </li>
                             <li><a class="J_menuItem" href="${basePath}/sharedUsers/lookProfile/${users.id}">个人资料</a>
                             </li>
@@ -41,7 +43,10 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="logo-element"><a href="#"><img class="img-circle" src="${basePath}/images/${users.headImg}" width="50px" ></a>
+                    <!-- 模态框（Modal） -->
+                    <div id="modelHeadImgId" class="logo-element"><a href="#"><img class="img-circle"
+                                                                                   src="${basePath}/images/${users.headImg}"
+                                                                                   width="50px"></a>
                     </div>
                 </li>
                 <li>
@@ -59,19 +64,22 @@
                 </li>
                 <li>
                     <a href="#">
-                        <i class="fa fa fa-bar-chart-o"></i>
+                        <i class="fa fa-user"></i>
                         <span class="nav-label">好友管理</span>
                         <span class="fa arrow"></span>
                     </a>
                     <ul class="nav nav-second-level">
                         <li>
-                            <a class="J_menuItem" href="${basePath}/sharedFriends/goSearchFriend">查找好友</a>
+                            <a class=" J_menuItem" href="${basePath}/sharedFriends/goSearchFriend">查找好友</a>
                         </li>
                         <li>
-                            <a class="J_menuItem" href="graph_flot.html">全部好友</a>
+                            <a class="J_menuItem" href="${basePath}/sharedFriends/goListFriendList/${users.id}">全部好友</a>
                         </li>
                         <li>
-                            <a class="J_menuItem" href="graph_morris.html">好友博客</a>
+                            <a class="J_menuItem" href="${basePath}/shareBlogs/goBlos/${users.id}">好友博客</a>
+                        </li>
+                        <li>
+                            <a class="J_menuItem" href="graph_morris.html">好友请求</a>
                         </li>
                         <li>
                             <a class="J_menuItem" href="graph_rickshaw.html">好友聊天</a>
@@ -81,16 +89,11 @@
                 <li>
                     <a href="mailbox.html"><i class="fa fa-envelope"></i>
                         <span class="nav-label">信箱 </span>
-                       <#-- <#if (emailSum==0)>
-                            <span class="fa arrow"></span>
-                        <#else>
-                            <span class="label label-warning pull-right">${emailSum}</span>
-                        </#if>-->
-
+                        <span class="fa arrow"></span>
                     </a>
                     <ul class="nav nav-second-level">
-                        <li><a class="J_menuItem" href="${basePath}/sharedEmail/emailIndex">收件箱</a></li>
-                        <li><a class="J_menuItem" href="${basePath}/sharedEmail/emailLook">写信</a></li>
+                        <li><a class="J_menuItem" href="${basePath}/sharedReceiveMail/emailIndex">收件箱</a></li>
+                        <li><a class="J_menuItem" href="${basePath}/sharedReceiveMail/emailCompose">写信</a></li>
                     </ul>
                 </li>
 
@@ -320,29 +323,24 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="#"><i class="fa fa-picture-o"></i> <span class="nav-label">相册</span><span
+                    <a href="#"><i class="fa fa-picture-o"></i> <span class="nav-label">休闲游戏</span><span
                             class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
-                        <li><a class="J_menuItem" href="basic_gallery.html">基本图库</a>
+                        <li><a class="J_menuItem" href="${basePath}/gogluttonous">贪吃蛇</a>
                         </li>
-                        <li><a class="J_menuItem" href="carousel.html">图片切换</a>
+                        <li><a class="J_menuItem" href="${basePath}/goAAutomobile">竞速赛车</a>
                         </li>
-                        <li><a class="J_menuItem" href="blueimp.html">Blueimp相册</a>
+                        <li><a class="J_menuItem" href="${basePath}/gozombie">植物大战僵尸</a>
+                        </li>
+                        <li><a class="J_menuItem" href="${basePath}/goFragment">打砖块</a>
+                        </li>
+                        <li><a class="J_menuItem" href="${basePath}/godonkeyJump">秃驴跳跃</a>
                         </li>
                     </ul>
                 </li>
                 <li>
                     <a class="J_menuItem" href="css_animation.html"><i class="fa fa-magic"></i> <span class="nav-label">CSS动画</span></a>
                 </li>
-                <li>
-                    <a href="#"><i class="fa fa-cutlery"></i> <span class="nav-label">工具 </span><span
-                            class="fa arrow"></span></a>
-                    <ul class="nav nav-second-level">
-                        <li><a class="J_menuItem" href="form_builder.html">表单构建器</a>
-                        </li>
-                    </ul>
-                </li>
-
             </ul>
         </div>
     </nav>
@@ -361,48 +359,6 @@
                     </form>
                 </div>
                 <ul class="nav navbar-top-links navbar-right">
-                    <li class="dropdown">
-                        <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
-                            <i class="fa fa-envelope"></i> <span class="label label-warning">16</span>
-                        </a>
-                        <ul class="dropdown-menu dropdown-messages">
-                            <li class="m-t-xs">
-                                <div class="dropdown-messages-box">
-                                    <a href="profile.html" class="pull-left">
-                                        <img alt="image" class="img-circle" src="img/a7.jpg">
-                                    </a>
-                                    <div class="media-body">
-                                        <small class="pull-right">46小时前</small>
-                                        <strong>小四</strong> 这个在日本投降书上签字的军官，建国后一定是个不小的干部吧？
-                                        <br>
-                                        <small class="text-muted">3天前 2014.11.8</small>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="divider"></li>
-                            <li>
-                                <div class="dropdown-messages-box">
-                                    <a href="profile.html" class="pull-left">
-                                        <img alt="image" class="img-circle" src="img/a4.jpg">
-                                    </a>
-                                    <div class="media-body ">
-                                        <small class="pull-right text-navy">25小时前</small>
-                                        <strong>国民岳父</strong> 如何看待“男子不满自己爱犬被称为狗，刺伤路人”？——这人比犬还凶
-                                        <br>
-                                        <small class="text-muted">昨天</small>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="divider"></li>
-                            <li>
-                                <div class="text-center link-block">
-                                    <a class="J_menuItem" href="mailbox.html">
-                                        <i class="fa fa-envelope"></i> <strong> 查看所有消息</strong>
-                                    </a>
-                                </div>
-                            </li>
-                        </ul>
-                    </li>
                     <li class="dropdown">
                         <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
                             <i class="fa fa-bell"></i> <span class="label label-primary">8</span>

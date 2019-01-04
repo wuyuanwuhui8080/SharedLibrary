@@ -1,5 +1,6 @@
 package com.share.vo;
 
+import java.io.Serializable;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -16,7 +17,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class SharedUsersVO {
+public class SharedUsersVO implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 
@@ -69,6 +70,12 @@ public class SharedUsersVO {
 	 * 非数据库的字段 ，需要 @TableField(exist = false) 扩展字段 用来计算年龄
 	 */
 	private Integer age;
+
+	private String sexName;
+
+	public String getSexName() {
+		return sex == 1 ? "男" : "女";
+	}
 
 	/**
 	 * 好友状态

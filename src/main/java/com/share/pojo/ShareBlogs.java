@@ -1,16 +1,17 @@
 package com.share.pojo;
 
+import java.io.Serializable;
+import java.util.Date;
+import java.util.List;
+
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
-import com.baomidou.mybatisplus.extension.activerecord.Model;
-import java.time.LocalDateTime;
 import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.extension.activerecord.Model;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
-import java.io.Serializable;
-import java.util.Date;
 
 /**
  * <p>
@@ -55,19 +56,22 @@ public class ShareBlogs extends Model<ShareBlogs> {
     @TableField(update = "now()")
     private Date updateDate;
 
-    /**
-     * 博客标题
-     */
-    private String blogsTitle;
-
-    /**
-     * 博客摘要
-     */
-    private String blogsDigest;
 
     @TableField(exist = false)
     private SharedUsers  users;
 
+
+	/**
+	 * 点赞数
+	 */
+	@TableField(exist = false)
+	private Integer blogsGiveCount;
+
+	/**
+	 * 对应博客点赞id
+	 */
+	@TableField(exist = false)
+	private List<ShareBlogsGive> blogsGive;
 
     @Override
     protected Serializable pkVal() {

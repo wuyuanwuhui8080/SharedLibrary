@@ -55,20 +55,18 @@
                                 <h5><strong>${getFensCuont}</strong> 关注者</h5>
                             </div>
                         </div>
-                        <div class="user-button">
-                            <div class="row">
-                                <div class="col-sm-6">
-                                    <button type="button" class="btn btn-primary btn-sm btn-block"><i
-                                            class="fa fa-envelope"></i> 发送消息
-                                    </button>
-                                </div>
-                                <div class="col-sm-6">
-                                    <button type="button" class="btn btn-default btn-sm btn-block"><i
-                                            class="fa fa-coffee"></i> 赞助
-                                    </button>
+                        <#if Session.users.id != users.id>
+                            <div class="user-button">
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <button type="button" class="btn btn-primary btn-sm btn-block"><i
+                                                class="fa fa-envelope"></i> 发送消息
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        <#else >
+                        </#if>
                     </div>
                 </div>
             </div>
@@ -102,39 +100,55 @@
             <#if blogsList?? && (blogsList?size>0)>
                 <#list blogsList as li>
  <div class="feed-element">
-     <a href="profile.ftl#" class="pull-left">
+     <a href="${basePath}/sharedUsers/lookProfile/${li.users.id}" class="pull-left">
          <img alt="image" class="img-circle" src="${basePath}/images/${li.users.headImg}">
      </a>
      <div class="media-body ">
          <small class="pull-right">${li.creationDate?datetime}</small>
-         <strong>${li.blogsTitle}</strong>
+         <strong>${li.users.realName}</strong>
          <br>
-         <small class="text-muted">来自 ${li.users.realName}</small>
          <div class="well">
-             ${li.blogsDigest}
+             ${li.content}
          </div>
          <div class="pull-right">
-             <a class="btn btn-xs btn-white"><i class="fa fa-thumbs-up"></i> 赞 </a>
-             <a class="btn btn-xs btn-white"><i class="fa fa-heart"></i> 收藏</a>
-             <a class="btn btn-xs btn-primary"><i class="fa fa-pencil"></i> 评论</a>
+             <#if li.blogsGive??>
+                 <#list li.blogsGive as blogs>
+                     <#if blogs.giveUserId == Session.users.id>
+                                 <a class="btn btn-xs btn-white"><i style="color: red"
+                                                                    class="fa fa-thumbs-up"></i>${li.blogsGiveCount!}
+                                     已赞 </a>
+                         <#break>
+                     <#else >
+                                  <a class="btn btn-xs btn-white"><i class="fa fa-thumbs-up"></i>${li.blogsGiveCount!} 赞
+                                  </a>
+                     </#if>
+                 </#list>
+             <#else >
+                  <a class="btn btn-xs btn-white"><i class="fa fa-thumbs-up"></i>${li.blogsGiveCount!} 赞 </a>
+             </#if>
          </div>
      </div>
  </div>
-    </div>
-                    <#if (blogsList?size > 5)>
-                        <button class="btn btn-primary btn-block m"><i class="fa fa-arrow-down"></i> 显示更多</button>
-                    </#if>
-
-                    </div>
                 </#list>
+                </div>
+                        <button class="btn btn-primary btn-block m" onclick="goBlos();"><i class="fa fa-arrow-down"></i>
+                            显示更多
+                        </button>
+                    </div>
             <#else >
             <div class="feed-element">
                 <div class="media-body ">
                     <br>
-                    <div style="text-align: center;"> <strong class="" >来自 系统消息</strong></div>
+                    <div style="text-align: center;"><strong class="">来自 系统消息</strong></div>
 
-                    <div class="well">
-                        您的好友和您暂时没有动态哦..
+
+                    <div class="well text-center">
+                        <#if  Session.users.id != users.id>
+                            您的好友暂时没有动态哦..
+                        <#else >
+                              您的好友和您暂时没有动态哦..
+                        </#if>
+
                     </div>
                 </div>
             </div>
@@ -148,4 +162,9 @@
     </div>
 </div>
 </body>
+<script>
+    function goBlos() {
+        location.href = '${basePath}/shareBlogs/goBlos/${Session.users.id}';
+    }
+</script>
 </html>

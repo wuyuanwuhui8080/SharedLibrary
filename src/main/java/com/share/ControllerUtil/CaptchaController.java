@@ -1,16 +1,18 @@
 package com.share.ControllerUtil;
 
-import com.share.util.CaptchaUtil;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
+import java.awt.image.BufferedImage;
+import java.io.IOException;
 
 import javax.imageio.ImageIO;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import java.awt.image.BufferedImage;
-import java.io.IOException;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.share.util.CaptchaUtil;
 /**
  * @author 博博
  * @Title: CaptchaController
@@ -21,7 +23,6 @@ import java.io.IOException;
 public class CaptchaController {
 
     public static final String KEY_CAPTCHA = "KEY_CAPTCHA";
-
     /**
      *  用来生成验证码的方法
      * @param request
