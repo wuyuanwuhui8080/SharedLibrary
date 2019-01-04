@@ -8,100 +8,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a0d261ad-a2f4-4e31-bd12-bdaf4948317b" name="默认更改列表" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/share/bo/BlogsCommBO.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/share/bo/BlogsCommReplyReply.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/share/bo/BlosCommReplyBO.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/share/enums/FriendStatusEnums.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/share/enums/HttpStatus.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/share/pojo/SharedlFriendRequestStatus.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/js/users/blogEditors.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/js/users/friendRequest.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/templates/background/users/blog_editors.ftl" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/templates/background/users/friend_request.ftl" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/share/blogs/controller/ShareBlogsCommentController.java" afterPath="$PROJECT_DIR$/src/main/java/com/share/blogs/controller/ShareBlogsCommentController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/share/blogs/controller/ShareBlogsCommentReplyController.java" afterPath="$PROJECT_DIR$/src/main/java/com/share/blogs/controller/ShareBlogsCommentReplyController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/share/blogs/controller/ShareBlogsController.java" afterPath="$PROJECT_DIR$/src/main/java/com/share/blogs/controller/ShareBlogsController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/share/blogs/controller/ShareBlogsGiveController.java" afterPath="$PROJECT_DIR$/src/main/java/com/share/blogs/controller/ShareBlogsGiveController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/share/blogs/mapper/ShareBlogsCommentMapper.java" afterPath="$PROJECT_DIR$/src/main/java/com/share/blogs/mapper/ShareBlogsCommentMapper.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/share/blogs/mapper/ShareBlogsCommentReplyMapper.java" afterPath="$PROJECT_DIR$/src/main/java/com/share/blogs/mapper/ShareBlogsCommentReplyMapper.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/share/blogs/mapper/ShareBlogsGiveMapper.java" afterPath="$PROJECT_DIR$/src/main/java/com/share/blogs/mapper/ShareBlogsGiveMapper.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/share/blogs/mapper/ShareBlogsMapper.java" afterPath="$PROJECT_DIR$/src/main/java/com/share/blogs/mapper/ShareBlogsMapper.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/share/blogs/service/ShareBlogsCommentReplyService.java" afterPath="$PROJECT_DIR$/src/main/java/com/share/blogs/service/ShareBlogsCommentReplyService.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/share/blogs/service/ShareBlogsCommentService.java" afterPath="$PROJECT_DIR$/src/main/java/com/share/blogs/service/ShareBlogsCommentService.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/share/blogs/service/ShareBlogsGiveService.java" afterPath="$PROJECT_DIR$/src/main/java/com/share/blogs/service/ShareBlogsGiveService.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/share/blogs/service/ShareBlogsService.java" afterPath="$PROJECT_DIR$/src/main/java/com/share/blogs/service/ShareBlogsService.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/share/blogs/service/impl/ShareBlogsCommentReplyServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/share/blogs/service/impl/ShareBlogsCommentReplyServiceImpl.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/share/blogs/service/impl/ShareBlogsCommentServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/share/blogs/service/impl/ShareBlogsCommentServiceImpl.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/share/blogs/service/impl/ShareBlogsGiveServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/share/blogs/service/impl/ShareBlogsGiveServiceImpl.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/share/blogs/service/impl/ShareBlogsServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/share/blogs/service/impl/ShareBlogsServiceImpl.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/share/generator/MyBatisPlusGenerator.java" afterPath="$PROJECT_DIR$/src/main/java/com/share/generator/MyBatisPlusGenerator.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/share/pojo/ShareBlogs.java" afterPath="$PROJECT_DIR$/src/main/java/com/share/pojo/ShareBlogs.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/share/pojo/ShareBlogsComment.java" afterPath="$PROJECT_DIR$/src/main/java/com/share/pojo/ShareBlogsComment.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/share/pojo/ShareBlogsCommentReply.java" afterPath="$PROJECT_DIR$/src/main/java/com/share/pojo/ShareBlogsCommentReply.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/share/pojo/SharedlFriendRequest.java" afterPath="$PROJECT_DIR$/src/main/java/com/share/pojo/SharedlFriendRequest.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/share/users/controller/SharedFriendsController.java" afterPath="$PROJECT_DIR$/src/main/java/com/share/users/controller/SharedFriendsController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/share/users/controller/SharedUsersController.java" afterPath="$PROJECT_DIR$/src/main/java/com/share/users/controller/SharedUsersController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/share/users/controller/SharedlFriendRequestController.java" afterPath="$PROJECT_DIR$/src/main/java/com/share/users/controller/SharedlFriendRequestController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/share/users/mapper/SharedlFriendRequestMapper.java" afterPath="$PROJECT_DIR$/src/main/java/com/share/users/mapper/SharedlFriendRequestMapper.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/share/users/service/SharedAttentionService.java" afterPath="$PROJECT_DIR$/src/main/java/com/share/users/service/SharedAttentionService.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/share/users/service/SharedFansService.java" afterPath="$PROJECT_DIR$/src/main/java/com/share/users/service/SharedFansService.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/share/users/service/SharedFriendsService.java" afterPath="$PROJECT_DIR$/src/main/java/com/share/users/service/SharedFriendsService.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/share/users/service/SharedUsersService.java" afterPath="$PROJECT_DIR$/src/main/java/com/share/users/service/SharedUsersService.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/share/users/service/SharedlFriendRequestService.java" afterPath="$PROJECT_DIR$/src/main/java/com/share/users/service/SharedlFriendRequestService.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/share/users/service/SharedlPositionService.java" afterPath="$PROJECT_DIR$/src/main/java/com/share/users/service/SharedlPositionService.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/share/users/service/impl/SharedFriendsServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/share/users/service/impl/SharedFriendsServiceImpl.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/share/users/service/impl/SharedlFriendRequestServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/share/users/service/impl/SharedlFriendRequestServiceImpl.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/share/util/ReturnResult.java" afterPath="$PROJECT_DIR$/src/main/java/com/share/util/ReturnResult.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/share/vo/BlosAndUsersAndCommAndGiva.java" afterPath="$PROJECT_DIR$/src/main/java/com/share/vo/BlosAndUsersAndCommAndGiva.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/ShareBlogsCommentMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapper/ShareBlogsCommentMapper.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/ShareBlogsCommentReplyMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapper/ShareBlogsCommentReplyMapper.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/ShareBlogsGiveMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapper/ShareBlogsGiveMapper.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/ShareBlogsMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapper/ShareBlogsMapper.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/SharedlFriendRequestMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapper/SharedlFriendRequestMapper.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/docs/js/prettify.js" afterPath="$PROJECT_DIR$/src/main/resources/static/docs/js/prettify.js" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/plugins/codemirror/mode/clike/clike.js" afterPath="$PROJECT_DIR$/src/main/resources/static/js/plugins/codemirror/mode/clike/clike.js" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/plugins/codemirror/mode/d/d.js" afterPath="$PROJECT_DIR$/src/main/resources/static/js/plugins/codemirror/mode/d/d.js" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/plugins/codemirror/mode/dart/dart.js" afterPath="$PROJECT_DIR$/src/main/resources/static/js/plugins/codemirror/mode/dart/dart.js" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/plugins/codemirror/mode/groovy/groovy.js" afterPath="$PROJECT_DIR$/src/main/resources/static/js/plugins/codemirror/mode/groovy/groovy.js" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/plugins/codemirror/mode/kotlin/kotlin.js" afterPath="$PROJECT_DIR$/src/main/resources/static/js/plugins/codemirror/mode/kotlin/kotlin.js" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/plugins/codemirror/mode/livescript/livescript.js" afterPath="$PROJECT_DIR$/src/main/resources/static/js/plugins/codemirror/mode/livescript/livescript.js" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/plugins/codemirror/mode/python/python.js" afterPath="$PROJECT_DIR$/src/main/resources/static/js/plugins/codemirror/mode/python/python.js" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/plugins/codemirror/mode/sql/sql.js" afterPath="$PROJECT_DIR$/src/main/resources/static/js/plugins/codemirror/mode/sql/sql.js" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/plugins/codemirror/mode/verilog/verilog.js" afterPath="$PROJECT_DIR$/src/main/resources/static/js/plugins/codemirror/mode/verilog/verilog.js" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/plugins/staps/jquery.steps.min.js" afterPath="$PROJECT_DIR$/src/main/resources/static/js/plugins/staps/jquery.steps.min.js" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/users/friends.js" afterPath="$PROJECT_DIR$/src/main/resources/static/js/users/friends.js" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/users/friendsSearch.js" afterPath="$PROJECT_DIR$/src/main/resources/static/js/users/friendsSearch.js" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/users/usersBlogs.js" afterPath="$PROJECT_DIR$/src/main/resources/static/js/users/usersBlogs.js" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/background/index.ftl" afterPath="$PROJECT_DIR$/src/main/resources/templates/background/index.ftl" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/background/users/login.ftl" afterPath="$PROJECT_DIR$/src/main/resources/templates/background/users/login.ftl" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/background/users/user_headImg.ftl" afterPath="$PROJECT_DIR$/src/main/resources/templates/background/users/user_headImg.ftl" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/background/users/users_blogs.ftl" afterPath="$PROJECT_DIR$/src/main/resources/templates/background/users/users_blogs.ftl" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/background/users/users_list.ftl" afterPath="$PROJECT_DIR$/src/main/resources/templates/background/users/users_list.ftl" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/share/generator/MyBatisPlusGenerator.class" afterPath="$PROJECT_DIR$/target/classes/com/share/generator/MyBatisPlusGenerator.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/share/pojo/ShareBlogs.class" afterPath="$PROJECT_DIR$/target/classes/com/share/pojo/ShareBlogs.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/share/pojo/ShareBlogsComment.class" afterPath="$PROJECT_DIR$/target/classes/com/share/pojo/ShareBlogsComment.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/share/pojo/ShareBlogsCommentReply.class" afterPath="$PROJECT_DIR$/target/classes/com/share/pojo/ShareBlogsCommentReply.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/share/pojo/SharedlFriendRequest.class" afterPath="$PROJECT_DIR$/target/classes/com/share/pojo/SharedlFriendRequest.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/share/util/ReturnResult.class" afterPath="$PROJECT_DIR$/target/classes/com/share/util/ReturnResult.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapper/ShareBlogsCommentMapper.xml" afterPath="$PROJECT_DIR$/target/classes/mapper/ShareBlogsCommentMapper.xml" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapper/ShareBlogsCommentReplyMapper.xml" afterPath="$PROJECT_DIR$/target/classes/mapper/ShareBlogsCommentReplyMapper.xml" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapper/ShareBlogsGiveMapper.xml" afterPath="$PROJECT_DIR$/target/classes/mapper/ShareBlogsGiveMapper.xml" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapper/ShareBlogsMapper.xml" afterPath="$PROJECT_DIR$/target/classes/mapper/ShareBlogsMapper.xml" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapper/SharedlFriendRequestMapper.xml" afterPath="$PROJECT_DIR$/target/classes/mapper/SharedlFriendRequestMapper.xml" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/docs/js/prettify.js" afterPath="$PROJECT_DIR$/target/classes/static/docs/js/prettify.js" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/clike/clike.js" afterPath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/clike/clike.js" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/d/d.js" afterPath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/d/d.js" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/dart/dart.js" afterPath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/dart/dart.js" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/groovy/groovy.js" afterPath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/groovy/groovy.js" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/kotlin/kotlin.js" afterPath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/kotlin/kotlin.js" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/livescript/livescript.js" afterPath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/livescript/livescript.js" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/python/python.js" afterPath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/python/python.js" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/sql/sql.js" afterPath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/sql/sql.js" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/verilog/verilog.js" afterPath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/verilog/verilog.js" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/staps/jquery.steps.min.js" afterPath="$PROJECT_DIR$/target/classes/static/js/plugins/staps/jquery.steps.min.js" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/background/index.ftl" afterPath="$PROJECT_DIR$/target/classes/templates/background/index.ftl" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/background/users/login.ftl" afterPath="$PROJECT_DIR$/target/classes/templates/background/users/login.ftl" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -199,7 +106,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/share/users/controller/SharedlFriendRequestController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="72">
-              <caret line="84" column="40" lean-forward="true" selection-start-line="84" selection-start-column="40" selection-end-line="84" selection-end-column="40" />
+              <caret line="84" column="40" lean-forward="false" selection-start-line="84" selection-start-column="40" selection-end-line="84" selection-end-column="40" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -211,7 +118,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/share/users/controller/SharedFriendsController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="51">
-              <caret line="60" column="0" lean-forward="false" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
+              <caret line="59" column="0" lean-forward="false" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -221,7 +128,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/share/users/service/impl/SharedlFriendRequestServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-528">
-              <caret line="66" column="0" lean-forward="false" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
+              <caret line="61" column="0" lean-forward="false" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -231,7 +138,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/share/users/controller/SharedlFriendRequestStatusController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="242">
-              <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+              <caret line="15" column="15" lean-forward="false" selection-start-line="15" selection-start-column="15" selection-end-line="15" selection-end-column="15" />
               <folding />
             </state>
           </provider>
@@ -425,12 +332,12 @@
         <option value="$PROJECT_DIR$/src/main/java/com/share/enums/FriendStatusEnums.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/share/users/service/SharedFriendsService.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/SharedlFriendRequestMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/share/users/controller/SharedlFriendRequestController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/share/users/service/impl/SharedFriendsServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/share/users/service/impl/SharedlFriendRequestServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/share/users/controller/SharedFriendsController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/background/users/friend_request.ftl" />
         <option value="$PROJECT_DIR$/src/main/resources/static/js/users/friendRequest.js" />
+        <option value="$PROJECT_DIR$/src/main/java/com/share/users/controller/SharedlFriendRequestController.java" />
       </list>
     </option>
   </component>
@@ -1135,7 +1042,7 @@
       <workItem from="1546178853021" duration="7278000" />
       <workItem from="1546326986011" duration="24625000" />
       <workItem from="1546430332677" duration="9373000" />
-      <workItem from="1546476331578" duration="42137000" />
+      <workItem from="1546476331578" duration="42380000" />
     </task>
     <task id="LOCAL-00001" summary="完成邮箱查询,邮箱表增加字段state,页面展示成功">
       <created>1544780773011</created>
@@ -1207,11 +1114,18 @@
       <option name="project" value="LOCAL" />
       <updated>1545976104814</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="修改了登录的体验，增加了好友的请求。修复了博客的bug，增加了添加更多，增加了一个表字段，以及若干">
+      <created>1546584353365</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1546584353365</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="340770000" />
+    <option name="totallyTimeSpent" value="341013000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1358,7 +1272,8 @@
     <MESSAGE value="完善了添加好友和查询好友的功能，对一些bug进行了修复，" />
     <MESSAGE value="对一些注册进行了优化，很多alert进行了优化，增加了上传文件的工具类，增加了修改头像" />
     <MESSAGE value="这次修改了很多，登录可以使用回车键登录，然后alert弹窗的显示，增加了博客显示，好友查看，个人资料优化，头像上传，添加了五个小游戏" />
-    <option name="LAST_COMMIT_MESSAGE" value="这次修改了很多，登录可以使用回车键登录，然后alert弹窗的显示，增加了博客显示，好友查看，个人资料优化，头像上传，添加了五个小游戏" />
+    <MESSAGE value="修改了登录的体验，增加了好友的请求。修复了博客的bug，增加了添加更多，增加了一个表字段，以及若干" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改了登录的体验，增加了好友的请求。修复了博客的bug，增加了添加更多，增加了一个表字段，以及若干" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -1475,13 +1390,13 @@
         <state relative-caret-position="163">
           <caret line="211" column="26" lean-forward="false" selection-start-line="211" selection-start-column="16" selection-end-line="211" selection-end-column="26" />
           <folding>
-            <marker date="1546510832179" expanded="true" signature="857:868" ph="..." />
-            <marker date="1546510832179" expanded="true" signature="12838:12853" ph="..." />
-            <marker date="1546510832179" expanded="true" signature="20752:20763" ph="..." />
-            <marker date="1546510832179" expanded="true" signature="24593:24611" ph="..." />
-            <marker date="1546510832179" expanded="true" signature="28403:28418" ph="..." />
-            <marker date="1546510832179" expanded="true" signature="29178:29196" ph="..." />
-            <marker date="1546510832179" expanded="true" signature="33878:33889" ph="..." />
+            <marker date="1546584310270" expanded="true" signature="857:868" ph="..." />
+            <marker date="1546584310270" expanded="true" signature="12838:12853" ph="..." />
+            <marker date="1546584310270" expanded="true" signature="20793:20804" ph="..." />
+            <marker date="1546584310270" expanded="true" signature="24634:24652" ph="..." />
+            <marker date="1546584310270" expanded="true" signature="28444:28459" ph="..." />
+            <marker date="1546584310270" expanded="true" signature="29219:29237" ph="..." />
+            <marker date="1546584310270" expanded="true" signature="33919:33930" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1524,8 +1439,8 @@
           <caret line="36" column="29" lean-forward="false" selection-start-line="36" selection-start-column="19" selection-end-line="36" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="false" />
-            <element signature="e#751#752#0" expanded="false" />
-            <element signature="e#772#773#0" expanded="false" />
+            <element signature="e#752#753#0" expanded="false" />
+            <element signature="e#773#774#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1658,10 +1573,10 @@
         <state relative-caret-position="848">
           <caret line="32" column="5" lean-forward="true" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
           <folding>
-            <element signature="e#353#354#0" expanded="true" />
-            <element signature="e#375#376#0" expanded="true" />
-            <element signature="e#406#407#0" expanded="true" />
-            <element signature="e#426#427#0" expanded="true" />
+            <element signature="e#353#354#0" expanded="false" />
+            <element signature="e#375#376#0" expanded="false" />
+            <element signature="e#406#407#0" expanded="false" />
+            <element signature="e#426#427#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1687,16 +1602,16 @@
         <state relative-caret-position="482">
           <caret line="172" column="37" lean-forward="false" selection-start-line="172" selection-start-column="37" selection-end-line="172" selection-end-column="37" />
           <folding>
-            <marker date="1546509743816" expanded="true" signature="3748:4640" ph="SELECT (SELE... share_blogs" />
-            <marker date="1546509743816" expanded="true" signature="3764:3851" ph="SELECT COUNT... share_blogs_give" />
-            <marker date="1546509743816" expanded="true" signature="3875:3957" ph="SELECT realN... shared_users" />
-            <marker date="1546509743816" expanded="true" signature="3981:4063" ph="SELECT head_... shared_users" />
-            <marker date="1546509743816" expanded="true" signature="4087:4163" ph="SELECT id FR... shared_users" />
-            <marker date="1546509743816" expanded="true" signature="4825:6757" ph="SELECT (SELE... share_blogs" />
-            <marker date="1546509743816" expanded="true" signature="4825:6758" ph="SELECT (SELE... share_blogs" />
-            <marker date="1546509743816" expanded="true" signature="4843:4942" ph="SELECT COUNT... share_blogs_give" />
-            <marker date="1546509743816" expanded="true" signature="6551:6718" ph="SELECT t.id id" />
-            <marker date="1546509743816" expanded="true" signature="6588:6712" ph="SELECT b.id share_blogs" />
+            <marker date="1546584310395" expanded="true" signature="3745:4637" ph="SELECT (SELE... share_blogs" />
+            <marker date="1546584310395" expanded="true" signature="3761:3848" ph="SELECT COUNT... share_blogs_give" />
+            <marker date="1546584310395" expanded="true" signature="3872:3954" ph="SELECT realN... shared_users" />
+            <marker date="1546584310395" expanded="true" signature="3978:4060" ph="SELECT head_... shared_users" />
+            <marker date="1546584310395" expanded="true" signature="4084:4160" ph="SELECT id FR... shared_users" />
+            <marker date="1546584310395" expanded="true" signature="4822:6728" ph="SELECT (SELE... share_blogs" />
+            <marker date="1546584310395" expanded="true" signature="4822:6729" ph="SELECT (SELE... share_blogs" />
+            <marker date="1546584310395" expanded="true" signature="4838:4925" ph="SELECT COUNT... share_blogs_give" />
+            <marker date="1546584310395" expanded="true" signature="6534:6689" ph="SELECT t.id id" />
+            <marker date="1546584310395" expanded="true" signature="6568:6683" ph="SELECT b.id share_blogs" />
           </folding>
         </state>
       </provider>
@@ -1706,8 +1621,8 @@
         <state relative-caret-position="365">
           <caret line="80" column="4" lean-forward="false" selection-start-line="80" selection-start-column="4" selection-end-line="80" selection-end-column="4" />
           <folding>
-            <element signature="e#926#927#0" expanded="false" />
-            <element signature="e#978#979#0" expanded="false" />
+            <element signature="e#875#876#0" expanded="false" />
+            <element signature="e#927#928#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1784,7 +1699,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/share/users/service/impl/SharedlFriendRequestServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-528">
-          <caret line="66" column="0" lean-forward="false" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
+          <caret line="61" column="0" lean-forward="false" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1792,7 +1707,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/share/users/controller/SharedlFriendRequestStatusController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="242">
-          <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+          <caret line="15" column="15" lean-forward="false" selection-start-line="15" selection-start-column="15" selection-end-line="15" selection-end-column="15" />
           <folding />
         </state>
       </provider>
@@ -1800,7 +1715,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/share/users/controller/SharedFriendsController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
-          <caret line="60" column="0" lean-forward="false" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
+          <caret line="59" column="0" lean-forward="false" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1824,7 +1739,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/share/users/controller/SharedlFriendRequestController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
-          <caret line="84" column="40" lean-forward="true" selection-start-line="84" selection-start-column="40" selection-end-line="84" selection-end-column="40" />
+          <caret line="84" column="40" lean-forward="false" selection-start-line="84" selection-start-column="40" selection-end-line="84" selection-end-column="40" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
