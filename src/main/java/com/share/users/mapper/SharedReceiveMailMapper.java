@@ -18,14 +18,6 @@ import java.util.List;
  * @since 2019-01-03
  */
 public interface SharedReceiveMailMapper extends BaseMapper<SharedReceiveMail> {
-    /**
-     * 分页查询数据
-     *
-     * @param page    分页数据
-     * @param wrapper 条件
-     * @return 邮件集合
-     */
-    IPage selectSharedReceiveMailList(Page page, @Param("ew") Wrapper wrapper);
 
     /**
      * 根据选中的邮箱,更改邮件状态

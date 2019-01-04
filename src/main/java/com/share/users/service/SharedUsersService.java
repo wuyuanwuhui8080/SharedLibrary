@@ -17,38 +17,42 @@ import com.share.vo.SharedUsersVO;
  */
 public interface SharedUsersService extends IService<SharedUsers> {
 
-    /**
-     * 添加用户
-     *
-     * @param users 传入的用户实体
-     * @return Boolean
-     */
+	/**
+	 * 添加用户
+	 *
+	 * @param users
+	 *            传入的用户实体
+	 * @return Boolean
+	 */
 	@Transactional(propagation = Propagation.REQUIRED, rollbackFor = Exception.class)
-    Boolean saveNorsalSharedUsers(SharedUsers users);
+	Boolean saveNorsalSharedUsers(SharedUsers users);
 
-    /**
-     * 判断用户名是否重复
-     *
-     * @param userName 传入的用户名
-     * @return Boolean
-     */
+	/**
+	 * 判断用户名是否重复
+	 *
+	 * @param userName
+	 *            传入的用户名
+	 * @return Boolean
+	 */
 	@Transactional(propagation = Propagation.NOT_SUPPORTED)
-    Boolean getSharedUsersGetUserName(String userName);
+	Boolean getSharedUsersGetUserName(String userName);
 
-    /**
-     * 根据用户名 查询是否存在
-     *
-     * @param userName 传入的用户名
-     * @return SharedUsers
-     */
+	/**
+	 * 根据用户名 查询是否存在
+	 *
+	 * @param userName
+	 *            传入的用户名
+	 * @return SharedUsers
+	 */
 	@Transactional(propagation = Propagation.NOT_SUPPORTED)
-    SharedUsers getSharedUsersByUserName(String userName);
+	SharedUsers getSharedUsersByUserName(String userName);
 
-    /**
-     *根据用户名或真实姓名查询用户列表
-     * @author cll 陈留领
-     * @time 2018/12/15 16:05
-     */
+	/**
+	 * 根据用户名或真实姓名查询用户列表
+	 * 
+	 * @author cll 陈留领
+	 * @time 2018/12/15 16:05
+	 */
 	@Transactional(propagation = Propagation.NOT_SUPPORTED)
 	List<SharedUsers> findUsersListByUserNameOrRealName(String name,
 			Integer position);
@@ -79,4 +83,14 @@ public interface SharedUsersService extends IService<SharedUsers> {
 	 */
 	@Transactional(propagation = Propagation.NOT_SUPPORTED)
 	SharedUsers getUserById(String userId);
+
+	/**
+	 * 根据传入的参数判断是否存在
+	 * 
+	 * @param name
+	 *            传入的用户名或者真实姓名
+	 * @return
+	 */
+	@Transactional(propagation = Propagation.NOT_SUPPORTED)
+	boolean getUserByUserNameOrRealName(String name);
 }

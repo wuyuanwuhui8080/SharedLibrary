@@ -1,9 +1,6 @@
 package com.share.users.service;
 
-import com.baomidou.mybatisplus.core.conditions.Wrapper;
-import com.baomidou.mybatisplus.core.metadata.IPage;
-import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.share.pojo.SharedEmail;
+import com.github.pagehelper.PageInfo;
 import com.share.pojo.SharedReceiveMail;
 import com.baomidou.mybatisplus.extension.service.IService;
 
@@ -18,20 +15,28 @@ import java.util.List;
  * @since 2019-01-03
  */
 public interface SharedReceiveMailService extends IService<SharedReceiveMail> {
-    /**
-     * 分页查询数据
-     *
-     * @param page    分页数据
-     * @param wrapper 条件
-     * @return 邮件集合
-     */
-    IPage selectSharedReceiveMailList(Page<SharedReceiveMail> page, Wrapper wrapper) ;
+	/**
+	 * 分页查询数据
+	 * 
+	 * @param userId
+	 *            用户id
+	 * @param status
+	 *            状态
+	 * @param pageIndex
+	 *            起始页
+	 * @param pageSize
+	 *            每页页数
+	 * @return
+	 */
+	PageInfo<SharedReceiveMail> selectSharedReceiveMailList(String userId,
+			String status, Integer pageIndex, Integer pageSize);
 
-    /**
-     * 根据选中的邮箱,更改邮件状态
-     *
-     * @param idList 选中的邮箱id
-     * @return 是否成功
-     */
-    int updateState(List<String> idList, String state);
+	/**
+	 * 根据选中的邮箱,更改邮件状态
+	 *
+	 * @param idList
+	 *            选中的邮箱id
+	 * @return 是否成功
+	 */
+	int updateState(List<String> idList, String state);
 }

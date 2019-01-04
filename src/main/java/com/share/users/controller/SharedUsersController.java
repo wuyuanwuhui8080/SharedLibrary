@@ -181,6 +181,22 @@ public class SharedUsersController {
 	}
 
 	/**
+	 * 根据用户名或者真实姓名判断
+	 * 
+	 * @param name
+	 * @return
+	 */
+	@GetMapping("/getUserNamorRealName")
+	@ResponseBody
+	public ReturnResult getUserNamorRealName(String name) {
+		if (usersService.getUserByUserNameOrRealName(name)) {
+			return ReturnResult.error();
+		} else {
+			return ReturnResult.ok();
+		}
+	}
+
+	/**
 	 * 根据条件查询 有则查询条件， 无则查询所有
 	 *
 	 * @author cll
@@ -259,7 +275,6 @@ public class SharedUsersController {
 		return "background/users/user_headImg";
 	}
 
-
 	/*
 	 * @PostMapping("/uploadHeadImg")
 	 *
@@ -286,8 +301,7 @@ public class SharedUsersController {
 	@PostMapping("/uploadHeadImg")
 	@ResponseBody
 	public ReturnResult uploadHeadImg(String userId, String userImg,
-			String image,
-			HttpSession session) throws FileNotFoundException {
+			String image, HttpSession session) throws FileNotFoundException {
 		// 把base64 字符串转换成MultipartFile
 		MultipartFile file = BASE64DecodedMultipartFile
 				.base64ToMultipart(image);

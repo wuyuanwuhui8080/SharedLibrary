@@ -19,14 +19,7 @@
         id, hair_id, hair_name, receive_id, creation_date, email_digest, email_content, state
     </sql>
 
-    <select id="selectSharedReceiveMailList" resultType="com.share.pojo.SharedReceiveMail">
-        SELECT
-        <include refid="Base_Column_List"/>
-        FROM shared_receive_mail
-        <where>
-            ${ew.sqlSegment}
-        </where>
-    </select>
+
 
     <update id="updateState">
         UPDATE shared_receive_mail

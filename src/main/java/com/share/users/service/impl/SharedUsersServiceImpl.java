@@ -142,4 +142,18 @@ public class SharedUsersServiceImpl
 		return super.getById(userId);
 	}
 
+	/**
+	 * 根据传入的参数判断是否存在
+	 *
+	 * @param name
+	 *            传入的用户名或者真实姓名
+	 * @return
+	 */
+	@Override
+	public boolean getUserByUserNameOrRealName(String name) {
+		return super.count(new LambdaQueryWrapper<SharedUsers>()
+				.eq(SharedUsers::getUserName, name).or()
+				.eq(SharedUsers::getRealName, name)) > 0 ? true : false;
+	}
+
 }
