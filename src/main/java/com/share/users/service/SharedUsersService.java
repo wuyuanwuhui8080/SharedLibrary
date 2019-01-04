@@ -2,6 +2,9 @@ package com.share.users.service;
 
 import java.util.List;
 
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
+
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.share.pojo.SharedUsers;
 import com.share.vo.SharedUsersVO;
@@ -20,6 +23,7 @@ public interface SharedUsersService extends IService<SharedUsers> {
      * @param users 传入的用户实体
      * @return Boolean
      */
+	@Transactional(propagation = Propagation.REQUIRED, rollbackFor = Exception.class)
     Boolean saveNorsalSharedUsers(SharedUsers users);
 
     /**
@@ -28,6 +32,7 @@ public interface SharedUsersService extends IService<SharedUsers> {
      * @param userName 传入的用户名
      * @return Boolean
      */
+	@Transactional(propagation = Propagation.NOT_SUPPORTED)
     Boolean getSharedUsersGetUserName(String userName);
 
     /**
@@ -36,6 +41,7 @@ public interface SharedUsersService extends IService<SharedUsers> {
      * @param userName 传入的用户名
      * @return SharedUsers
      */
+	@Transactional(propagation = Propagation.NOT_SUPPORTED)
     SharedUsers getSharedUsersByUserName(String userName);
 
     /**
@@ -43,6 +49,7 @@ public interface SharedUsersService extends IService<SharedUsers> {
      * @author cll 陈留领
      * @time 2018/12/15 16:05
      */
+	@Transactional(propagation = Propagation.NOT_SUPPORTED)
 	List<SharedUsers> findUsersListByUserNameOrRealName(String name,
 			Integer position);
 
@@ -52,6 +59,7 @@ public interface SharedUsersService extends IService<SharedUsers> {
 	 * @param users
 	 * @return
 	 */
+	@Transactional(propagation = Propagation.REQUIRED, rollbackFor = Exception.class)
 	Boolean updateUserHeadImg(SharedUsers users);
 
 	/**
@@ -60,6 +68,7 @@ public interface SharedUsersService extends IService<SharedUsers> {
 	 * @param userId
 	 * @return
 	 */
+	@Transactional(propagation = Propagation.NOT_SUPPORTED)
 	List<SharedUsersVO> findListByUsersIdForFriends(List<String> userId);
 
 	/**
@@ -68,5 +77,6 @@ public interface SharedUsersService extends IService<SharedUsers> {
 	 * @param userId
 	 * @return
 	 */
+	@Transactional(propagation = Propagation.NOT_SUPPORTED)
 	SharedUsers getUserById(String userId);
 }

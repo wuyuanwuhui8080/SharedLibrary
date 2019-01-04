@@ -6,11 +6,11 @@ import javax.annotation.Resource;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 import com.share.blogs.service.ShareBlogsService;
+import com.share.pojo.ShareBlogs;
+import com.share.util.ReturnResult;
 import com.share.vo.BlosAndUsersAndCommAndGiva;
 
 /**
@@ -40,6 +40,66 @@ public class ShareBlogsController {
 				.findListByUseridToShareBlogs(userId, 0, 5);
 		model.addAttribute("shareBlogsList", shareBlogsList);
 		return "background/users/users_blogs";
+	}
+
+	/**
+	 * 转到编辑博客的页面
+	 * 
+	 * @return
+	 */
+	@GetMapping("/goEditorsBlos")
+	public String goEditorsBlos() {
+		return "background/users/blog_editors";
+	}
+
+	/**
+	 * 添加博客方法
+	 * 
+	 * @param shareBlogs
+	 * @return
+	 */
+	@PostMapping("/saveBlos")
+	@ResponseBody
+	public ReturnResult saveBlos(ShareBlogs shareBlogs) {
+		// 判断是否添加成功
+		if (blogsService.saveBlos(shareBlogs)) {
+			return ReturnResult.ok();
+		} else {
+			return ReturnResult.error("发博客失败！");
+		}
+	}
+
+	/**
+	 * 删除博客 的方法
+	 * 
+	 * @param id
+	 * @return
+	 */
+	@PostMapping("/deleteBlos/{id}")
+	@ResponseBody
+	public ReturnResult deleteBlos(@PathVariable String id) {
+		// 判断是否删除成功
+		if (blogsService.deleteBlogs(id)) {
+			return ReturnResult.ok();
+		} else {
+			return ReturnResult.error();
+		}
+	}
+
+	/**
+	 * 加载更多博客 数据
+	 * 
+	 * @param userId
+	 * @param pageIndex
+	 * @return
+	 */
+	@GetMapping("/toManyList/{userId}/{pageIndex}")
+	@ResponseBody
+	public ReturnResult toManyList(@PathVariable String userId,
+			@PathVariable Integer pageIndex) {
+		pageIndex = (pageIndex - 1) * 5;
+		return ReturnResult.okAndList(blogsService
+				.findListByUseridToShareBlogs(userId, pageIndex, 5));
 	}
 
 }

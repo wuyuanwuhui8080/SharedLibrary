@@ -34,7 +34,7 @@
                         <a class="collapse-link">
                             <i class="fa fa-chevron-up"></i>
                         </a>
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="form_editors.html#">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="blog_editors.ftl#">
                             <i class="fa fa-wrench"></i>
                         </a>
                         <a class="close-link">

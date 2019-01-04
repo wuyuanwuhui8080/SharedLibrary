@@ -1,4 +1,9 @@
 $(function () {
+    /**
+     * 根据条件查询用户
+     * @author 博博大人
+     * @time 2018/12/29 19:23
+     */
     $("#userSearch").click(function () {
         var name = $("#baidu").val();
         var div = "";

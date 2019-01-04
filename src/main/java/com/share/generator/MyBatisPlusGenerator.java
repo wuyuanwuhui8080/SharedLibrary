@@ -1,5 +1,7 @@
 package com.share.generator;
 
+import java.sql.SQLException;
+
 import com.baomidou.mybatisplus.annotation.DbType;
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.generator.AutoGenerator;
@@ -9,8 +11,6 @@ import com.baomidou.mybatisplus.generator.config.PackageConfig;
 import com.baomidou.mybatisplus.generator.config.StrategyConfig;
 import com.baomidou.mybatisplus.generator.config.rules.NamingStrategy;
 
-import java.sql.SQLException;
-
 public class MyBatisPlusGenerator {
 
 	public static void main(String[] args) throws SQLException {
@@ -18,9 +18,9 @@ public class MyBatisPlusGenerator {
 		//1. 全局配置
 				GlobalConfig config = new GlobalConfig();
 				config.setActiveRecord(true) // 是否支持AR模式
-					  .setAuthor("Bean") // 作者
+				.setAuthor("博博大人") // 作者
 					  //.setOutputDir("D:\\workspace_mp\\mp03\\src\\main\\java") // 生成路径
-					  .setOutputDir("E:\\ideaxml\\SharedLibrary\\src\\main\\java") // 生成路径
+				.setOutputDir("E:\\ideaxm\\SharedLibrary\\src\\main\\java") // 生成路径
 					  .setFileOverride(true)  // 文件覆盖
 					  .setIdType(IdType.UUID) // 主键策略
 					  .setServiceName("%sService")  // 设置生成的service接口的名字的首字母是否为I
@@ -41,11 +41,11 @@ public class MyBatisPlusGenerator {
 				stConfig.setCapitalMode(true) //全局大写命名
 						.setNaming(NamingStrategy.underline_to_camel) // 数据库表映射到实体的命名策略
 						//.setTablePrefix("tbl_")
-						.setInclude("shared_attention");  // 生成的表
+				.setInclude("sharedl_friend_request_status"); // 生成的表
 				
 				//4. 包名策略配置 
 				PackageConfig pkConfig = new PackageConfig();
-				pkConfig.setParent("com.share")
+		pkConfig.setParent("com.share.users")
 						.setMapper("mapper")//dao
 						.setService("service")//servcie
 						.setController("controller")//controller

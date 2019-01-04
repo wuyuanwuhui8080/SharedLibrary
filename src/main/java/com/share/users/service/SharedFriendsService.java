@@ -2,6 +2,9 @@ package com.share.users.service;
 
 import java.util.List;
 
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
+
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.share.pojo.SharedFriends;
 
@@ -17,6 +20,7 @@ public interface SharedFriendsService extends IService<SharedFriends> {
      * @param userId 用户ID
      * @return
      */
+	@Transactional(propagation = Propagation.NOT_SUPPORTED)
     List<String> getListUsersId(String userId);
 
 
@@ -29,5 +33,15 @@ public interface SharedFriendsService extends IService<SharedFriends> {
 	 *            传入的参数
 	 * @return
 	 */
+	@Transactional(propagation = Propagation.NOT_SUPPORTED)
 	List<String> getListUserIdByuserNameOrRealName(String userId, String name);
+
+	/**
+	 * 添加一条新好友的方法
+	 * 
+	 * @param friends
+	 * @return
+	 */
+	@Transactional(propagation = Propagation.REQUIRED, rollbackFor = Exception.class)
+	boolean saveFirends(SharedFriends friends, SharedFriends friends2);
 }

@@ -1,5 +1,8 @@
 package com.share.users.service;
 
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
+
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.share.pojo.SharedFans;
 
@@ -15,6 +18,7 @@ public interface SharedFansService extends IService<SharedFans> {
      * @param usersId 用户id
      * @return
      */
+	@Transactional(propagation = Propagation.NOT_SUPPORTED)
     Integer getFensCount(String usersId);
 
 }

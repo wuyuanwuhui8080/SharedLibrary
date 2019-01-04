@@ -28,21 +28,29 @@
         <result column="blogsImg" property="blosUserImg"/>
         <result column="blogsName" property="blosUserRealName"/>
 
-        <result column="mIds" property="blosCommId"/>
-        <result column="commentRetext" property="blosCommRetext"/>
-        <result column="commDate" property="blosCommDate"/>
-        <result column="commrealid" property="blosCommUsersId"/>
-        <result column="commrealImg" property="blosCommUsersImg"/>
-        <result column="commrealName" property="blosCommUsersRealName"/>
-
-        <result column="r_id" property="blosCommReplyId"/>
-        <result column="rRetext" property="blosCommReplyRetext"/>
-        <result column="rDate" property="blosCommReplyDate"/>
-        <result column="replyid" property="blosCommReplyUsersId"/>
-        <result column="replyImg" property="blosCommReplyUsersImg"/>
-        <result column="replyName" property="blosCommReplyUsersRealName"/>
-
         <result column="giveCount" property="giveCount"/>
+
+        <collection property="blogsCommBOList" ofType="com.share.bo.BlogsCommBO">
+            <result column="mIds" property="blosCommId"/>
+            <result column="commentRetext" property="blosCommRetext"/>
+            <result column="commDate" property="blosCommDate"/>
+            <result column="commrealid" property="blosCommUsersId"/>
+            <result column="commrealImg" property="blosCommUsersImg"/>
+            <result column="commrealName" property="blosCommUsersRealName"/>
+        </collection>
+
+        <collection property="blosCommReplyBOList" ofType="com.share.bo.BlosCommReplyBO">
+            <result column="r_id" property="blosCommReplyId"/>
+            <result column="rRetext" property="blosCommReplyRetext"/>
+            <result column="rDate" property="blosCommReplyDate"/>
+            <result column="replyid" property="blosCommReplyUsersId"/>
+            <result column="replyImg" property="blosCommReplyUsersImg"/>
+            <result column="replyName" property="blosCommReplyUsersRealName"/>
+            <result column="replyBlosId" property="commReplyBlosId"/>
+            <result column="replybyUserID" property="commentByuserId"/>
+            <result column="replyByUserRealName" property="commentByuserRealName"/>
+        </collection>
+
         <collection property="blogsGiveBOList" ofType="com.share.bo.BlogsGiveBO">
             <result property="giveId" column="g_id"/>
             <result property="giveUserid" column="giveUserId"/>
@@ -53,6 +61,21 @@
     <sql id="Base_Column_List">
         id, user_id, content, creation_date, update_date, blogs_title, blogs_digest
     </sql>
+
+    <!--根据博客id级联删除，博客、点赞、评论、回复表的记录-->
+    <delete id="deleteBlogs">
+        DELETE b,c,r,g
+        FROM share_blogs b
+        LEFT JOIN share_blogs_comment c
+        ON c.blogs_id = b.id
+        LEFT JOIN share_blogs_comment_reply r
+        ON r.comment_id = c.id
+        LEFT JOIN share_blogs_give g
+        ON g.blogs_id = b.id
+        WHERE
+        b.id =  #{id}
+    </delete>
+
     <!--根据查询的list集合查询博客-->
     <select id="findListByUserId" resultMap="BaseResultMap">
         SELECT
@@ -88,49 +111,22 @@
         LIMIT #{pageIndex},#{pageSize}
     </select>
 
+    <!--根据传入的usersid查询博客表，点赞表，回复、评论、用户表的记录-->
     <select id="findListByUsersIdToBlosgsAndCommAndUsers" resultMap="findListByUsersIdToBlosgsAndCommAndUsersMap">
         SELECT
-        (SELECT
-        sa.realName
-        FROM share_blogs_comment m
-        WHERE
-        m.comment_user_id = sa.id ) AS commrealName,
-        (SELECT
-        sa.head_img
-        FROM share_blogs_comment m
-        WHERE m.comment_user_id = sa.id ) AS commrealImg,
-        (SELECT
-        sa.id
-        FROM share_blogs_comment m
-        WHERE m.comment_user_id = sa.id ) AS commrealid,
-        (SELECT
-        rep.realName
-        FROM share_blogs_comment_reply r
-        WHERE r.comment_user_id = rep.id) AS replyName,
-        (SELECT
-        rep.head_img
-        FROM share_blogs_comment_reply r
-        WHERE r.comment_user_id = rep.id) AS replyImg,
-        (SELECT
-        rep.id
-        FROM share_blogs_comment_reply r
-        WHERE r.comment_user_id = rep.id) AS replyid,
-        (SELECT
-        u.realName
-        FROM share_blogs b
-        WHERE b.user_id = u.id) AS blogsName,
-        (SELECT
-        u.head_img
-        FROM share_blogs b
-        WHERE b.user_id = u.id) AS blogsImg,
-        (SELECT
-        u.id
-        FROM share_blogs b
-        WHERE b.user_id = u.id) AS blogsId,
         (SELECT
         COUNT(1)
         FROM share_blogs_give g
         WHERE g.blogs_id = b.id) AS giveCount,
+        r_users.id AS replybyUserID,
+        r_users.realName AS replyByUserRealName,
+        rep.id AS replyid,
+        rep.head_img AS replyImg,
+        rep.realName AS replyName,
+        ms.id AS replyBlosId,
+        sa.id AS commrealid,
+        sa.head_img AS commrealImg,
+        sa.realName AS commrealName,
         g.id AS g_id,
         g.give_user_id AS giveUserId,
         r.comment_retext AS rRetext
@@ -140,7 +136,10 @@
         b.creation_date AS b_date
         ,b.id AS b_id,m.id AS mIds
         ,m.comment_date AS commDate
-        ,r.id AS r_id
+        ,r.id AS r_id,
+        u.id AS blogsId,
+        u.head_img AS blogsImg,
+        u.realName AS blogsName
         FROM share_blogs b
         LEFT JOIN shared_users u
         ON u.id = b.user_id
@@ -148,6 +147,8 @@
         ON m.blogs_id = b.id
         LEFT JOIN share_blogs_comment_reply r
         ON r.comment_id = m.id
+        LEFT JOIN share_blogs_comment ms
+        ON ms.id = r.comment_id
         LEFT JOIN shared_users sa
         ON sa.id=m.comment_user_id
         LEFT JOIN share_blogs_give g
@@ -156,11 +157,19 @@
         ON rep.id=r.comment_user_id
         LEFT JOIN shared_users shus
         ON shus.id = g.give_user_id
+        LEFT JOIN shared_users r_users
+        ON r_users.id = r.comment_byuser_id
         WHERE b.user_id IN
         <foreach collection="blogsList" item="blogsList" close=")" open="(" separator=",">
             #{blogsList}
         </foreach>
-        ORDER by b.creation_date desc
-        limit #{pageIndex},#{pageSize}
+        AND b.id IN
+        (SELECT t.id
+        FROM
+        (SELECT b.id
+        FROM share_blogs b
+        ORDER BY b.creation_date
+        DESC LIMIT #{pageIndex},#{pageSize}) AS t)
+        ORDER BY b.creation_date DESC
     </select>
 </mapper>

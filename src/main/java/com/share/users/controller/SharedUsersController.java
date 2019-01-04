@@ -262,7 +262,7 @@ public class SharedUsersController {
 
 	/*
 	 * @PostMapping("/uploadHeadImg")
-	 * 
+	 *
 	 * @ResponseBody public ReturnResult uploadHeadImg(String
 	 * userId,MultipartFile file) { ReturnResult returnResult =
 	 * FileUtil.fileUpload(file); if(returnResult.getStatus() !=
@@ -276,7 +276,7 @@ public class SharedUsersController {
 
 	/**
 	 * 提交修改头像的操作
-	 * 
+	 *
 	 * @param userId
 	 *            当前用户id
 	 * @param image

@@ -1,10 +1,12 @@
 package com.share.users.service.impl;
 
+import java.util.Arrays;
 import java.util.List;
 
 import javax.annotation.Resource;
 
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.interceptor.TransactionAspectSupport;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.share.pojo.SharedFriends;
@@ -13,17 +15,19 @@ import com.share.users.service.SharedFriendsService;
 
 /**
  * <p>
- *  服务实现类
+ * 服务实现类
  * </p>
  *
  * @author Bean
  * @since 2018-12-11
  */
 @Service
-public class SharedFriendsServiceImpl extends ServiceImpl<SharedFriendsMapper, SharedFriends> implements SharedFriendsService {
+public class SharedFriendsServiceImpl
+		extends ServiceImpl<SharedFriendsMapper, SharedFriends>
+		implements SharedFriendsService {
 
-    @Resource
-    private SharedFriendsMapper friendsMapper;
+	@Resource
+	private SharedFriendsMapper friendsMapper;
 
 	/**
 	 * 根据用户id查询所有好友的id
@@ -32,10 +36,10 @@ public class SharedFriendsServiceImpl extends ServiceImpl<SharedFriendsMapper, S
 	 *            用户ID
 	 * @return
 	 */
-    @Override
-    public List<String> getListUsersId(String userId) {
-        return friendsMapper.findListByUserId(userId);
-    }
+	@Override
+	public List<String> getListUsersId(String userId) {
+		return friendsMapper.findListByUserId(userId);
+	}
 
 	/**
 	 * 根据用户id 和用户名或者真实姓名模糊查询用户id
@@ -52,4 +56,24 @@ public class SharedFriendsServiceImpl extends ServiceImpl<SharedFriendsMapper, S
 		return friendsMapper.findListByUsersByidAndUserNameOrReamName(userId,
 				name);
 	}
+
+	/**
+	 * 添加双向好友请求
+	 * 
+	 * @param friends
+	 * @param friends2
+	 * @return
+	 */
+	@Override
+	public boolean saveFirends(SharedFriends friends, SharedFriends friends2) {
+		if (super.saveBatch(Arrays.asList(friends, friends2))) {
+			return true;
+		} else {
+			// 手动回滚
+			TransactionAspectSupport.currentTransactionStatus()
+					.setRollbackOnly();
+			return false;
+		}
+	}
+
 }

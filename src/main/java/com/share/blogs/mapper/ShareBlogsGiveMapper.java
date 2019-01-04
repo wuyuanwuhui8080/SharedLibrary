@@ -13,4 +13,12 @@ import com.share.pojo.ShareBlogsGive;
  */
 public interface ShareBlogsGiveMapper extends BaseMapper<ShareBlogsGive> {
 
+	/**
+	 * 添加一个点赞操作
+	 * 
+	 * @param shareBlogsGive
+	 * @return
+	 */
+	Integer saveBlogGive(ShareBlogsGive shareBlogsGive);
+
 }

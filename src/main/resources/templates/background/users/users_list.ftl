@@ -68,8 +68,9 @@
                         <br>
                     </address>
                 </div>
-                <div class="clearfix"></div>
             </a>
+            <div class="clearfix"></div>
+
         </div>
     </div>
 </#list>

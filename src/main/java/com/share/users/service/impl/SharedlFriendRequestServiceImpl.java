@@ -1,12 +1,16 @@
 package com.share.users.service.impl;
 
 import java.util.Date;
+import java.util.List;
+
+import javax.annotation.Resource;
 
 import org.springframework.stereotype.Service;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.share.pojo.SharedlFriendRequest;
+import com.share.users.mapper.SharedFriendsMapper;
 import com.share.users.mapper.SharedlFriendRequestMapper;
 import com.share.users.service.SharedlFriendRequestService;
 
@@ -17,7 +21,15 @@ import com.share.users.service.SharedlFriendRequestService;
  * @time 2018/12/16 21:38
  */
 @Service
-public class SharedlFriendRequestServiceImpl extends ServiceImpl<SharedlFriendRequestMapper, SharedlFriendRequest> implements SharedlFriendRequestService {
+public class SharedlFriendRequestServiceImpl
+		extends ServiceImpl<SharedlFriendRequestMapper, SharedlFriendRequest>
+		implements SharedlFriendRequestService {
+
+	@Resource
+	private SharedlFriendRequestMapper friendRequest;
+
+	@Resource
+	private SharedFriendsMapper friendsMapper;
 
 	/**
 	 * 添加好友请求
@@ -46,5 +58,32 @@ public class SharedlFriendRequestServiceImpl extends ServiceImpl<SharedlFriendRe
 			return true;
 		}
 		return false;
+	}
+
+	/**
+	 * 根据传入的用户ID查询所有请求
+	 * 
+	 * @param userId
+	 *            传入的用户id
+	 * @return
+	 */
+	@Override
+	public List<SharedlFriendRequest> findFriendRequestByUserId(String userId) {
+		return friendRequest.findLstByUserId(userId);
+	}
+
+	/**
+	 * 修改请求状态的方法
+	 * 
+	 * @param friendRequest
+	 *            传入实体
+	 * @return
+	 */
+	@Override
+	public boolean updateFriendRequestByStatus(
+			SharedlFriendRequest friendRequest) {
+		friendRequest.setMeId(null);
+		friendRequest.setRequestId(null);
+		return super.updateById(friendRequest);
 	}
 }
