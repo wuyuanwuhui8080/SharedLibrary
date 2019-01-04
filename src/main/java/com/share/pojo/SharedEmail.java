@@ -1,8 +1,11 @@
 package com.share.pojo;
 
 import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.extension.activerecord.Model;
+
 import java.time.LocalDateTime;
+
 import com.baomidou.mybatisplus.annotation.TableId;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -28,6 +31,7 @@ public class SharedEmail extends Model<SharedEmail> {
 
     private static final long serialVersionUID = 1L;
 
+
     /**
      * 邮箱id
      */
@@ -35,14 +39,14 @@ public class SharedEmail extends Model<SharedEmail> {
     private String id;
 
     /**
-     * 自己的id
+     * 发件人id
      */
-    private String meId;
+    private String hairId;
 
     /**
-     * 朋友id
+     * 收件人id
      */
-    private String friendsId;
+    private String receiveId;
 
     /**
      * 发送时间
@@ -60,16 +64,17 @@ public class SharedEmail extends Model<SharedEmail> {
     private String emailContent;
 
     /**
-     * 邮件状态
+     * 读取状态(
+     * 5:草稿)
      */
     private Integer state;
 
     //--------------------------拓展列------------------------------
 
     /**
-     * 发件人姓名
+     * 收件人姓名
      */
-    private String friendName;
+    private String receiveName;
 
 
     @Override

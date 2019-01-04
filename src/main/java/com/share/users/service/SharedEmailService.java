@@ -1,10 +1,8 @@
 package com.share.users.service;
 
-import java.util.List;
-
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.share.pojo.SharedEmail;
-
+import com.share.pojo.SharedReceiveMail;
 /**
  * 邮件业务接口
  *
@@ -13,13 +11,14 @@ import com.share.pojo.SharedEmail;
  */
 public interface SharedEmailService extends IService<SharedEmail> {
 
+
     /**
-     * 根据用户id获取该用户邮件
-     * @param id 用户id
-     * @return  邮件集合
+     * 发送邮件
+     * @param email 发件对象
+     * @param receiveMail 收件对象
+     * @return 成功或失败
      */
-    List<SharedEmail> getEmail(String id);
+    boolean saveEmail(SharedEmail email, SharedReceiveMail receiveMail);
 
 
-    int getUnreadEmailCount(String id);
 }
