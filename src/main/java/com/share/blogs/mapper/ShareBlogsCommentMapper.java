@@ -1,5 +1,7 @@
 package com.share.blogs.mapper;
 
+import org.apache.ibatis.annotations.Param;
+
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.share.pojo.ShareBlogsComment;
 
@@ -11,5 +13,13 @@ import com.share.pojo.ShareBlogsComment;
  */
 public interface ShareBlogsCommentMapper extends BaseMapper<ShareBlogsComment> {
 
+	/**
+	 * 删除评论以及关联回复
+	 * 
+	 * @param commId
+	 *            传入的评论id
+	 * @return
+	 */
+	Integer deleteBlogsComm(@Param("commId") String commId);
 
 }

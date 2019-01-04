@@ -26,7 +26,6 @@
         <div class="col-sm-12" id="MyFriendsFIst">
             <div class="ibox">
                 <div class="ibox-content">
-                    <span class="text-muted small pull-right">最后更新：<i class="fa fa-clock-o"></i> 2015-09-01 12:00</span>
                     <h2>查询好友</h2>
                     <p>
                         根据用户名或者真实姓名
@@ -40,7 +39,7 @@
                     </div>
                     <div class="clients-list">
                         <ul class="nav nav-tabs">
-                            <span class="pull-right small text-muted">0个好友</span>
+                            <span class="pull-right small text-muted" id="fendIDFriend">0个好友</span>
                             <li class="active"><a data-toggle="tab" href="#tab-1"><i class="fa fa-user"></i> 联系人</a>
                             </li>
                         </ul>

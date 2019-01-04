@@ -1,9 +1,10 @@
 package com.share.blogs.service.impl;
 
-import java.util.Date;
+import javax.annotation.Resource;
 
 import org.springframework.stereotype.Service;
 
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.share.blogs.mapper.ShareBlogsGiveMapper;
 import com.share.blogs.service.ShareBlogsGiveService;
@@ -20,6 +21,9 @@ public class ShareBlogsGiveServiceImpl
 		extends ServiceImpl<ShareBlogsGiveMapper, ShareBlogsGive>
 		implements ShareBlogsGiveService {
 
+	@Resource
+	private ShareBlogsGiveMapper blogsGiveMapper;
+
 	/**
 	 * 添加点赞记录
 	 * 
@@ -29,8 +33,7 @@ public class ShareBlogsGiveServiceImpl
 	 */
 	@Override
 	public Boolean saveBlogGive(ShareBlogsGive shareBlogsGive) {
-		shareBlogsGive.setCreationDate(new Date());
-		return super.save(shareBlogsGive);
+		return blogsGiveMapper.saveBlogGive(shareBlogsGive) == 1 ? true : false;
 	}
 
 	/**
@@ -43,5 +46,17 @@ public class ShareBlogsGiveServiceImpl
 	@Override
 	public Boolean deleteBlogGiveById(String id) {
 		return super.removeById(id);
+	}
+
+	/**
+	 * 根据博客id查询点赞数
+	 * 
+	 * @param blogId
+	 * @return
+	 */
+	@Override
+	public Integer getCount(String blogId) {
+		return super.count(new QueryWrapper<ShareBlogsGive>().lambda()
+				.eq(ShareBlogsGive::getBlogsId, blogId));
 	}
 }

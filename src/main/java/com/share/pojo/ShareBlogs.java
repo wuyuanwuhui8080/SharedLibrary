@@ -47,31 +47,28 @@ public class ShareBlogs extends Model<ShareBlogs> {
     /**
      * 创建时间
      */
-    @TableField(update = "now()")
     private Date creationDate;
 
     /**
      * 修改时间
      */
-    @TableField(update = "now()")
     private Date updateDate;
 
 
     @TableField(exist = false)
     private SharedUsers  users;
 
+	/**
+	 * 点赞表对象
+	 */
+	@TableField(exist = false)
+	private List<ShareBlogsGive> blogsGive;
 
 	/**
 	 * 点赞数
 	 */
 	@TableField(exist = false)
 	private Integer blogsGiveCount;
-
-	/**
-	 * 对应博客点赞id
-	 */
-	@TableField(exist = false)
-	private List<ShareBlogsGive> blogsGive;
 
     @Override
     protected Serializable pkVal() {

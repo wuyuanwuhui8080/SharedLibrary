@@ -63,15 +63,18 @@ public class SharedFriendsController {
 					usersList.get(i).setMsg(FriendsStatusConstant.FRIENDS_ME);
 					// 判断好友表是否为空
 				} else if (StringUtils.isNotNullToArray(friendsList)) { // 不为空就执行判断
-					if (usersList.get(i).getId().equals(friendsList.get(i))) {
-						// 该好友已经是您的好友
-						usersList.get(i).setMsg(
-								FriendsStatusConstant.FRIENDS_NOTMEFRIEDS);
-					} else if (!usersList.get(i).getId()
-							.equals(friendsList.get(i))) {
-						// 点击用户名添加哦
-						usersList.get(i).setMsg(
-								FriendsStatusConstant.FRIENDS_IS_MEFRIEDS);
+					for (int a = 0; a < friendsList.size(); a++) {
+						if (usersList.get(i).getId()
+								.equals(friendsList.get(a))) {
+							// 该好友已经是您的好友
+							usersList.get(i).setMsg(
+									FriendsStatusConstant.FRIENDS_NOTMEFRIEDS);
+						} else if ((a + 1) == friendsList.size() && !usersList
+								.get(i).getId().equals(friendsList.get(i))) {
+							// 点击用户名添加哦
+							usersList.get(i).setMsg(
+									FriendsStatusConstant.FRIENDS_IS_MEFRIEDS);
+						}
 					}
 				} else { // 为空就提示可以添加
 					// 点击用户名添加哦

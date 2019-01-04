@@ -1,5 +1,10 @@
 $(function () {
     var falg = true;
+    /**
+     * 查看用户资料
+     * @author 博博大人
+     * @time 2018/12/29 19:23
+     */
     $("#tbodyId").on("click", ".userName", function () {
         var obj = $(this);
         if (falg) {
@@ -124,6 +129,11 @@ $(function () {
         }
     });
 
+    /**
+     * 查询用户
+     * @author 博博大人
+     * @time 2018/12/29 19:23
+     */
     $("#sachFriendsSumit").click(function () {
         var name = $("#firendName").val();
         if (app.isNull(name)) {
@@ -141,6 +151,7 @@ $(function () {
                 data: {name: name}, // 传的参数
                 url: app.path() + "/sharedFriends/searchFriend", // 请求的地址
                 dataType: "json", // 返回类型
+                timeout: 1000,
                 success: function (date) { // date 返回的东西
                     var tr = "";
                     $("#tbodyId").html("");
@@ -177,6 +188,7 @@ $(function () {
                             '  <td class="client-avatar" colspan="4" align="center">\n' +
                             ' 没有此用户哦...</td>';
                     }
+                    $("#fendIDFriend").html(date.list.length + "个好友");
                     $("#tbodyId").html(tr);
                 },
                 complete: function () { // 不管请求成功还是失败都会执行
@@ -184,7 +196,7 @@ $(function () {
                 },
                 error: function () { // 请求失败的操作
                     swal({
-                        title: "服务器请求错误！",
+                        title: "请求超时，请检查网络！",
                         type: "error"
                     });
                 }

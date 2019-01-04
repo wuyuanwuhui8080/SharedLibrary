@@ -30,8 +30,24 @@ public interface ShareBlogsMapper extends BaseMapper<ShareBlogs> {
 			@Param("pageIndex") Integer pageIndex,
 			@Param("pageSize") Integer pageSize);
 
+	/***
+	 * 根据传入的usersid查询博客表，点赞表，回复、评论、用户表的记录
+	 * 
+	 * @param blogsList
+	 * @param pageIndex
+	 * @param pageSize
+	 * @return
+	 */
 	List<BlosAndUsersAndCommAndGiva> findListByUsersIdToBlosgsAndCommAndUsers(
 			@Param("blogsList") List<String> blogsList,
 			@Param("pageIndex") Integer pageIndex,
 			@Param("pageSize") Integer pageSize);
+
+	/**
+	 * 根据博客id级联删除，博客、点赞、评论、回复表的记录
+	 * 
+	 * @param id
+	 * @return
+	 */
+	Integer deleteBlogs(@Param("id") String id);
 }

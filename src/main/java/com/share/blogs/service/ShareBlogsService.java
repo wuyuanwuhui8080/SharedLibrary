@@ -43,4 +43,21 @@ public interface ShareBlogsService extends IService<ShareBlogs> {
 	List<BlosAndUsersAndCommAndGiva> findListByUseridToShareBlogs(String userId,
 			Integer pageIndex, Integer pageSize);
 
+	/**
+	 * 添加一条博客记录
+	 * 
+	 * @param shareBlogs
+	 *            传入的实体对象
+	 * @return
+	 */
+	boolean saveBlos(ShareBlogs shareBlogs);
+
+	/**
+	 * 根据博客id级联删除，博客、点赞、评论、回复表的记录
+	 * 
+	 * @param id
+	 * @return
+	 */
+	boolean deleteBlogs(String id);
+
 }

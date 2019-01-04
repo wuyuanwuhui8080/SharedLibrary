@@ -4,7 +4,6 @@ import java.io.Serializable;
 import java.util.Date;
 
 import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.extension.activerecord.Model;
 
@@ -53,17 +52,6 @@ public class ShareBlogsComment extends Model<ShareBlogsComment> {
      */
     private Date commentDate;
 
-	/**
-	 * 用来储存每个评论下的回复
-	 */
-	@TableField(exist = false)
-	private ShareBlogsCommentReply blogsCommentReply;
-
-	/**
-	 * 用来储存评论的用户
-	 */
-	@TableField(exist = false)
-	private SharedUsers users;
 
     @Override
     protected Serializable pkVal() {

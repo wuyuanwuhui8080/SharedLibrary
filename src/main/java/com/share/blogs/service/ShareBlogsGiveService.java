@@ -27,4 +27,12 @@ public interface ShareBlogsGiveService extends IService<ShareBlogsGive> {
 	 */
 	Boolean deleteBlogGiveById(String id);
 
+	/**
+	 * 根据传入的博客id查询总记录数
+	 *
+	 * @param blogId
+	 * @return
+	 */
+	Integer getCount(String blogId);
+
 }

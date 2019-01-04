@@ -60,6 +60,12 @@ public class ShareBlogsCommentReply extends Model<ShareBlogsCommentReply> {
 	@TableField(exist = false)
 	private SharedUsersVO sharedUsersVO;
 
+	/**
+	 * 被评论id
+	 */
+	@TableField(value = "comment_byuser_id")
+	private String commentByuserId;
+
 	@Override
 	protected Serializable pkVal() {
 		return this.id;

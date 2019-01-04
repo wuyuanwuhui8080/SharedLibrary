@@ -85,12 +85,7 @@
         dataType: "json",
         success: function (date) {
             if (date.status == 200) {
-                swal({
-                    title: "登录成功！",
-                    type: "success",
-                }, function () {
                     location.href = "/sharedUsers/goIndex";
-                });
             } else {
                 swal({
                     title: date.msg,

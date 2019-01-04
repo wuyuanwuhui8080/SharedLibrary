@@ -3,7 +3,9 @@ package com.share.vo;
 import java.util.Date;
 import java.util.List;
 
+import com.share.bo.BlogsCommBO;
 import com.share.bo.BlogsGiveBO;
+import com.share.bo.BlosCommReplyBO;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -50,62 +52,14 @@ public class BlosAndUsersAndCommAndGiva {
 	private String blosUserRealName;
 
 	/**
-	 * 博客评论id
+	 * 用来放评论集合
 	 */
-	private String blosCommId;
-	/**
-	 * 评论的文字
-	 */
-	private String blosCommRetext;
+	private List<BlogsCommBO> blogsCommBOList;
 
 	/**
-	 * 博客评论时间
+	 * 用来放评论回复
 	 */
-	private Date blosCommDate;
-
-	/**
-	 * 博客评论用户id
-	 */
-	private String blosCommUsersId;
-
-	/**
-	 * 博客评论用户头像
-	 */
-	private String blosCommUsersImg;
-
-	/**
-	 * 博客评论用户真实姓名
-	 */
-	private String blosCommUsersRealName;
-
-	/**
-	 * 评论回复id
-	 */
-	private String blosCommReplyId;
-
-	/**
-	 * 回复内容
-	 */
-	private String blosCommReplyRetext;
-
-	/**
-	 * 回复时间
-	 */
-	private Date blosCommReplyDate;
-
-	/**
-	 * 回复者的id
-	 */
-	private String blosCommReplyUsersId;
-
-	/**
-	 * 回复者用户的头像
-	 */
-	private String blosCommReplyUsersImg;
-	/**
-	 * 回复者用户真实姓名
-	 */
-	private String blosCommReplyUsersRealName;
+	private List<BlosCommReplyBO> blosCommReplyBOList;
 
 	/**
 	 * 点赞数

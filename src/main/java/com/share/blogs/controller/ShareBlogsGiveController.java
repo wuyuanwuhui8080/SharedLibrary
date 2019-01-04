@@ -1,5 +1,8 @@
 package com.share.blogs.controller;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import javax.annotation.Resource;
 
 import org.springframework.web.bind.annotation.PostMapping;
@@ -10,6 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.share.blogs.service.ShareBlogsGiveService;
 import com.share.pojo.ShareBlogsGive;
 import com.share.util.ReturnResult;
+import com.share.util.StringUtils;
 
 /**
  * 点赞表前端控制器
@@ -33,16 +37,28 @@ public class ShareBlogsGiveController {
 	@PostMapping("/getGiveNum")
 	public ReturnResult getGiveNum(ShareBlogsGive shareBlogsGive,
 			@RequestParam("giveId") String giveId) {
+		Map<String, Object> myMap = new HashMap<>();
 		if (giveId.equals("0")) {
+			String uuid = StringUtils.randomUUID();
+			shareBlogsGive.setId(uuid);
 			if (blogsGiveService.saveBlogGive(shareBlogsGive)) {
+				Integer count = blogsGiveService
+						.getCount(shareBlogsGive.getBlogsId());
 				// 这里0是向前端发送状态，0表示这是一个没有点赞过的
-				return ReturnResult.ok(0);
+				myMap.put("blogGiveId", shareBlogsGive.getId());
+				myMap.put("blogId", shareBlogsGive.getBlogsId());
+				myMap.put("count", count);
+				return ReturnResult.ok(myMap);
 			} else {
 				return ReturnResult.error("点赞失败!");
 			}
 		} else {
 			if (blogsGiveService.deleteBlogGiveById(giveId)) {
-				return ReturnResult.ok(1);
+				Integer count = blogsGiveService
+						.getCount(shareBlogsGive.getBlogsId());
+				myMap.put("count", count);
+				myMap.put("blogId", shareBlogsGive.getBlogsId());
+				return ReturnResult.ok(myMap);
 			} else {
 				return ReturnResult.error("取消点赞失败!");
 			}

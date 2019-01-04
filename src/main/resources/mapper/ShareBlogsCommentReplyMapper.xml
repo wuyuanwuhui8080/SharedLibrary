@@ -4,16 +4,28 @@
 
     <!-- 通用查询映射结果 -->
     <resultMap id="BaseResultMap" type="com.share.pojo.ShareBlogsCommentReply">
-        <id column="id" property="id" />
-        <result column="comment_id" property="commentId" />
-        <result column="comment_user_id" property="commentUserId" />
-        <result column="comment_retext" property="commentRetext" />
-        <result column="comment_date" property="commentDate" />
+        <id column="id" property="id"/>
+        <result column="comment_id" property="commentId"/>
+        <result column="comment_user_id" property="commentUserId"/>
+        <result column="comment_retext" property="commentRetext"/>
+        <result column="comment_date" property="commentDate"/>
     </resultMap>
 
     <!-- 通用查询结果列 -->
     <sql id="Base_Column_List">
         id, comment_id, comment_user_id, comment_retext, comment_date
     </sql>
+    <delete id="deleteBlosCommReply">
+      /*删除评论回复*/
+      DELETE r
+      FROM share_blogs_comment_reply r
+      WHERE r.id = #{replyId};
+      /*删除评论回复回复*/
+      DELETE r
+      FROM share_blogs_comment_reply r
+      WHERE r.comment_id = #{commId}
+      AND r.comment_byuser_id = #{byUserId};
+
+    </delete>
 
 </mapper>
