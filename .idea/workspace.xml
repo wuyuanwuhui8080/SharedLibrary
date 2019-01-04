@@ -276,7 +276,7 @@
     </option>
     <push-targets>
       <push-target-info target-remote="origin" target-branch="master" repo="$PROJECT_DIR$" source="master" />
-      <push-target-info target-remote="origin" target-branch="master" repo="$PROJECT_DIR$" source="bobomaster" />
+      <push-target-info target-remote="origin" target-branch="bobomaster" repo="$PROJECT_DIR$" source="bobomaster" />
     </push-targets>
   </component>
   <component name="GradleLocalSettings">
@@ -1042,7 +1042,7 @@
       <workItem from="1546178853021" duration="7278000" />
       <workItem from="1546326986011" duration="24625000" />
       <workItem from="1546430332677" duration="9373000" />
-      <workItem from="1546476331578" duration="42380000" />
+      <workItem from="1546476331578" duration="42428000" />
     </task>
     <task id="LOCAL-00001" summary="完成邮箱查询,邮箱表增加字段state,页面展示成功">
       <created>1544780773011</created>
@@ -1121,11 +1121,18 @@
       <option name="project" value="LOCAL" />
       <updated>1546584353365</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="修改了登录的体验，增加了好友的请求。修复了博客的bug，增加了添加更多，增加了一个表字段，以及若干">
+      <created>1546584466022</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1546584466022</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="341013000" />
+    <option name="totallyTimeSpent" value="341061000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
