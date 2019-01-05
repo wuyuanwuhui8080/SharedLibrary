@@ -82,10 +82,8 @@ public class SharedFriendsController {
 							.setMsg(FriendsStatusConstant.FRIENDS_IS_MEFRIEDS);
 				}
 			}
-			return ReturnResult.okAndList(usersList);
-		} else {
-			return ReturnResult.error();
 		}
+		return ReturnResult.okAndList(usersList);
 	}
 
 	/**

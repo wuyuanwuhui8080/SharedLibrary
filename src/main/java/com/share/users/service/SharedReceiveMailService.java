@@ -39,4 +39,6 @@ public interface SharedReceiveMailService extends IService<SharedReceiveMail> {
 	 * @return 是否成功
 	 */
 	int updateState(List<String> idList, String state);
+
+
 }

@@ -6,6 +6,7 @@ import java.util.List;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpSession;
 
+import com.baomidou.mybatisplus.core.conditions.update.UpdateWrapper;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.session.Session;
 import org.springframework.stereotype.Controller;
@@ -94,7 +95,7 @@ public class SharedReceiveMailController {
 		if (email.getState() == 2) {
 			email.setState(1);
 			sharedReceiveMailService.update(email,
-					new QueryWrapper<SharedReceiveMail>().eq("id", id));
+					new UpdateWrapper<SharedReceiveMail>().eq("id", id));
 		}
 		model.addAttribute("email", email);
 		model.addAttribute("state", 4);
@@ -108,9 +109,10 @@ public class SharedReceiveMailController {
 	 * @return 邮件集合
 	 */
 	@RequestMapping("/emailState/{state}")
-	public String getMajorEmail(@PathVariable String state, Session session,
+	public String getMajorEmail(@PathVariable String state,
 			Model model,
 			@RequestParam(value = "pageIndex", required = false, defaultValue = "1") Integer pageIndex) {
+		Session session = SecurityUtils.getSubject().getSession();
 		SharedUsers users = (SharedUsers) session.getAttribute("users");
 		PageInfo<SharedEmail> iPage = null;
 		// 判断显示那个页面的标记

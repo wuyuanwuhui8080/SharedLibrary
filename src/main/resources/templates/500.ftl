@@ -5,9 +5,6 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script>if (window.top !== window.self) {
-        window.top.location = window.location;
-    }</script>
     <title>500错误</title>
     <#include "background/comm/script.ftl">
 </head>

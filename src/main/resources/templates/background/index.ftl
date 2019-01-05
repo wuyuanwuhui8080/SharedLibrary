@@ -99,7 +99,7 @@
                     </a>
                     <ul class="nav nav-second-level">
                         <li><a class="J_menuItem" href="${basePath}/sharedReceiveMail/emailIndex">收件箱</a></li>
-                        <li><a class="J_menuItem" href="${basePath}/sharedEmail/emailAdd">写信</a></li>
+                        <li><a class="J_menuItem" href="${basePath}/sharedReceiveMail/emailCompose">写信</a></li>
                     </ul>
                 </li>
 
