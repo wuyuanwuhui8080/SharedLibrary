@@ -166,7 +166,7 @@ public class SharedReceiveMailController {
 	 * @return
 	 */
 	@RequestMapping("/emailCompose")
-	public String toEmailCompose(Model model) {
+	public String toEmailCompose( Model model) {
 		Session session = SecurityUtils.getSubject().getSession();
 		SharedEmail sharedEmail = new SharedEmail();
 		sharedEmail.setReceiveName("");
