@@ -7,10 +7,12 @@ import java.util.List;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpSession;
 
+import com.share.util.ShiroMd5;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.IncorrectCredentialsException;
 import org.apache.shiro.authc.UnknownAccountException;
 import org.apache.shiro.authc.UsernamePasswordToken;
+import org.apache.shiro.session.Session;
 import org.apache.shiro.subject.Subject;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -327,4 +329,113 @@ public class SharedUsersController {
 			}
 		}
 	}
+
+	/**
+	 * 跳转修改页面
+	 * 
+	 * @param userId
+	 * @param model
+	 * @return
+	 */
+	@GetMapping("/goUpdateUsers")
+	public String goUpdateUsers(String userId, Model model) {
+		// 根据id查询用户信息
+		SharedUsers users = usersService.getUserById(userId);
+		model.addAttribute("users", users);
+		return "background/users/user_modifier";
+	}
+
+	/**
+	 * 修改个人资料
+	 * 
+	 * @param users
+	 * @return
+	 */
+	@PostMapping("/updateUsers")
+	@ResponseBody
+	public ReturnResult updateUsers(SharedUsers users, String captcha) {
+		// session中的验证码
+		String sessionCaptcha = (String) SecurityUtils.getSubject().getSession()
+				.getAttribute(CaptchaController.KEY_CAPTCHA);
+		if (null == captcha || !captcha.equalsIgnoreCase(sessionCaptcha)) {
+			return ReturnResult.error("验证码错误！");
+		}
+		if (usersService.updateUsers(users)) {
+			Session session = SecurityUtils.getSubject().getSession();
+			SharedUsers users1 = (SharedUsers) session.getAttribute("users");
+			if (users1 != null) {
+				session.removeAttribute("users");
+			}
+			SharedUsers users2 = usersService.getUserById(users.getId());
+			session.setAttribute("users", users2);
+			return ReturnResult.ok();
+		}
+		return ReturnResult.error("修改失败");
+	}
+
+	/**
+	 * 跳转到旧密码页面
+	 * 
+	 * @param userId
+	 * @return
+	 */
+	@GetMapping("/goOldPassword/{userId}")
+	public String goOldPassword(String userId) {
+		return "background/users/oldPassword";
+	}
+
+	/**
+	 * 校验输入的老密码是否和当前登录用户的密码一致
+	 * 
+	 * @param password
+	 * @param userName
+	 * @return
+	 */
+	@PostMapping("/verifyOdlPaassword/{password}/{userName}/{captcha}")
+	@ResponseBody
+	public ReturnResult verifyOdlPaassword(@PathVariable String password,
+			@PathVariable String userName, @PathVariable String captcha) {
+		Session session = SecurityUtils.getSubject().getSession();
+		// session中的验证码
+		String sessionCaptcha = (String) session
+				.getAttribute(CaptchaController.KEY_CAPTCHA);
+		if (null == captcha || !captcha.equalsIgnoreCase(sessionCaptcha)) {
+			return ReturnResult.error("验证码错误！");
+		}
+		// 把传入的用户密码和用户名用md5加密
+		String pwd1 = ShiroMd5.hashMd5(userName, password);
+		SharedUsers users = (SharedUsers) session.getAttribute("users");
+		if (pwd1.equals(users.getPassword())) {
+			return ReturnResult.ok(users.getId());
+		}
+		return ReturnResult.error("旧密码输入错误!");
+	}
+
+	/**
+	 * 修改新密码
+	 * 
+	 * @param users
+	 *            传入的实体
+	 * @param captcha
+	 *            验证码
+	 * @return
+	 */
+	@PostMapping("/updateNewPassword")
+	@ResponseBody
+	public ReturnResult updateNewPassword(SharedUsers users, String captcha) {
+		Session session = SecurityUtils.getSubject().getSession();
+		// session中的验证码
+		String sessionCaptcha = (String) session
+				.getAttribute(CaptchaController.KEY_CAPTCHA);
+		if (null == captcha || !captcha.equalsIgnoreCase(sessionCaptcha)) {
+			return ReturnResult.error("验证码错误！");
+		}
+		String pwd = ShiroMd5.hashMd5(users.getUserName(), users.getPassword());
+		users.setPassword(pwd);
+		if (usersService.updateUserPassword(users)) {
+			return ReturnResult.ok();
+		}
+		return ReturnResult.error("修改失败！");
+	}
+
 }

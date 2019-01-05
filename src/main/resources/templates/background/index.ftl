@@ -10,6 +10,7 @@
 
     <meta name="keywords" content="内部后台">
     <#include "comm/script.ftl">
+    <script src="${basePath}/js/users/users_modifier.js"></script>
     <script src="${basePath}/js/custom_up_img.js"></script>
 </head>
 
@@ -27,7 +28,7 @@
                                                 src="${basePath}/images/${users.headImg}"/></span>
                         <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                                 <span class="clear">
-                               <span class="block m-t-xs"><strong
+                               <span class="block m-t-xs MyUsersName"><strong
                                        class="font-bold">欢迎你：${users.realName}</strong></span>
                         </a>
                         <ul class="dropdown-menu animated fadeInRight m-t-xs">
@@ -35,9 +36,9 @@
                             </li>
                             <li><a class="J_menuItem" href="${basePath}/sharedUsers/lookProfile/${users.id}">个人资料</a>
                             </li>
-                            <li><a class="J_menuItem" href="contacts.html">联系我们</a>
+                            <li><a class="J_menuItem" href="${basePath}/sharedUsers/goUpdateUsers">修改资料</a>
                             </li>
-                            <li><a class="J_menuItem" href="mailbox.html">信箱</a>
+                            <li><a class="J_menuItem" href="${basePath}/sharedUsers/goOldPassword/${users.id}">修改密码</a>
                             </li>
                             <li class="divider"></li>
                             <li><a href="${basePath}/sharedUsers/loginOut">安全退出</a>
@@ -93,17 +94,12 @@
                 </li>
                 <li>
                     <a href="mailbox.html"><i class="fa fa-envelope"></i>
-                        <span class="nav-label">信箱 </span>
-                    <#-- <#if (emailSum==0)>
-                         <span class="fa arrow"></span>
-                     <#else>
-                         <span class="label label-warning pull-right">${emailSum}</span>
-                     </#if>-->
-
+                        <span class="nav-label">信箱 <span
+                                class="fa arrow"></span></span>
                     </a>
                     <ul class="nav nav-second-level">
-                        <li><a class="J_menuItem" href="${basePath}/sharedEmail/emailIndex">收件箱</a></li>
-                        <li><a class="J_menuItem" href="${basePath}/sharedEmail/emailLook">写信</a></li>
+                        <li><a class="J_menuItem" href="${basePath}/sharedReceiveMail/emailIndex">收件箱</a></li>
+                        <li><a class="J_menuItem" href="${basePath}/sharedEmail/emailAdd">写信</a></li>
                     </ul>
                 </li>
 

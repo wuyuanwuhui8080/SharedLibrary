@@ -156,4 +156,29 @@ public class SharedUsersServiceImpl
 				.eq(SharedUsers::getRealName, name)) > 0 ? true : false;
 	}
 
+	/**
+	 * 修改信息
+	 *
+	 * @param users
+	 * @return
+	 */
+	@Override
+	public boolean updateUsers(SharedUsers users) {
+		users.setPassword(null);
+		users.setUpdateDate(new Date());
+		return super.updateById(users);
+	}
+
+	/**
+	 * 修改用户密码
+	 * @param users
+	 *            传入的实体用户
+	 * @return
+	 */
+	@Override
+	public boolean updateUserPassword(SharedUsers users) {
+		users.setUpdateDate(new Date());
+		return super.updateById(users);
+	}
+
 }

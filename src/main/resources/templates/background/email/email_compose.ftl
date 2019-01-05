@@ -48,7 +48,7 @@
                                         </div>
                                     </div>
                                 </div>
-                              <div class="col-sm-2 center-left"> <span id="userNameSpanId"  style="font-size: 16px">用户名不存在</span></div>
+                              <div class="col-sm-2 center-left"> <span id="userNameSpanId"  style="font-size: 16px"></span></div>
                           </div>
 
                     </div>

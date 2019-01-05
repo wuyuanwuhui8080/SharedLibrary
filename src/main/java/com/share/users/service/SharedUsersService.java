@@ -93,4 +93,22 @@ public interface SharedUsersService extends IService<SharedUsers> {
 	 */
 	@Transactional(propagation = Propagation.NOT_SUPPORTED)
 	boolean getUserByUserNameOrRealName(String name);
+
+	/**
+	 * 修改信息
+	 * 
+	 * @param users
+	 * @return
+	 */
+	@Transactional(propagation = Propagation.REQUIRED, rollbackFor = Exception.class)
+	boolean updateUsers(SharedUsers users);
+
+	/**
+	 * 修改用户密码
+	 * 
+	 * @param users
+	 *            传入的实体用户
+	 * @return
+	 */
+	boolean updateUserPassword(SharedUsers users);
 }
