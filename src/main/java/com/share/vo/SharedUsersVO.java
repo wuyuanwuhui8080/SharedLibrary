@@ -7,6 +7,7 @@ import java.util.Date;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.format.annotation.DateTimeFormat;
 
 /**
  * 用户表 的视图表示对象
@@ -30,6 +31,24 @@ public class SharedUsersVO implements Serializable {
 	 * 名字
 	 */
 	private String userName;
+
+
+	/**
+	 * 创建时间
+	 */
+	@DateTimeFormat(pattern = "yyyy-MM-dd hh:mm:ss")
+	private Date creationDate;
+
+	/**
+	 * 职位名称
+	 */
+	private String positionName;
+
+	/**
+	 * 角色外键 （对应sharedl_position的id）
+	 */
+	private Integer positionId;
+
 
 	/**
 	 * 真实姓名

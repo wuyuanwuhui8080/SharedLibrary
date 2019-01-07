@@ -5,6 +5,7 @@ import java.util.List;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpSession;
 
+import com.github.pagehelper.PageInfo;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -51,39 +52,39 @@ public class SharedFriendsController {
 	public ReturnResult searchFriend(@RequestParam("name") String name,
 			HttpSession session) {
 		// 根据用户名或者真实姓名查询
-		List<SharedUsers> usersList = usersService
-				.findUsersListByUserNameOrRealName(name, null);
+		List<SharedUsers> userList = usersService
+				.findUserListBYUserNameorRealName(name);
 		SharedUsers users1 = (SharedUsers) session.getAttribute("users");
 		List<String> friendsList = friendsService
 				.getListUsersId(users1.getId());
-		if (usersList != null && usersList.size() > 0) {
-			for (int i = 0; i < usersList.size(); i++) {
-				if (usersList.get(i).getId().equals(users1.getId())) {
+		if (userList != null && userList.size() > 0) {
+			for (int i = 0; i < userList.size(); i++) {
+				if (userList.get(i).getId().equals(users1.getId())) {
 					// 自己
-					usersList.get(i).setMsg(FriendsStatusConstant.FRIENDS_ME);
+					userList.get(i).setMsg(FriendsStatusConstant.FRIENDS_ME);
 					// 判断好友表是否为空
 				} else if (StringUtils.isNotNullToArray(friendsList)) { // 不为空就执行判断
 					for (int a = 0; a < friendsList.size(); a++) {
-						if (usersList.get(i).getId()
+						if (userList.get(i).getId()
 								.equals(friendsList.get(a))) {
 							// 该好友已经是您的好友
-							usersList.get(i).setMsg(
+							userList.get(i).setMsg(
 									FriendsStatusConstant.FRIENDS_NOTMEFRIEDS);
-						} else if ((a + 1) == friendsList.size() && !usersList
+						} else if ((a + 1) == friendsList.size() && !userList
 								.get(i).getId().equals(friendsList.get(i))) {
 							// 点击用户名添加哦
-							usersList.get(i).setMsg(
+							userList.get(i).setMsg(
 									FriendsStatusConstant.FRIENDS_IS_MEFRIEDS);
 						}
 					}
 				} else { // 为空就提示可以添加
 					// 点击用户名添加哦
-					usersList.get(i)
+					userList.get(i)
 							.setMsg(FriendsStatusConstant.FRIENDS_IS_MEFRIEDS);
 				}
 			}
 		}
-		return ReturnResult.okAndList(usersList);
+		return ReturnResult.okAndList(userList);
 	}
 
 	/**
@@ -129,6 +130,11 @@ public class SharedFriendsController {
 		List<SharedUsersVO> friendsLiist = usersService
 				.findListByUsersIdForFriends(userIds);
 		return ReturnResult.okAndList(friendsLiist);
+	}
+
+	@GetMapping("/goChar")
+	public String goChar() {
+		return "background/users/friend_chat";
 	}
 
 }

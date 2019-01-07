@@ -4,7 +4,9 @@ import java.util.List;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.share.pojo.SharedUsers;
+import com.share.vo.SharedUsersJSONVO;
 import com.share.vo.SharedUsersVO;
+import org.apache.ibatis.annotations.Param;
 
 /**
  * 用户自定义数据接口
@@ -22,7 +24,23 @@ public interface SharedUsersMapper extends BaseMapper<SharedUsers> {
 	 */
 	List<SharedUsersVO> findListByUserIdList(List<String> userId);
 
-	// List<SharedUsersVO> findListByUserNameOrRealNameForFriends(List<String>
-	// userId,String name);
+	/**
+	 * 根据传入的用户名和职位查询
+	 * 
+	 * @param name
+	 * @param position
+	 * @return
+	 */
+	List<SharedUsersJSONVO> findUsersListByUserNameOrRealName(
+			@Param("name") String name, @Param("position") Integer position);
+
+	/**
+	 * 删除用户以及用户下的所有东西
+	 * 
+	 * @param userId
+	 *            传入的用户id
+	 * @return
+	 */
+	Integer removeById(@Param("userId") String userId);
 
 }

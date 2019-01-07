@@ -2,12 +2,20 @@ package com.share.users.controller;
 
 import java.io.FileNotFoundException;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpSession;
 
-import com.share.util.ShiroMd5;
+import com.github.pagehelper.PageInfo;
+import com.share.constant.PageConstant;
+import com.share.constant.PositionConstant;
+import com.share.constant.PositionNameConstant;
+import com.share.util.*;
+import com.share.vo.SharedUsersJSONVO;
+import com.share.vo.SharedUsersVO;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.IncorrectCredentialsException;
 import org.apache.shiro.authc.UnknownAccountException;
@@ -29,9 +37,6 @@ import com.share.users.service.SharedAttentionService;
 import com.share.users.service.SharedFansService;
 import com.share.users.service.SharedUsersService;
 import com.share.users.service.SharedlPositionService;
-import com.share.util.BASE64DecodedMultipartFile;
-import com.share.util.FileUtil;
-import com.share.util.ReturnResult;
 
 import lombok.extern.log4j.Log4j2;
 
@@ -201,25 +206,59 @@ public class SharedUsersController {
 	/**
 	 * 根据条件查询 有则查询条件， 无则查询所有
 	 *
-	 * @author cll
+	 * @author cll 马汇博
 	 * @time 2018/12/15 15:49
 	 */
 	@GetMapping("/goUserList")
 	public String goUserList(
 			@RequestParam(value = "name", required = false) String name,
 			@RequestParam(value = "position", required = false) Integer position,
+			@RequestParam(value = "pageIndex", required = false, defaultValue = "1") Integer pageIndex,
 			Model model) {
 		// 查询所有职位
 		List<SharedlPosition> positionList = positionServicel.findList();
 
-		// 查询所有用户
-		List<SharedUsers> usersList = usersService
-				.findUsersListByUserNameOrRealName(name, position);
-		model.addAttribute("usersList", usersList);
+		// 查询用户
+		PageInfo<SharedUsersJSONVO> page = usersService
+				.findUsersListByUserNameOrRealName(name, position, pageIndex,
+						PageConstant.PAGESIZE);
+		model.addAttribute("page", page);
 		model.addAttribute("positionList", positionList);
 		model.addAttribute("position", position);
 		model.addAttribute("name", name);
 		return "background/users/userList";
+	}
+
+	/**
+	 * 用来json查询的方法
+	 * 
+	 * @param name
+	 *            用户名或者真实姓名
+	 * @param position
+	 *            职位
+	 * @param pageIndex
+	 *            起始页
+	 * @param model
+	 * @return
+	 */
+	@GetMapping("/jsonUserList")
+	@ResponseBody
+	public ReturnResult jsonUserList(
+			@RequestParam(value = "name", required = false) String name,
+			@RequestParam(value = "position", required = false) Integer position,
+			@RequestParam(value = "pageIndex", required = false, defaultValue = "1") Integer pageIndex,
+			Model model) {
+		// 查询用户
+		PageInfo<SharedUsersJSONVO> page = usersService
+				.findUsersListByUserNameOrRealName(name, position, pageIndex,
+						PageConstant.PAGESIZE);
+		Map<String, Object> map = new HashMap<>();
+		// 回显数据
+		map.put("page", page);
+		map.put("name", name);
+		map.put("position", position);
+		map.put("pageIndex", pageIndex);
+		return ReturnResult.ok(map);
 	}
 
 	/**
@@ -276,20 +315,6 @@ public class SharedUsersController {
 	public String goUpload() {
 		return "background/users/user_headImg";
 	}
-
-	/*
-	 * @PostMapping("/uploadHeadImg")
-	 *
-	 * @ResponseBody public ReturnResult uploadHeadImg(String
-	 * userId,MultipartFile file) { ReturnResult returnResult =
-	 * FileUtil.fileUpload(file); if(returnResult.getStatus() !=
-	 * HTTPStutusConstant.SUCCESS_STRUTS){ return returnResult; }else{ //
-	 * 实例化users实体并把id和头像名称塞入 SharedUsers users = new SharedUsers();
-	 * users.setId(userId);
-	 * users.setHeadImg(returnResult.getList().get(0).toString()); if
-	 * (usersService.updateUserHeadImg(users)){ return ReturnResult.ok(); }else
-	 * { return ReturnResult.error("修改失败!"); } } }
-	 */
 
 	/**
 	 * 提交修改头像的操作
@@ -436,6 +461,105 @@ public class SharedUsersController {
 			return ReturnResult.ok();
 		}
 		return ReturnResult.error("修改失败！");
+	}
+
+	/**
+	 * 查看用户详细
+	 * 
+	 * @param userid
+	 * @return
+	 */
+	@GetMapping("/showUsers/{userid}")
+	public String showUsers(@PathVariable String userid, Model model)
+			throws Exception {
+		// 根据id查询用户信息
+		SharedUsers users = usersService.getUserById(userid);
+		SharedUsersVO sharedUsersVO = new SharedUsersVO();
+		CopyUtils.Copy(users, sharedUsersVO);
+		model.addAttribute("user", sharedUsersVO);
+		return "background/users/show_user";
+	}
+
+	/**
+	 * 删除用户
+	 * 
+	 * @param userId
+	 * @return
+	 */
+	@PostMapping("/deleteUsers/{userId}")
+	@ResponseBody
+	public ReturnResult deleteUsers(@PathVariable String userId) {
+		// 先根据用户id查询这个用户的状态
+		SharedUsers users = usersService.getUserById(userId);
+		// 判断当前删除的用户是不是管理员，如果是管理员，提示不能删除
+		if (users.getPositionId() == PositionConstant.ADMIN_USER) {
+			return ReturnResult.error("您没有权限删除管理员用户！");
+			// 不是管理员
+		} else {
+			// 判断封号次数是不是大于三
+			if (users.getStopNum() <= 3) {
+				return ReturnResult.error("该用户封号次数没有大于3次不能删除！");
+				// 大于三 可以删除
+			} else {
+				if (usersService.deleteUsers(userId)) {
+					return ReturnResult.ok();
+				}
+			}
+		}
+		return ReturnResult.error("删除失败！");
+	}
+
+	/**
+	 * 跳转到修改页面
+	 * 
+	 * @param userId
+	 *            用户id
+	 * @param model
+	 * @return
+	 * @throws Exception
+	 */
+	@GetMapping("/goUpdate/{userId}")
+	public String goUpdate(@PathVariable("userId") String userId, Model model)
+			throws Exception {
+		SharedUsers sharedUsers = usersService.getUserById(userId);
+		SharedUsersVO usersVO = new SharedUsersVO();
+		CopyUtils.Copy(sharedUsers, usersVO);
+		model.addAttribute("users", usersVO);
+		return "background/users/user_list_modifier";
+	}
+
+	/**
+	 * 修改用户资料
+	 * 
+	 * @param sharedUsers
+	 *            传入对象
+	 * @return
+	 */
+	@PostMapping("/updateUser")
+	@ResponseBody
+	public ReturnResult updateUser(SharedUsers sharedUsers, String captcha) {
+		Session session = SecurityUtils.getSubject().getSession();
+		// session中的验证码
+		String sessionCaptcha = (String) session
+				.getAttribute(CaptchaController.KEY_CAPTCHA);
+		if (null == captcha || !captcha.equalsIgnoreCase(sessionCaptcha)) {
+			return ReturnResult.error("验证码错误！");
+		}
+		// 判断传入的用户是不是管理员
+		if (sharedUsers.getPositionId() == PositionConstant.ADMIN_USER) {
+			return ReturnResult.error("您没有权限更改管理员的资料");
+		} else {
+			sharedUsers.setUserName(null);
+			if (usersService.updateUsers(sharedUsers)) {
+				return ReturnResult.ok();
+			}
+		}
+		return ReturnResult.error("更新错误！");
+	}
+
+	@GetMapping("/goSaveUser")
+	public String goSaveUser() {
+		return "background/users/add_users";
 	}
 
 }

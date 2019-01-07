@@ -5,6 +5,9 @@ import java.util.List;
 
 import javax.annotation.Resource;
 
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
+import com.share.vo.SharedUsersJSONVO;
 import org.springframework.stereotype.Service;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
@@ -93,20 +96,32 @@ public class SharedUsersServiceImpl
 	 * 
 	 * @param name
 	 *            传入的字符串
-	 * @author cll 陈留领
+	 * @author cll 陈留领 马汇博
 	 * @return
 	 */
 	@Override
-	public List<SharedUsers> findUsersListByUserNameOrRealName(String name,
-			Integer position) {
-		QueryWrapper<SharedUsers> wrapper = new QueryWrapper<>();
-		if (StringUtils.isNotNull(name)) {
-			wrapper.like("userName", name).or().like("realName", name);
-		}
-		if (position != null && !position.equals("")) {
-			wrapper.eq("position_id", position);
-		}
-		return super.list(wrapper);
+	public PageInfo<SharedUsersJSONVO> findUsersListByUserNameOrRealName(
+			String name, Integer position, Integer pageIndex,
+			Integer pageSize) {
+		// 拦截sql
+		PageHelper.startPage(pageIndex, pageSize);
+		PageInfo<SharedUsersJSONVO> pageInfo = new PageInfo<>(
+				usersMapper.findUsersListByUserNameOrRealName(name, position));
+		return pageInfo;
+	}
+
+	/**
+	 * 根据真实姓名或者用户名查询
+	 * 
+	 * @param name
+	 *            传入的真实姓名或者用户名
+	 * @return
+	 */
+	@Override
+	public List<SharedUsers> findUserListBYUserNameorRealName(String name) {
+		return super.list(new LambdaQueryWrapper<SharedUsers>()
+				.eq(SharedUsers::getUserName, name).or()
+				.eq(SharedUsers::getRealName, name));
 	}
 
 	/**
@@ -171,6 +186,7 @@ public class SharedUsersServiceImpl
 
 	/**
 	 * 修改用户密码
+	 * 
 	 * @param users
 	 *            传入的实体用户
 	 * @return
@@ -179,6 +195,18 @@ public class SharedUsersServiceImpl
 	public boolean updateUserPassword(SharedUsers users) {
 		users.setUpdateDate(new Date());
 		return super.updateById(users);
+	}
+
+	/**
+	 * 删除用户
+	 * 
+	 * @param userId
+	 *            传入的用户id
+	 * @return
+	 */
+	@Override
+	public boolean deleteUsers(String userId) {
+		return usersMapper.removeById(userId) > 0 ? true : false;
 	}
 
 }

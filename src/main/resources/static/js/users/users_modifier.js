@@ -1,4 +1,3 @@
-var path = document.getElementById("path").value;
 /**
  * 制定提交和返回格式，并执行业务!
  * @author 博博大人

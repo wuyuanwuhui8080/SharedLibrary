@@ -2,6 +2,8 @@ package com.share.users.service;
 
 import java.util.List;
 
+import com.github.pagehelper.PageInfo;
+import com.share.vo.SharedUsersJSONVO;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -50,12 +52,22 @@ public interface SharedUsersService extends IService<SharedUsers> {
 	/**
 	 * 根据用户名或真实姓名查询用户列表
 	 * 
-	 * @author cll 陈留领
+	 * @author cll 陈留领 马汇博
 	 * @time 2018/12/15 16:05
 	 */
 	@Transactional(propagation = Propagation.NOT_SUPPORTED)
-	List<SharedUsers> findUsersListByUserNameOrRealName(String name,
-			Integer position);
+	PageInfo<SharedUsersJSONVO> findUsersListByUserNameOrRealName(String name,
+																  Integer position, Integer pageIndex, Integer pageSize);
+
+	/**
+	 * 根据真实姓名或者用户名查询
+	 * 
+	 * @param name
+	 *            传入的真实姓名或者用户名
+	 * @return
+	 */
+	@Transactional(propagation = Propagation.NOT_SUPPORTED)
+	List<SharedUsers> findUserListBYUserNameorRealName(String name);
 
 	/**
 	 * 修改头像
@@ -110,5 +122,15 @@ public interface SharedUsersService extends IService<SharedUsers> {
 	 *            传入的实体用户
 	 * @return
 	 */
+	@Transactional(propagation = Propagation.REQUIRED)
 	boolean updateUserPassword(SharedUsers users);
+
+	/**
+	 * 删除用户
+	 * 
+	 * @param userId
+	 *            传入的用户id
+	 * @return
+	 */
+	boolean deleteUsers(String userId);
 }
