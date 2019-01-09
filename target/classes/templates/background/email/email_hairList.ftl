@@ -4,8 +4,8 @@
     <div class="mail-box">
         <table class="table table-hover table-mail">
             <tbody id="emailList">
-                   <#if (page.records?size > 0)>
-                        <#list page.records as email>
+                   <#if (page.list?size > 0)>
+                        <#list page.list as email>
                                 <tr class="unread">
                                     <td class="check-mail">
                                         <input type="checkbox" name="email_id" value="${email.id}" class="i-checks">

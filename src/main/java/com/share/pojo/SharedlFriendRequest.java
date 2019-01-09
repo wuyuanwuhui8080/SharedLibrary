@@ -36,12 +36,12 @@ public class SharedlFriendRequest extends Model<SharedlFriendRequest> {
 	private String id;
 
 	/**
-	 * 被请求者的id
+	 * 请求者的id
 	 */
 	private String meId;
 
 	/**
-	 * 请求者的id
+	 * 被请求者的id
 	 */
 	private String requestId;
 

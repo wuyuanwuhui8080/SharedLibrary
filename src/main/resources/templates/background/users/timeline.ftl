@@ -22,77 +22,93 @@
                         <div class="" id="ibox-content">
 
                             <div id="vertical-timeline" class="vertical-container light-timeline">
-                                <div class="vertical-timeline-block">
-                                    <div class="vertical-timeline-icon navy-bg">
-                                        <i class="fa fa-briefcase"></i>
+                                <#list events as event>
+                                    <div class="vertical-timeline-block">
+                                        <div class="vertical-timeline-icon navy-bg">
+                                            <i class="fa fa-briefcase"></i>
+                                        </div>
+                                        <div class="vertical-timeline-content">
+                                            <h2>好友请求</h2>
+                                            <p>${event.requesterName}(${event.requesterUsername})</p>
+                                            <a href="#" class="btn btn-sm btn-primary"> 更多信息</a>
+                                            <span class="vertical-date"><br>
+                                     <small>${event.requestTime}</small>
+                                 </span>
+                                        </div>
                                     </div>
+                                </#list>
 
-                                    <div class="vertical-timeline-content">
-                                        <h2>会议</h2>
-                                        <p>上一年的销售业绩发布会。总结产品营销和销售趋势及销售的现状。
-                                        </p>
-                                        <a href="#" class="btn btn-sm btn-primary"> 更多信息</a>
-                                        <span class="vertical-date">
-                                        今天 <br>
-                                        <small>2月3日</small>
-                                    </span>
-                                    </div>
-                                </div>
 
-                                <div class="vertical-timeline-block">
-                                    <div class="vertical-timeline-icon blue-bg">
-                                        <i class="fa fa-file-text"></i>
-                                    </div>
 
-                                    <div class="vertical-timeline-content">
-                                        <h2>给张三发送文档</h2>
-                                        <p>发送上年度《销售业绩报告》</p>
-                                        <a href="#" class="btn btn-sm btn-success"> 下载文档 </a>
-                                        <span class="vertical-date">
-                                        今天 <br>
-                                        <small>2月3日</small>
-                                    </span>
-                                    </div>
-                                </div>
+                            <#-- <div class="vertical-timeline-block">
+                                 <div class="vertical-timeline-icon navy-bg">
+                                     <i class="fa fa-briefcase"></i>
+                                 </div>
+                                 <div class="vertical-timeline-content">
+                                     <h2>会议</h2>
+                                     <p>上一年的销售业绩发布会。总结产品营销和销售趋势及销售的现状。
+                                     </p>
+                                     <a href="#" class="btn btn-sm btn-primary"> 更多信息</a>
+                                     <span class="vertical-date">
+                                  今天 <br>
+                                  <small>2月3日</small>
+                              </span>
+                                 </div>
+                             </div>
 
-                                <div class="vertical-timeline-block">
-                                    <div class="vertical-timeline-icon lazur-bg">
-                                        <i class="fa fa-coffee"></i>
-                                    </div>
+                             <div class="vertical-timeline-block">
+                                 <div class="vertical-timeline-icon blue-bg">
+                                     <i class="fa fa-file-text"></i>
+                                 </div>
 
-                                    <div class="vertical-timeline-content">
-                                        <h2>喝咖啡休息</h2>
-                                        <p>喝咖啡啦，啦啦啦~~</p>
-                                        <a href="#" class="btn btn-sm btn-info">更多</a>
-                                        <span class="vertical-date"> 昨天 <br><small>2月2日</small></span>
-                                    </div>
-                                </div>
+                                 <div class="vertical-timeline-content">
+                                     <h2>给张三发送文档</h2>
+                                     <p>发送上年度《销售业绩报告》</p>
+                                     <a href="#" class="btn btn-sm btn-success"> 下载文档 </a>
+                                     <span class="vertical-date">
+                              今天 <br>
+                              <small>2月3日</small>
+                          </span>
+                                 </div>
+                             </div>
 
-                                <div class="vertical-timeline-block">
-                                    <div class="vertical-timeline-icon yellow-bg">
-                                        <i class="fa fa-phone"></i>
-                                    </div>
+                             <div class="vertical-timeline-block">
+                                 <div class="vertical-timeline-icon lazur-bg">
+                                     <i class="fa fa-coffee"></i>
+                                 </div>
 
-                                    <div class="vertical-timeline-content">
-                                        <h2>给李四打电话</h2>
-                                        <p>给李四打电话分配本月工作任务</p>
-                                        <span class="vertical-date">昨天 <br><small>2月2日</small></span>
-                                    </div>
-                                </div>
+                                 <div class="vertical-timeline-content">
+                                     <h2>喝咖啡休息</h2>
+                                     <p>喝咖啡啦，啦啦啦~~</p>
+                                     <a href="#" class="btn btn-sm btn-info">更多</a>
+                                     <span class="vertical-date"> 昨天 <br><small>2月2日</small></span>
+                                 </div>
+                             </div>
 
-                                <div class="vertical-timeline-block">
-                                    <div class="vertical-timeline-icon lazur-bg">
-                                        <i class="fa fa-user-md"></i>
-                                    </div>
+                             <div class="vertical-timeline-block">
+                                 <div class="vertical-timeline-icon yellow-bg">
+                                     <i class="fa fa-phone"></i>
+                                 </div>
 
-                                    <div class="vertical-timeline-content">
-                                        <h2>公司年会</h2>
-                                        <p>发年终奖啦，啦啦啦~~</p>
-                                        <span class="vertical-date">前天 <br><small>2月1日</small></span>
-                                    </div>
-                                </div>
+                                 <div class="vertical-timeline-content">
+                                     <h2>给李四打电话</h2>
+                                     <p>给李四打电话分配本月工作任务</p>
+                                     <span class="vertical-date">昨天 <br><small>2月2日</small></span>
+                                 </div>
+                             </div>
+
+                             <div class="vertical-timeline-block">
+                                 <div class="vertical-timeline-icon lazur-bg">
+                                     <i class="fa fa-user-md"></i>
+                                 </div>
+
+                                 <div class="vertical-timeline-content">
+                                     <h2>公司年会</h2>
+                                     <p>发年终奖啦，啦啦啦~~</p>
+                                     <span class="vertical-date">前天 <br><small>2月1日</small></span>
+                                 </div>
+                             </div>-->
                             </div>
-
                         </div>
                     </div>
                 </div>
@@ -108,6 +124,27 @@
 </div>
 
 <script>
+    /*$(function () {
+        var div = "";
+        //页面加载完成ajax请求数据
+        $.get("/sharedUsers/showEvent", function (data) {
+            div += '<div class="vertical-timeline-block">\n' +
+                    '<div class="vertical-timeline-icon navy-bg">\n' +
+                    '<i class="fa fa-briefcase"></i>\n' +
+                    '</div>\n' +
+                    '<div class="vertical-timeline-content">\n' +
+                    '<h2>好友请求</h2>\n' +
+                    '<p>' + data[0].requesterName + '(' + data[0].requesterUsername + ')</p>\n' +
+                    '<a href="#" class="btn btn-sm btn-primary"> 更多信息</a>\n' +
+                    '<span class="vertical-date"><br>\n' +
+                    '<small>' + data[0].requestTime + '</small>\n' +
+                    '</span>\n' +
+                    '</div>\n' +
+                    '</div>\n';
+        });
+    });*/
+
+
     $(document).ready(function () {
 
         // Local script for demo purpose only

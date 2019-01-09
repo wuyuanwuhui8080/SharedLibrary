@@ -191,8 +191,8 @@ $(function () {
                         }
                         $("#fendIDFriend").html(date.list.length + "个好友");
                         $("#tbodyId").html(tr);
-                    }else {
-                        swal("查询失败！",null,"error");
+                    } else {
+                        swal("查询失败！", null, "error");
                     }
 
                 },

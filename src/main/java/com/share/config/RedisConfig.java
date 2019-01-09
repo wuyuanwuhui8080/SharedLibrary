@@ -14,7 +14,6 @@ import org.springframework.stereotype.Component;
 import redis.clients.jedis.JedisPoolConfig;
 
 /**
- *
  * redis 连接管理
  *
  * @author 博博
@@ -25,15 +24,17 @@ import redis.clients.jedis.JedisPoolConfig;
 @Configuration
 public class RedisConfig {
 
-    private String hostName = "127.0.0.1";
+    private String hostName = "192.168.25.133";
     private Integer host = 6379;
+
     /**
      * JedisPoolConfig 连接池
+     *
      * @return
      */
     @Bean
-    public JedisPoolConfig jedisPoolConfig(){
-        JedisPoolConfig jedisPoolConfig=new JedisPoolConfig();
+    public JedisPoolConfig jedisPoolConfig() {
+        JedisPoolConfig jedisPoolConfig = new JedisPoolConfig();
         //最大空闲数
         jedisPoolConfig.setMaxIdle(300);
         //连接池的最大数据库连接数
@@ -55,12 +56,13 @@ public class RedisConfig {
 
     /**
      * 配置工厂
+     *
      * @param jedisPoolConfig
      * @return
      */
     @Bean
-    public JedisConnectionFactory jedisConnectionFactory(JedisPoolConfig jedisPoolConfig){
-        JedisConnectionFactory jedisConnectionFactory=new JedisConnectionFactory();
+    public JedisConnectionFactory jedisConnectionFactory(JedisPoolConfig jedisPoolConfig) {
+        JedisConnectionFactory jedisConnectionFactory = new JedisConnectionFactory();
         //连接池
         jedisConnectionFactory.setPoolConfig(jedisPoolConfig);
         //IP地址
@@ -75,6 +77,7 @@ public class RedisConfig {
 
     /**
      * 实例化 RedisTemplate 对象
+     *
      * @return
      */
     @Bean
@@ -86,6 +89,7 @@ public class RedisConfig {
 
     /**
      * 设置数据存入 redis 的序列化方式,并开启事务
+     *
      * @param redisTemplate
      * @param factory
      */
@@ -100,8 +104,8 @@ public class RedisConfig {
     }
 
     @Bean
-    public RedisUtil redisUtil(RedisTemplate<String, Object> redisTemplate){
-        RedisUtil redisUtil=new RedisUtil();
+    public RedisUtil redisUtil(RedisTemplate<String, Object> redisTemplate) {
+        RedisUtil redisUtil = new RedisUtil();
         redisUtil.setRedisTemplate(redisTemplate);
         return redisUtil;
     }

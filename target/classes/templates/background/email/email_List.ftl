@@ -4,8 +4,8 @@
     <div class="mail-box">
         <table class="table table-hover table-mail">
             <tbody id="emailList">
-                    <#if (page.records?size > 0)>
-                        <#list page.records as email>
+                    <#if (page.list?size > 0)>
+                        <#list page.list as email>
                             <#if (email.state != 4 && email.state != 5)>
                                 <tr class="<#if (email.state==3)>unread</#if><#if (email.state!=3)>read</#if>">
                                     <td class="check-mail">

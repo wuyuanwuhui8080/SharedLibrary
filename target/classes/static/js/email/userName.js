@@ -25,20 +25,20 @@ var falg = 1;
  * @returns {boolean}
  */
 function selUserName() {
-    var receiveName = $("#receiveName");
-    if (!app.isNull(receiveName.val())) {
+    var receiveName = $("#receiveName").val();
+    if (!app.isNull(receiveName)) {
         $.ajax({
             type: "get",
-            data: {userName: receiveName.val()},
+            data: {name: receiveName},
             dataType: "json",
-            url: path + "/sharedUsers/getUserName",
+            url: path + "/sharedUsers/getUserNamorRealName",
             success: function (date) {
                 if (date.status == 200) {
                     document.getElementById("userNameSpanId").innerHTML = "<font color='red'>查无此用户！</font>";
                     receiveName.val("");
                     falg = 1;
                 } else {
-                    document.getElementById("userNameSpanId").innerHTML = "<font color='green'>有此用户！</font>";
+                    document.getElementById("userNameSpanId").innerHTML = "";
                     falg = 0;
                 }
             },
