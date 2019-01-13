@@ -21,10 +21,9 @@
       FROM share_blogs_comment_reply r
       WHERE r.id = #{replyId};
       /*删除评论回复回复*/
-      DELETE r
-      FROM share_blogs_comment_reply r
-      WHERE r.comment_id = #{commId}
-      AND r.comment_byuser_id = #{byUserId};
+     DELETE
+     FROM share_blogs_comment_reply
+     WHERE comm_reply_id = #{replyId};
 
     </delete>
 

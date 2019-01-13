@@ -1,185 +1,342 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
-<title>首页_杨青个人博客 - 一个站在web前端设计之路的女技术员个人博客网站</title>
-<meta name="keywords" content="个人博客,杨青个人博客,个人博客模板,杨青" />
-<meta name="description" content="杨青个人博客，是一个站在web前端设计之路的女程序员个人网站，提供个人博客模板免费资源下载的个人原创网站。" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <#include "comm/script.ftl">
+    <meta charset="UTF-8">
+    <title>首页_杨青个人博客 - 一个站在web前端设计之路的女技术员个人博客网站</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <#include "comm/script.ftl">
 </head>
 <body>
-<header>
-<div id="mnav">
-   <div class="logo"><a href="/">杨青个人博客</a></div>
-    <h2 id="mnavh"><span class="navicon"></span></h2>
-    <ul id="starlist">
-      <li><a href="index.html">网站首页</a></li>
-      <li><a href="about.ftl">关于我</a></li>
-      <li><a href="share.ftl">模板分享</a></li>
-      <li><a href="list.ftl">学无止境</a></li>
-      <li><a href="info.ftl">慢生活</a></li>
-      <li><a href="shareinfo.ftl">模板内容页</a></li>
-      <li><a href="gbook.html">留言</a></li>
-    </ul>
-</div>
-<script>
-window.onload = function ()
-{
-	var oH2 = document.getElementById("mnavh"); 
-	var oUl = document.getElementById("starlist");  
-	oH2.onclick = function ()
-	{
-		var style = oUl.style;
-		style.display = style.display == "block" ? "none" : "block";
-		oH2.className = style.display == "block" ? "open" : ""
-	}
-}
-</script>
+<header class="header-navigation" id="header">
+    <nav>
+        <div class="logo"><a href="">论坛博客</a></div>
+        <h2 id="mnavh"><span class="navicon"></span></h2>
+        <ul id="starlist">
+            <li><a href="index.html">网站首页</a></li>
+            <li><a href="about.html">关于我</a></li>
+            <li><a href="share.html">模板分享</a></li>
+            <li><a href="index1.ftl">博客日记</a></li>
+            <li class="menu"><a href="fengmian.html">学无止境</a>
+                <ul class="sub">
+                    <li><a href="#">慢生活</a></li>
+                    <li><a href="#">美文欣赏</a></li>
+                </ul>
+            </li>
+            <li><a href="info.html">慢生活</a></li>
+            <li><a href="time.html">时间轴</a></li>
+        </ul>
+        <div class="searchbox">
+            <div id="search_bar" class="search_bar">
+                <form  id="searchform" action="[!--news.url--]e/search/index.php" method="post" name="searchform">
+                    <input class="input" placeholder="想搜点什么呢.." type="text" name="keyboard" id="keyboard">
+                    <input type="hidden" name="show" value="title" />
+                    <input type="hidden" name="tempid" value="1" />
+                    <input type="hidden" name="tbname" value="news">
+                    <input type="hidden" name="Submit" value="搜索" />
+                    <p class="search_ico"> <span></span></p>
+                </form>
+            </div>
+        </div>
+    </nav>
 </header>
-<div class="line46"></div>
 <article>
-  <div class="leftbox">
-    <div class="newblogs">
-      <h2 class="hometitle"><span><a href="/jstt/bj/">心得笔记</a><a href="/jstt/css3/">CSS3|Html5</a><a href="/jstt/web/">网站建设</a></span>学无止境</h2>
-      <ul>
-        <li>
-          <h3 class="blogtitle"><a href="/" target="_blank" >6条网页设计配色原则,让你秒变配色高手</a></h3>
-          <div class="bloginfo"><span class="blogpic"><a href="/" title=""><img src="images/t01.jpg"  /></a></span>
-            <p>网页设计好不好看,颜色是毋庸置疑要排首位的,所以关于颜色的搭配技巧以及原则,对于每一个要学习web前端设计的新手来说,这都是一个重要的学习过程.在本教程中我们将与你分享...</p>
-          </div>
-          <div class="autor"><span class="lm f_l"><a href="/">杨青个人博客</a></span><span class="dtime f_l">2014-02-19</span><span class="viewnum f_l">浏览（<a href="/">459</a>）</span><span class="pingl f_l">评论（<a href="/">30</a>）</span><span class="f_r"><a href="/" class="more">阅读原文>></a></span></div>
-        </li>
-        <li>
-          <h3 class="blogtitle"><a href="/" target="_blank" >作为一个设计师,如果遭到质疑你是否能恪守自己的原则</a></h3>
-          <div class="bloginfo"><span class="blogpic"><a href="/" title=""><img src="images/b01.png"  /></a></span>
-            <p>网页设计好不好看,颜色是毋庸置疑要排首位的,所以关于颜色的搭配技巧以及原则,对于每一个要学习web前端设计的新手来说,这都是一个重要的学习过程.在本教程中我们将与你分享...</p>
-          </div>
-          <div class="autor"><span class="lm f_l"><a href="/">杨青个人博客</a></span><span class="dtime f_l">2014-02-19</span><span class="viewnum f_l">浏览（<a href="/">459</a>）</span><span class="pingl f_l">评论（<a href="/">30</a>）</span><span class="f_r"><a href="/" class="more">阅读原文>></a></span></div>
-        </li>
-        <li>
-          <h3 class="blogtitle"><a href="/" target="_blank" >Come on,行动起来吧!我们和时间来一场赛跑!</a></h3>
-          <div class="bloginfo"><span class="blogpic"><a href="/" title=""><img src="images/b06.jpg"  /></a></span>
-            <p>"时间过得那么飞快,使我的小心眼儿里不只是着急,还有悲伤.有一天,我放学回家,看到太阳快落山了,就下决心说:"我要比太阳更快地回家."我狂奔回去,站在庭院前喘气的时候,看到太阳还露着半边脸,我高兴地跳跃起来,那一天我跑赢了太阳.以后我就时常做那样的游戏,有时和太阳赛跑...</p>
-          </div>
-          <div class="autor"><span class="lm f_l"><a href="/">杨青个人博客</a></span><span class="dtime f_l">2014-02-19</span><span class="viewnum f_l">浏览（<a href="/">459</a>）</span><span class="pingl f_l">评论（<a href="/">30</a>）</span><span class="f_r"><a href="/" class="more">阅读原文>></a></span></div>
-        </li>
-        <li>
-          <h3 class="blogtitle"><a href="/" target="_blank" >或许换一个活法,能让你走出阴霾</a></h3>
-          <div class="bloginfo"><!--<span class="blogpic"><a href="/" title=""><img src="images/b06.jpg"  /></a></span>-->
-            <p>前段时间回成都,去见了几年未见的老友.一起吃了饭,还带我家宝宝去玩.我问她为什么这么久都还没有打算要孩子,她说,她有一段时间患上了忧郁症,很长的时间才走出来,我听她这么说,我都很惊讶!想问问她原因,可见她欲言又止的神情,我便不再主动问她.就听着她慢慢的说.其实主要的原因还是源自于工作和家庭,工作压力大,每天的程序代码,上级不停的催,她甚至连续好几个通宵的熬夜...</p>
-          </div>
-          <div class="autor"><span class="lm f_l"><a href="/">杨青个人博客</a></span><span class="dtime f_l">2014-02-19</span><span class="viewnum f_l">浏览（<a href="/">459</a>）</span><span class="pingl f_l">评论（<a href="/">30</a>）</span><span class="f_r"><a href="/" class="more">阅读原文>></a></span></div>
-        </li>
-        <li>
-          <h3 class="blogtitle"><a href="/" target="_blank" >即便是坑，我也想要拉你入伙！</a></h3>
-          <div class="bloginfo"><span class="blogpic"><a href="/" title=""><img src="images/b07.jpg"  /></a></span>
-            <p>对于刚毕业的学生来说，想学习建网站，掌握一技之长，最简单的入门无非就是学会html和css，先前发表过一篇文章《如果要学习web前端开发，需要学习什么？》，如果你还不知道如何着手，请仔细阅读....7天的时间，入门是没有问题的，当然，如果你用心的话！...</p>
-          </div>
-          <div class="autor"><span class="lm f_l"><a href="/">杨青个人博客</a></span><span class="dtime f_l">2014-02-19</span><span class="viewnum f_l">浏览（<a href="/">459</a>）</span><span class="pingl f_l">评论（<a href="/">30</a>）</span><span class="f_r"><a href="/" class="more">阅读原文>></a></span></div>
-        </li>
-        <li>
-          <h3 class="blogtitle"><a href="/" target="_blank" >6条网页设计配色原则,让你秒变配色高手</a></h3>
-          <div class="bloginfo"><span class="blogpic"><a href="/" title=""><img src="images/t01.jpg"  /></a></span>
-            <p>网页设计好不好看,颜色是毋庸置疑要排首位的,所以关于颜色的搭配技巧以及原则,对于每一个要学习web前端设计的新手来说,这都是一个重要的学习过程.在本教程中我们将与你分享...</p>
-          </div>
-          <div class="autor"><span class="lm f_l"><a href="/">杨青个人博客</a></span><span class="dtime f_l">2014-02-19</span><span class="viewnum f_l">浏览（<a href="/">459</a>）</span><span class="pingl f_l">评论（<a href="/">30</a>）</span><span class="f_r"><a href="/" class="more">阅读原文>></a></span></div>
-        </li>
-        <li>
-          <h3 class="blogtitle"><a href="/" target="_blank" >作为一个设计师,如果遭到质疑你是否能恪守自己的原则</a></h3>
-          <div class="bloginfo"><span class="blogpic"><a href="/" title=""><img src="images/b01.png"  /></a></span>
-            <p>网页设计好不好看,颜色是毋庸置疑要排首位的,所以关于颜色的搭配技巧以及原则,对于每一个要学习web前端设计的新手来说,这都是一个重要的学习过程.在本教程中我们将与你分享...</p>
-          </div>
-          <div class="autor"><span class="lm f_l"><a href="/">杨青个人博客</a></span><span class="dtime f_l">2014-02-19</span><span class="viewnum f_l">浏览（<a href="/">459</a>）</span><span class="pingl f_l">评论（<a href="/">30</a>）</span><span class="f_r"><a href="/" class="more">阅读原文>></a></span></div>
-        </li>
-        <li>
-          <h3 class="blogtitle"><a href="/" target="_blank" >Come on,行动起来吧!我们和时间来一场赛跑!</a></h3>
-          <div class="bloginfo"><span class="blogpic"><a href="/" title=""><img src="images/b06.jpg"  /></a></span>
-            <p>"时间过得那么飞快,使我的小心眼儿里不只是着急,还有悲伤.有一天,我放学回家,看到太阳快落山了,就下决心说:"我要比太阳更快地回家."我狂奔回去,站在庭院前喘气的时候,看到太阳还露着半边脸,我高兴地跳跃起来,那一天我跑赢了太阳.以后我就时常做那样的游戏,有时和太阳赛跑...</p>
-          </div>
-          <div class="autor"><span class="lm f_l"><a href="/">杨青个人博客</a></span><span class="dtime f_l">2014-02-19</span><span class="viewnum f_l">浏览（<a href="/">459</a>）</span><span class="pingl f_l">评论（<a href="/">30</a>）</span><span class="f_r"><a href="/" class="more">阅读原文>></a></span></div>
-        </li>
-        <li>
-          <h3 class="blogtitle"><a href="/" target="_blank" >或许换一个活法,能让你走出阴霾</a></h3>
-          <div class="bloginfo"><!--<span class="blogpic"><a href="/" title=""><img src="images/b06.jpg"  /></a></span>-->
-            <p>前段时间回成都,去见了几年未见的老友.一起吃了饭,还带我家宝宝去玩.我问她为什么这么久都还没有打算要孩子,她说,她有一段时间患上了忧郁症,很长的时间才走出来,我听她这么说,我都很惊讶!想问问她原因,可见她欲言又止的神情,我便不再主动问她.就听着她慢慢的说.其实主要的原因还是源自于工作和家庭,工作压力大,每天的程序代码,上级不停的催,她甚至连续好几个通宵的熬夜...</p>
-          </div>
-          <div class="autor"><span class="lm f_l"><a href="/">杨青个人博客</a></span><span class="dtime f_l">2014-02-19</span><span class="viewnum f_l">浏览（<a href="/">459</a>）</span><span class="pingl f_l">评论（<a href="/">30</a>）</span><span class="f_r"><a href="/" class="more">阅读原文>></a></span></div>
-        </li>
-        <li>
-          <h3 class="blogtitle"><a href="/" target="_blank" >即便是坑，我也想要拉你入伙！</a></h3>
-          <div class="bloginfo"><span class="blogpic"><a href="/" title=""><img src="images/b07.jpg"  /></a></span>
-            <p>对于刚毕业的学生来说，想学习建网站，掌握一技之长，最简单的入门无非就是学会html和css，先前发表过一篇文章《如果要学习web前端开发，需要学习什么？》，如果你还不知道如何着手，请仔细阅读....7天的时间，入门是没有问题的，当然，如果你用心的话！...</p>
-          </div>
-          <div class="autor"><span class="lm f_l"><a href="/">杨青个人博客</a></span><span class="dtime f_l">2014-02-19</span><span class="viewnum f_l">浏览（<a href="/">459</a>）</span><span class="pingl f_l">评论（<a href="/">30</a>）</span><span class="f_r"><a href="/" class="more">阅读原文>></a></span></div>
-        </li>
-      </ul>
-      <div class="pagelist"><a title="Total record">&nbsp;<b>142</b> </a>&nbsp;&nbsp;<a href="/jstt/index.html">首页</a>&nbsp;<a href="/jstt/index.html">上一页</a>&nbsp;<a href="/jstt/index.html">1</a>&nbsp;<b>2</b>&nbsp;<a href="/jstt/index_3.html">3</a>&nbsp;<a href="/jstt/index_4.html">4</a>&nbsp;<a href="/jstt/index_5.html">5</a>&nbsp;<a href="/jstt/index_6.html">6</a>&nbsp;<a href="/jstt/index_3.html">下一页</a>&nbsp;<a href="/jstt/index_6.html">尾页</a></div>
-    </div>
-  </div>
-  <div class="rightbox">
-  <div class="blank"></div>
-    <div class="search">
-      <form action="/e/search/index.php" method="post" name="searchform" id="searchform">
-        <input name="keyboard" id="keyboard" class="input_text" value="请输入关键字" style="color: rgb(153, 153, 153);" onfocus="if(value=='请输入关键字'){this.style.color='#000';value=''}" onblur="if(value==''){this.style.color='#999';value='请输入关键字'}" type="text">
-        <input name="show" value="title" type="hidden">
-        <input name="tempid" value="1" type="hidden">
-        <input name="tbname" value="news" type="hidden">
-        <input name="Submit" class="input_submit" value="搜索" type="submit">
-      </form>
-    </div>
-    <div class="paihang">
-      <h2 class="ab_title"><a href="/">本栏推荐</a></h2>
-      <ul>
-        <li><b><a href="/" target="_blank">住在手机里的朋友</a></b>
-          <p>对于刚毕业的学生来说，想学习建网站，掌握一技之长，最简单的入门无学...</p>
-        </li>
-        <li><b><a href="/" target="_blank">教你怎样用欠费手机拨打电话</a></b>
-          <p>对于刚毕业的学生来说，想学习建网站，掌握一技之长，最简单的入门...</p>
-        </li>
-        <li><b><a href="/" target="_blank">原来以为，一个人的勇敢是，删掉他的手机号码</a></b>
-          <p>.先前发表过一篇文章《如果要学习web前端开发，需要学习什么？》</p>
-        </li>
-        <li><b><a href="/" target="_blank">手机的16个惊人小秘密，据说99.999%的人都不知</a></b>
-          <p>对于刚毕业的学生来说，.需要学习什么？》</p>
-        </li>
-        <li><b><a href="/" target="_blank">你面对的是生活而不是手机</a></b>
-          <p>.最简单的入门无非就是学会html和css，先前发表过一篇文章...</p>
-        </li>
-      </ul>
-      <div class="ad"><img src="images/ad300x100.jpg"></div>
-    </div>
-    <div class="paihang">
-      <h2 class="ab_title"><a href="/">点击排行</a></h2>
-      <ul>
-        <li><b><a href="/" target="_blank">住在手机里的朋友</a></b>
-          <p>对于刚毕业的学生来说，想学习建网站，掌握一技之长，最简单的入门无学...</p>
-        </li>
-        <li><b><a href="/" target="_blank">教你怎样用欠费手机拨打电话</a></b>
-          <p>对于刚毕业的学生来说，想学习建网站，掌握一技之长，最简单的入门...</p>
-        </li>
-        <li><b><a href="/" target="_blank">原来以为，一个人的勇敢是，删掉他的手机号码</a></b>
-          <p>.先前发表过一篇文章《如果要学习web前端开发，需要学习什么？》</p>
-        </li>
-        <li><b><a href="/" target="_blank">手机的16个惊人小秘密，据说99.999%的人都不知</a></b>
-          <p>对于刚毕业的学生来说，.需要学习什么？》</p>
-        </li>
-        <li><b><a href="/" target="_blank">你面对的是生活而不是手机</a></b>
-          <p>.最简单的入门无非就是学会html和css，先前发表过一篇文章...</p>
-        </li>
-      </ul>
-      <div class="ad"><img src="images/ad01.jpg"></div>
-    </div>
-    <div class="weixin">
-      <h2 class="ab_title">微信关注</h2>
-      <ul>
-        <img src="images/wx.jpg">
-      </ul>
-    </div>
-  </div>
+    <main>
+        <div class="blogs" data-scroll-reveal="enter bottom over 1s" >
+            <h3 class="blogtitle"><a href="/" target="_blank">别让这些闹心的套路，毁了你的网页设计!</a></h3>
+            <span class="blogpic"><a href="/" title=""><img src="${basePath}/blue/images/1.jpg" alt=""></a></span>
+            <p class="blogtext">如图，要实现上图效果，我采用如下方法：1、首先在数据库模型，增加字段，分别是图片2，图片3。2、增加标签模板，用if，else if 来判断，输出。思路已打开，样式调用就可以多样化啦！... </p>
+            <div class="bloginfo">
+                <ul>
+                    <li class="author"><a href="/">杨青</a></li>
+                    <li class="lmname"><a href="/">学无止境</a></li>
+                    <li class="timer">2018-5-13</li>
+                    <li class="view"><span>34567</span>已阅读</li>
+                    <li class="like">9999</li>
+                </ul>
+            </div>
+        </div>
+        <div class="blogs" data-scroll-reveal="enter bottom over 1s" >
+            <h3 class="blogtitle"><a href="/" target="_blank">帝国cms 首页或者列表页 实现图文不同样式调用方法</a></h3>
+            <p class="blogtext">如图，要实现上图效果，我采用如下方法：1、首先在数据库模型，增加字段，分别是图片2，图片3。2、增加标签模板，用if，else if 来判断，输出。思路已打开，样式调用就可以多样化啦！...</p>
+            <div class="bloginfo">
+                <ul>
+                    <li class="author"><a href="/">杨青</a></li>
+                    <li class="lmname"><a href="/">学无止境</a></li>
+                    <li class="timer">2018-5-13</li>
+                    <li class="view">4567已阅读</li>
+                    <li class="like">9999</li>
+                </ul>
+            </div>
+        </div>
+        <div class="blogs" data-scroll-reveal="enter bottom over 1s" >
+            <h3 class="blogtitle"><a href="/" target="_blank">别让这些闹心的套路，毁了你的网页设计!</a></h3>
+            <span class="bplist"><a href="/" title="">
+      <li><img src="${basePath}/blue/images/2.jpg" alt=""></li>
+      <li><img src="${basePath}/blue/images/3.jpg" alt=""></li>
+      <li><img src="${basePath}/blue/images/4.jpg" alt=""></li>
+      </a></span>
+            <p class="blogtext">如图，要实现上图效果，我采用如下方法：1、首先在数据库模型，增加字段，分别是图片2，图片3。2、增加标签模板，用if，else if 来判断，输出。思路已打开，样式调用就可以多样化啦！... </p>
+            <div class="bloginfo">
+                <ul>
+                    <li class="author"><a href="/">杨青</a></li>
+                    <li class="lmname"><a href="/">学无止境</a></li>
+                    <li class="timer">2018-5-13</li>
+                    <li class="view"><span>34567</span>已阅读</li>
+                    <li class="like">9999</li>
+                </ul>
+            </div>
+        </div>
+        <div class="blogs" data-scroll-reveal="enter bottom over 1s" >
+            <h3 class="blogtitle"><a href="/" target="_blank">别让这些闹心的套路，毁了你的网页设计!</a></h3>
+            <span class="bigpic"><a href="/" title=""><img src="${basePath}/blue/images/5.jpg" alt=""></a></span>
+            <p class="blogtext">如图，要实现上图效果，我采用如下方法：1、首先在数据库模型，增加字段，分别是图片2，图片3。2、增加标签模板，用if，else if 来判断，输出。思路已打开，样式调用就可以多样化啦！... </p>
+            <div class="bloginfo">
+                <ul>
+                    <li class="author"><a href="/">杨青</a></li>
+                    <li class="lmname"><a href="/">学无止境</a></li>
+                    <li class="timer">2018-5-13</li>
+                    <li class="view"><span>34567</span>已阅读</li>
+                    <li class="like">9999</li>
+                </ul>
+            </div>
+        </div>
+        <div class="blogs" data-scroll-reveal="enter bottom over 1s" >
+            <h3 class="blogtitle"><a href="/" target="_blank">别让这些闹心的套路，毁了你的网页设计!</a></h3>
+            <span class="blogpic"><a href="/" title=""><img src="${basePath}/blue/images/6.jpg" alt=""></a></span>
+            <p class="blogtext">如图，要实现上图效果，我采用如下方法：1、首先在数据库模型，增加字段，分别是图片2，图片3。2、增加标签模板，用if，else if 来判断，输出。思路已打开，样式调用就可以多样化啦！... </p>
+            <div class="bloginfo">
+                <ul>
+                    <li class="author"><a href="/">杨青</a></li>
+                    <li class="lmname"><a href="/">学无止境</a></li>
+                    <li class="timer">2018-5-13</li>
+                    <li class="view"><span>34567</span>已阅读</li>
+                    <li class="like">9999</li>
+                </ul>
+            </div>
+        </div>
+        <div class="blogs" data-scroll-reveal="enter bottom over 1s" >
+            <h3 class="blogtitle"><a href="/" target="_blank">帝国cms 首页或者列表页 实现图文不同样式调用方法</a></h3>
+            <p class="blogtext">如图，要实现上图效果，我采用如下方法：1、首先在数据库模型，增加字段，分别是图片2，图片3。2、增加标签模板，用if，else if 来判断，输出。思路已打开，样式调用就可以多样化啦！...</p>
+            <div class="bloginfo">
+                <ul>
+                    <li class="author"><a href="/">杨青</a></li>
+                    <li class="lmname"><a href="/">学无止境</a></li>
+                    <li class="timer">2018-5-13</li>
+                    <li class="view">4567已阅读</li>
+                    <li class="like">9999</li>
+                </ul>
+            </div>
+        </div>
+        <div class="blogs" data-scroll-reveal="enter bottom over 1s" >
+            <h3 class="blogtitle"><a href="/" target="_blank">别让这些闹心的套路，毁了你的网页设计!</a></h3>
+            <span class="bplist"><a href="/" title="">
+      <li><img src="${basePath}/blue/images/7.jpg" alt=""></li>
+      <li><img src="${basePath}/blue/images/8.jpg" alt=""></li>
+      <li><img src="${basePath}/blue/images/9.jpg" alt=""></li>
+      </a></span>
+            <p class="blogtext">如图，要实现上图效果，我采用如下方法：1、首先在数据库模型，增加字段，分别是图片2，图片3。2、增加标签模板，用if，else if 来判断，输出。思路已打开，样式调用就可以多样化啦！... </p>
+            <div class="bloginfo">
+                <ul>
+                    <li class="author"><a href="/">杨青</a></li>
+                    <li class="lmname"><a href="/">学无止境</a></li>
+                    <li class="timer">2018-5-13</li>
+                    <li class="view"><span>34567</span>已阅读</li>
+                    <li class="like">9999</li>
+                </ul>
+            </div>
+        </div>
+        <div class="blogs" data-scroll-reveal="enter bottom over 1s" >
+            <h3 class="blogtitle"><a href="/" target="_blank">别让这些闹心的套路，毁了你的网页设计!</a></h3>
+            <span class="bigpic"><a href="/" title=""><img src="${basePath}/blue/images/10.jpg" alt=""></a></span>
+            <p class="blogtext">如图，要实现上图效果，我采用如下方法：1、首先在数据库模型，增加字段，分别是图片2，图片3。2、增加标签模板，用if，else if 来判断，输出。思路已打开，样式调用就可以多样化啦！... </p>
+            <div class="bloginfo">
+                <ul>
+                    <li class="author"><a href="/">杨青</a></li>
+                    <li class="lmname"><a href="/">学无止境</a></li>
+                    <li class="timer">2018-5-13</li>
+                    <li class="view"><span>34567</span>已阅读</li>
+                    <li class="like">9999</li>
+                </ul>
+            </div>
+        </div>
+        <div class="blogs" data-scroll-reveal="enter bottom over 1s" >
+            <h3 class="blogtitle"><a href="/" target="_blank">别让这些闹心的套路，毁了你的网页设计!</a></h3>
+            <span class="blogpic"><a href="/" title=""><img src="${basePath}/blue/images/1.jpg" alt=""></a></span>
+            <p class="blogtext">如图，要实现上图效果，我采用如下方法：1、首先在数据库模型，增加字段，分别是图片2，图片3。2、增加标签模板，用if，else if 来判断，输出。思路已打开，样式调用就可以多样化啦！... </p>
+            <div class="bloginfo">
+                <ul>
+                    <li class="author"><a href="/">杨青</a></li>
+                    <li class="lmname"><a href="/">学无止境</a></li>
+                    <li class="timer">2018-5-13</li>
+                    <li class="view"><span>34567</span>已阅读</li>
+                    <li class="like">9999</li>
+                </ul>
+            </div>
+        </div>
+        <div class="blogs" data-scroll-reveal="enter bottom over 1s" >
+            <h3 class="blogtitle"><a href="/" target="_blank">帝国cms 首页或者列表页 实现图文不同样式调用方法</a></h3>
+            <p class="blogtext">如图，要实现上图效果，我采用如下方法：1、首先在数据库模型，增加字段，分别是图片2，图片3。2、增加标签模板，用if，else if 来判断，输出。思路已打开，样式调用就可以多样化啦！...</p>
+            <div class="bloginfo">
+                <ul>
+                    <li class="author"><a href="/">杨青</a></li>
+                    <li class="lmname"><a href="/">学无止境</a></li>
+                    <li class="timer">2018-5-13</li>
+                    <li class="view">4567已阅读</li>
+                    <li class="like">9999</li>
+                </ul>
+            </div>
+        </div>
+        <div class="blogs" data-scroll-reveal="enter bottom over 1s" >
+            <h3 class="blogtitle"><a href="/" target="_blank">别让这些闹心的套路，毁了你的网页设计!</a></h3>
+            <span class="bplist"><a href="/" title="">
+      <li><img src="${basePath}/blue/images/2.jpg" alt=""></li>
+      <li><img src="${basePath}/blue/images/3.jpg" alt=""></li>
+      <li><img src="${basePath}/blue/images/4.jpg" alt=""></li>
+      </a></span>
+            <p class="blogtext">如图，要实现上图效果，我采用如下方法：1、首先在数据库模型，增加字段，分别是图片2，图片3。2、增加标签模板，用if，else if 来判断，输出。思路已打开，样式调用就可以多样化啦！... </p>
+            <div class="bloginfo">
+                <ul>
+                    <li class="author"><a href="/">杨青</a></li>
+                    <li class="lmname"><a href="/">学无止境</a></li>
+                    <li class="timer">2018-5-13</li>
+                    <li class="view"><span>34567</span>已阅读</li>
+                    <li class="like">9999</li>
+                </ul>
+            </div>
+        </div>
+        <div class="blogs" data-scroll-reveal="enter bottom over 1s" >
+            <h3 class="blogtitle"><a href="/" target="_blank">别让这些闹心的套路，毁了你的网页设计!</a></h3>
+            <span class="bigpic"><a href="/" title=""><img src="${basePath}/blue/images/5.jpg" alt=""></a></span>
+            <p class="blogtext">如图，要实现上图效果，我采用如下方法：1、首先在数据库模型，增加字段，分别是图片2，图片3。2、增加标签模板，用if，else if 来判断，输出。思路已打开，样式调用就可以多样化啦！... </p>
+            <div class="bloginfo">
+                <ul>
+                    <li class="author"><a href="/">杨青</a></li>
+                    <li class="lmname"><a href="/">学无止境</a></li>
+                    <li class="timer">2018-5-13</li>
+                    <li class="view"><span>34567</span>已阅读</li>
+                    <li class="like">9999</li>
+                </ul>
+            </div>
+        </div>
+        <div class="blogs" data-scroll-reveal="enter bottom over 1s" >
+            <h3 class="blogtitle"><a href="/" target="_blank">别让这些闹心的套路，毁了你的网页设计!</a></h3>
+            <span class="blogpic"><a href="/" title=""><img src="${basePath}/blue/images/6.jpg" alt=""></a></span>
+            <p class="blogtext">如图，要实现上图效果，我采用如下方法：1、首先在数据库模型，增加字段，分别是图片2，图片3。2、增加标签模板，用if，else if 来判断，输出。思路已打开，样式调用就可以多样化啦！... </p>
+            <div class="bloginfo">
+                <ul>
+                    <li class="author"><a href="/">杨青</a></li>
+                    <li class="lmname"><a href="/">学无止境</a></li>
+                    <li class="timer">2018-5-13</li>
+                    <li class="view"><span>34567</span>已阅读</li>
+                    <li class="like">9999</li>
+                </ul>
+            </div>
+        </div>
+        <div class="blogs" data-scroll-reveal="enter bottom over 1s" >
+            <h3 class="blogtitle"><a href="/" target="_blank">帝国cms 首页或者列表页 实现图文不同样式调用方法</a></h3>
+            <p class="blogtext">如图，要实现上图效果，我采用如下方法：1、首先在数据库模型，增加字段，分别是图片2，图片3。2、增加标签模板，用if，else if 来判断，输出。思路已打开，样式调用就可以多样化啦！...</p>
+            <div class="bloginfo">
+                <ul>
+                    <li class="author"><a href="/">杨青</a></li>
+                    <li class="lmname"><a href="/">学无止境</a></li>
+                    <li class="timer">2018-5-13</li>
+                    <li class="view">4567已阅读</li>
+                    <li class="like">9999</li>
+                </ul>
+            </div>
+        </div>
+        <div class="blogs" data-scroll-reveal="enter bottom over 1s" >
+            <h3 class="blogtitle"><a href="/" target="_blank">别让这些闹心的套路，毁了你的网页设计!</a></h3>
+            <span class="bplist"><a href="/" title="">
+      <li><img src="${basePath}/blue/images/7.jpg" alt=""></li>
+      <li><img src="${basePath}/blue/images/8.jpg" alt=""></li>
+      <li><img src="${basePath}/blue/images/9.jpg" alt=""></li>
+      </a></span>
+            <p class="blogtext">如图，要实现上图效果，我采用如下方法：1、首先在数据库模型，增加字段，分别是图片2，图片3。2、增加标签模板，用if，else if 来判断，输出。思路已打开，样式调用就可以多样化啦！... </p>
+            <div class="bloginfo">
+                <ul>
+                    <li class="author"><a href="/">杨青</a></li>
+                    <li class="lmname"><a href="/">学无止境</a></li>
+                    <li class="timer">2018-5-13</li>
+                    <li class="view"><span>34567</span>已阅读</li>
+                    <li class="like">9999</li>
+                </ul>
+            </div>
+        </div>
+        <div class="blogs" data-scroll-reveal="enter bottom over 1s" >
+            <h3 class="blogtitle"><a href="/" target="_blank">别让这些闹心的套路，毁了你的网页设计!</a></h3>
+            <span class="bigpic"><a href="/" title=""><img src="images/10.jpg" alt=""></a></span>
+            <p class="blogtext">如图，要实现上图效果，我采用如下方法：1、首先在数据库模型，增加字段，分别是图片2，图片3。2、增加标签模板，用if，else if 来判断，输出。思路已打开，样式调用就可以多样化啦！... </p>
+            <div class="bloginfo">
+                <ul>
+                    <li class="author"><a href="/">杨青</a></li>
+                    <li class="lmname"><a href="/">学无止境</a></li>
+                    <li class="timer">2018-5-13</li>
+                    <li class="view"><span>34567</span>已阅读</li>
+                    <li class="like">9999</li>
+                </ul>
+            </div>
+        </div>
+        <div class="pagelist"><a title="Total record">&nbsp;<b>160</b> </a>&nbsp;&nbsp;&nbsp;<b>1</b>&nbsp;<a href="/jstt/index_2.html">2</a>&nbsp;<a href="/jstt/index_3.html">3</a>&nbsp;<a href="/jstt/index_4.html">4</a>&nbsp;<a href="/jstt/index_5.html">5</a>&nbsp;<a href="/jstt/index_6.html">6</a>&nbsp;<a href="/jstt/index_2.html">下一页</a>&nbsp;<a href="/jstt/index_14.html">尾页</a></div>
+    </main>
+    <aside class="r_box" >
+
+        <div class="wdxc">
+            <h2>图文精选</h2>
+            <ul>
+                <li><a href="/"><img src="${basePath}/blue/images/7.jpg"></a></li>
+                <li><a href="/"><img src="${basePath}/blue/images/8.jpg"></a></li>
+                <li><a href="/"><img src="${basePath}/blue/images/9.jpg"></a></li>
+                <li><a href="/"><img src="${basePath}/blue/images/10.jpg"></a></li>
+                <li><a href="/"><img src="${basePath}/blue/images/11.jpg"></a></li>
+                <li><a href="/"><img src="${basePath}/blue/images/12.jpg"></a></li>
+            </ul>
+        </div>
+        <div class="cloud">
+            <h2>标签云</h2>
+            <ul>
+                <a href="/">陌上花开</a> <a href="/">校园生活</a> <a href="/">html5</a> <a href="/">SumSung</a> <a href="/">青春</a> <a href="/">温暖</a> <a href="/">阳光</a> <a href="/">三星</a><a href="/">索尼</a> <a href="/">华维荣耀</a> <a href="/">三星</a> <a href="/">索尼</a>
+            </ul>
+        </div>
+        <div class="tuijian">
+            <h2 id="tab"><a href="#"class="current">点击排行</a><a href="#">站长推荐</a></h2>
+
+            <div id="content">
+                <ul style="display:block;">
+                    <li><a href="/">第二届 优秀个人博客模板比赛参选活动</a></li>
+                    <li><a href="/">【活动作品】柠檬绿兔小白个人博客模板</a></li>
+                    <li><a href="/">帝国cms 列表页调用子栏目，没有则不显示栏目名称</a></li>
+                    <li><a href="/">2014年度优秀个人博客评选活动</a></li>
+                    <li><a href="/">你是什么人便会遇上什么人</a></li>
+                    <li><a href="/">帝国cms 列表页调用子栏目，没有则不显示栏目名称</a></li>
+                    <li><a href="/">第二届 优秀个人博客模板比赛参选活动</a></li>
+                    <li><a href="/">个人博客模板《绅士》后台管理</a></li>
+                </ul>
+
+                <ul>
+                    <li><a href="/">个人博客，我为什么要用帝国cms？</a></li>
+                    <li><a href="/">D设计师博客-一个热爱生活的设计师</a></li>
+                    <li><a href="/">东轩博客，我看到了你的坚持！</a></li>
+                    <li><a href="/">程序员创业，就得“豁得出去”！</a></li>
+                    <li><a href="/">张建华 一个90后年轻站长！我们是对手亦是朋友！</a></li>
+                    <li><a href="/">《奋斗电商》看知名微商如何做博客引流？</a></li>
+                    <li><a href="/">《寻之旅》一个关于旅游，游记的个人博客</a></li>
+                    <li><a href="/">【匆匆那些年】总结个人博客经历的这四年</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="guanzhu">
+            <h2>关注我 么么哒</h2>
+            <ul>
+                <img src="images/wx.jpg">
+            </ul>
+        </div>
+
+    </aside>
 </article>
 <footer>
-  <p>Design by <a href="/">杨青个人博客</a> <a href="/">蜀ICP备11002373号-1</a></p>
+    <p>Design by <a href="http://www.yangqq.com" target="_blank">杨青个人博客</a> <a href="/">蜀ICP备11002373号-1</a><a href="/" class="links">友情链接</a></p>
 </footer>
+<a href="#" class="cd-top">Top</a>
 </body>
 </html>

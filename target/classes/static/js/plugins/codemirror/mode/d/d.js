@@ -204,7 +204,7 @@ CodeMirror.defineMode("d", function(config, parserConfig) {
                     "throw typedef typeid typeof volatile __FILE__ __LINE__ __gshared __traits __vector __parameters " +
                     blockKeywords),
     blockKeywords: words(blockKeywords),
-    builtin: words("bool byte char creal dchar double float idouble ifloat int ireal long real short ubyte " +
+    builtin: words("bool byte charsocket creal dchar double float idouble ifloat int ireal long real short ubyte " +
                    "ucent uint ulong ushort wchar wstring void size_t sizediff_t"),
     atoms: words("exit failure success true false null"),
     hooks: {

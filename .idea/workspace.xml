@@ -5,28 +5,36 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a0d261ad-a2f4-4e31-bd12-bdaf4948317b" name="默认更改列表" comment="修改了登录的体验，增加了好友的请求。修复了博客的bug，增加了添加更多，增加了一个表字段，以及若干">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/share/constant/PageConstant.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/share/vo/SharedUsersJSONVO.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/js/comm/page.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/js/users/userListJs.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/templates/background/comm/page.ftl" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/templates/background/users/add_users.ftl" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/templates/background/users/friend_chat.ftl" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/templates/background/users/show_user.ftl" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/templates/background/users/user_list_modifier.ftl" />
+      <change beforePath="$PROJECT_DIR$/.idea/eclipseCodeFormatter.xml" afterPath="$PROJECT_DIR$/.idea/eclipseCodeFormatter.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/SharedLibrary.iml" afterPath="$PROJECT_DIR$/SharedLibrary.iml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/share/shiro/realm/CustomRealm.java" afterPath="$PROJECT_DIR$/src/main/java/com/share/shiro/realm/CustomRealm.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/share/users/controller/SharedFriendsController.java" afterPath="$PROJECT_DIR$/src/main/java/com/share/users/controller/SharedFriendsController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/share/users/controller/SharedUsersController.java" afterPath="$PROJECT_DIR$/src/main/java/com/share/users/controller/SharedUsersController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/share/users/mapper/SharedUsersMapper.java" afterPath="$PROJECT_DIR$/src/main/java/com/share/users/mapper/SharedUsersMapper.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/share/users/service/SharedUsersService.java" afterPath="$PROJECT_DIR$/src/main/java/com/share/users/service/SharedUsersService.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/share/users/service/impl/SharedUsersServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/share/users/service/impl/SharedUsersServiceImpl.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/share/vo/SharedUsersVO.java" afterPath="$PROJECT_DIR$/src/main/java/com/share/vo/SharedUsersVO.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/SharedUsersMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapper/SharedUsersMapper.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/users/users_modifier.js" afterPath="$PROJECT_DIR$/src/main/resources/static/js/users/users_modifier.js" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/background/index.ftl" afterPath="$PROJECT_DIR$/src/main/resources/templates/background/index.ftl" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/background/users/userList.ftl" afterPath="$PROJECT_DIR$/src/main/resources/templates/background/users/userList.ftl" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/background/char/friend_chat.ftl" afterPath="$PROJECT_DIR$/src/main/resources/templates/background/char/friend_chat.ftl" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/share/ControllerUtil/SharedFriendControllerUtil.class" afterPath="$PROJECT_DIR$/target/classes/com/share/ControllerUtil/SharedFriendControllerUtil.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/share/SharedlibraryApplication.class" afterPath="$PROJECT_DIR$/target/classes/com/share/SharedlibraryApplication.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/share/blogs/controller/ShareBlogsCommentReplyController.class" afterPath="$PROJECT_DIR$/target/classes/com/share/blogs/controller/ShareBlogsCommentReplyController.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/share/blogs/mapper/ShareBlogsCommentReplyMapper.class" afterPath="$PROJECT_DIR$/target/classes/com/share/blogs/mapper/ShareBlogsCommentReplyMapper.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/share/blogs/service/ShareBlogsCommentReplyService.class" afterPath="$PROJECT_DIR$/target/classes/com/share/blogs/service/ShareBlogsCommentReplyService.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/share/blogs/service/impl/ShareBlogsCommentReplyServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/share/blogs/service/impl/ShareBlogsCommentReplyServiceImpl.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/share/bo/BlosCommReplyBO.class" afterPath="$PROJECT_DIR$/target/classes/com/share/bo/BlosCommReplyBO.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/share/config/SpringBootConfig.class" afterPath="$PROJECT_DIR$/target/classes/com/share/config/SpringBootConfig.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/share/generator/MyBatisPlusGenerator.class" afterPath="$PROJECT_DIR$/target/classes/com/share/generator/MyBatisPlusGenerator.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/share/invitation/controller/ShareBlogsInvitationReplyController.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/share/invitation/controller/SharediInvitationCommentController.class" afterPath="$PROJECT_DIR$/target/classes/com/share/invitation/controller/SharediInvitationCommentController.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/share/invitation/controller/SharediInvitationController.class" afterPath="$PROJECT_DIR$/target/classes/com/share/invitation/controller/SharediInvitationController.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/share/invitation/controller/SharediInvitationGiveController.class" afterPath="$PROJECT_DIR$/target/classes/com/share/invitation/controller/SharediInvitationGiveController.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/share/invitation/controller/SharedlClassifyController.class" afterPath="$PROJECT_DIR$/target/classes/com/share/invitation/controller/SharedlClassifyController.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/share/invitation/mapper/ShareBlogsInvitationReplyMapper.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/share/invitation/service/ShareBlogsInvitationReplyService.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/share/invitation/service/impl/ShareBlogsInvitationReplyServiceImpl.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/share/invitation/service/impl/SharediInvitationCommentServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/share/invitation/service/impl/SharediInvitationCommentServiceImpl.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/share/invitation/service/impl/SharediInvitationGiveServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/share/invitation/service/impl/SharediInvitationGiveServiceImpl.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/share/invitation/service/impl/SharedlClassifyServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/share/invitation/service/impl/SharedlClassifyServiceImpl.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/share/pojo/ShareBlogsCommentReply.class" afterPath="$PROJECT_DIR$/target/classes/com/share/pojo/ShareBlogsCommentReply.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/share/pojo/ShareBlogsInvitationReply.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/share/pojo/SharediInvitation.class" afterPath="$PROJECT_DIR$/target/classes/com/share/pojo/SharediInvitation.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/share/pojo/SharediInvitationComment.class" afterPath="$PROJECT_DIR$/target/classes/com/share/pojo/SharediInvitationComment.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/share/pojo/SharediInvitationGive.class" afterPath="$PROJECT_DIR$/target/classes/com/share/pojo/SharediInvitationGive.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/share/pojo/SharedlClassify.class" afterPath="$PROJECT_DIR$/target/classes/com/share/pojo/SharedlClassify.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/share/shiro/config/ShiroConfig.class" afterPath="$PROJECT_DIR$/target/classes/com/share/shiro/config/ShiroConfig.class" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/share/shiro/realm/CustomRealm.class" afterPath="$PROJECT_DIR$/target/classes/com/share/shiro/realm/CustomRealm.class" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/share/users/controller/SharedEmailController.class" afterPath="$PROJECT_DIR$/target/classes/com/share/users/controller/SharedEmailController.class" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/share/users/controller/SharedFriendsController.class" afterPath="$PROJECT_DIR$/target/classes/com/share/users/controller/SharedFriendsController.class" />
@@ -41,12 +49,47 @@
       <change beforePath="$PROJECT_DIR$/target/classes/com/share/users/service/impl/SharedEmailServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/share/users/service/impl/SharedEmailServiceImpl.class" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/share/users/service/impl/SharedReceiveMailServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/share/users/service/impl/SharedReceiveMailServiceImpl.class" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/share/users/service/impl/SharedUsersServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/share/users/service/impl/SharedUsersServiceImpl.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/share/util/JsonUtil.class" afterPath="$PROJECT_DIR$/target/classes/com/share/util/JsonUtil.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/share/util/RedisUtil.class" afterPath="$PROJECT_DIR$/target/classes/com/share/util/RedisUtil.class" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/share/util/ShiroMd5.class" afterPath="$PROJECT_DIR$/target/classes/com/share/util/ShiroMd5.class" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/share/vo/SharedUsersVO.class" afterPath="$PROJECT_DIR$/target/classes/com/share/vo/SharedUsersVO.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/ShareBlogsCommentReplyMapper.xml" afterPath="$PROJECT_DIR$/target/classes/mapper/ShareBlogsCommentReplyMapper.xml" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/ShareBlogsInvitationReplyMapper.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/ShareBlogsMapper.xml" afterPath="$PROJECT_DIR$/target/classes/mapper/ShareBlogsMapper.xml" />
       <change beforePath="$PROJECT_DIR$/target/classes/mapper/SharedReceiveMailMapper.xml" afterPath="$PROJECT_DIR$/target/classes/mapper/SharedReceiveMailMapper.xml" />
       <change beforePath="$PROJECT_DIR$/target/classes/mapper/SharedUsersMapper.xml" afterPath="$PROJECT_DIR$/target/classes/mapper/SharedUsersMapper.xml" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/SharediInvitationCommentMapper.xml" afterPath="$PROJECT_DIR$/target/classes/mapper/SharediInvitationCommentMapper.xml" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/SharediInvitationGiveMapper.xml" afterPath="$PROJECT_DIR$/target/classes/mapper/SharediInvitationGiveMapper.xml" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/SharedlClassifyMapper.xml" afterPath="$PROJECT_DIR$/target/classes/mapper/SharedlClassifyMapper.xml" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/base.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/docs/js/prettify.js" afterPath="$PROJECT_DIR$/target/classes/static/docs/js/prettify.js" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/content.js" afterPath="$PROJECT_DIR$/target/classes/static/js/content.js" />
       <change beforePath="$PROJECT_DIR$/target/classes/static/js/email/userName.js" afterPath="$PROJECT_DIR$/target/classes/static/js/email/userName.js" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/jquery-1.7.2.js" afterPath="$PROJECT_DIR$/target/classes/static/js/jquery-1.7.2.js" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/jquery-1.8.3.min.js" afterPath="$PROJECT_DIR$/target/classes/static/js/jquery-1.8.3.min.js" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/jquery-2.1.1.min.js" afterPath="$PROJECT_DIR$/target/classes/static/js/jquery-2.1.1.min.js" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/jquery.min.js" afterPath="$PROJECT_DIR$/target/classes/static/js/jquery.min.js" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/codemirror.js" afterPath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/codemirror.js" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/clike/clike.js" afterPath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/clike/clike.js" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/clojure/clojure.js" afterPath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/clojure/clojure.js" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/d/d.js" afterPath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/d/d.js" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/erlang/erlang.js" afterPath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/erlang/erlang.js" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/gfm/test.js" afterPath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/gfm/test.js" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/groovy/groovy.js" afterPath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/groovy/groovy.js" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/pascal/pascal.js" afterPath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/pascal/pascal.js" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/rust/rust.js" afterPath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/rust/rust.js" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/scheme/scheme.js" afterPath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/scheme/scheme.js" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/sql/sql.js" afterPath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/sql/sql.js" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/verilog/verilog.js" afterPath="$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/verilog/verilog.js" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/jsTree/jstree.js" afterPath="$PROJECT_DIR$/target/classes/static/js/plugins/jsTree/jstree.js" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/markdown/markdown.js" afterPath="$PROJECT_DIR$/target/classes/static/js/plugins/markdown/markdown.js" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/simditor/jquery.min.js" afterPath="$PROJECT_DIR$/target/classes/static/js/plugins/simditor/jquery.min.js" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/webuploader/webuploader.custom.js" afterPath="$PROJECT_DIR$/target/classes/static/js/plugins/webuploader/webuploader.custom.js" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/webuploader/webuploader.fis.js" afterPath="$PROJECT_DIR$/target/classes/static/js/plugins/webuploader/webuploader.fis.js" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/webuploader/webuploader.js" afterPath="$PROJECT_DIR$/target/classes/static/js/plugins/webuploader/webuploader.js" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/plugins/webuploader/webuploader.nolog.js" afterPath="$PROJECT_DIR$/target/classes/static/js/plugins/webuploader/webuploader.nolog.js" />
       <change beforePath="$PROJECT_DIR$/target/classes/static/js/users/friends.js" afterPath="$PROJECT_DIR$/target/classes/static/js/users/friends.js" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/users/usersBlogs.js" afterPath="$PROJECT_DIR$/target/classes/static/js/users/usersBlogs.js" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/403.ftl" afterPath="$PROJECT_DIR$/target/classes/templates/403.ftl" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/500.ftl" afterPath="$PROJECT_DIR$/target/classes/templates/500.ftl" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/background/email/email_Index.ftl" afterPath="$PROJECT_DIR$/target/classes/templates/background/email/email_Index.ftl" />
@@ -59,6 +102,16 @@
       <change beforePath="$PROJECT_DIR$/target/classes/templates/background/users/friends_search.ftl" afterPath="$PROJECT_DIR$/target/classes/templates/background/users/friends_search.ftl" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/background/users/register.ftl" afterPath="$PROJECT_DIR$/target/classes/templates/background/users/register.ftl" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/background/users/userList.ftl" afterPath="$PROJECT_DIR$/target/classes/templates/background/users/userList.ftl" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/background/users/users_blogs.ftl" afterPath="$PROJECT_DIR$/target/classes/templates/background/users/users_blogs.ftl" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/index.ftl" afterPath="$PROJECT_DIR$/target/classes/templates/index.ftl" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/reception/about.ftl" afterPath="$PROJECT_DIR$/target/classes/templates/reception/about.ftl" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/reception/comm/footer.ftl" afterPath="$PROJECT_DIR$/target/classes/templates/reception/comm/footer.ftl" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/reception/comm/header.ftl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/reception/comm/script.ftl" afterPath="$PROJECT_DIR$/target/classes/templates/reception/comm/script.ftl" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/reception/info.ftl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/reception/list.ftl" afterPath="$PROJECT_DIR$/target/classes/templates/reception/list.ftl" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/reception/share.ftl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/reception/shareinfo.ftl" afterPath="" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -165,111 +218,47 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="page.ftl" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/background/comm/page.ftl">
+      <file leaf-file-name="friend_chat.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/chars/friend_chat.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="4" column="48" lean-forward="false" selection-start-line="4" selection-start-column="48" selection-end-line="4" selection-end-column="48" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="jsUtil.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/jsUtil.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="8" column="74" lean-forward="true" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="74" />
+            <state relative-caret-position="930">
+              <caret line="368" column="29" lean-forward="false" selection-start-line="368" selection-start-column="29" selection-end-line="368" selection-end-column="29" />
               <folding>
-                <marker date="1544970637633" expanded="true" signature="5439:5577" ph="..." />
+                <marker date="1547361206420" expanded="true" signature="11994:12010" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SharedUsersController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/share/users/controller/SharedUsersController.java">
+      <file leaf-file-name="SharedFriendsController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/share/users/controller/SharedFriendsController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2014">
-              <caret line="221" column="55" lean-forward="true" selection-start-line="221" selection-start-column="55" selection-end-line="221" selection-end-column="55" />
+            <state relative-caret-position="303">
+              <caret line="140" column="19" lean-forward="false" selection-start-line="140" selection-start-column="19" selection-end-line="140" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FriendAndUsers.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/share/charsocket/bo/FriendAndUsers.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="573">
+              <caret line="44" column="23" lean-forward="false" selection-start-line="44" selection-start-column="19" selection-end-line="44" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="friend_chat.ftl" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/background/char/friend_chat.ftl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="526">
+              <caret line="34" column="30" lean-forward="true" selection-start-line="34" selection-start-column="30" selection-end-line="34" selection-end-column="30" />
               <folding>
-                <element signature="e#14370#14371#0" expanded="true" />
-                <element signature="e#14412#14413#0" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.ftl" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/background/index.ftl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="40">
-              <caret line="238" column="25" lean-forward="true" selection-start-line="238" selection-start-column="25" selection-end-line="238" selection-end-column="25" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SharediInvitationController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/share/invitation/controller/SharediInvitationController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="163">
-              <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="userList.ftl" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/background/users/userList.ftl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="55" column="47" lean-forward="false" selection-start-line="55" selection-start-column="47" selection-end-line="55" selection-end-column="47" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="page.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/comm/page.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="355">
-              <caret line="38" column="18" lean-forward="true" selection-start-line="38" selection-start-column="18" selection-end-line="38" selection-end-column="18" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="usersBlogs.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/users/usersBlogs.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="414" column="28" lean-forward="false" selection-start-line="414" selection-start-column="20" selection-end-line="414" selection-end-column="28" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="page.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/page.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="page2.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/page2.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -280,28 +269,14 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
-        <option value="Class" />
+        <option value="FxmlFile" />
         <option value="JavaScript File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>com.alibaba</find>
-      <find>login</find>
-      <find>信箱</find>
-      <find>h</find>
-      <find>index_v1.html</find>
-      <find>J_menuItem</find>
-      <find>购买</find>
-      <find>首页</find>
-      <find>加载动画</find>
-      <find>SweetAlert</find>
-      <find>custom.css</find>
-      <find>fa fa-desktop</find>
-      <find>modal-backdrop fade in</find>
-      <find>modal-backdrop in</find>
-      <find>refreshCaptcha</find>
       <find>captcha_img</find>
       <find>loginout</find>
       <find>emailIndex</find>
@@ -311,9 +286,31 @@
       <find>SharedUsersVO</find>
       <find>主题</find>
       <find>您当前有14个任务，10个已完成</find>
+      <find>click2edit</find>
+      <find>replyId</find>
+      <find>，一个80后草根女站长！09年入行。一直潜心研究web前端技术，一边工作一边积累经验，分享一些个人博客模板，以</find>
+      <find>站长！09年入行。一直潜心研究web前端技术，一边工作一边积累</find>
+      <find>about_me</find>
+      <find>netty</find>
+      <find>GROUP_CHAT_MESSAGE_CODE</find>
+      <find>SYSTEM_MESSAGE_CODE</find>
+      <find>sendHttpResponse</find>
+      <find>TextWebSocketFrame</find>
+      <find>cobjhat-discussion</find>
+      <find>NORMAL_SYSTEM_MESSGAE_CODE</find>
+      <find>UPDATE_USERCOUNT_SYSTEM_MESSGAE_CODE</find>
+      <find>users-list</find>
+      <find>chat-users</find>
+      <find>GROUP_CHAT_MESSAGE_CODE`</find>
+      <find>sendMessChar</find>
+      <find>sset</find>
+      <find>list</find>
+      <find>sse</find>
+      <find>opsForSet</find>
     </findStrings>
     <dirStrings>
       <dir>E:\ideaxm\SharedLibrary</dir>
+      <dir>E:\ideaxm\SharedLibrary\src\main\java\com\share</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -321,7 +318,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="bobomaster" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="PUSH_TAGS">
@@ -340,57 +337,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/share/util/CopyUtils.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/js/jsUtil.js" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/background/users/friends_search.ftl" />
-        <option value="$PROJECT_DIR$/src/main/java/com/share/constant/FriendsStatusConstant.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/share/constant/PositionConstant.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/share/constant/PositionNameConstant.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/share/constant/StateConstant.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/share/service/SharedFriendsService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/share/pojo/SharedlFriendRequest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/share/controller/SharedFriendsController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/share/service/SharedlFriendRequestService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/share/service/impl/SharedlFriendRequestServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/share/controller/SharedlFriendRequestController.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/js/email/userName.js" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/background/email/email_compose.ftl" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/js/plugins/layer/laydate/need/laydate.css" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/403.ftl" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/background/users/oldPassword.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/background/users/oldPassword.ftl" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/background/users/user_modifier.ftl" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/background/users/register.ftl" />
-        <option value="$PROJECT_DIR$/src/main/java/com/share/util/ShiroMd5.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/js/users/users_password.js" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/500.ftl" />
-        <option value="$PROJECT_DIR$/src/main/java/com/share/users/service/SharedReceiveMailService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/share/users/controller/SharedReceiveMailController.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/js/users/friends.js" />
-        <option value="$PROJECT_DIR$/src/main/java/com/share/users/controller/SharedEmailController.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/background/users/friend_chat.ftl" />
-        <option value="$PROJECT_DIR$/src/main/java/com/share/constant/PageConstant.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/share/users/controller/SharedFriendsController.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/background/users/show_user.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/background/users/show_user.ftl" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/ShareBlogsMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/background/users/users_blogs.ftl" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/ShareBlogsCommentReplyMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/share/blogs/service/ShareBlogsCommentReplyService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/share/blogs/service/impl/ShareBlogsCommentReplyServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/share/blogs/mapper/ShareBlogsCommentReplyMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/share/blogs/controller/ShareBlogsCommentReplyController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/static/js/users/usersBlogs.js" />
-        <option value="$PROJECT_DIR$/src/main/java/com/share/shiro/realm/CustomRealm.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/share/vo/SharedUsersVO.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/background/users/user_list_modifier.ftl" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/background/users/add_users.ftl" />
-        <option value="$PROJECT_DIR$/src/main/java/com/share/vo/SharedUsersJSONVO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/share/users/service/SharedUsersService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/share/users/service/impl/SharedUsersServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/share/users/mapper/SharedUsersMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/blue/css/index.css" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/index.ftl" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/reception/write_forum.ftl" />
+        <option value="$PROJECT_DIR$/src/main/java/com/share/ControllerUtil/SharedFriendControllerUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/js/users/friends.js" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/share/charsocket/constant/MessageCodeConstant.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/share/charsocket/bo/Users.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/share/charsocket/util/WebSocketLocalhostUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/share/util/DateFormatUtils.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/share/util/DateUtils.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/share/charsocket/config/NettyConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/share/util/JsonUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/share/charsocket/bo/WebSocketMessage.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/js/chars/charUtil.js" />
+        <option value="$PROJECT_DIR$/src/main/java/com/share/charsocket/config/UtilConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/share/charsocket/enums/CharServerEnum.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/share/charsocket/config/NettyBooter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/share/charsocket/constant/WebSocketConstant.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/share/charsocket/server/CharServer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/share/charsocket/util/WebsocketUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/background/users/friend_chat.ftl" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/css/style.css" />
+        <option value="$PROJECT_DIR$/src/main/java/com/share/charsocket/enums/MessageUtilEnum.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/share/charsocket/enums/WebsocketUtilEnum.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/share/charsocket/util/MessageUtil.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/SharedUsersMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/js/users/userListJs.js" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/js/users/users_modifier.js" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/js/comm/page.js" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/background/comm/page.ftl" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/background/users/userList.ftl" />
-        <option value="$PROJECT_DIR$/src/main/java/com/share/users/controller/SharedUsersController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/css/chat.css" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/background/char/chat.ftl" />
+        <option value="$PROJECT_DIR$/src/main/java/com/share/charsocket/util/FriendAndMyIdString.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/share/charsocket/util/FriendAndMyIdKey.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/share/enums/RedisUtilEnums.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/share/SharedlibraryApplication.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/share/config/SpringBootConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/share/util/SpringUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/share/charsocket/bo/FriendAndUsers.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/share/charsocket/handler/CharHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/share/users/controller/SharedFriendsController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/background/index.ftl" />
+        <option value="$PROJECT_DIR$/src/main/java/com/share/util/RedisUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/share/charsocket/controller/CharController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/js/chars/friend_chat.js" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/background/char/friend_chat.ftl" />
       </list>
     </option>
   </component>
@@ -583,9 +580,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="AndroidView" />
       <pane id="Scratches" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -636,7 +632,7 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="share" type="462c0819:PsiDirectoryNode" />
-              <item name="invitation" type="462c0819:PsiDirectoryNode" />
+              <item name="charsocket" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SharedLibrary" type="b2602c69:ProjectViewProjectNode" />
@@ -646,8 +642,42 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="share" type="462c0819:PsiDirectoryNode" />
-              <item name="invitation" type="462c0819:PsiDirectoryNode" />
+              <item name="charsocket" type="462c0819:PsiDirectoryNode" />
+              <item name="bo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SharedLibrary" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SharedLibrary" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="share" type="462c0819:PsiDirectoryNode" />
+              <item name="charsocket" type="462c0819:PsiDirectoryNode" />
               <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SharedLibrary" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SharedLibrary" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="share" type="462c0819:PsiDirectoryNode" />
+              <item name="charsocket" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+              <item name="CharController" type="1a9f42e2:ClassTreeNode" />
+            </path>
+            <path>
+              <item name="SharedLibrary" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SharedLibrary" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="share" type="462c0819:PsiDirectoryNode" />
+              <item name="charsocket" type="462c0819:PsiDirectoryNode" />
+              <item name="enums" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SharedLibrary" type="b2602c69:ProjectViewProjectNode" />
@@ -669,6 +699,16 @@
               <item name="share" type="462c0819:PsiDirectoryNode" />
               <item name="users" type="462c0819:PsiDirectoryNode" />
               <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SharedLibrary" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SharedLibrary" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="share" type="462c0819:PsiDirectoryNode" />
+              <item name="vo" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SharedLibrary" type="b2602c69:ProjectViewProjectNode" />
@@ -676,6 +716,51 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SharedLibrary" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SharedLibrary" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="mapper" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SharedLibrary" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SharedLibrary" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SharedLibrary" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SharedLibrary" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SharedLibrary" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SharedLibrary" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="chars" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SharedLibrary" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SharedLibrary" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="users" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SharedLibrary" type="b2602c69:ProjectViewProjectNode" />
@@ -694,11 +779,51 @@
               <item name="templates" type="462c0819:PsiDirectoryNode" />
               <item name="background" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="SharedLibrary" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SharedLibrary" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="background" type="462c0819:PsiDirectoryNode" />
+              <item name="char" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SharedLibrary" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SharedLibrary" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="background" type="462c0819:PsiDirectoryNode" />
+              <item name="users" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SharedLibrary" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SharedLibrary" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="reception" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SharedLibrary" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SharedLibrary" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="reception" type="462c0819:PsiDirectoryNode" />
+              <item name="comm" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -712,7 +837,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544781701540" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/SQL Dialect" value="MySQL" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/eclipsePuls.xml" />
+    <property name="last_opened_file_path" value="E:/桌面文件/自己写的项目/SpringBoot_Netty" />
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
     <property name="RequestMappingsPanelWidth2" value="75" />
     <property name="RequestMappingsPanelOrder2" value="2" />
@@ -729,16 +854,20 @@
       <recent name="com.share" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\ideaxm\SharedLibrary\src\main\resources\templates\background\comm" />
-      <recent name="E:\ideaxm\SharedLibrary\src\main\resources\templates\background\users" />
-      <recent name="E:\ideaxm\SharedLibrary\src\main\resources\static\js\users" />
-      <recent name="E:\ideaxm\SharedLibrary\src\main\java\com\share\controller" />
-      <recent name="C:\Users\Administrator\Desktop\SharedLibrary\src\main\resources\templates\background\email" />
+      <recent name="E:\ideaxm\SharedLibrary\src\main\java\com\share\util" />
+      <recent name="E:\ideaxm\SharedLibrary\src\main\resources\static\css" />
+      <recent name="E:\ideaxm\SharedLibrary\src\main\resources\templates\background\char" />
+      <recent name="E:\ideaxm\SharedLibrary\src\main\resources\static\img" />
+      <recent name="E:\ideaxm\SharedLibrary\src\main\java\com\share\charsocket\constant" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.share.vo" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\ideaxm\SharedLibrary\src\main\resources\templates\background\char" />
+      <recent name="E:\ideaxm\SharedLibrary\src\main\resources\mapper" />
+      <recent name="E:\ideaxm\SharedLibrary\src\main\resources\templates" />
+      <recent name="E:\ideaxm\SharedLibrary\src\main\resources\templates\reception" />
       <recent name="C:\Users\博博\Desktop\SharedLibrary\src\main\resources\mapper" />
     </key>
   </component>
@@ -955,9 +1084,9 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.ShareBlogsController" />
-        <item index="1" class="java.lang.String" itemvalue="Application.StringUtils" />
-        <item index="2" class="java.lang.String" itemvalue="Application.MyBatisPlusGenerator" />
+        <item index="0" class="java.lang.String" itemvalue="Application.MyBatisPlusGenerator" />
+        <item index="1" class="java.lang.String" itemvalue="Application.ShareBlogsController" />
+        <item index="2" class="java.lang.String" itemvalue="Application.StringUtils" />
         <item index="3" class="java.lang.String" itemvalue="Application.ShiroMd5" />
         <item index="4" class="java.lang.String" itemvalue="Application.ShareBlogsController" />
       </list>
@@ -1000,7 +1129,16 @@
       <workItem from="1546754207039" duration="19396000" />
       <workItem from="1546784282498" duration="681000" />
       <workItem from="1546821743477" duration="4000" />
-      <workItem from="1546831789404" duration="8454000" />
+      <workItem from="1546831789404" duration="18973000" />
+      <workItem from="1546929343600" duration="11753000" />
+      <workItem from="1547029903883" duration="551000" />
+      <workItem from="1547031675226" duration="683000" />
+      <workItem from="1547035832129" duration="1664000" />
+      <workItem from="1547038072280" duration="31000" />
+      <workItem from="1547081822021" duration="30408000" />
+      <workItem from="1547166905349" duration="22455000" />
+      <workItem from="1547293749151" duration="15588000" />
+      <workItem from="1547353905152" duration="7621000" />
     </task>
     <task id="LOCAL-00001" summary="完成邮箱查询,邮箱表增加字段state,页面展示成功">
       <created>1544780773011</created>
@@ -1086,11 +1224,25 @@
       <option name="project" value="LOCAL" />
       <updated>1546690263763</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="增加了用户列表功能">
+      <created>1546854995102</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1546854995102</updated>
+    </task>
+    <task id="LOCAL-00014" summary="修改了登录的体验，增加了好友的请求。修复了博客的bug，增加了添加更多，增加了一个表字段，以及若干">
+      <created>1547362041706</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1547362041706</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="126494000" />
+    <option name="totallyTimeSpent" value="227767000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1105,10 +1257,10 @@
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Key Promoter X" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="FindBugs-IDEA" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290398" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39064327" sideWeight="0.50858366" order="13" side_tool="true" content_ui="tabs" />
-      <window_info id="JRebel Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3265306" sideWeight="0.5104167" order="14" side_tool="true" content_ui="tabs" />
+      <window_info id="Key Promoter X" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299356" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="FindBugs-IDEA" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32865497" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39064327" sideWeight="0.50858366" order="12" side_tool="true" content_ui="tabs" />
+      <window_info id="JRebel Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3265306" sideWeight="0.5104167" order="13" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295699" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="JRebel Executor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32858837" sideWeight="0.49166667" order="17" side_tool="false" content_ui="tabs" />
       <window_info id="调色板" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1117,22 +1269,22 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38875878" sideWeight="0.4914163" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32858837" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="调试" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30725622" sideWeight="0.49583334" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32740214" sideWeight="0.49785408" order="15" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24093567" sideWeight="0.4914163" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32748538" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="调试" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30679157" sideWeight="0.49583334" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3263158" sideWeight="0.49785408" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290398" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32865497" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32977462" sideWeight="0.49791667" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32740214" sideWeight="0.49356222" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290398" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="MyBatis Sql Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32779098" sideWeight="0.5" order="18" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290398" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290398" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29291844" sideWeight="0.46746576" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32865497" sideWeight="0.49791667" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3263158" sideWeight="0.49356222" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32865497" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="MyBatis Sql Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32748538" sideWeight="0.5" order="18" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32865497" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3277897" sideWeight="0.46746576" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32865497" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
+      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299356" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="JRebel" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26979166" sideWeight="0.53253424" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="设计器" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1144,7 +1296,7 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="JRebel Setup Guide" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3203125" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32748538" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1193,9 +1345,10 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="完成邮箱查询,邮箱表增加字段state,页面展示成功" />
     <MESSAGE value="完善了个人资料页面，好友查找的页面，优化了动态页面" />
-    <MESSAGE value="修改了登录的体验，增加了好友的请求。修复了博客的bug，增加了添加更多，增加了一个表字段，以及若干" />
     <MESSAGE value="修复了邮箱问题，查询好友问题" />
-    <option name="LAST_COMMIT_MESSAGE" value="修复了邮箱问题，查询好友问题" />
+    <MESSAGE value="增加了用户列表功能" />
+    <MESSAGE value="修改了登录的体验，增加了好友的请求。修复了博客的bug，增加了添加更多，增加了一个表字段，以及若干" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改了登录的体验，增加了好友的请求。修复了博客的bug，增加了添加更多，增加了一个表字段，以及若干" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1207,7 +1360,7 @@
           <option name="timeStamp" value="140" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="153" />
+      <option name="time" value="206" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1225,81 +1378,54 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/background/email/rollpage.jsp">
+    <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/4.1.27.Final/netty-all-4.1.27.Final-sources.jar!/io/netty/handler/codec/http/FullHttpRequest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-235">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="176">
+          <caret line="23" column="17" lean-forward="false" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/background/email/email_detail.ftl">
+    <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/4.1.27.Final/netty-all-4.1.27.Final-sources.jar!/io/netty/handler/codec/http/DefaultFullHttpRequest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="-1435">
+          <caret line="25" column="35" lean-forward="false" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="35" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/share/pojo/SharedEmail.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/4.1.27.Final/netty-all-4.1.27.Final-sources.jar!/io/netty/handler/codec/http/websocketx/WebSocketServerProtocolHandshakeHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="76" column="19" lean-forward="false" selection-start-line="76" selection-start-column="19" selection-end-line="76" selection-end-column="19" />
+        <state relative-caret-position="390">
+          <caret line="63" column="0" lean-forward="false" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/baomidou/mybatis-plus-extension/3.0.6/mybatis-plus-extension-3.0.6-sources.jar!/com/baomidou/mybatisplus/extension/activerecord/Model.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/share/charsocket/constant/WebSocketConstant.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="75" column="39" lean-forward="false" selection-start-line="75" selection-start-column="27" selection-end-line="75" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/background/email/email_page.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/share/users/controller/SharedReceiveMailController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="169" column="34" lean-forward="false" selection-start-line="169" selection-start-column="22" selection-end-line="169" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/background/email/email_simditor.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2995">
-          <caret line="9" column="21" lean-forward="false" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/background/email/email_StateList.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-625">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/share/users/controller/SharedEmailController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1081">
-          <caret line="129" column="0" lean-forward="false" selection-start-line="129" selection-start-column="0" selection-end-line="129" selection-end-column="0" />
+        <state relative-caret-position="-24">
+          <caret line="3" column="7" lean-forward="false" selection-start-line="3" selection-start-column="7" selection-end-line="3" selection-end-column="7" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/jquery-1.7.2.js">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/background/users/friend_request.ftl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="3909" column="4" lean-forward="false" selection-start-line="3909" selection-start-column="4" selection-end-line="3909" selection-end-column="4" />
+        <state relative-caret-position="840">
+          <caret line="49" column="42" lean-forward="false" selection-start-line="49" selection-start-column="39" selection-end-line="49" selection-end-column="42" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/email/Email_Submit.js">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/users/friendRequest.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="271">
-          <caret line="44" column="5" lean-forward="false" selection-start-line="44" selection-start-column="5" selection-end-line="44" selection-end-column="5" />
+        <state relative-caret-position="-821">
+          <caret line="1" column="7" lean-forward="true" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-transport/4.1.27.Final/netty-transport-4.1.27.Final-sources.jar!/io/netty/channel/SimpleChannelInboundHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2850">
+          <caret line="114" column="0" lean-forward="false" selection-start-line="114" selection-start-column="0" selection-end-line="114" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1307,349 +1433,400 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/background/users/users_list.ftl">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="451">
-          <caret line="31" column="38" lean-forward="true" selection-start-line="31" selection-start-column="38" selection-end-line="31" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/background/users/friend_chat.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="135" column="82" lean-forward="false" selection-start-line="135" selection-start-column="82" selection-end-line="135" selection-end-column="82" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/github/pagehelper/pagehelper/5.1.4/pagehelper-5.1.4.jar!/com/github/pagehelper/PageSerializable.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/github/pagehelper/pagehelper/5.1.4/pagehelper-5.1.4.jar!/com/github/pagehelper/PageInfo.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/share/users/controller/SharedStateController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/share/constant/PageConstant.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="20" column="36" lean-forward="false" selection-start-line="20" selection-start-column="36" selection-end-line="20" selection-end-column="36" />
+        <state relative-caret-position="259">
+          <caret line="7006" column="25" lean-forward="false" selection-start-line="7006" selection-start-column="15" selection-end-line="7006" selection-end-column="25" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/background/users/users_blogs.ftl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/share/users/controller/SharedFriendsController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5">
-          <caret line="64" column="32" lean-forward="true" selection-start-line="64" selection-start-column="32" selection-end-line="64" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1800">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="2199">
+          <caret line="179" column="66" lean-forward="false" selection-start-line="179" selection-start-column="46" selection-end-line="179" selection-end-column="66" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/background/users/friend_request.ftl">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/ShareBlogsMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="12" column="59" lean-forward="false" selection-start-line="12" selection-start-column="59" selection-end-line="12" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/share/shiro/realm/CustomRealm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="87">
-          <caret line="56" column="19" lean-forward="true" selection-start-line="56" selection-start-column="19" selection-end-line="56" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-core/5.0.8.RELEASE/spring-core-5.0.8.RELEASE.jar!/org/springframework/cglib/proxy/MethodProxy.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="105" column="0" lean-forward="false" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/background/users/show_user.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="33" column="36" lean-forward="false" selection-start-line="33" selection-start-column="28" selection-end-line="33" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/share/util/CopyUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="331">
-          <caret line="31" column="57" lean-forward="false" selection-start-line="31" selection-start-column="53" selection-end-line="31" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/share/pojo/SharedUsers.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="63" column="31" lean-forward="true" selection-start-line="60" selection-start-column="3" selection-end-line="63" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/background/users/user_modifier.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
+        <state relative-caret-position="-3600">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/users/register.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="50" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/background/users/user_list_modifier.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="141" column="16" lean-forward="false" selection-start-line="141" selection-start-column="16" selection-end-line="141" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/background/users/add_users.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3780">
-          <caret line="126" column="32" lean-forward="false" selection-start-line="126" selection-start-column="32" selection-end-line="126" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/share/users/service/SharedUsersService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1470">
-          <caret line="58" column="30" lean-forward="false" selection-start-line="58" selection-start-column="30" selection-end-line="58" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/share/users/service/impl/SharedUsersServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2640">
-          <caret line="108" column="49" lean-forward="false" selection-start-line="108" selection-start-column="49" selection-end-line="108" selection-end-column="49" />
           <folding>
-            <element signature="e#3791#3792#0" expanded="false" />
-            <element signature="e#3826#3827#0" expanded="false" />
-            <element signature="e#4717#4718#0" expanded="false" />
-            <element signature="e#4780#4781#0" expanded="false" />
+            <marker date="1546936377575" expanded="true" signature="3820:4712" ph="SELECT (SELE... share_blogs" />
+            <marker date="1546936377575" expanded="true" signature="3836:3923" ph="SELECT COUNT... share_blogs_give" />
+            <marker date="1546936377575" expanded="true" signature="3947:4029" ph="SELECT realN... shared_users" />
+            <marker date="1546936377575" expanded="true" signature="4053:4135" ph="SELECT head_... shared_users" />
+            <marker date="1546936377575" expanded="true" signature="4159:4235" ph="SELECT id FR... shared_users" />
+            <marker date="1546936377575" expanded="true" signature="4897:6845" ph="SELECT (SELE... share_blogs" />
+            <marker date="1546936377575" expanded="true" signature="4913:5000" ph="SELECT COUNT... share_blogs_give" />
+            <marker date="1546936377575" expanded="true" signature="6651:6806" ph="SELECT t.id id" />
+            <marker date="1546936377575" expanded="true" signature="6685:6800" ph="SELECT b.id share_blogs" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/share/users/mapper/SharedUsersMapper.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/chat.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="810">
-          <caret line="33" column="26" lean-forward="false" selection-start-line="33" selection-start-column="26" selection-end-line="33" selection-end-column="26" />
+        <state relative-caret-position="150">
+          <caret line="5" column="19" lean-forward="false" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/SharedUsersMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="22" column="93" lean-forward="false" selection-start-line="22" selection-start-column="93" selection-end-line="22" selection-end-column="93" />
-          <folding>
-            <marker date="1546783387359" expanded="true" signature="4629:5267" ph="SELECT u.id shared_users" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/share/vo/SharedUsersVO.java">
-      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1590">
-          <caret line="60" column="25" lean-forward="false" selection-start-line="57" selection-start-column="4" selection-end-line="60" selection-end-column="25" />
+          <caret line="86" column="64" lean-forward="false" selection-start-line="86" selection-start-column="64" selection-end-line="86" selection-end-column="64" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/share/vo/SharedUsersJSONVO.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/users/users_password.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="14" column="19" lean-forward="false" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
+        <state relative-caret-position="0">
+          <caret line="33" column="94" lean-forward="true" selection-start-line="33" selection-start-column="94" selection-end-line="33" selection-end-column="94" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/share/users/service/impl/SharedUsersServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="382">
+          <caret line="208" column="0" lean-forward="false" selection-start-line="208" selection-start-column="0" selection-end-line="208" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/background/char/chat.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="29" column="66" lean-forward="false" selection-start-line="29" selection-start-column="60" selection-end-line="29" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/share/charsocket/constant/MessageCodeConstant.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1380">
+          <caret line="46" column="53" lean-forward="false" selection-start-line="46" selection-start-column="28" selection-end-line="46" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/share/ControllerUtil/CaptchaController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-453">
+          <caret line="22" column="13" lean-forward="false" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/share/charsocket/util/MessageUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="21" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/share/charsocket/util/WebSocketLocalhostUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="18" column="7" lean-forward="true" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/share/charsocket/util/WebsocketUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1905">
+          <caret line="186" column="0" lean-forward="false" selection-start-line="180" selection-start-column="0" selection-end-line="186" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/io/Serializable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="168" column="17" lean-forward="false" selection-start-line="168" selection-start-column="17" selection-end-line="168" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/share/charsocket/bo/Users.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="45" column="1" lean-forward="true" selection-start-line="45" selection-start-column="1" selection-end-line="45" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/share/charsocket/util/FriendAndMyIdKey.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-30">
+          <caret line="14" column="12" lean-forward="false" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
+          <folding>
+            <element signature="e#382#383#0" expanded="false" />
+            <element signature="e#421#422#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/users/friends.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-120">
+          <caret line="173" column="59" lean-forward="false" selection-start-line="173" selection-start-column="59" selection-end-line="173" selection-end-column="72" />
+          <folding>
+            <marker date="1547036695695" expanded="true" signature="1491:1502" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/share/charsocket/bo/WebSocketMessage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="22" column="24" lean-forward="false" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/share/charsocket/server/CharServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="142">
+          <caret line="48" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+          <folding>
+            <element signature="e#1555#2179#0" expanded="false" />
+            <element signature="e#2178#2179#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/share/charsocket/enums/CharServerEnum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="23" column="22" lean-forward="false" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/share/config/RedisConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="271">
+          <caret line="103" column="17" lean-forward="false" selection-start-line="103" selection-start-column="8" selection-end-line="103" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/share/charsocket/enums/WebsocketUtilEnum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="393">
+          <caret line="28" column="28" lean-forward="false" selection-start-line="28" selection-start-column="28" selection-end-line="28" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/share/util/SpringUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="17" column="10" lean-forward="false" selection-start-line="17" selection-start-column="10" selection-end-line="17" selection-end-column="10" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#844#845#0" expanded="false" />
+            <element signature="e#900#901#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/share/SharedlibraryApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="16" column="39" lean-forward="false" selection-start-line="16" selection-start-column="39" selection-end-line="16" selection-end-column="39" />
+          <folding>
+            <element signature="e#564#565#0" expanded="false" />
+            <element signature="e#630#631#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/share/config/SpringBootConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="23" column="16" lean-forward="false" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#635#636#0" expanded="false" />
+            <element signature="e#674#675#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/share/enums/RedisUtilEnums.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="22" column="11" lean-forward="false" selection-start-line="22" selection-start-column="11" selection-end-line="22" selection-end-column="11" />
+          <folding>
+            <element signature="e#280#281#0" expanded="false" />
+            <element signature="e#323#324#0" expanded="false" />
+            <element signature="e#362#363#0" expanded="false" />
+            <element signature="e#394#395#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/background/index.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="87" column="107" lean-forward="false" selection-start-line="87" selection-start-column="107" selection-end-line="87" selection-end-column="107" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/share/users/service/SharedFriendsService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="15" column="17" lean-forward="false" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/share/users/service/SharedUsersService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="87" column="24" lean-forward="false" selection-start-line="87" selection-start-column="24" selection-end-line="87" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/share/charsocket/handler/CharHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="215" column="67" lean-forward="false" selection-start-line="215" selection-start-column="67" selection-end-line="215" selection-end-column="67" />
           <folding>
             <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/commons-beanutils/commons-beanutils/1.9.3/commons-beanutils-1.9.3.jar!/org/apache/commons/beanutils/BeanUtils.class">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-redis/2.0.9.RELEASE/spring-data-redis-2.0.9.RELEASE.jar!/org/springframework/data/redis/core/RedisTemplate.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-630">
-          <caret line="19" column="15" lean-forward="false" selection-start-line="19" selection-start-column="15" selection-end-line="19" selection-end-column="15" />
+        <state relative-caret-position="131">
+          <caret line="763" column="18" lean-forward="false" selection-start-line="763" selection-start-column="18" selection-end-line="763" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-redis/2.0.9.RELEASE/spring-data-redis-2.0.9.RELEASE.jar!/org/springframework/data/redis/core/SetOperations.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="131">
+          <caret line="62" column="11" lean-forward="false" selection-start-line="62" selection-start-column="11" selection-end-line="62" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-redis/2.0.9.RELEASE/spring-data-redis-2.0.9.RELEASE.jar!/org/springframework/data/redis/core/DefaultSetOperations.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="301">
+          <caret line="39" column="27" lean-forward="true" selection-start-line="39" selection-start-column="27" selection-end-line="39" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-redis/2.0.9.RELEASE/spring-data-redis-2.0.9.RELEASE.jar!/org/springframework/data/redis/core/AbstractOperations.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="151">
+          <caret line="153" column="11" lean-forward="false" selection-start-line="153" selection-start-column="11" selection-end-line="153" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/share/util/RedisUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="356" column="42" lean-forward="false" selection-start-line="356" selection-start-column="33" selection-end-line="356" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-core/5.0.8.RELEASE/spring-core-5.0.8.RELEASE.jar!/org/springframework/cglib/proxy/MethodProxy.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="181">
+          <caret line="105" column="0" lean-forward="false" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/share/charsocket/controller/CharController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="40" column="38" lean-forward="false" selection-start-line="40" selection-start-column="38" selection-end-line="40" selection-end-column="38" />
           <folding>
-            <marker date="1542181568488" expanded="false" signature="0:104" ph="/.../" />
-            <marker date="1542181568488" expanded="false" signature="152:218" ph="..." />
-            <marker date="1542181568488" expanded="true" signature="249:267" ph="/**...*/" />
-            <marker date="1542181568488" expanded="true" signature="342:349" ph="{}" />
-            <marker date="1542181568488" expanded="true" signature="355:373" ph="/**...*/" />
-            <marker date="1542181568488" expanded="false" signature="422:433" ph=" { " />
-            <marker date="1542181568488" expanded="false" signature="446:452" ph=" }" />
-            <marker date="1542181568488" expanded="true" signature="458:476" ph="/**...*/" />
-            <marker date="1542181568488" expanded="false" signature="538:549" ph=" { " />
-            <marker date="1542181568488" expanded="false" signature="566:572" ph=" }" />
-            <marker date="1542181568488" expanded="true" signature="726:793" ph="{...}" />
-            <marker date="1542181568488" expanded="true" signature="916:987" ph="{...}" />
-            <marker date="1542181568488" expanded="true" signature="1122:1198" ph="{...}" />
-            <marker date="1542181568488" expanded="true" signature="1340:1406" ph="{...}" />
-            <marker date="1542181568488" expanded="true" signature="1558:1638" ph="{...}" />
-            <marker date="1542181568488" expanded="true" signature="1790:1872" ph="{...}" />
-            <marker date="1542181568488" expanded="true" signature="2035:2124" ph="{...}" />
-            <marker date="1542181568488" expanded="true" signature="2275:2356" ph="{...}" />
-            <marker date="1542181568488" expanded="true" signature="2519:2605" ph="{...}" />
-            <marker date="1542181568488" expanded="true" signature="2756:2837" ph="{...}" />
-            <marker date="1542181568488" expanded="true" signature="2982:3057" ph="{...}" />
-            <marker date="1542181568488" expanded="true" signature="3208:3289" ph="{...}" />
-            <marker date="1542181568488" expanded="true" signature="3435:3506" ph="{...}" />
-            <marker date="1542181568488" expanded="true" signature="3640:3715" ph="{...}" />
-            <marker date="1542181568488" expanded="true" signature="3791:3870" ph="{...}" />
-            <marker date="1542181568488" expanded="false" signature="3920:3931" ph=" { " />
-            <marker date="1542181568488" expanded="false" signature="3960:3966" ph=" }" />
-            <marker date="1542181568488" expanded="true" signature="4022:4119" ph="{...}" />
-            <marker date="1542181568488" expanded="true" signature="4186:4300" ph="{...}" />
+            <element signature="imports" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/background/youxi/automobile.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/users/users_modifier.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-450">
-          <caret line="0" column="3" lean-forward="true" selection-start-line="0" selection-start-column="3" selection-end-line="0" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/users/userListJs.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="79" column="15" lean-forward="false" selection-start-line="79" selection-start-column="15" selection-end-line="79" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/page2.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/page.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/users/usersBlogs.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="414" column="28" lean-forward="false" selection-start-line="414" selection-start-column="20" selection-end-line="414" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/comm/page.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="355">
-          <caret line="38" column="18" lean-forward="true" selection-start-line="38" selection-start-column="18" selection-end-line="38" selection-end-column="18" />
+        <state relative-caret-position="345">
+          <caret line="549" column="43" lean-forward="true" selection-start-line="544" selection-start-column="39" selection-end-line="549" selection-end-column="43" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <marker date="1546938422815" expanded="true" signature="857:868" ph="..." />
+            <marker date="1546938422815" expanded="true" signature="13210:13225" ph="..." />
+            <marker date="1546938422815" expanded="true" signature="21165:21176" ph="..." />
+            <marker date="1546938422815" expanded="true" signature="25006:25024" ph="..." />
+            <marker date="1546938422815" expanded="true" signature="28816:28831" ph="..." />
+            <marker date="1546938422815" expanded="true" signature="29591:29609" ph="..." />
+            <marker date="1546938422815" expanded="true" signature="34291:34302" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/background/comm/page.ftl">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/share/vo/SharedUsersVO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="4" column="48" lean-forward="false" selection-start-line="4" selection-start-column="48" selection-end-line="4" selection-end-column="48" />
+        <state relative-caret-position="205">
+          <caret line="20" column="13" lean-forward="false" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/jsUtil.js">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/chars/friend_chat.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="8" column="74" lean-forward="true" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="74" />
+        <state relative-caret-position="930">
+          <caret line="368" column="29" lean-forward="false" selection-start-line="368" selection-start-column="29" selection-end-line="368" selection-end-column="29" />
           <folding>
-            <marker date="1544970637633" expanded="true" signature="5439:5577" ph="..." />
+            <marker date="1547361206420" expanded="true" signature="11994:12010" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/background/users/userList.ftl">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/share/users/controller/SharedFriendsController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="55" column="47" lean-forward="false" selection-start-line="55" selection-start-column="47" selection-end-line="55" selection-end-column="47" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/share/users/controller/SharedUsersController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2014">
-          <caret line="221" column="55" lean-forward="true" selection-start-line="221" selection-start-column="55" selection-end-line="221" selection-end-column="55" />
-          <folding>
-            <element signature="e#14370#14371#0" expanded="true" />
-            <element signature="e#14412#14413#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/share/invitation/controller/SharediInvitationController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
-          <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+        <state relative-caret-position="303">
+          <caret line="140" column="19" lean-forward="false" selection-start-line="140" selection-start-column="19" selection-end-line="140" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/background/index.ftl">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/share/charsocket/bo/FriendAndUsers.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="238" column="25" lean-forward="true" selection-start-line="238" selection-start-column="25" selection-end-line="238" selection-end-column="25" />
+        <state relative-caret-position="573">
+          <caret line="44" column="23" lean-forward="false" selection-start-line="44" selection-start-column="19" selection-end-line="44" selection-end-column="23" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/background/char/friend_chat.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="526">
+          <caret line="34" column="30" lean-forward="true" selection-start-line="34" selection-start-column="30" selection-end-line="34" selection-end-column="30" />
+          <folding>
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

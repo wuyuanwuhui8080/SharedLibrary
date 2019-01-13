@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Title</title>
     <#include "../comm/script.ftl">
-    <!-- 全局js -->
-    <link href="${basePath}/css/font-awesome.css?v=4.4.0" rel="stylesheet">
+    <script src="${basePath}/js/users/userListJs.js"></script>
+    <script src="${basePath}/js/comm/page.js"></script>
 </head>
 <body class="gray-bg">
 <div class="wrapper wrapper-content animated fadeInRight">
@@ -14,7 +14,7 @@
         <div class="col-sm-12">
             <div class="ibox float-e-margins">
                 <div class="ibox-title">
-                    <h5>自定义响应式表格</h5>
+                    <h5>用户列表</h5>
                     <div class="ibox-tools">
                         <a class="collapse-link">
                             <i class="fa fa-chevron-up"></i>
@@ -37,7 +37,7 @@
                     <form action="${basePath}/sharedUsers/goUserList" method="get">
                         <div class="row">
                             <div class="col-sm-5 m-b-xs">
-                                <select class="input-sm form-control input-s-sm inline" name="position">
+                                <select class="input-sm form-control input-s-sm inline selectClass" name="position">
                                     <option value="">请选择</option>
                                    <#list positionList as li>
                                        <option value="${li.id}"
@@ -49,12 +49,16 @@
                             <div class="col-sm-3">
                                 <div class="input-group">
                                     <input type="text" placeholder="请输入关键词" name="name" value="${name!}"
-                                           class="input-sm form-control"> <span class="input-group-btn">
-                                        <button type="submit" class="btn btn-sm btn-primary"> 搜索</button> </span>
+                                           class="input-sm form-control RealnameOrUsername"> <span class="input-group-btn">
+                                        <button type="submit" class="btn btn-sm btn-primary sarchSumitUser"> 搜索</button> </span>
                                 </div>
                             </div>
+                            <input type="hidden" id="pageId" name="pageIndex" value="${page.pageNum}"/>
+                            <button class="btn btn-success" type="button" onclick="goSaveUsre();" style="margin-left: 30px;">添加用户
+                            </button>
                         </div>
                     </form>
+                    <div style="display: none"><button type="submit"></button></div>
                     <div class="table-responsive">
                         <table class="table table-striped">
                             <thead>
@@ -63,29 +67,26 @@
                                 <th>真实姓名</th>
                                 <th>电话</th>
                                 <th>角色</th>
-                                <th>出生日期</th>
+                                <th>创建时间</th>
                                 <th>操作</th>
                             </tr>
                             </thead>
-                            <tbody>
-                               <#list usersList as sus>
+                            <tbody class="tableTbody">
+                               <#list page.list as sus>
                                <tr>
                                    <td>${sus.userName}</td>
                                    <td>${sus.realName}</td>
                                    <td>${sus.phone}</td>
-                                   <#if (sus.positionId) == 1 >
-                                      <td>普通用户</td>
-                                   <#elseif (sus.positionId) == 2 >
-                                      <td>扫地僧</td>
-                                   <#elseif (sus.positionId) == 3>
-                                      <td>管理员</td>
-                                   </#if>
-                                   <td>${sus.birthday?date}</td>
-                                   <td><a href="#">查看</a> <a href="#">删除</a> <a href="#">修改</a></td>
+                                   <td>${sus.positionName}</td>
+                                   <td>${sus.creationDate?datetime}</td>
+                                   <td><a href="${basePath}/sharedUsers/showUsers/${sus.id}">查看</a> <a
+                                           href="javascript:;" class="del" userId="${sus.id}">删除</a>
+                                       <a href="${basePath}/sharedUsers/goUpdate/${sus.id}">修改</a></td>
                                </tr>
                                </#list>
                             </tbody>
                         </table>
+                        <#include "../comm/page.ftl">
                     </div>
                 </div>
             </div>
@@ -96,16 +97,6 @@
 </div>
 </body>
 </html>
- <!-- 全局js -->
-    <!-- Peity -->
-    <script src="${basePath}/js/plugins/peity/jquery.peity.min.js"></script>
-
-    <!-- iCheck -->
-    <script src="${basePath}/js/plugins/iCheck/icheck.min.js"></script>
-
-    <!-- Peity -->
-    <script src="${basePath}/js/demo/peity-demo.js"></script>
-
     <script>
         $(document).ready(function () {
             $('.i-checks').iCheck({
@@ -113,4 +104,10 @@
                 radioClass: 'iradio_square-green',
             });
         });
+        var path = "${basePath}";
+
+        function goSaveUsre() {
+            location.href = path + "/sharedUsers/goSaveUser";
+        }
+
     </script>

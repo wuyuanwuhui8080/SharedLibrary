@@ -137,10 +137,10 @@
      "foo [link http://www.example.com/]. bar");
 
   MT("vanillaLinkExtension",
-     "foo [link http://www.example.com/index.ftl] bar");
+     "foo [link http://www.example.com/index1.ftl] bar");
 
   MT("vanillaLinkEmphasis",
-     "foo [em *][em&link http://www.example.com/index.ftl][em *] bar");
+     "foo [em *][em&link http://www.example.com/index1.ftl][em *] bar");
 
   MT("notALink",
      "[comment ```css]",

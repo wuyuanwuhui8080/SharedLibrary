@@ -52,6 +52,7 @@
                                                 <img class="chat-avatar" src="${basePath}/images/${li.headImg}" alt="">
                                                 <div class="chat-user-name">
                                                     <a href="javascript:;" onclick="chooseUser('${li.realName}','${li.id}','${li.headImg}');">${li.realName}</a>
+                                                    <span class="label label-default" style="margin-left: 40%">离线
                                                 </div>
                                             </div>
                                         </#list>
