@@ -26,11 +26,7 @@ public interface ShareBlogsCommentReplyService
 	 *
 	 * @param replyId
 	 *            回复表id
-	 * @param byUserId
-	 *            被回复者id
-	 * @param commId
-	 *            评论id
 	 * @return
 	 */
-	boolean deleteBlosCommReply(String replyId, String byUserId, String commId);
+	boolean deleteBlosCommReply(String replyId);
 }

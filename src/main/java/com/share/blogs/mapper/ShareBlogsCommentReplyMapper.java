@@ -25,7 +25,6 @@ public interface ShareBlogsCommentReplyMapper
 	 *            评论id
 	 * @return
 	 */
-	Integer deleteBlosCommReply(@Param("replyId") String replyId,
-			@Param("byUserId") String byUserId, @Param("commId") String commId);
+	Integer deleteBlosCommReply(@Param("replyId") String replyId);
 
 }

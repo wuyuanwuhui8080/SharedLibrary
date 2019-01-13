@@ -22,5 +22,10 @@ public class SharediInvitationController {
         return  "index";
     }
 
+    @GetMapping("/goWriteInvitation")
+    public String goWriteInvitation(){
+        return  "reception/write_forum";
+    }
+
 }
 

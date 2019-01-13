@@ -85,7 +85,7 @@
                                href="${basePath}/sharedlFriendRequest/goFirendRequest/${Session.users.id}">好友请求</a>
                         </li>
                         <li>
-                            <a class="J_menuItem" href="${basePath}/sharedFriends/goChar">好友聊天</a>
+                            <a class="J_menuItem" href="${basePath}/sharedFriends/goChar/${Session.users.id}">好友聊天</a>
                         </li>
                         <li>
                             <a class="J_menuItem" href="${basePath}/shareBlogs/goEditorsBlos">写博客</a>

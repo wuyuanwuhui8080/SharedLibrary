@@ -94,6 +94,7 @@ public class ShiroConfig {
         linkedHashMap.put("/images/**", "anon");
         linkedHashMap.put("/img/**", "anon");
         linkedHashMap.put("/fonts/**", "anon");
+        linkedHashMap.put("/blue/**", "anon");
         linkedHashMap.put("/docs/**", "anon");
         linkedHashMap.put("/__MACOSX/**", "anon");
         linkedHashMap.put("/plugins/**", "anon");

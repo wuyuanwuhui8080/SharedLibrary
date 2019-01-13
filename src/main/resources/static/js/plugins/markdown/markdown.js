@@ -1087,7 +1087,7 @@ Markdown.DialectHelpers.inline_until_char = function( text, want ) {
     }
 
     if ( consumed >= text.length ) {
-      // No closing char found. Abort.
+      // No closing charsocket found. Abort.
       return null;
     }
 

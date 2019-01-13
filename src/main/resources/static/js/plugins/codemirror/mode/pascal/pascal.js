@@ -18,7 +18,7 @@ CodeMirror.defineMode("pascal", function() {
     return obj;
   }
   var keywords = words("and array begin case const div do downto else end file for forward integer " +
-                       "boolean char function goto if in label mod nil not of or packed procedure " +
+                       "boolean charsocket function goto if in label mod nil not of or packed procedure " +
                        "program record repeat set string then to type until var while with");
   var atoms = {"null": true};
 

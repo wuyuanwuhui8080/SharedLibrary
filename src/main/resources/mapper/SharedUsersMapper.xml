@@ -36,12 +36,12 @@
 
     <!--删除用户以及用户下的所有东西-->
     <delete id="removeById">
-         DELETE
+          DELETE
              u,e,att,fans,fans_fans,b,c,reply,give,invitation,
              commm_invitation,invitation_give,invitation_reply,
              friend_request_me,friend_request_frend,friends_me,
              friends_friend,comment_user_id,commt_relpy_user,comm_user_id
-             ,invitation_reply_users_id
+             ,invitation_reply_users_id,invitation_reply_Byusers_id
          FROM shared_users u
          LEFT JOIN shared_email e
          ON e.hair_id = u.id
@@ -64,9 +64,9 @@
          LEFT JOIN sharedi_invitation_comment commm_invitation
          ON commm_invitation.invitation_id = invitation.id
          LEFT JOIN sharedi_invitation_give invitation_give
-         ON invitation_give.blogs_id = invitation.id
-         LEFT JOIN share_blogs_invitation_reply invitation_reply
-         ON invitation_reply.invitation_comm_id = commm_invitation.id
+         ON invitation_give.invitataion_id = invitation.id
+         LEFT JOIN share_invitation_comment_reply invitation_reply
+         ON invitation_reply.invitation_comment_id = commm_invitation.id
          LEFT JOIN sharedl_friend_request friend_request_me
          ON friend_request_me.me_id = u.id
          LEFT JOIN sharedl_friend_request friend_request_frend
@@ -81,8 +81,10 @@
          ON commt_relpy_user.comment_byuser_id = u.id
          LEFT JOIN sharedi_invitation_comment comm_user_id
          ON comm_user_id.comment_user_id = u.id
-         LEFT JOIN share_blogs_invitation_reply invitation_reply_users_id
-         ON invitation_reply_users_id.comment_byuser_id = u.id
+         LEFT JOIN share_invitation_comment_reply invitation_reply_users_id
+         ON invitation_reply_users_id.comment_user_id = u.id
+         LEFT JOIN share_invitation_comment_reply invitation_reply_Byusers_id
+         ON invitation_reply_Byusers_id.comment_byuser_id = u.id
          WHERE u.id = #{userId}
     </delete>
 

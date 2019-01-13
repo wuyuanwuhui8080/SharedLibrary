@@ -7,54 +7,37 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.time.LocalDateTime;
 import java.io.Serializable;
-import java.util.Date;
 
 /**
  * <p>
- * 帖子分类
+ * 论坛分类
  * </p>
  *
- * @author Bean
- * @since 2018-12-11
+ * @author 博博大人
+ * @since 2019-01-08
  */
 @Data
-@AllArgsConstructor
 @NoArgsConstructor
+@AllArgsConstructor
 public class SharedlClassify extends Model<SharedlClassify> {
 
-    private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 1L;
 
-    /**
-     * 主键
-     */
-    @TableId(value = "id", type = IdType.AUTO)
-    private Long id;
+	/**
+	 * 主键
+	 */
+	@TableId(value = "id", type = IdType.AUTO)
+	private Long id;
 
-    /**
-     * 帖子分类名称
-     */
-    private String classifyName;
+	/**
+	 * 帖子分类名称
+	 */
+	private String classifyName;
 
-    /**
-     * 帖子点击量
-     */
-    private Integer thermalClassification;
+	@Override
+	protected Serializable pkVal() {
+		return this.id;
+	}
 
-    /**
-     * 创建时间
-     */
-    private Date creationDate;
-
-    /**
-     * 修改时间
-     */
-    private Date updateDate;
-
-
-    @Override
-    protected Serializable pkVal() {
-        return this.id;
-    }
 }

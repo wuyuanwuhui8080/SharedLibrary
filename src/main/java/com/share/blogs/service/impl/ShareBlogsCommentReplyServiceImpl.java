@@ -37,9 +37,7 @@ public class ShareBlogsCommentReplyServiceImpl extends
 	}
 
 	@Override
-	public boolean deleteBlosCommReply(String replyId, String byUserId,
-			String commId) {
-		return blogsCommentReplyMapperl.deleteBlosCommReply(replyId, byUserId,
-				commId) > 0 ? true : false;
+	public boolean deleteBlosCommReply(String replyId) {
+		return blogsCommentReplyMapperl.deleteBlosCommReply(replyId) > 0 ? true : false;
 	}
 }

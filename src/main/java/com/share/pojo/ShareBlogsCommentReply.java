@@ -66,6 +66,12 @@ public class ShareBlogsCommentReply extends Model<ShareBlogsCommentReply> {
 	@TableField(value = "comment_byuser_id")
 	private String commentByuserId;
 
+	/**
+	 * 评论回复回复id（share_blogs_comment_reply ）的id，该字段比较特殊，如果只是回复评论，该字段是空
+	 */
+	@TableField(value = "comm_reply_id")
+	private String commReplyId;
+
 	@Override
 	protected Serializable pkVal() {
 		return this.id;

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.share.invitation.mapper.ShareInvitationCommentReplyMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.share.pojo.ShareInvitationCommentReply">
+        <id column="id" property="id" />
+        <result column="invitation_comment_id" property="invitationCommentId" />
+        <result column="comment_user_id" property="commentUserId" />
+        <result column="comment_retext" property="commentRetext" />
+        <result column="comment_date" property="commentDate" />
+        <result column="comment_byuser_id" property="commentByuserId" />
+        <result column="comm_reply_id" property="commReplyId" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, invitation_comment_id, comment_user_id, comment_retext, comment_date, comment_byuser_id, comm_reply_id
+    </sql>
+
+</mapper>

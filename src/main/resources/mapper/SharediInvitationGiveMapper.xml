@@ -5,14 +5,14 @@
     <!-- 通用查询映射结果 -->
     <resultMap id="BaseResultMap" type="com.share.pojo.SharediInvitationGive">
         <id column="id" property="id" />
-        <result column="blogs_id" property="blogsId" />
-        <result column="give_user_id" property="giveUserId" />
+        <result column="invitataion_id" property="invitataionId" />
+        <result column="invitataion_user_id" property="invitataionUserId" />
         <result column="creation_date" property="creationDate" />
     </resultMap>
 
     <!-- 通用查询结果列 -->
     <sql id="Base_Column_List">
-        id, blogs_id, give_user_id, creation_date
+        id, invitataion_id, invitataion_user_id, creation_date
     </sql>
 
 </mapper>

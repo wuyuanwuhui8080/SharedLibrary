@@ -9,19 +9,18 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
-import java.util.Date;
 
 /**
  * <p>
- * 帖子评论表
+ * 论坛评论
  * </p>
  *
- * @author Bean
- * @since 2018-12-11
+ * @author 博博大人
+ * @since 2019-01-08
  */
 @Data
-@AllArgsConstructor
 @NoArgsConstructor
+@AllArgsConstructor
 public class SharediInvitationComment extends Model<SharediInvitationComment> {
 
     private static final long serialVersionUID = 1L;
@@ -50,8 +49,7 @@ public class SharediInvitationComment extends Model<SharediInvitationComment> {
     /**
      * 评论时间
      */
-    private Date commentDate;
-
+    private LocalDateTime commentDate;
 
 
     @Override

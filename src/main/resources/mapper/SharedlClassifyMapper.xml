@@ -6,14 +6,11 @@
     <resultMap id="BaseResultMap" type="com.share.pojo.SharedlClassify">
         <id column="id" property="id" />
         <result column="classify_name" property="classifyName" />
-        <result column="thermal_classification" property="thermalClassification" />
-        <result column="creation_date" property="creationDate" />
-        <result column="update_date" property="updateDate" />
     </resultMap>
 
     <!-- 通用查询结果列 -->
     <sql id="Base_Column_List">
-        id, classify_name, thermal_classification, creation_date, update_date
+        id, classify_name
     </sql>
 
 </mapper>

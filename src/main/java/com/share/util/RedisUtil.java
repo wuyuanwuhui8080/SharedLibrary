@@ -1,6 +1,7 @@
 package com.share.util;
 
 import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.data.redis.core.ZSetOperations;
 import org.springframework.stereotype.Component;
 import org.springframework.util.CollectionUtils;
 
@@ -357,6 +358,39 @@ public class RedisUtil {
         } catch (Exception e) {
             e.printStackTrace();
             return 0;
+        }
+    }
+
+    /**
+     * asc排序
+     *
+     * @param key
+     * @return
+     */
+    public Set<Object> ascSet(String key) {
+        try {
+            //zset 命令操作对象
+            ZSetOperations zSetOperations = redisTemplate.opsForZSet();
+            return zSetOperations.rangeWithScores(key, 0, -1);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+    /**
+     * desc排序set
+     * @param key
+     * @return
+     */
+    public Set<Object> descSet(String key){
+        try {
+            //zset 命令操作对象
+            ZSetOperations zSetOperations = redisTemplate.opsForZSet();
+            return zSetOperations.reverseRangeWithScores(key, 0, -1);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
         }
     }
 

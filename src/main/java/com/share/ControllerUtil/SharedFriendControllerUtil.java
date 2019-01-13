@@ -56,7 +56,8 @@ public class SharedFriendControllerUtil {
 		String likeFriendKey = "SHARED_FRIEND_USERSID" + userId;
 		// 判断key是否存在
 		if (redisUtil.hasKey(likeFriendKey)) {
-			List<SharedUsersVO> findlist = (List<SharedUsersVO>) JsonUtil
+			String sss = redisUtil.get(likeFriendKey).toString();
+			System.out.println(redisUtil.get(likeFriendKey).toString());List<SharedUsersVO> findlist = (List<SharedUsersVO>) JsonUtil
 					.JSONList(redisUtil.get(likeFriendKey).toString(),
 							SharedUsersVO.class);
 			if (StringUtils.isNotNull(name)) {
@@ -71,8 +72,7 @@ public class SharedFriendControllerUtil {
 			}
 		}
 		List<String> userListId = friendsService.getListUsersId(userId);
-		String msg = JsonUtil.JSONString(
-				usersService.findListByUsersIdForFriends(userListId));
+		String msg = JsonUtil.JSONString(usersService.findListByUsersIdForFriends(userListId));
 		// 赛值进reds缓存中
 		redisUtil.set(likeFriendKey, msg, 60);
 		log.info(msg);

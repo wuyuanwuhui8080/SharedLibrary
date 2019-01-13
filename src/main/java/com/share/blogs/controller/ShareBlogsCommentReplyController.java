@@ -37,13 +37,10 @@ public class ShareBlogsCommentReplyController {
 	 * @param id
 	 * @return
 	 */
-	@PostMapping("/deleteReply/{relpyId}/{byUserId}/{commId}")
+	@PostMapping("/deleteReply/{relpyId}")
 	public ReturnResult deleteReply(
-			@PathVariable(value = "relpyId") String relpyId,
-			@PathVariable(value = "byUserId") String byUserId,
-			@PathVariable(value = "commId") String commId) {
-		if (blogsCommentReplyService.deleteBlosCommReply(relpyId, byUserId,
-				commId)) {
+			@PathVariable(value = "relpyId") String relpyId) {
+		if (blogsCommentReplyService.deleteBlosCommReply(relpyId)){
 			return ReturnResult.ok();
 		}
 		return ReturnResult.error();
@@ -75,6 +72,7 @@ public class ShareBlogsCommentReplyController {
 			map.put("headImg", users.getHeadImg());
 			map.put("realName", users.getRealName());
 			map.put("byRealName", byRealName);
+			map.put("commReplyId", blogsCommentReply.getCommReplyId());
 			map.put("commId", blogsCommentReply.getCommentId());
 			return ReturnResult.ok(map);
 		}

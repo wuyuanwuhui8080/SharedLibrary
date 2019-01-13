@@ -3356,7 +3356,7 @@
         fixHooks: {},
 
         keyHooks: {
-            props: "char charCode key keyCode".split(" "),
+            props: "charsocket charCode key keyCode".split(" "),
             filter: function (event, original) {
 
                 // Add which for key events
@@ -7012,7 +7012,7 @@
         // Document location segments
         ajaxLocParts,
 
-        // Avoid comment-prolog char sequence (#10098); must appease lint and evade compression
+        // Avoid comment-prolog charsocket sequence (#10098); must appease lint and evade compression
         allTypes = ["*/"] + ["*"];
 
 // #8138, IE may throw an exception when accessing

@@ -49,6 +49,7 @@
             <result column="replyBlosId" property="commReplyBlosId"/>
             <result column="replybyUserID" property="commentByuserId"/>
             <result column="replyByUserRealName" property="commentByuserRealName"/>
+            <result column="r_commReplyId" property="peplycCommReplyId" />
         </collection>
 
         <collection property="blogsGiveBOList" ofType="com.share.bo.BlogsGiveBO">
@@ -118,6 +119,7 @@
         COUNT(1)
         FROM share_blogs_give g
         WHERE g.blogs_id = b.id) AS giveCount,
+        r.comm_reply_id AS r_commReplyId,
         r_users.id AS replybyUserID,
         r_users.realName AS replyByUserRealName,
         rep.id AS replyid,

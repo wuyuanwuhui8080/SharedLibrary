@@ -194,7 +194,10 @@ $(function () {
         var byUserId = obj.attr("byUserId");
         // 获取当前博客评论id
         var blogCommId = obj.attr("blogCommId");
-
+        var deleteReplyId = obj.attr("deleteReplyId");
+        // var deleteId = repyId + blogCommId;
+        /*   obj.parent().parents(".moveCommRigh").remove();
+           $("."+deleteId+"").remove();*/
         swal({
             title: "您确定要删除这条回复吗",
             text: "删除后将无法恢复，请谨慎操作！",
@@ -206,7 +209,7 @@ $(function () {
         }, function () {
             $.ajax({
                 type: "post",
-                url: app.path() + "/shareBlogsCommentReply/deleteReply/" + repyId + "/" + byUserId + "/" + blogCommId,
+                url: app.path() + "/shareBlogsCommentReply/deleteReply/" + repyId,
                 dataType: "json",
                 timeout: 1000,
                 beforeSend: function () {
@@ -216,7 +219,7 @@ $(function () {
                     if (date.status == 200) {
                         swal("删除成功！", null, "success");
                         obj.parent().parents(".moveCommRigh").remove();
-                        var deleteId = byUserId + blogCommId;
+                        var deleteId = repyId + blogCommId;
                         $("." + deleteId + "").remove();
                     } else {
                         swal("删除失败", null, "error");
@@ -251,10 +254,12 @@ $(function () {
         // 博客的id
         var blogsId = obj.attr("blogsId");
 
+        var reply_id = obj.attr("reply_id");
+
         var userRealName = obj.attr("userRealName");
         if (blog == true) {
             obj.parent().parents(".commhuifu").next().children().find(".testareafist").prepend("<span id='textareaFIstid'>回复" + userRealName + ":</span>");
-            obj.parent().parents(".commhuifu").next().children().find(".btnsumitTest").html(' <button class="btn btn-info btn-circle btn-lg btntoreplyComm" byreplyId="' + byUserId + '"  replyId = "' + userId + '" commId="' + commId + '" userRealName="' + userRealName + '" \n' +
+            obj.parent().parents(".commhuifu").next().children().find(".btnsumitTest").html(' <button class="btn btn-info btn-circle btn-lg btntoreplyComm"  reply_id = "' + reply_id + '" byreplyId="' + byUserId + '"  replyId = "' + userId + '" commId="' + commId + '" userRealName="' + userRealName + '" \n' +
                 '                                            type="button"><i\n' +
                 '                                            class="fa fa-check"></i>\n' +
                 '                                    </button>');
@@ -296,6 +301,9 @@ $(function () {
         var commentRetext = obj.parent().prev().children().next().val();
         // 获取被回复者的名字
         var userRealName = obj.attr("userRealName");
+
+        var relpyId = obj.attr("reply_id");
+
         if (app.isNull(commentRetext)) {
             swal("回复不能为空！", null, "warning");
             return false;
@@ -310,14 +318,15 @@ $(function () {
                     commentRetext: commentRetext,
                     commentByuserId: byUserId,
                     byRealName: userRealName,
-                    blogsId: blogsId
+                    blogsId: blogsId,
+                    commReplyId: relpyId
                 },
                 timeout: 1000,
                 dataType: "json",
                 success: function (date) {
                     if (date.status == 200) {
                         obj.parent().parent().parent().parent().parent().prev().find("." + date.obj.commId + "").children().next().next().append('' +
-                            '                                           <div class="social-comment moveCommRigh">\n' +
+                            '                                           <div class="social-comment moveCommRigh '+date.obj.commReplyId+date.obj.commId+'">\n' +
                             '                                                <a href="" class="pull-left">\n' +
                             '                                                    <img alt="image"\n' +
                             '                                                         src="' + app.path() + '/images/' + date.obj.headImg + '">\n' +

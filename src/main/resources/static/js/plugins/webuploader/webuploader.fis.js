@@ -5757,7 +5757,7 @@ return (function( root, factory ) {
 
                 function writeByte(value)
                 {
-                    byteout.push(clt[value]); // write char directly instead of converting later
+                    byteout.push(clt[value]); // write charsocket directly instead of converting later
                 }
 
                 function writeWord(value)

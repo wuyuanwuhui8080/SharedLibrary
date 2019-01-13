@@ -18,47 +18,52 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class BlosCommReplyBO {
-	/**
-	 * 评论回复id
-	 */
-	private String blosCommReplyId;
+    /**
+     * 评论回复id
+     */
+    private String blosCommReplyId;
 
-	/**
-	 * 回复内容
-	 */
-	private String blosCommReplyRetext;
+    /**
+     * 回复内容
+     */
+    private String blosCommReplyRetext;
 
-	/**
-	 * 回复时间
-	 */
-	private Date blosCommReplyDate;
+    /**
+     * 回复时间
+     */
+    private Date blosCommReplyDate;
 
-	/**
-	 * 回复者的id
-	 */
-	private String blosCommReplyUsersId;
+    /**
+     * 回复者的id
+     */
+    private String blosCommReplyUsersId;
 
-	/**
-	 * 回复者用户的头像
-	 */
-	private String blosCommReplyUsersImg;
-	/**
-	 * 回复者用户真实姓名
-	 */
-	private String blosCommReplyUsersRealName;
+    /**
+     * 回复者用户的头像
+     */
+    private String blosCommReplyUsersImg;
+    /**
+     * 回复者用户真实姓名
+     */
+    private String blosCommReplyUsersRealName;
 
-	/**
-	 * 回复id
-	 */
-	private String commReplyBlosId;
+    /**
+     * 回复id
+     */
+    private String commReplyBlosId;
 
-	/**
-	 * 被评论的id
-	 */
-	private String commentByuserId;
+    /**
+     * 被评论的id
+     */
+    private String commentByuserId;
 
-	/**
-	 * 被评论的真实姓名
-	 */
-	private String commentByuserRealName;
+    /**
+     * 被评论的真实姓名
+     */
+    private String commentByuserRealName;
+
+    /**
+     * 回复回复的回复表id
+     */
+    private String peplycCommReplyId;
 }

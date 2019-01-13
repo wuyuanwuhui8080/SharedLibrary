@@ -1,5 +1,6 @@
 package com.share.config;
 
+import com.share.util.SpringUtil;
 import org.springframework.boot.web.server.ConfigurableWebServerFactory;
 import org.springframework.boot.web.server.ErrorPage;
 import org.springframework.boot.web.server.WebServerFactoryCustomizer;
@@ -19,6 +20,10 @@ import org.springframework.http.HttpStatus;
 @Configuration
 public class SpringBootConfig {
 
+    @Bean
+    public SpringUtil getSpringutil(){
+        return new SpringUtil();
+    }
 
     /**
      * 自定义错误信息跳转的页面

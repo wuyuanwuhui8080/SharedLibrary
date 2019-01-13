@@ -2595,7 +2595,7 @@
     });
     on(d.input, "paste", function() {
       // Workaround for webkit bug https://bugs.webkit.org/show_bug.cgi?id=90206
-      // Add a char to the end of textarea before paste occur so that
+      // Add a charsocket to the end of textarea before paste occur so that
       // selection doesn't span to the end of textarea.
       if (webkit && !cm.state.fakedLastChar && !(new Date - cm.state.lastMiddleDown < 200)) {
         var start = d.input.selectionStart, end = d.input.selectionEnd;
@@ -3922,7 +3922,7 @@
   }
 
   // Used for horizontal relative motion. Dir is -1 or 1 (left or
-  // right), unit can be "char", "column" (like char, but doesn't
+  // right), unit can be "charsocket", "column" (like charsocket, but doesn't
   // cross line boundaries), "word" (across next word), or "group" (to
   // the start of next group of word or non-word-non-whitespace
   // chars). The visually param controls whether, in right-to-left
@@ -7310,7 +7310,7 @@
     return true;
   }
 
-  // Extending unicode characters. A series of a non-extending char +
+  // Extending unicode characters. A series of a non-extending charsocket +
   // any number of extending chars is treated as a single unit as far
   // as editing and measuring is concerned. This is not fully correct,
   // since some scripts/fonts/browsers also treat other configurations
@@ -7658,7 +7658,7 @@
   // See http://unicode.org/reports/tr9/tr9-13.html for the algorithm
   // that this (partially) implements.
 
-  // One-char codes used for character types:
+  // One-charsocket codes used for character types:
   // L (L):   Left-to-Right
   // R (R):   Right-to-Left
   // r (AL):  Right-to-Left Arabic

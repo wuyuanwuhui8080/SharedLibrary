@@ -132,9 +132,15 @@ public class SharedFriendsController {
 		return ReturnResult.okAndList(friendsLiist);
 	}
 
-	@GetMapping("/goChar")
-	public String goChar() {
-		return "background/users/friend_chat";
+
+	@GetMapping("/goChar/{userId}")
+	public String goChar(@PathVariable String userId,Model model) {
+		// 获取全部好友用户id
+		List<String> listUsersId = friendsService.getListUsersId(userId);
+		// 查询所有好友的用户信息
+		List<SharedUsersVO> listByUsersIdForFriends = usersService.findListByUsersIdForFriends(listUsersId);
+		model.addAttribute("list",listByUsersIdForFriends);
+		return "background/char/friend_chat";
 	}
 
 }

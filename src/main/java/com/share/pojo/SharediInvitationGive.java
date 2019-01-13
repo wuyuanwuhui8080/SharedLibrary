@@ -9,19 +9,18 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
-import java.util.Date;
 
 /**
  * <p>
- * 帖子点赞表
+ *  论坛点赞
  * </p>
  *
- * @author Bean
- * @since 2018-12-11
+ * @author 博博大人
+ * @since 2019-01-08
  */
 @Data
-@AllArgsConstructor
 @NoArgsConstructor
+@AllArgsConstructor
 public class SharediInvitationGive extends Model<SharediInvitationGive> {
 
     private static final long serialVersionUID = 1L;
@@ -35,21 +34,22 @@ public class SharediInvitationGive extends Model<SharediInvitationGive> {
     /**
      * 帖子id（对应share_blogs主键）
      */
-    private String blogsId;
+    private String invitataionId;
 
     /**
      * 点赞人的id（user表主键）
      */
-    private String giveUserId;
+    private String invitataionUserId;
 
     /**
      * 创建时间
      */
-    private Date creationDate;
+    private LocalDateTime creationDate;
 
 
     @Override
     protected Serializable pkVal() {
         return this.id;
     }
+
 }
