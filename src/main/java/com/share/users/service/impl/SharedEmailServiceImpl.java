@@ -79,9 +79,7 @@ public class SharedEmailServiceImpl
 		}
         wrapper.orderByDesc(SharedEmail::getCreationDate);
 		PageHelper.startPage(pageInex, pageSize);
-
 		PageInfo<SharedEmail> info = new PageInfo<>(super.list(wrapper));
-
 		return info;
 	}
 }

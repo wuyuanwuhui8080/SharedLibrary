@@ -7,8 +7,8 @@ import javax.annotation.Resource;
 import javax.servlet.http.HttpSession;
 
 import com.github.pagehelper.PageInfo;
-import com.share.Recent_Events.Event;
-import com.share.Recent_Events.Recent_Events;
+import com.share.recent_events.Event;
+import com.share.recent_events.Recent_Events;
 import com.share.constant.PageConstant;
 import com.share.constant.PositionConstant;
 import com.share.util.*;
@@ -54,6 +54,9 @@ public class SharedUsersController {
 
     @Resource
     private SharedUsersService usersService;
+
+    @Resource
+    private RedisUtil redisUtil;
 
     @Resource
     private SharedFansService fansService;
@@ -270,7 +273,6 @@ public class SharedUsersController {
         // 查询博客
         List<ShareBlogs> blogsList = blogsService
                 .findListFriendsByUsersId(usersId);
-
         SharedUsers users = usersService.getUserById(usersId);
 
         // 数据统一发送到页面
@@ -294,30 +296,23 @@ public class SharedUsersController {
         return "redirect:/sharedUsers/goLogin";
     }
 
+    /**
+     * 跳转主页面
+     *
+     * @param model 页面传输
+     * @return 视图
+     */
     @GetMapping("/GoIndex")
     public String GoIndex(Model model) {
         //获取登录用户
         SharedUsers users = (SharedUsers) SecurityUtils.getSubject().getSession().getAttribute("users");
-        List<Event> events = (List<Event>) JsonUtils.JSONList(recent_events.getEvent(users.getUserName()), Event.class);
+//        String event = recent_events.getEvent(users.getUserName());
+        String event = redisUtil.sGet(users.getUserName()).toString();
+        List<Event> events = (List<Event>) JsonUtils.JSONList(event, Event.class);
         model.addAttribute("events", events);
         return "background/users/timeline";
     }
 
-    /**
-     * 显示最近事件
-     *
-     * @return
-     */
-    @GetMapping("/showEvent")
-    public Object showEvent(Model model) {
-       /* //获取登录用户
-        SharedUsers users = (SharedUsers) SecurityUtils.getSubject().getSession().getAttribute("users");
-        String event = recent_events.getEvent(users.getUserName());
-        List<Event> events = JsonUtils.jsonToList(event, Event.class);
-        model.addAttribute("events", events);
-        return events;*/
-        return null;
-    }
 
     /**
      * 转到修改头像的页面

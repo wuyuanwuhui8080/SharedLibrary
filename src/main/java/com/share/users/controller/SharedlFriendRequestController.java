@@ -5,7 +5,8 @@ import java.util.List;
 
 import javax.annotation.Resource;
 
-import com.share.Recent_Events.Recent_Events;
+import com.github.pagehelper.PageInfo;
+import com.share.recent_events.Recent_Events;
 import com.share.constant.EventConstant;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -48,8 +49,8 @@ public class SharedlFriendRequestController {
     @ResponseBody
     public ReturnResult toFriendsRTS(String meId, String requestId) {
         SharedlFriendRequest friendRequest = new SharedlFriendRequest();
-        friendRequest.setMeId(meId);
-        friendRequest.setRequestId(requestId);
+        friendRequest.setMeId(requestId);
+        friendRequest.setRequestId(meId);
         // 校验是否发送重复请求
         if (friendRequestService.getFriendRequstEixt(friendRequest)) {
             return ReturnResult.error("您已经发送过请求了,不能在发送请求了!");
@@ -65,19 +66,37 @@ public class SharedlFriendRequestController {
     }
 
     /**
-     * 跳转到请求页面
+     * 跳转到好友请求请求页面
      *
      * @param userId
      * @param model
      * @return
      */
-    @GetMapping("/goFirendRequest/{userId}")
-    public String goFirendRequest(@PathVariable String userId, Model model) {
+    @GetMapping("/goFirendRequest/{userId}/{pageIndex}")
+    public String goFirendRequest(@PathVariable String userId,
+                                  @PathVariable Integer pageIndex, Model model) {
         // 查询所有好友请求
-        List<SharedlFriendRequest> friendRequestList = friendRequestService
-                .findFriendRequestByUserId(userId);
-        model.addAttribute("friendRequestList", friendRequestList);
+        PageInfo<SharedlFriendRequest> friendRequestByUserId = friendRequestService
+                .findFriendRequestByUserId(userId, pageIndex, 6);
+        model.addAttribute("page", friendRequestByUserId);
         return "background/users/friend_request";
+    }
+
+    /**
+     * 跳转到加为好友请求页面
+     *
+     * @param userId
+     * @param model
+     * @return
+     */
+    @GetMapping("/goRequestFirend/{userId}/{pageIndex}")
+    public String goRequestFirend(@PathVariable String userId,
+                                  @PathVariable Integer pageIndex, Model model) {
+        // 查询自己请求加为好友的请求
+        PageInfo<SharedlFriendRequest> pageInfo = friendRequestService
+                .requestFindFriendByUserId(userId, pageIndex, 6);
+        model.addAttribute("page", pageInfo);
+        return "background/users/request_friend";
     }
 
     /**
@@ -112,9 +131,10 @@ public class SharedlFriendRequestController {
         // 修改请求字段
         if (friendRequestService
                 .updateFriendRequestByStatus(sharedlFriendRequest)) {
+            //调用添加事件方法
+            recent_events.setEvent(EventConstant.FRIEND_EVENT, sharedlFriendRequest.getId());
             return ReturnResult.ok();
         }
         return ReturnResult.error();
     }
-
 }

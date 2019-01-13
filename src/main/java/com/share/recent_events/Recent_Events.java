@@ -1,4 +1,4 @@
-package com.share.Recent_Events;
+package com.share.recent_events;
 
 import com.share.constant.EventConstant;
 import com.share.pojo.SharedUsers;
@@ -7,7 +7,7 @@ import com.share.users.mapper.SharedUsersMapper;
 import com.share.users.service.SharedlFriendRequestService;
 import com.share.util.JsonUtils;
 import com.share.util.RedisUtil;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Component;
 
 import javax.annotation.Resource;
 import java.util.Date;
@@ -18,7 +18,7 @@ import java.util.Date;
  * @author 牛自豪
  * @date 2019-01-08-14:35
  */
-@Service
+@Component
 public class Recent_Events {
 
     @Resource
@@ -36,25 +36,26 @@ public class Recent_Events {
      */
     public void setEvent(String type, String EventObjectId) {
         Event event = new Event();
+        //补全对象字段
+        event.setEventid(EventObjectId);
+        event.setEventTime(new Date());
         if (EventConstant.FRIEND_EVENT.equals(type)) {
             //好友请求事件
             //强转好友请求对象
             SharedlFriendRequest sharedlFriendRequest = friendRequest.getById(EventObjectId);
             //获取请求用户
-            SharedUsers requestUsers = sharedUsersMapper.selectById(sharedlFriendRequest.getMeId());
+            SharedUsers requestUsers = sharedUsersMapper.selectById(sharedlFriendRequest.getRequestId());
             //获取被请求用户
-            SharedUsers requestedUsers = sharedUsersMapper.selectById(sharedlFriendRequest.getRequestId());
-
+            SharedUsers requestedUsers = sharedUsersMapper.selectById(sharedlFriendRequest.getMeId());
             event.setEventName("添加好友");
-            event.setEventTime(new Date());
             //获取详细信息,调用方法
             event.setEventDescription(getRequestFriendDetails(sharedlFriendRequest, requestedUsers, 1));
             event.setType(type);
+            String msg = JsonUtils.JSONString(event);
             //添加进redis
-            redisUtil.sSet(requestUsers.getUserName(), JsonUtils.JSONString(event));
+            redisUtil.sSet(requestUsers.getUserName(), msg);
             //同时添加被请求者事件
             setRequestedFriend(requestedUsers.getUserName(), requestUsers, sharedlFriendRequest);
-
         } else if (EventConstant.BLOG_EVENT.equals(type)) {
             //博客事件
 
@@ -78,19 +79,9 @@ public class Recent_Events {
         //获取详细信息,调用方法
         event.setEventDescription(getRequestFriendDetails(sharedlFriendRequest, requestUsers, 2));
         event.setType(EventConstant.FRIEND_EVENT);
+        String mag = JsonUtils.JSONString(event);
         //添加进redis
-        redisUtil.sSet(RequestedUserName, JsonUtils.JSONString(event));
-    }
-
-    /**
-     * 获取事件
-     *
-     * @param userName Redis的Key是用户UserName
-     * @return json字符串
-     */
-    public String getEvent(String userName) {
-        String string = JsonUtils.JSONString(redisUtil.sGet(userName));
-        return string;
+        redisUtil.sSet(RequestedUserName, mag);
     }
 
     /**
@@ -107,15 +98,14 @@ public class Recent_Events {
             sb.append("添加用户:" + requestedUsers.getRealName());
             sb.append("(" + requestedUsers.getUserName() + ")为好友,");
             //请求状态 请求状态(1.未处理 2.同意，3.拒绝 )
-            sb.append("请求状态:" + (sharedlFriendRequest.getStatus() == 1 ? "未处理" : sharedlFriendRequest.getStatus() == 2 ? "同意" : "拒绝"));
-        } else {
+            sb.append("请求状态:" + (sharedlFriendRequest.getStatus() == 1 ? "未处理" : sharedlFriendRequest.getStatus() == 2 ? "已同意" : "被拒绝"));
+        } else if (type == 2) {
             sb.append("用户:" + requestedUsers.getRealName());
             sb.append("(" + requestedUsers.getUserName() + ")希望添加您为好友,");
             //请求状态 请求状态(1.未处理 2.同意，3.拒绝 )
-            sb.append("请求状态:" + (sharedlFriendRequest.getStatus() == 1 ? "未处理" : sharedlFriendRequest.getStatus() == 2 ? "同意" : "拒绝"));
+            sb.append("请求状态:" + (sharedlFriendRequest.getStatus() == 1 ? "未处理" : sharedlFriendRequest.getStatus() == 2 ? "已同意" : "被拒绝"));
         }
         return sb.toString();
     }
-
 
 }

@@ -2,7 +2,8 @@
     <div class="ibox float-e-margins">
         <div class="ibox-content mailbox-content">
             <div class="file-manager">
-                <a class="btn btn-block btn-primary compose-mail" href="${basePath}/sharedReceiveMail/emailCompose">写信</a>
+                <a class="btn btn-block btn-primary compose-mail"
+                   href="${basePath}/sharedReceiveMail/emailCompose">写信</a>
                 <div class="space-25"></div>
                 <h5>文件夹</h5>
                 <ul class="folder-list m-b-md" style="padding: 0">
@@ -34,11 +35,12 @@
                         </a>
                     </li>
                     <li>
-                    <a id="selDel" href="javaScript:void();"> <i class="fa fa-trash-o"></i> 垃圾箱
-                        <#if (emailDelSum==0)>
-                        <#else>
-                            <span class="label label-default pull-right">${emailDelSum}</span></a>
-                        </#if>
+                        <a id="selDel" href="javaScript:void();"> <i class="fa fa-trash-o"></i> 垃圾箱
+                            <#if (emailDelSum==0)>
+                            <#else>
+                                <span class="label label-default pull-right">${emailDelSum}</span>
+                            </#if>
+                        </a>
                     </li>
                 </ul>
             <#-- <h5>分类</h5>

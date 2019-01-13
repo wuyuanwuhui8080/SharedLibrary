@@ -27,56 +27,56 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class SharedlFriendRequest extends Model<SharedlFriendRequest> {
 
-	private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L;
 
-	/**
-	 * 主键
-	 */
-	@TableId(value = "id", type = IdType.UUID)
-	private String id;
+    /**
+     * 主键
+     */
+    @TableId(value = "id", type = IdType.UUID)
+    private String id;
 
-	/**
-	 * 请求者的id
-	 */
-	private String meId;
+    /**
+     * 被请求者的id
+     */
+    private String meId;
 
-	/**
-	 * 被请求者的id
-	 */
-	private String requestId;
+    /**
+     * 请求者的id
+     */
+    private String requestId;
 
-	/**
-	 * 请求状态 请求状态(2.同意，3.拒绝 1.未处理)
-	 */
-	private Integer status;
+    /**
+     * 请求状态 请求状态(2.同意，3.拒绝 1.未处理)
+     */
+    private Integer status;
 
-	/**
-	 * 用来查询请求者 的基础信息
-	 */
-	@TableField(exist = false)
-	private SharedUsers sharedUsers;
+    /**
+     * 用来查询请求者 的基础信息
+     */
+    @TableField(exist = false)
+    private SharedUsers sharedUsers;
 
-	/**
-	 * 用来处理请求状态
-	 */
-	@TableField(exist = false)
-	private SharedlFriendRequestStatus friendRequestStatus;
+    /**
+     * 用来处理请求状态
+     */
+    @TableField(exist = false)
+    private SharedlFriendRequestStatus friendRequestStatus;
 
-	/**
-	 * 创建时间
-	 */
-	@DateTimeFormat(pattern = "yyyy-MM-dd hh:mm:ss")
-	private Date creationDate;
+    /**
+     * 创建时间
+     */
+    @DateTimeFormat(pattern = "yyyy-MM-dd hh:mm:ss")
+    private Date creationDate;
 
-	/**
-	 * 修改时间
-	 */
-	@DateTimeFormat(pattern = "yyyy-MM-dd hh:mm:ss")
-	private Date updateDate;
+    /**
+     * 修改时间
+     */
+    @DateTimeFormat(pattern = "yyyy-MM-dd hh:mm:ss")
+    private Date updateDate;
 
-	@Override
-	protected Serializable pkVal() {
-		return this.id;
-	}
+    @Override
+    protected Serializable pkVal() {
+        return this.id;
+    }
 
 }

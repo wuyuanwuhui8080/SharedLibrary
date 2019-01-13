@@ -1,4 +1,4 @@
-package com.share.Recent_Events;
+package com.share.recent_events;
 
 import lombok.Data;
 
@@ -14,6 +14,12 @@ import java.util.Date;
 @Data
 public class Event implements Serializable {
 
+    /**
+     * 事件对象id
+     * 也就是处理的事情
+     * 列:SharedlFriendRequest对象的Id
+     */
+    private String eventid;
 
     /**
      * 事件名称

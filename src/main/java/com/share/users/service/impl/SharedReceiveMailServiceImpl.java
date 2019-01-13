@@ -25,58 +25,51 @@ import java.util.List;
  */
 @Service
 public class SharedReceiveMailServiceImpl
-		extends ServiceImpl<SharedReceiveMailMapper, SharedReceiveMail>
-		implements SharedReceiveMailService {
-	@Resource
-	private SharedReceiveMailMapper mailMapper;
+        extends ServiceImpl<SharedReceiveMailMapper, SharedReceiveMail>
+        implements SharedReceiveMailService {
+    @Resource
+    private SharedReceiveMailMapper mailMapper;
 
-	/**
-	 * 分页查询数据
-	 * 
-	 * @param userId
-	 *            用户id
-	 * @param status
-	 *            状态
-	 * @param pageIndex
-	 *            起始页
-	 * @param pageSize
-	 *            每页页数
-	 * @return
-	 */
-	@Override
-	public PageInfo<SharedReceiveMail> selectSharedReceiveMailList(
-			String userId, String status, Integer pageIndex, Integer pageSize) {
-		LambdaQueryWrapper<SharedReceiveMail> wrapper = new LambdaQueryWrapper<>();
-		// 判断状态是否为空
-		if (StringUtils.isNotNull(userId)) {
-			wrapper.eq(SharedReceiveMail::getReceiveId, userId);
-		}
-		// 判断发件人id是否为空
-		if (StringUtils.isNotNull(status)) {
-			wrapper.eq(SharedReceiveMail::getState, status);
-		}
-		wrapper.orderByDesc(SharedReceiveMail::getCreationDate);
-		// 拦截条件
-		PageHelper.startPage(pageIndex, pageSize);
-		PageInfo<SharedReceiveMail> pageInfo = new PageInfo<SharedReceiveMail>(
-				super.list(wrapper));
-		return pageInfo;
-	}
+    /**
+     * 分页查询数据
+     *
+     * @param userId    用户id
+     * @param status    状态
+     * @param pageIndex 起始页
+     * @param pageSize  每页页数
+     * @return
+     */
+    @Override
+    public PageInfo<SharedReceiveMail> selectSharedReceiveMailList(
+            String userId, String status, Integer pageIndex, Integer pageSize) {
+        LambdaQueryWrapper<SharedReceiveMail> wrapper = new LambdaQueryWrapper<>();
+        // 判断状态是否为空
+        if (StringUtils.isNotNull(userId)) {
+            wrapper.eq(SharedReceiveMail::getReceiveId, userId);
+        }
+        // 判断发件人id是否为空
+        if (StringUtils.isNotNull(status)) {
+            wrapper.eq(SharedReceiveMail::getState, status);
+        }
+        wrapper.orderByDesc(SharedReceiveMail::getCreationDate);
+        // 拦截条件
+        PageHelper.startPage(pageIndex, pageSize);
+        PageInfo<SharedReceiveMail> pageInfo = new PageInfo<SharedReceiveMail>(super.list(wrapper));
+        return pageInfo;
+    }
 
-	/**
-	 * 根据选中的邮箱,更改邮件状态
-	 *
-	 * @param idList
-	 *            选中的邮箱id
-	 * @param state
-	 *            -1 为没有选中
-	 * @return 是否成功
-	 */
-	@Override
-	public int updateState(List<String> idList, String state) {
-		if (idList.size() == 0) {
-			return -1;
-		}
-		return mailMapper.updateState(idList, state);
-	}
+    /**
+     * 根据选中的邮箱,更改邮件状态
+     *
+     * @param idList 选中的邮箱id
+     * @param state  -1 为没有选中
+     * @return 是否成功
+     */
+    @Override
+    public int updateState(List<String> idList, String state) {
+        if (idList.size() == 0) {
+            return -1;
+        }
+        return mailMapper.updateState(idList, state);
+    }
 }

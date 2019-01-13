@@ -113,7 +113,7 @@ public class SharedReceiveMailController {
                                 @RequestParam(value = "pageIndex", required = false, defaultValue = "1") Integer pageIndex) {
         Session session = SecurityUtils.getSubject().getSession();
         SharedUsers users = (SharedUsers) session.getAttribute("users");
-        PageInfo<SharedEmail> iPage = null;
+        PageInfo<SharedEmail> iPage;
         // 判断显示那个页面的标记
         int flg = 0;
         // 重新加载邮件数量

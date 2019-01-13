@@ -22,7 +22,7 @@ public class JsonUtils {
      * @return
      */
     public static String JSONString(Object obj) {
-        return JSON.toJSONString(obj);
+        return JSON.toJSON(obj).toString();
     }
 
     /**
