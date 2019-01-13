@@ -77,3 +77,4 @@ target/generated-test-sources/
 /.mvn/
 /.idea/
 /SharedLibrary.iml
+/target/

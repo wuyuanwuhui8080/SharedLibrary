@@ -5,7 +5,6 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>500错误</title>
     <#include "background/comm/script.ftl">
 </head>
@@ -20,7 +19,7 @@
         <div class="error-desc">
             服务器好像出错了...
             <br/>您可以返回主页看看
-            <br/><a href="index.html" class="btn btn-primary m-t">主页</a>
+            <br/><a href="index.ftl" class="btn btn-primary m-t">主页</a>
         </div>
     </div>
 

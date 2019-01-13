@@ -79,6 +79,9 @@
             radioClass: 'iradio_square-green',
         });
     });
+    function refreshCaptcha() {
+        $("#captcha_img").attr("src", "/Captcha.jpg?id=" + new Date() + Math.floor(Math.random() * 24));
+    }
 </script>
 
 <script type="text/javascript" src="http://tajs.qq.com/stats?sId=9051096" charset="UTF-8"></script>

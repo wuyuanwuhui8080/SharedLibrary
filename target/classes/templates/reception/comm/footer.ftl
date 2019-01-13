@@ -1,3 +1,6 @@
 <footer>
-    <p>Design by <a href="/">论坛博客</a> <a href="/">蜀ICP备11002373号-1</a> @2018</p>
+    <p>Design by <a href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=66741255" target="_blank">添加作者QQ</a> <a href="/"></a><a href="/"
+                                                                                               class="links"></a>
+    </p>
 </footer>
+<a href="#" class="cd-top">Top</a>

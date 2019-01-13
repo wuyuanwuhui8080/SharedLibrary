@@ -1,83 +1,169 @@
 <!doctype html>
 <html>
 <head>
-<meta charset="utf-8">
-<title>é¦–é¡µ_æ¨é’ä¸ªäººåšå®¢ - ä¸€ä¸ªç«™åœ¨webå‰ç«¯è®¾è®¡ä¹‹è·¯çš„å¥³æŠ€æœ¯å‘˜ä¸ªäººåšå®¢ç½‘ç«™</title>
-<meta name="keywords" content="ä¸ªäººåšå®¢,æ¨é’ä¸ªäººåšå®¢,ä¸ªäººåšå®¢æ¨¡æ¿,æ¨é’" />
-<meta name="description" content="æ¨é’ä¸ªäººåšå®¢ï¼Œæ˜¯ä¸€ä¸ªç«™åœ¨webå‰ç«¯è®¾è®¡ä¹‹è·¯çš„å¥³ç¨‹åºå‘˜ä¸ªäººç½‘ç«™ï¼Œæä¾›ä¸ªäººåšå®¢æ¨¡æ¿å…è´¹èµ„æºä¸‹è½½çš„ä¸ªäººåŽŸåˆ›ç½‘ç«™ã€‚" />
+<meta charset="gbk">
+<title>Ê×Ò³_ÑîÇà¸öÈË²©¿Í - Ò»¸öÕ¾ÔÚwebÇ°¶ËÉè¼ÆÖ®Â·µÄÅ®¼¼ÊõÔ±¸öÈË²©¿ÍÍøÕ¾</title>
+<meta name="keywords" content="¸öÈË²©¿Í,ÑîÇà¸öÈË²©¿Í,¸öÈË²©¿ÍÄ£°å,ÑîÇà" />
+<meta name="description" content="ÑîÇà¸öÈË²©¿Í£¬ÊÇÒ»¸öÕ¾ÔÚwebÇ°¶ËÉè¼ÆÖ®Â·µÄÅ®³ÌÐòÔ±¸öÈËÍøÕ¾£¬Ìá¹©¸öÈË²©¿ÍÄ£°åÃâ·Ñ×ÊÔ´ÏÂÔØµÄ¸öÈËÔ­´´ÍøÕ¾¡£" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <#include "comm/script.ftl">
+<link href="css/base.css" rel="stylesheet">
+<link href="css/about.css" rel="stylesheet">
+<link href="css/m.css" rel="stylesheet">
+<script src="js/jquery.min.js" ></script>
+<script src="js/ab.js"></script>
+<!--[if lt IE 9]>
+<script src="js/modernizr.js"></script>
+<![endif]-->
 </head>
 <body>
-<header>
-<div id="mnav">
-   <div class="logo"><a href="/">æ¨é’ä¸ªäººåšå®¢</a></div>
+<header class="header-navigation" id="header">
+  <nav>
+    <div class="logo"><a href="http://www.yangqq.com">ÑîÇà¸öÈË²©¿Í</a></div>
     <h2 id="mnavh"><span class="navicon"></span></h2>
     <ul id="starlist">
-      <li><a href="index.html">ç½‘ç«™é¦–é¡µ</a></li>
-      <li><a href="about.ftl">å…³äºŽæˆ‘</a></li>
-      <li><a href="share.ftl">æ¨¡æ¿åˆ†äº«</a></li>
-      <li><a href="list.ftl">å­¦æ— æ­¢å¢ƒ</a></li>
-      <li><a href="info.ftl">æ…¢ç”Ÿæ´»</a></li>
-      <li><a href="shareinfo.ftl">æ¨¡æ¿å†…å®¹é¡µ</a></li>
-      <li><a href="gbook.html">ç•™è¨€</a></li>
+      <li><a href="../sss.ftl">ÍøÕ¾Ê×Ò³</a></li>
+      <li><a href="about.ftl">¹ØÓÚÎÒ</a></li>
+      <li><a href="share.html">Ä£°å·ÖÏí</a></li>
+      <li><a href="list.html">²©¿ÍÈÕ¼Ç</a></li>
+      <li class="menu"><a href="fengmian.ftl">Ñ§ÎÞÖ¹¾³</a>
+        <ul class="sub">
+          <li><a href="#">ÂýÉú»î</a></li>
+          <li><a href="#">ÃÀÎÄÐÀÉÍ</a></li>
+        </ul>
+      </li>
+      <li><a href="info.html">ÂýÉú»î</a></li>
+      <li><a href="time.html">Ê±¼äÖá</a></li>
     </ul>
-</div>
-<script>
-window.onload = function ()
-{
-	var oH2 = document.getElementById("mnavh"); 
-	var oUl = document.getElementById("starlist");  
-	oH2.onclick = function ()
-	{
-		var style = oUl.style;
-		style.display = style.display == "block" ? "none" : "block";
-		oH2.className = style.display == "block" ? "open" : ""
-	}
-}
-</script>
+    <div class="searchbox">
+      <div id="search_bar" class="search_bar">
+        <form  id="searchform" action="[!--news.url--]e/search/index.php" method="post" name="searchform">
+          <input class="input" placeholder="ÏëËÑµãÊ²Ã´ÄØ.." type="text" name="keyboard" id="keyboard">
+          <input type="hidden" name="show" value="title" />
+          <input type="hidden" name="tempid" value="1" />
+          <input type="hidden" name="tbname" value="news">
+          <input type="hidden" name="Submit" value="ËÑË÷" />
+          <p class="search_ico"> <span></span></p>
+        </form>
+      </div>
+    </div>
+  </nav>
 </header>
-<div class="line46"></div>
-<div class="blank"></div>
 <article>
-  <div class="leftbox">
-    <div class="infos">
-      <div class="newsview">
-        <h2 class="intitle">æ‚¨çŽ°åœ¨çš„ä½ç½®æ˜¯ï¼š<a href="/">ç½‘ç«™é¦–é¡µ</a>&nbsp;&gt;&nbsp;<a href="/">å…³äºŽæˆ‘</a></h2>
-        <div class="news_infos">
-          <p>æ¨é’ï¼Œå¥³ï¼Œä¸€ä¸ª80åŽè‰æ ¹å¥³ç«™é•¿ï¼09å¹´å…¥è¡Œã€‚ä»Žæ¬ç –ä¸€æ ·çš„ç”Ÿæ´»æ–¹å¼æ¢æˆäº†çŽ°åœ¨æœ‰â€œå•â€è€Œå±…çš„æ—¥å­ã€‚å½“ç„¶è¿™ä¸ªå•ä¸æ˜¯å•èº«çš„å•ï¼Œè·Ÿæˆ‘çš„èŒä¸šç›¸æ¯”ï¼Œçˆ±æƒ…è„±å•å¹¶ä¸æ˜¯é—®é¢˜ï¼è™½ç„¶æžå°½è‹›åˆ»çš„å¾å©šæ¡ä»¶ä½†ä¹Ÿè¿œä¸åŠå®¢æˆ·åƒå¥‡ç™¾æ€ªçš„è¦æ±‚ã€‚å‘Šåˆ«äº†æœä¹æ™šäº”ï¼Œèº²è¿‡äº†é£Žå¹æ—¥æ™’ï¼Œè™½ç„¶ä¸å†æœ‰é˜¶æ¢¯å¼çš„å·¥èµ„ï¼Œä½†æ˜¯å¶å°”å¯ä»¥ç»™è‡ªå·±æ”¾æ”¾å‡ï¼ŒæŒ½ç€è€å…¬ï¼Œä¸€èµ·è½»è£…æ—…è¡Œã€‚</p>
-          <p> äººç”Ÿå°±æ˜¯ä¸€ä¸ªå¾—ä¸Žå¤±çš„è¿‡ç¨‹ï¼Œè€Œæˆ‘å´æ˜¯ä¸€ä¸ªå¹¸è¿è€…ï¼Œå¾—åˆ°çš„æ°¸è¿œæ¯”å¤±åŽ»çš„å¤šã€‚ç”Ÿæ´»çš„åŽ‹åŠ›è¿«ä½¿æˆ‘æ”¾å¼ƒäº†è½»æ¾çš„å‰å°æŽ¥å¾…ï¼Œæ”¾å¼ƒäº†ä½“é¢çš„ç¼–è¾‘ï¼Œæ¢æ¥è™½æœ‰äº›è“¬å¤´åž¢é¢çš„å·¥ä½œï¼Œä½†æ˜¯æˆ‘ä»ç„¶å¾ˆäº«å—é‚£äº›ç†¬å¾—åªå‰©ä¸‹é»‘çœ¼åœˆçš„æ—¥å­ï¼Œå› ä¸ºæˆ‘åœ¨å­¦ä¹ ä½¿ç”¨Photoshopã€Flashã€Dreamweaverã€ASPã€PHPã€JSP...ä¸­æ¿€å‘äº†å…´è¶£ï¼Œç„¶åŽè¶Šèµ°è¶Šè¿œ....</p>
-          <p> å–œæ¬¢ä¸€å¥è¯â€œå†¥å†¥ä¸­è¯¥æ¥åˆ™æ¥ï¼Œæ— å¤„å¯é€ƒâ€ã€‚</p>
-        </div>
+  <div class="photowall">
+    <ul class="wall_a">
+      <li><a href="/"><img src="images/1.jpg">
+        <figcaption>
+          <h2>²»ÔÙÒòÎª±ðÈË¹ýµÃºÃ¶ø½¹ÂÇ£¬ÔÚÃ»ÓÐÈË¿´µÃµ½ÄãµÄÊ±ºòÒÀ¾ÉÄÜ±£³Ö½Ú×à </h2>
+        </figcaption>
+        </a></li>
+      <li>
+        <p class="text_b"><a href="/">ÌÓ±Ü×Ô¼ºµÄÈË£¬×îÖÕÖ»ÄÜµ¼ÖÂ×Ô¼ºÊÀ½çµÄ±ÀËú£¬¶ø±äµÃÔ½À´Ô½Ã»ÓÐ°²È«¸Ð¡£</a></p>
+      </li>
+      <li><a href="/"><img src="images/3.jpg">
+        <figcaption>
+          <h2>²»ÔÙÒòÎª±ðÈË¹ýµÃºÃ¶ø½¹ÂÇ£¬ÔÚÃ»ÓÐÈË¿´µÃµ½ÄãµÄÊ±ºòÒÀ¾ÉÄÜ±£³Ö½Ú×à </h2>
+        </figcaption>
+        </a></li>
+      <li>
+        <p class="text_b"><a href="/">ÌÓ±Ü×Ô¼ºµÄÈË£¬×îÖÕÖ»ÄÜµ¼ÖÂ×Ô¼ºÊÀ½çµÄ±ÀËú£¬¶ø±äµÃÔ½À´Ô½Ã»ÓÐ°²È«¸Ð¡£</a></p>
+      </li>
+      <li>
+        <p class="text_b"><a href="/">ÌÓ±Ü×Ô¼ºµÄÈË£¬×îÖÕÖ»ÄÜµ¼ÖÂ×Ô¼ºÊÀ½çµÄ±ÀËú£¬¶ø±äµÃÔ½À´Ô½Ã»ÓÐ°²È«¸Ð¡£</a></p>
+      </li>
+      <li><a href="/"><img src="images/5.jpg">
+        <figcaption>
+          <h2>²»ÔÙÒòÎª±ðÈË¹ýµÃºÃ¶ø½¹ÂÇ£¬ÔÚÃ»ÓÐÈË¿´µÃµ½ÄãµÄÊ±ºòÒÀ¾ÉÄÜ±£³Ö½Ú×à </h2>
+        </figcaption>
+        </a></li>
+      <li>
+        <p class="text_b"><a href="/">ÌÓ±Ü×Ô¼ºµÄÈË£¬×îÖÕÖ»ÄÜµ¼ÖÂ×Ô¼ºÊÀ½çµÄ±ÀËú£¬¶ø±äµÃÔ½À´Ô½Ã»ÓÐ°²È«¸Ð¡£</a></p>
+      </li>
+      <li><a href="/"><img src="images/6.jpg">
+        <figcaption>
+          <h2>²»ÔÙÒòÎª±ðÈË¹ýµÃºÃ¶ø½¹ÂÇ£¬ÔÚÃ»ÓÐÈË¿´µÃµ½ÄãµÄÊ±ºòÒÀ¾ÉÄÜ±£³Ö½Ú×à </h2>
+        </figcaption>
+        </a></li>
+    </ul>
+  </div>
+  <div class="abox">
+  <h2>²©Ö÷¼ò½é</h2>
+  <div class="biji-content" id="content"> ÑîÇà£¬Å®£¬Ò»¸ö80ºó²Ý¸ùÅ®Õ¾³¤£¡09ÄêÈëÐÐ¡£Ò»Ö±Ç±ÐÄÑÐ¾¿webÇ°¶Ë¼¼Êõ£¬Ò»±ß¹¤×÷Ò»±ß»ýÀÛ¾­Ñé£¬·ÖÏíÒ»Ð©¸öÈË²©¿ÍÄ£°å£¬ÒÔ¼°SEOÓÅ»¯µÈÐÄµÃ¡£ÎÒÈëÐÐÔç£¬´ó¼ÒÒ²Ç×ÇÐµÄ½ÐÎÒ¡°Çà½ã¡±¡£
+    SEO·Ü¶·ÁË½«½üÁ½ÄêÊ±¼ä£¬¸öÈË²©¿ÍÍøÕ¾°Ù¶ÈÅÅÃûÒ²´ÓÖ®Ç°µÄ30Ò³ºó£¬ÅÅµ½ÁËµÚÒ»Ò³¡£ÆÚ¼äÓÐºÜ¶àµÄ²»ÈÝÒ×£¬µ«ÊÇ¶¼Ã»ÓÐ·ÅÆú¹ý¡£ÈëÁËÕâÒ»ÐÐ£¬¾ÍÉîÉîµÄÏ²»¶ÉÏËü¡£ </div>
+  <div class="navlist">
+    <ul>
+      <li class="navcurrent"><a href="#top1">»ù±¾ÐÅÏ¢</a> </li>
+      <li> <a href="#top2" >¹¤×÷¼¼ÄÜ</a> </li>
+      <li> <a href="#top3" >ÐÄÂ·Àú³Ì</a> </li>
+      <li> <a href="#top4" >ÎÒµÄ²©¿Í</a> </li>
+      <li> <a href="#top5" >¹ºÂò¿Õ¼ä</a> </li>
+    </ul>
+  </div>
+  <div class="navtab">
+    <div class="navitem" style="display: block;" name = "top1">
+      <div class="content">
+        <p>ÍøÃû£ºdancesmile | ÑîÇà</p>
+        <p>Ö°Òµ£ºWebÇ°¶ËÉè¼ÆÊ¦¡¢ÍøÒ³Éè¼Æ </p>
+                <p>ÓÊÏä£ºdancesmiling@qq.com</p>
+        <p>¸öÈËÎ¢ÐÅ£º</p>
+        <p><img src="images/grwx.png"></p>
+
       </div>
     </div>
-    <div class="news_pl">
-      <h2>æˆ‘è¦ç•™è¨€</h2>
-      <ul>
-      </ul>
-    </div>
-  </div>
-  <div class="rightbox">
-    <div class="aboutme">
-      <h2 class="ab_title">å…³äºŽæˆ‘</h2>
-      <div class="avatar"> <img src="images/b04.jpg"> </div>
-      <div class="ab_con">
-        <p>ç½‘åï¼šDanceSmile | å³æ­¥éžçƒŸ</p>
-        <p>èŒä¸šï¼šWebå‰ç«¯è®¾è®¡å¸ˆã€ç½‘é¡µè®¾è®¡ </p>
-        <p>ç±è´¯ï¼šå››å·çœâ€”æˆéƒ½å¸‚</p>
-        <p>é‚®ç®±ï¼šdancesmiling@qq.com</p>
+    <div class="navitem" name = "top2">
+      <div class="content">
+        <p class="ab_t">¹¤×÷¼¼ÄÜ£º</p>
+        <p>1¡¢webÇ°¶ËÒ³ÃæµÄ¿ª·¢</p>
+        <p>2¡¢¸ù¾Ý²úÆ·ÐèÇó£¬ÅäºÏºó¶Ë¿ª·¢ÈËÔ±Ð­×÷ÊµÏÖÇ°¶ËÒ³ÃæÐ§¹ûºÍ¹¦ÄÜ</p>
+        <p>3¡¢ÄÜ¹»½øÐÐÊÖ»ú¶ËºÍPc¶ËHtmlÒ³ÃæÖÆ×÷</p>
+        <p>4¡¢ÊìÁ·Ê¹ÓÃhtml5£¬CSS3£¬javascript£¬ÊìÏ¤Ò³Ãæ¼Ü¹¹ºÍ²¼¾Ö</p>
+        <p>5¡¢ÊìÁ·Ê¹ÓÃJavascript¿ò¼Ü</p>
       </div>
     </div>
-    <div class="weixin">
-      <h2 class="ab_title">å¾®ä¿¡å…³æ³¨</h2>
-      <ul>
-        <img src="images/wx.jpg">
-      </ul>
+    <div class="navitem" name = "top3">
+      <div class="content">
+        <p class="ab_t">ÐÄÂ·Àú³Ì£º</p>
+        <p><a href="http://www.yangqq.com/news/life/2018-04-27/816.html" target="_blank">¡¾×ß½øÐÄÁé¡¿¸öÈË²©¿Í£¬ÊôÓÚÎÒµÄÐ¡ÊÀ½ç£¡</a></p>
+        <p><a href="http://www.yangqq.com/news/life/2018-06-17/873.html" target="_blank">¡¾°®Éè¼Æ¡¿°²¾²µØ×öÒ»¸ö°®Éè¼ÆµÄÅ®×Ó</a></p>
+        <p><a href="http://www.yangqq.com/jstt/bj/2015-01-09/740.html" target="_blank">¡¾´Ò´ÒÄÇÐ©Äê¡¿×Ü½á¸öÈË²©¿Í¾­ÀúµÄÕâËÄÄê</a></p>
+        <p><a href="http://www.yangqq.com/jstt/bj/2014-11-06/732.html" target="_blank">·ÖÏíÎÒµÄ¸öÈË²©¿Í·ÃÎÊÁ¿ÈçºÎ×öµ½IP´Ó10µ½600µÄ</a></p>
+        <p><a href="http://www.yangqq.com/news/s/2014-01-08/635.html" target="_blank">¸öÈË²©¿Í´Ó¼ò²»·±</a></p>
+        <p><a href="http://www.yangqq.com/jstt/bj/2013-06-18/285.html" target="_blank">Èç¹û¸öÈË²©¿ÍÍøÕ¾ÔÙÃ»ÓÐ¼ÛÖµ£¬Äã»¹»á¼á³ÖÂð£¿</a></p>
+        <p><a href="http://www.yangqq.com/news/life/2013-06-06/68.html" target="_blank">WebÖ®Â·£¬¾­ÀúÁËÐÄËáÖ®ºó</a></p>
+      </div>
+    </div>
+    <div class="navitem" name = "top4">
+      <div class="content">
+        <p class="ab_t">ÎÒµÄ²©¿Í£º</p>
+        <p>Óò Ãû£ºwww.yangqq.com ´´½¨ÓÚ2011Äê01ÔÂ12ÈÕ&nbsp;</p>
+        <p>·þÎñÆ÷£º°¢ÀïÔÆ·þÎñÆ÷&nbsp;&nbsp;<a href="https://promotion.aliyun.com/ntms/act/ambassador/sharetouser.html?userCode=8smrzoqa&amp;productCode=vm" target="_blank"><span style="color:#FF0000;"><strong>Ç°Íù°¢ÀïÔÆ¹ÙÍø¹ºÂò&gt;&gt;</strong></span></a></p>
+        <p>±¸°¸ºÅ£ºÊñICP±¸11002373ºÅ-1</p>
+        <p>³Ì Ðò£ºPHP µÛ¹úCMS7.5&nbsp; &nbsp;<u><a href="http://www.yangqq.com/blogs/876.html" target="_blank"><span style="color:#000000;">ÎªÊ²Ã´Ñ¡ÔñµÛ¹úcms£¿</span></a></u></p>
+           <p class="ab_t">Î¢ÐÅÉ¨Âë´òÉÍ£º</p>
+
+        <p><img src="images/weipayimg.jpg"></p>
+        
+      </div>
+    </div>
+    <div class="navitem" name = "top5">
+      <div class="content">
+        <p class="ab_t">¹ºÂò¿Õ¼ä£º</p>
+        <p><a href="https://s.click.taobao.com/t?e=m%3D2%26s%3Dtx5qvgOp2sEcQipKwQzePCperVdZeJviEViQ0P1Vf2kguMN8XjClAv6rqJwbkViRJZyTmHFgi7toyO3ddgEZ98KZ%2FCBiGC%2BAA120cfxpzVcJ9DgiofYXHhmIkXBqRClNTcEU%2BDykfuSM%2BhtH71aX6uIOTs4KMj3yjpOyWSRdiSZDEm2YKA6YIrbIzrZDfgWtwGXLU4WXsy%2FSGTLzgkOZ%2F6tHZYFMpqEnXF%2B87KN7TKeiZ%2BQMlGz6FQ%3D%3D" target="_blank">¡¾ÍÆ¼ö¡¿°¢ÀïÔÆECS</a></p>
+        <p><a href="https://s.click.taobao.com/t?e=m%3D2%26s%3DBd7iLbiMBvscQipKwQzePCperVdZeJviEViQ0P1Vf2kguMN8XjClAv6rqJwbkViRlCnp0VPQiKVoyO3ddgEZ98KZ%2FCBiGC%2BAA120cfxpzVe3QAIFZ4qxdxmIkXBqRClNTcEU%2BDykfuSM%2BhtH71aX6uIOTs4KMj3yjpOyWSRdiSZDEm2YKA6YIrbIzrZDfgWtewfOCTsUhuL7A4ojqcFxLlxfvOyje0ynomfkDJRs%2BhU%3D" target="_blank">¡¾ÍÆ¼ö¡¿°¢ÀïÔÆÑ§ÉúÌØ»ÝÔÆ·þÎñÆ÷</a></p>
+        <p><a href="https://s.click.taobao.com/t?e=m%3D2%26s%3DOU6WqfEvy%2FQcQipKwQzePCperVdZeJviEViQ0P1Vf2kguMN8XjClAv6rqJwbkViRgNciauKrSpxoyO3ddgEZ98KZ%2FCBiGC%2BAA120cfxpzVdiEIb0a5VTxRmIkXBqRClNTcEU%2BDykfuTlSg55GVX5wb6HrfO5Rkxh34mdTsZIUcAD%2Bi4rDfTRpeTIM5d0rdP%2BMLZ4%2BrZ7PWchhQs2DjqgEA%3D%3D" target="_blank">RDSÔÆÊý¾Ý¿â</a></p>
+        <p><a href="https://s.click.taobao.com/t?e=m%3D2%26s%3DkOyMRXLe5y0cQipKwQzePCperVdZeJviEViQ0P1Vf2kguMN8XjClAv6rqJwbkViRLZXTD7FAd8hoyO3ddgEZ98KZ%2FCBiGC%2BAA120cfxpzVdeQ9pcQh0ldxmIkXBqRClNTcEU%2BDykfuSM%2BhtH71aX6htm26afTqZhX2AelcDTwouII%2BH4AtnKmf9aAWiTxsBW2YeVZAPpWRfGDF1NzTQoPw%3D%3D" target="_blank">ÔÆÊý¾Ý¿âRedis°æ</a></p>
+        <p><a href="https://s.click.taobao.com/t?e=m%3D2%26s%3DNEP6My0TsB0cQipKwQzePCperVdZeJviEViQ0P1Vf2kguMN8XjClAv6rqJwbkViR2Wp0cUyixa5oyO3ddgEZ98KZ%2FCBiGC%2BAA120cfxpzVeG2k2079gAVRmIkXBqRClNTcEU%2BDykfuSM%2BhtH71aX6htm26afTqZhX2AelcDTwouII%2BH4AtnKmf9aAWiTxsBWuCgE0st4OyjGDmntuH4VtA%3D%3D" target="_blank">°¢ÀïÔÆDDOS·À»¤-¸ß·ÀIP</a></p>
+        <p><a href="https://s.click.taobao.com/t?e=m%3D2%26s%3DxKaTivPOxxscQipKwQzePCperVdZeJviEViQ0P1Vf2kguMN8XjClAv6rqJwbkViRxJn51p0fCRZoyO3ddgEZ98KZ%2FCBiGC%2BAA120cfxpzVe%2FTQ%2BKb31whBmIkXBqRClNTcEU%2BDykfuTlSg55GVX5wVaL%2B82m0QZTEzn0DH69aFtLyrb2g0H2G%2Fwamd%2BEL%2FWmhcLzAjcuTkddow9d%2FMD%2BXQ%3D%3D" target="_blank">°¢ÀïÔÆÔÆ½âÎö</a></p>
+        <p><a href="https://s.click.taobao.com/t?e=m%3D2%26s%3DbAEFASZ9ijccQipKwQzePCperVdZeJviEViQ0P1Vf2kguMN8XjClAv6rqJwbkViR4CZyur93miVoyO3ddgEZ98KZ%2FCBiGC%2BAA120cfxpzVfmlqlNq1vcQRmIkXBqRClNTcEU%2BDykfuSM%2BhtH71aX6mMC%2FVYRjeGkg1LZ9gMhib9Lyrb2g0H2G3pD%2Buoa%2BvW2xgxdTc00KD8%3D" target="_blank">°¢ÀïÔÆ¾«Æ·ÍøÕ¾Ä£°æ</a></p>
+        <p><a href="https://s.click.taobao.com/t?e=m%3D2%26s%3DYFtE9mLmbI8cQipKwQzePCperVdZeJviEViQ0P1Vf2kguMN8XjClAv6rqJwbkViR%2F67zSlRHtIZoyO3ddgEZ98KZ%2FCBiGC%2BAA120cfxpzVdqFcPM5kapBRmIkXBqRClNTcEU%2BDykfuSM%2BhtH71aX6htm26afTqZhX2AelcDTwouII%2BH4AtnKmf9aAWiTxsBWI8xs9INDEPvGJe8N%2FwNpGw%3D%3D" target="_blank">webÓ¦ÓÃ·À»ðÇ½</a></p>
+        <p><a href="https://s.click.taobao.com/t?e=m%3D2%26s%3DG7ldZyW9ShocQipKwQzePCperVdZeJviEViQ0P1Vf2kguMN8XjClAv6rqJwbkViRVSG%2Bc1h4z9hoyO3ddgEZ98KZ%2FCBiGC%2BAA120cfxpzVf0SX%2FX7ryxfhmIkXBqRClNTcEU%2BDykfuSM%2BhtH71aX6htm26afTqZhX2AelcDTwouII%2BH4AtnKmf9aAWiTxsBWC9C%2BaUDluR%2FGJe8N%2FwNpGw%3D%3D" target="_blank">ÔÆ¶ÜÖ¤Êé</a></p>
+      </div>
     </div>
   </div>
+ </div>
 </article>
 <footer>
-  <p>Design by <a href="/">æ¨é’ä¸ªäººåšå®¢</a> <a href="/">èœ€ICPå¤‡11002373å·-1</a></p>
+  <p>Design by <a href="http://www.yangqq.com" target="_blank">ÑîÇà¸öÈË²©¿Í</a> <a href="/">ÊñICP±¸11002373ºÅ-1</a></p>
 </footer>
+<a href="#" class="cd-top">Top</a>
 </body>
 </html>

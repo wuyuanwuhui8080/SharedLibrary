@@ -125,7 +125,7 @@
                                          <#if li.blosCommReplyBOList?? && (li.blosCommReplyBOList?size > 0)>
                                         <#list li.blosCommReplyBOList?sort_by("blosCommReplyDate")  as blosCommReply>
                                             <#if blogsComm.blosCommId == blosCommReply.commReplyBlosId>
-                                            <div class="social-comment moveCommRigh ${blosCommReply.commentByuserId}${blogsComm.blosCommId}">
+                                            <div class="social-comment moveCommRigh ${blosCommReply.peplycCommReplyId!}${blogsComm.blosCommId}">
                                                 <a href="" class="pull-left">
                                                     <img alt="image"
                                                          src="${basePath}/images/${blosCommReply.blosCommReplyUsersImg!}">
@@ -142,8 +142,10 @@
                                                            class="pull-right commRelf"
                                                            byreplyId="${blosCommReply.blosCommReplyUsersId}"
                                                            replyId="${Session.users.id}"
+                                                           reply_id = "${blosCommReply.blosCommReplyId}"
                                                            commId="${blogsComm.blosCommId}"
                                                            blogsId="${li.blosId}"
+
                                                            userRealName="${blosCommReply.blosCommReplyUsersRealName}">回复</a>
                                                     </#if>
                                                      <#if (Session.users.id == blosCommReply.blosCommReplyUsersId) || (Session.users.id == li.blosUserId)>

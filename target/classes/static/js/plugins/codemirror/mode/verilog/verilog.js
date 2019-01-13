@@ -257,7 +257,7 @@ CodeMirror.defineMode("verilog", function(config, parserConfig) {
   }
 
   function buildElectricInputRegEx() {
-    // Reindentation should occur on any bracket char: {}()[]
+    // Reindentation should occur on any bracket charsocket: {}()[]
     // or on a match of any of the block closing keywords, at
     // the end of a line
     var allClosings = [];

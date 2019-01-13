@@ -156,40 +156,46 @@ $(function () {
                     var tr = "";
                     $("#tbodyId").html("");
                     if (date.status == 200) {
-                        for (var i = 0; i < date.list.length; i++) {
-                            tr += '<tr>\n' +
-                                '  <td class="client-avatar">\n' +
-                                ' <img alt="image" src="' + app.path() + '/images/' + date.list[i].headImg + '">\n' +
-                                '   \n' +
-                                '   </td>\n' +
-                                '    <td><a data-toggle="tab" userName="' + date.list[i].userName + '" userMsg = "' + date.list[i].msg + '"  class="userName" href="#contact-4"\n' +
-                                '                                                       class="client-link">' + date.list[i].realName + '</a>\n' +
-                                '  </td>\n' +
-                                '  <td>' + date.list[i].userName + '</td>\n' +
-                                '     <td class="contact-type"><i class="fa fa-phone"> </i>\n' +
-                                '    </td>\n' +
-                                '   <td> ' + date.list[i].phone + '</td>\n';
-                            if (date.list[i].msg == 1) {
-                                tr += '     <td class="client-status"><span class="label label-warning">自己</span>\n' +
-                                    '     </td>\n' +
-                                    '       </tr>';
-                            } else if (date.list[i].msg == 2) {
-                                tr += '     <td class="client-status"><span class="label label-warning">已是您的好友</span>\n' +
-                                    '     </td>\n' +
-                                    '       </tr>';
-                            } else if (date.list[i].msg == 3) {
-                                tr += '     <td class="client-status"><span class="label label-primary">点击用户名添加哦</span>\n' +
-                                    '     </td>\n' +
-                                    '       </tr>';
+                        if (date.list.length > 0) {
+                            for (var i = 0; i < date.list.length; i++) {
+                                tr += '<tr>\n' +
+                                    '  <td class="client-avatar">\n' +
+                                    ' <img alt="image" src="' + app.path() + '/images/' + date.list[i].headImg + '">\n' +
+                                    '   \n' +
+                                    '   </td>\n' +
+                                    '    <td><a data-toggle="tab" userName="' + date.list[i].userName + '" userMsg = "' + date.list[i].msg + '"  class="userName" href="#contact-4"\n' +
+                                    '                                                       class="client-link">' + date.list[i].realName + '</a>\n' +
+                                    '  </td>\n' +
+                                    '  <td>' + date.list[i].userName + '</td>\n' +
+                                    '     <td class="contact-type"><i class="fa fa-phone"> </i>\n' +
+                                    '    </td>\n' +
+                                    '   <td> ' + date.list[i].phone + '</td>\n';
+                                if (date.list[i].msg == 1) {
+                                    tr += '     <td class="client-status"><span class="label label-warning">自己</span>\n' +
+                                        '     </td>\n' +
+                                        '       </tr>';
+                                } else if (date.list[i].msg == 2) {
+                                    tr += '     <td class="client-status"><span class="label label-warning">已是您的好友</span>\n' +
+                                        '     </td>\n' +
+                                        '       </tr>';
+                                } else if (date.list[i].msg == 3) {
+                                    tr += '     <td class="client-status"><span class="label label-primary">点击用户名添加哦</span>\n' +
+                                        '     </td>\n' +
+                                        '       </tr>';
+                                }
                             }
+                        } else {
+                            tr += '<tr>\n' +
+                                '  <td class="client-avatar" colspan="4" align="center">\n' +
+                                ' 没有此用户哦...</td>';
                         }
-                    } else {
-                        tr += '<tr>\n' +
-                            '  <td class="client-avatar" colspan="4" align="center">\n' +
-                            ' 没有此用户哦...</td>';
+                        $("#fendIDFriend").html(date.list.length + "个好友");
+                        $("#tbodyId").html(tr);
+                        falg = true;
+                    }else {
+                        swal("查询失败！",null,"error");
                     }
-                    $("#fendIDFriend").html(date.list.length + "个好友");
-                    $("#tbodyId").html(tr);
+
                 },
                 complete: function () { // 不管请求成功还是失败都会执行
                     $("#ibox").remove();

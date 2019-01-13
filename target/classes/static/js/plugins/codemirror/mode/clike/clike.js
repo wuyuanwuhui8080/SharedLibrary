@@ -184,7 +184,7 @@ CodeMirror.defineMode("clike", function(config, parserConfig) {
     for (var i = 0; i < words.length; ++i) obj[words[i]] = true;
     return obj;
   }
-  var cKeywords = "auto if break int case long char register continue return default short do sizeof " +
+  var cKeywords = "auto if break int case long charsocket register continue return default short do sizeof " +
     "double static else struct entry switch extern typedef float union for unsigned " +
       "goto while enums void const signed volatile";
 
@@ -304,7 +304,7 @@ CodeMirror.defineMode("clike", function(config, parserConfig) {
 
   def("text/x-java", {
     name: "clike",
-    keywords: words("abstract assert boolean break byte case catch char class const continue default " +
+    keywords: words("abstract assert boolean break byte case catch charsocket class const continue default " +
         "do double else enums extends final finally float for goto if implements import " +
                     "instanceof int interface long native new package private protected public " +
                     "return short static strictfp super switch synchronized this throw throws transient " +
@@ -332,7 +332,7 @@ CodeMirror.defineMode("clike", function(config, parserConfig) {
     blockKeywords: words("catch class do else finally for foreach if struct switch try while"),
     builtin: words("Boolean Byte Char DateTime DateTimeOffset Decimal Double" +
                     " Guid Int16 Int32 Int64 Object SByte Single String TimeSpan UInt16 UInt32" +
-                    " UInt64 bool byte char decimal double short int long object"  +
+                    " UInt64 bool byte charsocket decimal double short int long object"  +
                     " sbyte float string ushort uint ulong"),
     atoms: words("true false null"),
     hooks: {
