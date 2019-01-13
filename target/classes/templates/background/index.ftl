@@ -72,7 +72,7 @@
                     </a>
                     <ul class="nav nav-second-level">
                         <li>
-                            <a class=" J_menuItem" href="${basePath}/sharedFriends/goSearchFriend">查找好友</a>
+                            <a class=" J_menuItem" href="${basePath}/sharedFriends/goSearchFriend">查找用户</a>
                         </li>
                         <li>
                             <a class="J_menuItem" href="${basePath}/sharedFriends/goListFriendList/${users.id}">全部好友</a>
@@ -82,7 +82,11 @@
                         </li>
                         <li>
                             <a class="J_menuItem"
-                               href="${basePath}/sharedlFriendRequest/goFirendRequest/${Session.users.id}">好友请求</a>
+                               href="${basePath}/sharedlFriendRequest/goFirendRequest/${Session.users.id}/1">好友请求</a>
+                        </li>
+                        <li>
+                            <a class="J_menuItem"
+                               href="${basePath}/sharedlFriendRequest/goRequestFirend/${Session.users.id}/1">添加好友</a>
                         </li>
                         <li>
                             <a class="J_menuItem" href="${basePath}/sharedFriends/goChar/${Session.users.id}">好友聊天</a>
@@ -137,7 +141,7 @@
             <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
                 <div class="navbar-header"><a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i
                         class="fa fa-bars"></i> </a>
-                   <a href="#"></a>
+                    <a href="#"></a>
                 </div>
                 <ul class="nav navbar-top-links navbar-right">
                     <li class="dropdown">
@@ -247,15 +251,18 @@
                     </li>
                 </ul>
             </div>
-            <a href="${basePath}/sharediInvitation/goIndex" class="roll-nav roll-right J_tabExit"><i class="fa fa fa-sign-out"></i> 论坛</a>
+            <a href="${basePath}/sharediInvitation/goIndex" class="roll-nav roll-right J_tabExit"><i
+                    class="fa fa fa-sign-out"></i> 论坛</a>
         </div>
         <div class="row J_mainContent" id="content-main">
             <iframe class="J_iframe" name="iframe0" width="100%" height="100%" src="${basePath}/sharedUsers/GoIndex"
                     frameborder="0"
                     data-id="${basePath}/sharedUsers/GoIndex" seamless></iframe>
+
         </div>
         <div class="footer">
-            <div class="pull-right"><a href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=66741255" target="_blank">添加作者QQ</a>
+            <div class="pull-right"><a href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=66741255"
+                                       target="_blank">添加作者QQ</a>
             </div>
         </div>
     </div>
@@ -263,9 +270,7 @@
     <!--右侧边栏开始-->
     <div id="right-sidebar">
         <div class="sidebar-container">
-
             <ul class="nav nav-tabs navs-3">
-
                 <li class="active">
                     <a data-toggle="tab" href="#tab-1">
                         <i class="fa fa-gear"></i> 主题

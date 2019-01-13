@@ -1,4 +1,5 @@
 $(document).ready(function () {
+
     /**
      * 同意操作
      * @author 博博大人

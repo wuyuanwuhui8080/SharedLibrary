@@ -14,9 +14,7 @@ import com.share.charsocket.util.MessageUtil;
 import com.share.charsocket.util.WebsocketUtil;
 import com.share.enums.HttpStatus;
 
-import com.share.enums.RedisUtilEnums;
 import com.share.util.DateUtils;
-import com.share.util.JsonUtil;
 import com.share.util.RedisUtil;
 import com.share.util.SpringUtil;
 import io.netty.buffer.ByteBuf;
@@ -26,9 +24,7 @@ import io.netty.handler.codec.http.*;
 import io.netty.handler.codec.http.websocketx.*;
 import io.netty.util.CharsetUtil;
 import lombok.extern.log4j.Log4j2;
-import org.springframework.stereotype.Component;
 
-import javax.annotation.Resource;
 import java.util.Date;
 import java.util.Objects;
 
@@ -47,7 +43,6 @@ public class CharHandler extends SimpleChannelInboundHandler<Object> {
     // 获取单例实例
     private WebsocketUtil websocketUtil = WebsocketUtilEnum.INSTANCE
             .getInstance();
-
 
 
     /**
@@ -200,13 +195,13 @@ public class CharHandler extends SimpleChannelInboundHandler<Object> {
                 break;
             // 发送私聊信息
             case PRIVATE_CHAT_CODE:
-                RedisUtil redisUtil =  SpringUtil.getBean(RedisUtil.class);
+                RedisUtil redisUtil = SpringUtil.getBean(RedisUtil.class);
                 // 定义key
                 String charMyKey = FriendAndMyIdKey.CharKey(users.getId(), receiverId);
 
-                String forKey = FriendAndMyIdKey.CharKey(receiverId,users.getId());
+                String forKey = FriendAndMyIdKey.CharKey(receiverId, users.getId());
                 // 初始化数据
-                FriendAndUsers friendAndUsers = new FriendAndUsers(receiverId, users.getId(), headImg,realName, DateUtils.date2String(new Date()), chatMassage);
+                FriendAndUsers friendAndUsers = new FriendAndUsers(receiverId, users.getId(), headImg, realName, DateUtils.date2String(new Date()), chatMassage);
                 // 把数据塞进缓存
                 redisUtil.sSet(charMyKey, JSON.toJSON(friendAndUsers));
                 redisUtil.sSet(forKey, JSON.toJSON(friendAndUsers));

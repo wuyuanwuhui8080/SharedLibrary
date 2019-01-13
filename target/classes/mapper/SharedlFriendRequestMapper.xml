@@ -23,6 +23,7 @@
             <id column="U_ID" property="id"/>
             <result column="U_HEADIMG" property="headImg"/>
             <result column="U_REALNAME" property="realName"/>
+            <result column="U_USERNAME" property="userName"/>
         </association>
         <association property="friendRequestStatus" javaType="com.share.pojo.SharedlFriendRequestStatus">
             <result column="STATUS_NAME" property="statusName"/>
@@ -35,22 +36,38 @@
     </sql>
     <!--根据用户id 查询所有请求-->
     <select id="findLstByUserId" resultMap="findLstByUserIdResultMap">
-           SELECT
-                r.status AS R_STATUS,
-                r.creation_date AS R_REQUSTDATE,
-                r.id AS R_ID,
-                u.head_img AS U_HEADIMG,
-                u.id AS U_ID,
-                u.realName AS U_REALNAME,
-                s.status_name AS STATUS_NAME,
-                r.me_id AS R_ME_ID,
-                r.request_id AS R_REQUEST_ID
-         FROM sharedl_friend_request r
-         LEFT JOIN shared_users u
-         ON u.id = r.me_id
-         LEFT JOIN sharedl_friend_request_status s
-         ON s.id = r.status
-         WHERE r.request_id = #{userId}
+        SELECT r.status        AS R_STATUS,
+               r.creation_date AS R_REQUSTDATE,
+               r.id            AS R_ID,
+               u.head_img      AS U_HEADIMG,
+               u.id            AS U_ID,
+               u.userName      AS U_USERNAME,
+               u.realName      AS U_REALNAME,
+               s.status_name   AS STATUS_NAME,
+               r.me_id         AS R_ME_ID,
+               r.request_id    AS R_REQUEST_ID
+        FROM sharedl_friend_request r
+                 LEFT JOIN shared_users u ON u.id = r.request_id
+                 LEFT JOIN sharedl_friend_request_status s ON s.id = r.status
+        WHERE r.me_id = #{userId}
     </select>
+
+    <select id="findRequestFriendByUserId" resultMap="findLstByUserIdResultMap">
+        SELECT r.status        AS R_STATUS,
+               r.creation_date AS R_REQUSTDATE,
+               r.id            AS R_ID,
+               u.head_img      AS U_HEADIMG,
+               u.id            AS U_ID,
+               u.userName      AS U_USERNAME,
+               u.realName      AS U_REALNAME,
+               s.status_name   AS STATUS_NAME,
+               r.me_id         AS R_ME_ID,
+               r.request_id    AS R_REQUEST_ID
+        FROM sharedl_friend_request r
+                 LEFT JOIN shared_users u ON u.id = r.me_id
+                 LEFT JOIN sharedl_friend_request_status s ON s.id = r.status
+        WHERE r.request_id = #{userId}
+    </select>
+
 
 </mapper>

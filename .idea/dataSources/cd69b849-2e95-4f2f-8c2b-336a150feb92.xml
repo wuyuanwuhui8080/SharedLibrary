@@ -1317,7 +1317,7 @@
     </column>
     <column id="302" parent="222" name="stop_num">
       <Position>10</Position>
-      <Comment>封号的次数 </Comment>
+      <Comment>封号的次数</Comment>
       <DataType>int(11)|0s</DataType>
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
@@ -1570,7 +1570,7 @@
     </key>
     <column id="342" parent="228" name="id">
       <Position>1</Position>
-      <Comment>主键id </Comment>
+      <Comment>主键id</Comment>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>

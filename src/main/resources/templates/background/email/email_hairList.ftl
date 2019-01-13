@@ -41,6 +41,6 @@
                    </#if>
             </tbody>
         </table>
-        <#include "email_page.ftl"/>
+        <#include "../comm/page.ftl">
     </div>
 </div>

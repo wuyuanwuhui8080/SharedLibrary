@@ -1,10 +1,12 @@
 package com.share.util;
 
+import org.springframework.data.redis.connection.DataType;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.ZSetOperations;
 import org.springframework.stereotype.Component;
 import org.springframework.util.CollectionUtils;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -362,39 +364,6 @@ public class RedisUtil {
     }
 
     /**
-     * asc排序
-     *
-     * @param key
-     * @return
-     */
-    public Set<Object> ascSet(String key) {
-        try {
-            //zset 命令操作对象
-            ZSetOperations zSetOperations = redisTemplate.opsForZSet();
-            return zSetOperations.rangeWithScores(key, 0, -1);
-        } catch (Exception e) {
-            e.printStackTrace();
-            return null;
-        }
-    }
-
-    /**
-     * desc排序set
-     * @param key
-     * @return
-     */
-    public Set<Object> descSet(String key){
-        try {
-            //zset 命令操作对象
-            ZSetOperations zSetOperations = redisTemplate.opsForZSet();
-            return zSetOperations.reverseRangeWithScores(key, 0, -1);
-        } catch (Exception e) {
-            e.printStackTrace();
-            return null;
-        }
-    }
-
-    /**
      * 将set数据放入缓存
      *
      * @param key    键
@@ -444,6 +413,78 @@ public class RedisUtil {
             return 0;
         }
     }
+
+    //===============================ZSet=================================
+
+    /**
+     * 有序集合添加
+     *
+     * @param key
+     * @param value
+     * @param scoure
+     */
+    public void zAdd(String key, Object value, double scoure) {
+        ZSetOperations<String, Object> zset = redisTemplate.opsForZSet();
+        zset.add(key, value, scoure);
+    }
+
+    /**
+     * 有序集合获取
+     *
+     * @param key
+     * @param scoure
+     * @param scoure1
+     * @return
+     */
+    public Set<Object> rangeByScore(String key, double scoure, double scoure1) {
+        ZSetOperations<String, Object> zset = redisTemplate.opsForZSet();
+        return zset.rangeByScore(key, scoure, scoure1);
+    }
+
+    /**
+     * 有序集合 asc排序
+     *
+     * @param key
+     * @return
+     */
+    public Set<Object> ascSet(String key) {
+        try {
+            //zset 命令操作对象
+            ZSetOperations zSetOperations = redisTemplate.opsForZSet();
+            return zSetOperations.rangeWithScores(key, 0, -1);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+    /**
+     * 有序集合 desc排序set
+     *
+     * @param key
+     * @return
+     */
+    public Set<Object> descSet(String key) {
+        try {
+            //zset 命令操作对象
+            ZSetOperations zSetOperations = redisTemplate.opsForZSet();
+            return zSetOperations.reverseRangeWithScores(key, 0, -1);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+    /**
+     * 获取Zset 键为K的集合元素个数
+     *
+     * @param key
+     * @return
+     */
+    public long getZSetSize(String key) {
+        return redisTemplate.boundZSetOps(key).size();
+    }
+
     //===============================list=================================
 
     /**

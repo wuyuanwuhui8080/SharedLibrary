@@ -2,11 +2,8 @@
 <html>
 
 <head>
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
     <title>最近事情</title>
     <#include "../comm/script.ftl">
 </head>
@@ -18,98 +15,123 @@
             <div class="row animated fadeInRight">
                 <div class="col-sm-12">
                     <div class="ibox float-e-margins">
-
                         <div class="" id="ibox-content">
-
                             <div id="vertical-timeline" class="vertical-container light-timeline">
-                                <div class="vertical-timeline-block">
-                                    <div class="vertical-timeline-icon navy-bg">
-                                        <i class="fa fa-briefcase"></i>
-                                    </div>
+                                <#if (events?size>0) >
+                                <#--集合根据时间倒序输出-->
+                                    <#list events?sort_by("eventTime")?reverse as event>
+                                    <#--好友事件-->
+                                        <#if event.type==("FRIEND_REQUEST_EVENT")>
+                                         <div class="vertical-timeline-block">
+                                             <div class="vertical-timeline-icon navy-bg">
+                                                 <i class="fa fa-home"></i>
+                                             </div>
+                                             <div class="vertical-timeline-content">
+                                                 <h2>${event.eventName}</h2>
+                                                 <p>${event.eventDescription}</p>
+                                                 <#if event.eventName == "添加好友">
+                                                    <button id="newPage"
+                                                            href="${basePath}/sharedlFriendRequest/goRequestFirend/${Session.users.id}/1"
+                                                            class="btn btn-sm btn-primary" onclick="topage()">添加好友
+                                                    </button>
+                                                 <#elseif event.eventName=="好友添加请求">
+                                                    <button id="newPage"
+                                                            href="${basePath}/sharedlFriendRequest/goFirendRequest/${Session.users.id}/1"
+                                                            class="btn btn-sm btn-primary" onclick="topage()">好友请求
+                                                    </button>
+                                                 </#if>
 
-                                    <div class="vertical-timeline-content">
-                                        <h2>会议</h2>
-                                        <p>上一年的销售业绩发布会。总结产品营销和销售趋势及销售的现状。
-                                        </p>
-                                        <a href="#" class="btn btn-sm btn-primary"> 更多信息</a>
-                                        <span class="vertical-date">
-                                        今天 <br>
-                                        <small>2月3日</small>
-                                    </span>
-                                    </div>
-                                </div>
+                                                 <span class="vertical-date"><br>
+                                                    <small>${event.eventTime?datetime}</small>
+                                                 </span>
+                                             </div>
+                                         </div>
+                                        <#elseif event.type==("BLOG_EVENT")>
+                                            <div class="vertical-timeline-block">
+                                                <div class="vertical-timeline-icon blue-bg">
+                                                    <i class="fa fa-file-text"></i>
+                                                </div>
+                                                <div class="vertical-timeline-content">
+                                                    <h2>给张三发送文档</h2>
+                                                    <p>发送上年度《销售业绩报告》</p>
+                                                    <a href="#" class="btn btn-sm btn-success"> 下载文档 </a>
+                                                    <span class="vertical-date">
+                                                      今天 <br>
+                                                        <small>2月3日</small>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        <#elseif event.type==("POST_EVENT")>
+                                            <div class="vertical-timeline-block">
+                                                <div class="vertical-timeline-icon blue-bg">
+                                                    <i class="fa fa-briefcase"></i>
+                                                </div>
 
-                                <div class="vertical-timeline-block">
-                                    <div class="vertical-timeline-icon blue-bg">
-                                        <i class="fa fa-file-text"></i>
+                                                <div class="vertical-timeline-content">
+                                                    <h2>给张三发送文档</h2>
+                                                    <p>发送上年度《销售业绩报告》</p>
+                                                    <a href="#" class="btn btn-sm btn-success"> 下载文档 </a>
+                                                    <span class="vertical-date">
+                                                      今天 <br>
+                                                      <small>2月3日</small>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </#if>
+                                    </#list>
+                                <#else >
+                                    <div align="center">
+                                        <h2>您最近没有事件发生...</h2>
                                     </div>
-
-                                    <div class="vertical-timeline-content">
-                                        <h2>给张三发送文档</h2>
-                                        <p>发送上年度《销售业绩报告》</p>
-                                        <a href="#" class="btn btn-sm btn-success"> 下载文档 </a>
-                                        <span class="vertical-date">
-                                        今天 <br>
-                                        <small>2月3日</small>
-                                    </span>
-                                    </div>
-                                </div>
-
-                                <div class="vertical-timeline-block">
-                                    <div class="vertical-timeline-icon lazur-bg">
-                                        <i class="fa fa-coffee"></i>
-                                    </div>
-
-                                    <div class="vertical-timeline-content">
-                                        <h2>喝咖啡休息</h2>
-                                        <p>喝咖啡啦，啦啦啦~~</p>
-                                        <a href="#" class="btn btn-sm btn-info">更多</a>
-                                        <span class="vertical-date"> 昨天 <br><small>2月2日</small></span>
-                                    </div>
-                                </div>
-
-                                <div class="vertical-timeline-block">
-                                    <div class="vertical-timeline-icon yellow-bg">
-                                        <i class="fa fa-phone"></i>
-                                    </div>
-
-                                    <div class="vertical-timeline-content">
-                                        <h2>给李四打电话</h2>
-                                        <p>给李四打电话分配本月工作任务</p>
-                                        <span class="vertical-date">昨天 <br><small>2月2日</small></span>
-                                    </div>
-                                </div>
-
-                                <div class="vertical-timeline-block">
-                                    <div class="vertical-timeline-icon lazur-bg">
-                                        <i class="fa fa-user-md"></i>
-                                    </div>
-
-                                    <div class="vertical-timeline-content">
-                                        <h2>公司年会</h2>
-                                        <p>发年终奖啦，啦啦啦~~</p>
-                                        <span class="vertical-date">前天 <br><small>2月1日</small></span>
-                                    </div>
-                                </div>
+                                </#if>
                             </div>
-
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="text-center float-e-margins p-md">
-            <span>预览：</span>
-            <a href="#" class="btn btn-xs btn-primary" id="lightVersion">浅色</a>
-            <a href="#" class="btn btn-xs btn-primary" id="darkVersion">深色</a>
-            <a href="#" class="btn btn-xs btn-primary" id="leftVersion">布局切换</a>
-        </div>
+         <#if (events?size>0) >
+             <div class="text-center float-e-margins p-md">
+                 <span>预览：</span>
+                 <a href="#" class="btn btn-xs btn-primary" id="lightVersion">浅色</a>
+                 <a href="#" class="btn btn-xs btn-primary" id="darkVersion">深色</a>
+                 <a href="#" class="btn btn-xs btn-primary" id="leftVersion">布局切换</a>
+             </div>
+         </#if>
     </div>
 </div>
 
 <script>
-    $(document).ready(function () {
+    /*跳转页面*/
+    function topage() {
+        var dataUrl = $("#newPage").attr('href'),
+                dataIndex = $("#newPage").data('index'),
+                menuName = $.trim($("#newPage").text());
+        parent.addMenuTab(dataUrl, menuName, dataIndex);
+    }
 
+    /*$(function () {
+        var div = "";
+        //页面加载完成ajax请求数据
+        $.get("/sharedUsers/showEvent", function (data) {
+            div += '<div class="vertical-timeline-block">\n' +
+                    '<div class="vertical-timeline-icon navy-bg">\n' +
+                    '<i class="fa fa-briefcase"></i>\n' +
+                    '</div>\n' +
+                    '<div class="vertical-timeline-content">\n' +
+                    '<h2>好友请求</h2>\n' +
+                    '<p>' + data[0].requesterName + '(' + data[0].requesterUsername + ')</p>\n' +
+                    '<a href="#" class="btn btn-sm btn-primary"> 更多信息</a>\n' +
+                    '<span class="vertical-date"><br>\n' +
+                    '<small>' + data[0].requestTime + '</small>\n' +
+                    '</span>\n' +
+                    '</div>\n' +
+                    '</div>\n';
+        });
+    });*/
+
+
+    $(document).ready(function () {
         // Local script for demo purpose only
         $('#lightVersion').click(function (event) {
             event.preventDefault()
