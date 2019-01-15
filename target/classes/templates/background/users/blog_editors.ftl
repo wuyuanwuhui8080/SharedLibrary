@@ -36,6 +36,6 @@
 </body>
 </html>
 <script>
-    var userid = "${users.id}";
+    var userid = "${Session.users.id}";
     var path = "${basePath}";
 </script>

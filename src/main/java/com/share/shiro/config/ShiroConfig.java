@@ -65,7 +65,7 @@ public class ShiroConfig {
         //必须设置securityManager 登录登出什么的
         shiroFilterFactoryBean.setSecurityManager(securityManager);
         //setLoginUrl 如果不设置值，默认会寻找web工程下的/login.jsp 页面或者/login映射
-        shiroFilterFactoryBean.setLoginUrl("/sharediInvitation/goIndex");
+        shiroFilterFactoryBean.setLoginUrl("/sharediForum/goIndex");
         //登录成功跳转的urls
 //        shiroFilterFactoryBean.setSuccessUrl("/sharedUsers/goIndex");
         //设置无权限时跳转的url;

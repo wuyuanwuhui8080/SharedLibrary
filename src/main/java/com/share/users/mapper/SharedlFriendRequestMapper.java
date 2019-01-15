@@ -23,7 +23,7 @@ public interface SharedlFriendRequestMapper
      * @param userId 传入的用户id
      * @return
      */
-    List<SharedlFriendRequest> findLstByUserId(@Param("userId") String userId, @Param("pageIndex") int pageIndex, @Param("pageSize") int pageSize);
+    List<SharedlFriendRequest> findLstByUserId(@Param("userId") String userId);
 
     /**
      * 查看所有自己请求加为好友的请求
@@ -31,5 +31,5 @@ public interface SharedlFriendRequestMapper
      * @param userId 传入的用户id
      * @return
      */
-    List<SharedlFriendRequest> findRequestFriendByUserId(@Param("userId") String userId, @Param("pageIndex") int pageIndex, @Param("pageSize") int pageSize);
+    List<SharedlFriendRequest> findRequestFriendByUserId(@Param("userId") String userId);
 }

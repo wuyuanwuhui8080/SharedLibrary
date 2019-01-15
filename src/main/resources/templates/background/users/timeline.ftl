@@ -9,6 +9,13 @@
 </head>
 
 <body class="gray-bg">
+<div id="dg" style="z-index: 9999; position: fixed ! important; right: 0px; top: 30%;right: 20px">
+    <table width="" 100% style="position: absolute; width:260px; right: 0px; top: 0px;">
+        <button class="btn btn-success btn-circle btn-lg" title="点我刷新" type="button" id="rightreigh"><i
+                class="fa fa-refresh"></i>
+        </button>
+    </table>
+</div>
 <div class="row">
     <div class="col-sm-12">
         <div class="wrapper wrapper-content">
@@ -30,17 +37,18 @@
                                                  <h2>${event.eventName}</h2>
                                                  <p>${event.eventDescription}</p>
                                                  <#if event.eventName == "添加好友">
-                                                    <button id="newPage"
+                                                    <button id="friendRequest"
                                                             href="${basePath}/sharedlFriendRequest/goRequestFirend/${Session.users.id}/1"
-                                                            class="btn btn-sm btn-primary" onclick="topage()">添加好友
+                                                            class="btn btn-sm btn-primary"
+                                                            onclick="friendRequestTopage()">添加好友
                                                     </button>
                                                  <#elseif event.eventName=="好友添加请求">
-                                                    <button id="newPage"
+                                                    <button id="friendRequest"
                                                             href="${basePath}/sharedlFriendRequest/goFirendRequest/${Session.users.id}/1"
-                                                            class="btn btn-sm btn-primary" onclick="topage()">好友请求
+                                                            class="btn btn-sm btn-primary"
+                                                            onclick="friendRequestTopage()">好友请求
                                                     </button>
                                                  </#if>
-
                                                  <span class="vertical-date"><br>
                                                     <small>${event.eventTime?datetime}</small>
                                                  </span>
@@ -52,13 +60,15 @@
                                                     <i class="fa fa-file-text"></i>
                                                 </div>
                                                 <div class="vertical-timeline-content">
-                                                    <h2>给张三发送文档</h2>
-                                                    <p>发送上年度《销售业绩报告》</p>
-                                                    <a href="#" class="btn btn-sm btn-success"> 下载文档 </a>
-                                                    <span class="vertical-date">
-                                                      今天 <br>
-                                                        <small>2月3日</small>
-                                                    </span>
+                                                    <h2>${event.eventName}</h2>
+                                                    <p>${event.eventDescription}</p>
+                                                    <button id="blog"
+                                                            href="${basePath}/shareBlogs/goBlos/${Session.users.id}"
+                                                            class="btn btn-sm btn-success" onclick="blogTopage()"> 好友博客
+                                                    </button>
+                                                    <span class="vertical-date"><br>
+                                                    <small>${event.eventTime?datetime}</small>
+                                                 </span>
                                                 </div>
                                             </div>
                                         <#elseif event.type==("POST_EVENT")>
@@ -66,11 +76,12 @@
                                                 <div class="vertical-timeline-icon blue-bg">
                                                     <i class="fa fa-briefcase"></i>
                                                 </div>
-
                                                 <div class="vertical-timeline-content">
                                                     <h2>给张三发送文档</h2>
                                                     <p>发送上年度《销售业绩报告》</p>
-                                                    <a href="#" class="btn btn-sm btn-success"> 下载文档 </a>
+                                                    <button id="tiezi" href="#" class="btn btn-sm btn-success"
+                                                            onclick="tieziTopage()"> 下载文档
+                                                    </button>
                                                     <span class="vertical-date">
                                                       今天 <br>
                                                       <small>2月3日</small>
@@ -102,34 +113,35 @@
 </div>
 
 <script>
-    /*跳转页面*/
-    function topage() {
-        var dataUrl = $("#newPage").attr('href'),
-                dataIndex = $("#newPage").data('index'),
-                menuName = $.trim($("#newPage").text());
+    $(document).ready(function () {
+        $("#rightreigh").click(function () {
+            location.reload();
+        });
+    });
+
+    /*好友请求跳转页面*/
+    function friendRequestTopage() {
+        var dataUrl = $("#friendRequest").attr('href'),
+                dataIndex = $("#friendRequest").data('index'),
+                menuName = $.trim($("#friendRequest").text());
         parent.addMenuTab(dataUrl, menuName, dataIndex);
     }
 
-    /*$(function () {
-        var div = "";
-        //页面加载完成ajax请求数据
-        $.get("/sharedUsers/showEvent", function (data) {
-            div += '<div class="vertical-timeline-block">\n' +
-                    '<div class="vertical-timeline-icon navy-bg">\n' +
-                    '<i class="fa fa-briefcase"></i>\n' +
-                    '</div>\n' +
-                    '<div class="vertical-timeline-content">\n' +
-                    '<h2>好友请求</h2>\n' +
-                    '<p>' + data[0].requesterName + '(' + data[0].requesterUsername + ')</p>\n' +
-                    '<a href="#" class="btn btn-sm btn-primary"> 更多信息</a>\n' +
-                    '<span class="vertical-date"><br>\n' +
-                    '<small>' + data[0].requestTime + '</small>\n' +
-                    '</span>\n' +
-                    '</div>\n' +
-                    '</div>\n';
-        });
-    });*/
+    /*博客请求跳转页面*/
+    function blogTopage() {
+        var dataUrl = $("#blog").attr('href'),
+                dataIndex = $("#blog").data('index'),
+                menuName = $.trim($("#blog").text());
+        parent.addMenuTab(dataUrl, menuName, dataIndex);
+    }
 
+    /*论坛请求跳转页面*/
+    function tieziTopage() {
+        var dataUrl = $("#tiezi").attr('href'),
+                dataIndex = $("#tiezi").data('index'),
+                menuName = $.trim($("#tiezi").text());
+        parent.addMenuTab(dataUrl, menuName, dataIndex);
+    }
 
     $(document).ready(function () {
         // Local script for demo purpose only

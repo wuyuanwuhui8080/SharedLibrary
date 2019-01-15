@@ -1,10 +1,8 @@
 package com.share;
 
-import com.share.util.SpringUtil;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.Bean;
 
 /**
  *  spring boot启动类
@@ -13,7 +11,7 @@ import org.springframework.context.annotation.Bean;
  */
 @SpringBootApplication
 @MapperScan(basePackages = { "com.share.blogs.mapper",
-		"com.share.invitation.mapper", "com.share.users.mapper" })
+		"com.share.forum.mapper", "com.share.users.mapper" })
 public class SharedlibraryApplication {
 
 	public static void main(String[] args) {

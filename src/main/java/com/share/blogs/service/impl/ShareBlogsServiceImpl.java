@@ -6,6 +6,8 @@ import java.util.List;
 
 import javax.annotation.Resource;
 
+import com.share.constant.EventConstant;
+import com.share.recent_events.Recent_Events;
 import org.springframework.stereotype.Service;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
@@ -24,97 +26,98 @@ import com.share.vo.BlosAndUsersAndCommAndGiva;
  */
 @Service
 public class ShareBlogsServiceImpl extends
-		ServiceImpl<ShareBlogsMapper, ShareBlogs> implements ShareBlogsService {
+        ServiceImpl<ShareBlogsMapper, ShareBlogs> implements ShareBlogsService {
 
-	@Resource
-	private ShareBlogsMapper blogsMapper;
+    @Resource
+    private ShareBlogsMapper blogsMapper;
 
-	@Resource
-	private SharedFriendsMapper friendsMapper;
+    @Resource
+    private SharedFriendsMapper friendsMapper;
 
-	/**
-	 * 根据传入的usersid查询博客表的数据总数
-	 *
-	 * @param userId
-	 *            传入的用户id
-	 * @return Integer
-	 */
-	@Override
-	public Integer getCountForBlogsByUsersId(String userId) {
-		QueryWrapper<ShareBlogs> wrapper = new QueryWrapper<>();
-		wrapper.eq("user_id", userId);
-		return super.count(wrapper);
-	}
+    @Resource
+    Recent_Events recent_events;
 
-	/**
-	 * 根据传入的用户id查询博客集合
-	 *
-	 * @param userId
-	 *            传入用户的id
-	 * @return List<ShareBlogs>
-	 */
-	@Override
-	public List<ShareBlogs> getFindListForBlogsByUsersId(String userId) {
-		QueryWrapper<ShareBlogs> wrapper = new QueryWrapper<>();
-		wrapper.eq("user_id", userId);
-		return super.list(wrapper);
-	}
+    /**
+     * 根据传入的usersid查询博客表的数据总数
+     *
+     * @param userId 传入的用户id
+     * @return Integer
+     */
+    @Override
+    public Integer getCountForBlogsByUsersId(String userId) {
+        QueryWrapper<ShareBlogs> wrapper = new QueryWrapper<>();
+        wrapper.eq("user_id", userId);
+        return super.count(wrapper);
+    }
 
-	/**
-	 * 查询自己和自己的所有好友的博客
-	 *
-	 * @param userId
-	 *            自己的id
-	 * @return
-	 */
-	@Override
-	public List<ShareBlogs> findListFriendsByUsersId(String userId) {
-		List<String> findList = new ArrayList<>();
-		findList.add(userId);
-		return blogsMapper.findListByUserId(findList, 0, 5);
-	}
+    /**
+     * 根据传入的用户id查询博客集合
+     *
+     * @param userId 传入用户的id
+     * @return List<ShareBlogs>
+     */
+    @Override
+    public List<ShareBlogs> getFindListForBlogsByUsersId(String userId) {
+        QueryWrapper<ShareBlogs> wrapper = new QueryWrapper<>();
+        wrapper.eq("user_id", userId);
+        return super.list(wrapper);
+    }
 
-	/**
-	 * 查询用户id的好友以及自己的博客、评论、点赞、还有回复
-	 * 
-	 * @param userId
-	 * @param pageIndex
-	 * @param pageSize
-	 * @return
-	 */
-	@Override
-	public List<BlosAndUsersAndCommAndGiva> findListByUseridToShareBlogs(
-			String userId, Integer pageIndex, Integer pageSize) {
-		List<String> findList = friendsMapper.findListByUserId(userId);
-		findList.add(userId);
-		List<BlosAndUsersAndCommAndGiva> list = blogsMapper
-				.findListByUsersIdToBlosgsAndCommAndUsers(findList, pageIndex,
-						pageSize);
-		return list;
-	}
+    /**
+     * 查询自己和自己的所有好友的博客
+     *
+     * @param userId 自己的id
+     * @return
+     */
+    @Override
+    public List<ShareBlogs> findListFriendsByUsersId(String userId) {
+        List<String> findList = new ArrayList<>();
+        findList.add(userId);
+        return blogsMapper.findListByUserId(findList, 0, 5);
+    }
 
-	/**
-	 * 增加博客记录
-	 * 
-	 * @param shareBlogs
-	 *            传入的实体对象
-	 * @return
-	 */
-	@Override
-	public boolean saveBlos(ShareBlogs shareBlogs) {
-		shareBlogs.setCreationDate(new Date());
-		return super.save(shareBlogs);
-	}
+    /**
+     * 查询用户id的好友以及自己的博客、评论、点赞、还有回复
+     *
+     * @param userId
+     * @param pageIndex
+     * @param pageSize
+     * @return
+     */
+    @Override
+    public List<BlosAndUsersAndCommAndGiva> findListByUseridToShareBlogs(
+            String userId, Integer pageIndex, Integer pageSize) {
+        List<String> findList = friendsMapper.findListByUserId(userId);
+        findList.add(userId);
+        List<BlosAndUsersAndCommAndGiva> list = blogsMapper
+                .findListByUsersIdToBlosgsAndCommAndUsers(findList, pageIndex,
+                        pageSize);
+        return list;
+    }
 
-	/**
-	 * 根据博客id级联删除，博客、点赞、评论、回复表的记录
-	 * 
-	 * @param id
-	 * @return
-	 */
-	@Override
-	public boolean deleteBlogs(String id) {
-		return blogsMapper.deleteBlogs(id) > 0 ? true : false;
-	}
+    /**
+     * 增加博客记录
+     *
+     * @param shareBlogs 传入的实体对象
+     * @return
+     */
+    @Override
+    public boolean saveBlos(ShareBlogs shareBlogs) {
+        shareBlogs.setCreationDate(new Date());
+        boolean save = super.save(shareBlogs);
+        recent_events.setEvent(EventConstant.BLOG_EVENT, shareBlogs.getId());
+        return save;
+    }
+
+    /**
+     * 根据博客id级联删除，博客、点赞、评论、回复表的记录
+     *
+     * @param id
+     * @return
+     */
+    @Override
+    public boolean deleteBlogs(String id) {
+        return blogsMapper.deleteBlogs(id) > 0 ? true : false;
+    }
 
 }

@@ -29,7 +29,7 @@ $(function () {
         var sHTML = $('.summernote').code();
         if (sHTML.length == 11 || sHTML == null || sHTML == "") {
             swal({
-                title: "清先输入文字！",
+                title: "请先输入文字！",
                 type: "error"
             });
             return;

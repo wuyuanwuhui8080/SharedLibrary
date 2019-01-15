@@ -17,6 +17,13 @@ import org.apache.ibatis.annotations.Param;
 public interface SharedUsersMapper extends BaseMapper<SharedUsers> {
 
 	/**
+	 * 根据userId集合获取UserName
+	 * @param userId userId集合
+	 * @return UserName
+	 */
+	List<String> findUserNameByUserId(@Param("userId")List userId);
+
+	/**
 	 * 根据传入的list集合，批量查询好友数据
 	 * 
 	 * @param userId

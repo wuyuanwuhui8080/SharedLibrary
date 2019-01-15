@@ -25,6 +25,8 @@
         </where>
     </select>
 
+
+
     <!--根据传入的id 和真实姓名或者用户名查询-->
     <select id="findListByUsersByidAndUserNameOrReamName" resultType="java.lang.String">
         SELECT f.friends_id

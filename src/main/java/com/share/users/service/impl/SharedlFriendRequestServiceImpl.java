@@ -1,20 +1,17 @@
 package com.share.users.service.impl;
 
-import java.util.Date;
-import java.util.List;
-
-import javax.annotation.Resource;
-
-import com.github.pagehelper.PageHelper;
-import com.github.pagehelper.PageInfo;
-import org.springframework.stereotype.Service;
-
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import com.share.pojo.SharedlFriendRequest;
-import com.share.users.mapper.SharedFriendsMapper;
 import com.share.users.mapper.SharedlFriendRequestMapper;
 import com.share.users.service.SharedlFriendRequestService;
+import org.springframework.stereotype.Service;
+
+import javax.annotation.Resource;
+import java.util.Date;
+import java.util.List;
 
 /**
  * 好友请求实现类
@@ -68,7 +65,7 @@ public class SharedlFriendRequestServiceImpl
     @Override
     public PageInfo<SharedlFriendRequest> findFriendRequestByUserId(String userId, int pageIndex, int pageSize) {
         PageHelper.startPage(pageIndex, pageSize);
-        List<SharedlFriendRequest> lstByUserId = friendRequest.findLstByUserId(userId, pageIndex, pageSize);
+        List<SharedlFriendRequest> lstByUserId = friendRequest.findLstByUserId(userId);
         PageInfo pageInfo = new PageInfo(lstByUserId);
         return pageInfo;
     }
@@ -82,7 +79,7 @@ public class SharedlFriendRequestServiceImpl
     @Override
     public PageInfo<SharedlFriendRequest> findRequestFriendByUserId(String userId, int pageIndex, int pageSize) {
         PageHelper.startPage(pageIndex, pageSize);
-        List<SharedlFriendRequest> lstByUserId = friendRequest.findRequestFriendByUserId(userId, pageIndex, pageSize);
+        List<SharedlFriendRequest> lstByUserId = friendRequest.findRequestFriendByUserId(userId);
         PageInfo pageInfo = new PageInfo(lstByUserId);
         return pageInfo;
     }

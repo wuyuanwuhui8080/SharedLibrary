@@ -10,8 +10,8 @@
 <body class="gray-bg">
 <div id="dg" style="z-index: 9999; position: fixed ! important; right: 0px; top: 30%;right: 20px">
     <table width="" 100% style="position: absolute; width:260px; right: 0px; top: 0px;">
-        <button class="btn btn-success btn-circle btn-lg" title="点我刷新" type="button" id="rightreigh"><i
-                class="fa fa-refresh"></i>
+        <button class="btn btn-success btn-circle btn-lg" title="点我刷新" type="button" id="rightreigh">
+            <i class="fa fa-refresh"></i>
         </button>
     </table>
 </div>
@@ -21,17 +21,13 @@
     <input type="hidden" id="pageIndex" value="1">
     <div class="row">
         <div class="col-sm-1">
-
         </div>
-
-
         <div class="col-sm-10 fistClassBlosg">
             <div class="ibox">
                 <div class="ibox-content text-center">
 
                     <h3 class="m-b-xxs">好友博客</h3>
                 </div>
-
             </div>
             <#if shareBlogsList?? && (shareBlogsList?size > 0)>
                 <#list shareBlogsList as li>
@@ -142,7 +138,7 @@
                                                            class="pull-right commRelf"
                                                            byreplyId="${blosCommReply.blosCommReplyUsersId}"
                                                            replyId="${Session.users.id}"
-                                                           reply_id = "${blosCommReply.blosCommReplyId}"
+                                                           reply_id="${blosCommReply.blosCommReplyId}"
                                                            commId="${blogsComm.blosCommId}"
                                                            blogsId="${li.blosId}"
 

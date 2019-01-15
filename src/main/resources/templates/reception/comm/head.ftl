@@ -1,3 +1,4 @@
+<#include "script.ftl">
 <script src="${basePath}/js/reception/head.js"></script>
 <header class="header-navigation" id="header" style="background-color: #efefef;">
     <nav>
@@ -26,7 +27,8 @@
         <div class="searchbox">
             <div id="search_bar" class="search_bar">
                 <form id="searchform" action="[!--news.url--]e/search/index.php" method="post" name="searchform">
-                    <input class="input" style="background-color: #efefef;" placeholder="想搜点什么呢.." type="text" name="keyboard" id="keyboard">
+                    <input class="input" style="background-color: #efefef;" placeholder="想搜点什么呢.." type="text"
+                           name="keyboard" id="keyboard">
                     <input type="hidden" name="show" value="title"/>
                     <input type="hidden" name="tempid" value="1"/>
                     <input type="hidden" name="tbname" value="news">

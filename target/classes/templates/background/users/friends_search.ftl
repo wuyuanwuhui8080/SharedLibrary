@@ -65,7 +65,6 @@
             <div class="ibox ">
                 <div class="ibox-content" id="FrendsUsers" style="display: none">
                     <div class="tab-content" id="UserDivId">
-
                     </div>
                 </div>
             </div>

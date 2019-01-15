@@ -12,3 +12,9 @@
 <script src="${basePath}/blue/js/modernizr.js"></script>
 <![endif]-->
 <script src="${basePath}/js/jsUtil.js"></script>
+
+<script src="${basePath}/js/plugins/iCheck/icheck.min.js"></script>
+ <!-- Sweet alert -->
+    <script src="${basePath}/js/plugins/sweetalert/sweetalert.min.js"></script>
+<!-- Sweet Alert -->
+    <link href="${basePath}/css/plugins/sweetalert/sweetalert.css" rel="stylesheet">

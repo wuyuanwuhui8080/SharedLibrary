@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>首页</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<#include "reception/comm/script.ftl">
+
 </head>
 <body>
 <#include "reception/comm/head.ftl">
@@ -344,7 +344,7 @@
           <div class="about_me">
               <h2>个人简介</h2>
               <ul>
-                  <i><img style=" width:100%; height:100%;"  src="${basePath}/images/${users.headImg}"></i>
+                  <i><img style=" width:100%; height:100%;" src="${basePath}/images/${users.headImg}"></i>
                   <p><b>姓名:</b>${users.realName}</p>
                   <p class="p_individual">
                   </p>
@@ -423,8 +423,8 @@
 <script>
     $(function () {
         var userIndividual = "${users.individual}";
-        if (userIndividual.length > 15){
-            $(".p_individual").html("<b>个人签名:</b>"+userIndividual.substring(0,15)+"....");
+        if (userIndividual.length > 15) {
+            $(".p_individual").html("<b>个人签名:</b>" + userIndividual.substring(0, 15) + "....");
         }
     });
 </script>

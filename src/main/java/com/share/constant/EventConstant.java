@@ -16,7 +16,7 @@ public class EventConstant {
      */
     public static final String BLOG_EVENT = "BLOG_EVENT";
     /**
-     * 帖子事件
+     * 论坛事件
      */
     public static final String POST_EVENT = "POST_EVENT";
 

@@ -46,9 +46,8 @@
                         </ul>
                     </div>
                     <!-- 模态框（Modal） -->
-                    <div id="modelHeadImgId" class="logo-element"><a href="#"><img class="img-circle"
-                                                                                   src="${basePath}/images/${users.headImg}"
-                                                                                   width="50px"></a>
+                    <div id="modelHeadImgId" class="logo-element"><a href="#">
+                        <img class="img-circle" src="${basePath}/images/${users.headImg}" width="50px"></a>
                     </div>
                 </li>
                 <li>
@@ -62,7 +61,6 @@
                             <a class="J_menuItem" href="${basePath}/sharedUsers/GoIndex" data-index="0">最近事情</a>
                         </li>
                     </ul>
-
                 </li>
                 <li>
                     <a href="#">
@@ -86,7 +84,7 @@
                         </li>
                         <li>
                             <a class="J_menuItem"
-                               href="${basePath}/sharedlFriendRequest/goRequestFirend/${Session.users.id}/1">添加好友</a>
+                               href="${basePath}/sharedlFriendRequest/goRequestFirend/${Session.users.id}/1">好友添加</a>
                         </li>
                         <li>
                             <a class="J_menuItem" href="${basePath}/sharedFriends/goChar/${Session.users.id}">好友聊天</a>
@@ -98,18 +96,31 @@
                 </li>
                 <li>
                     <a href="mailbox.html"><i class="fa fa-envelope"></i>
-                        <span class="nav-label">信箱 <span
-                                class="fa arrow"></span></span>
+                        <span class="nav-label">信箱
+                            <span class="fa arrow"></span>
+                        </span>
                     </a>
                     <ul class="nav nav-second-level">
                         <li><a class="J_menuItem" href="${basePath}/sharedReceiveMail/emailIndex">收件箱</a></li>
                         <li><a class="J_menuItem" href="${basePath}/sharedReceiveMail/emailCompose">写信</a></li>
                     </ul>
                 </li>
-
                 <li>
-                    <a href="#"><i class="fa fa-edit"></i> <span class="nav-label">用户管理</span><span
-                            class="fa arrow"></span></a>
+                    <a href="#">
+                        <i class="fa fa-road"></i>
+                        <span class="nav-label">论坛管理</span>
+                        <span class="fa arrow"></span>
+                    </a>
+                    <ul class="nav nav-second-level">
+                        <li><a class="J_menuItem" href="${basePath}/sharediForum/goWriteInvitation">写博客</a></li>
+                    <#--// TODO: 2019\1\15 0015 判断权限显示-->
+                        <li><a class="J_menuItem" href="${basePath}/sharediForum/#">管理论坛</a></li>
+                        <li><a class="J_menuItem" href="${basePath}/sharediForum/#">管理论坛分类</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-edit"></i> <span class="nav-label">用户管理</span>
+                        <span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
                         <li><a class="J_menuItem" href="${basePath}/sharedUsers/goUserList">全部用户</a>
                         </li>
@@ -251,7 +262,7 @@
                     </li>
                 </ul>
             </div>
-            <a href="${basePath}/sharediInvitation/goIndex" class="roll-nav roll-right J_tabExit"><i
+            <a href="${basePath}/sharediForum/goIndex" class="roll-nav roll-right J_tabExit"><i
                     class="fa fa fa-sign-out"></i> 论坛</a>
         </div>
         <div class="row J_mainContent" id="content-main">
@@ -359,5 +370,6 @@
     </div>
     <!--右侧边栏结束-->
 </div>
+
 </body>
 </html>
