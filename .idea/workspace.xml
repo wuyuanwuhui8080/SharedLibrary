@@ -4,74 +4,7 @@
     <option name="GROUP_BY_SEVERITY" value="true" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a0d261ad-a2f4-4e31-bd12-bdaf4948317b" name="默认更改列表" comment="修改了登录的体验，增加了好友的请求。修复了博客的bug，增加了添加更多，增加了一个表字段，以及若干">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/share/constant/EventConstant.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/share/recent_events/Event.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/share/recent_events/Recent_Events.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/background/users/request_friend.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/cd69b849-2e95-4f2f-8c2b-336a150feb92.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/cd69b849-2e95-4f2f-8c2b-336a150feb92.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SharedLibrary.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SharedLibrary.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/share/ControllerUtil/SharedFriendControllerUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/share/ControllerUtil/SharedFriendControllerUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/share/charsocket/handler/CharHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/share/charsocket/handler/CharHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/share/charsocket/util/MessageUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/share/charsocket/util/MessageUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/share/charsocket/util/WebsocketUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/share/charsocket/util/WebsocketUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/share/config/RedisConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/share/config/RedisConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/share/pojo/SharedlFriendRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/share/pojo/SharedlFriendRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/share/users/controller/SharedEmailController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/share/users/controller/SharedEmailController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/share/users/controller/SharedReceiveMailController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/share/users/controller/SharedReceiveMailController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/share/users/controller/SharedUsersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/share/users/controller/SharedUsersController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/share/users/controller/SharedlFriendRequestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/share/users/controller/SharedlFriendRequestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/share/users/mapper/SharedlFriendRequestMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/share/users/mapper/SharedlFriendRequestMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/share/users/service/SharedlFriendRequestService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/share/users/service/SharedlFriendRequestService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/share/users/service/impl/SharedEmailServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/share/users/service/impl/SharedEmailServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/share/users/service/impl/SharedReceiveMailServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/share/users/service/impl/SharedReceiveMailServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/share/users/service/impl/SharedlFriendRequestServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/share/users/service/impl/SharedlFriendRequestServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/share/util/JsonUtil.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/share/util/JsonUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/share/util/JsonUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/share/util/RedisUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/share/util/RedisUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/SharedlFriendRequestMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/SharedlFriendRequestMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/contabs.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/contabs.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/users/friendRequest.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/users/friendRequest.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/users/friends.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/users/friends.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/background/email/email_List.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/background/email/email_List.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/background/email/email_StateList.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/background/email/email_StateList.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/background/email/email_hairList.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/background/email/email_hairList.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/background/email/email_left.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/background/email/email_left.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/background/index.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/background/index.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/background/users/friend_request.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/background/users/friend_request.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/background/users/timeline.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/background/users/timeline.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/share/sharedlibrary/SharedlibraryApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/share/sharedlibrary/SharedlibraryApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/share/ControllerUtil/SharedFriendControllerUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/share/ControllerUtil/SharedFriendControllerUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/share/config/RedisConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/share/config/RedisConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/share/users/controller/SharedEmailController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/share/users/controller/SharedEmailController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/share/users/controller/SharedFriendsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/share/users/controller/SharedFriendsController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/share/users/controller/SharedReceiveMailController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/share/users/controller/SharedReceiveMailController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/share/users/controller/SharedUsersController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/share/users/controller/SharedUsersController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/share/users/controller/SharedlFriendRequestController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/share/users/controller/SharedlFriendRequestController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/share/users/mapper/SharedlFriendRequestMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/share/users/mapper/SharedlFriendRequestMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/share/users/service/SharedlFriendRequestService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/share/users/service/SharedlFriendRequestService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/share/users/service/impl/SharedEmailServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/share/users/service/impl/SharedEmailServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/share/users/service/impl/SharedReceiveMailServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/share/users/service/impl/SharedReceiveMailServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/share/users/service/impl/SharedlFriendRequestServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/share/users/service/impl/SharedlFriendRequestServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/share/util/JsonUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/share/util/JsonUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapper/SharedUsersMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/SharedUsersMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapper/SharedlFriendRequestMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/SharedlFriendRequestMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/contabs.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/contabs.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/users/friendRequest.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/users/friendRequest.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/users/friends.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/users/friends.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/background/email/email_List.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/background/email/email_List.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/background/email/email_StateList.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/background/email/email_StateList.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/background/email/email_hairList.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/background/email/email_hairList.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/background/email/email_left.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/background/email/email_left.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/background/index.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/background/index.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/background/users/friend_request.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/background/users/friend_request.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/background/users/timeline.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/background/users/timeline.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/share/sharedlibrary/SharedlibraryApplicationTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/share/sharedlibrary/SharedlibraryApplicationTests.class" afterDir="false" />
-    </list>
+    <list default="true" id="a0d261ad-a2f4-4e31-bd12-bdaf4948317b" name="默认更改列表" comment="修改了登录的体验，增加了好友的请求。修复了博客的bug，增加了添加更多，增加了一个表字段，以及若干" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -223,29 +156,15 @@
           <entry key="XML" value="9" />
         </counts>
       </usages-collector>
+      <usages-collector id="statistics.vcs.git.usages">
+        <counts>
+          <entry key="git.branch.checkout.local" value="1" />
+        </counts>
+      </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/share/recent_events/Recent_Events.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="295">
-              <caret line="52" column="32" lean-forward="true" selection-start-line="52" selection-start-column="32" selection-end-line="52" selection-end-column="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/share/users/controller/SharedUsersController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="205">
-              <caret line="298" column="24" lean-forward="true" selection-start-line="298" selection-start-column="24" selection-end-line="298" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -292,7 +211,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="bobomaster" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="PUSH_TAGS">
@@ -527,9 +446,12 @@
       </profile-state>
     </entry>
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="添加" />
+  </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
+      <hideEmptyPackages ProjectPane="false" />
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
@@ -565,6 +487,15 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SharedLibrary" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SharedLibrary" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="share" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -573,8 +504,9 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="share" type="462c0819:PsiDirectoryNode" />
-              <item name="recent_events" type="462c0819:PsiDirectoryNode" />
+              <item name="shiro" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SharedLibrary" type="b2602c69:ProjectViewProjectNode" />
@@ -582,6 +514,18 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="share" type="462c0819:PsiDirectoryNode" />
+              <item name="shiro" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SharedLibrary" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SharedLibrary" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="share" type="462c0819:PsiDirectoryNode" />
               <item name="users" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -591,6 +535,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="share" type="462c0819:PsiDirectoryNode" />
               <item name="users" type="462c0819:PsiDirectoryNode" />
               <item name="controller" type="462c0819:PsiDirectoryNode" />
@@ -600,29 +545,7 @@
               <item name="SharedLibrary" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="share" type="462c0819:PsiDirectoryNode" />
-              <item name="users" type="462c0819:PsiDirectoryNode" />
-              <item name="mapper" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SharedLibrary" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SharedLibrary" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="share" type="462c0819:PsiDirectoryNode" />
-              <item name="users" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SharedLibrary" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SharedLibrary" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="share" type="462c0819:PsiDirectoryNode" />
-              <item name="util" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SharedLibrary" type="b2602c69:ProjectViewProjectNode" />
@@ -630,6 +553,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SharedLibrary" type="b2602c69:ProjectViewProjectNode" />
@@ -646,17 +570,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="background" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SharedLibrary" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SharedLibrary" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="background" type="462c0819:PsiDirectoryNode" />
-              <item name="users" type="462c0819:PsiDirectoryNode" />
+              <item name="reception" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -692,18 +606,18 @@
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.share" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\博博\Desktop\SharedLibrary\src\main\resources\mapper" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.share.vo" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\ideaxm\SharedLibrary\src\main\resources\templates\background\comm" />
       <recent name="E:\ideaxm\SharedLibrary\src\main\resources\templates\background\users" />
       <recent name="E:\ideaxm\SharedLibrary\src\main\resources\static\js\users" />
       <recent name="E:\ideaxm\SharedLibrary\src\main\java\com\share\controller" />
       <recent name="C:\Users\Administrator\Desktop\SharedLibrary\src\main\resources\templates\background\email" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.share.vo" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\博博\Desktop\SharedLibrary\src\main\resources\mapper" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -977,7 +891,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="140713000" />
+    <option name="totallyTimeSpent" value="140953000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -990,9 +904,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1064" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.46746576" visible="true" weight="0.20182501" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.46746576" visible="true" weight="0.17874396" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="JRebel" order="3" sideWeight="0.53253424" side_tool="true" weight="0.26979166" />
@@ -1001,9 +914,6 @@
       <window_info id="设计器" order="6" />
       <window_info id="Favorites" order="7" side_tool="true" />
       <window_info id="UI Designer" order="8" />
-      <window_info anchor="bottom" id="Run with VisualVM" />
-      <window_info anchor="bottom" id="Database Changes" weight="0.32911393" />
-      <window_info anchor="bottom" id="Debug with VisualVM" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49791667" weight="0.32977462" />
@@ -1016,14 +926,16 @@
       <window_info anchor="bottom" id="Java Enterprise" order="9" weight="0.32796317" />
       <window_info anchor="bottom" id="Version Control" order="10" sideWeight="0.49356222" weight="0.36520737" />
       <window_info anchor="bottom" id="Spring" order="11" weight="0.3290398" />
-      <window_info anchor="bottom" id="Terminal" order="12" weight="0.28883773" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="12" visible="true" weight="0.28801844" />
       <window_info anchor="bottom" id="Event Log" order="13" sideWeight="0.5024155" side_tool="true" weight="0.32681242" />
       <window_info anchor="bottom" id="JRebel Console" order="14" sideWeight="0.5104167" side_tool="true" weight="0.3265306" />
       <window_info anchor="bottom" id="Messages" order="15" sideWeight="0.49758455" weight="0.2324511" />
       <window_info anchor="bottom" id="Problems" order="16" weight="0.32796317" />
       <window_info anchor="bottom" id="JRebel Executor" order="17" sideWeight="0.49166667" weight="0.32858837" />
       <window_info anchor="bottom" id="MyBatis Sql Log" order="18" weight="0.32779098" />
-      <window_info anchor="right" id="Mybatis datasource" side_tool="true" />
+      <window_info anchor="bottom" id="Run with VisualVM" order="19" />
+      <window_info anchor="bottom" id="Database Changes" order="20" weight="0.32911393" />
+      <window_info anchor="bottom" id="Debug with VisualVM" order="21" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="1" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
@@ -1036,6 +948,7 @@
       <window_info anchor="right" id="Bean Validation" order="9" />
       <window_info anchor="right" id="Theme Preview" order="10" />
       <window_info anchor="right" id="Maven Projects" order="11" weight="0.3295699" />
+      <window_info anchor="right" id="Mybatis datasource" order="12" side_tool="true" />
     </layout>
     <layout-to-restore>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.46746576" visible="true" weight="0.26086956" />
@@ -1196,25 +1109,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/page2.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/target/classes/templates/reception/about.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="363">
-          <caret line="11" column="45" lean-forward="true" selection-start-line="11" selection-start-column="45" selection-end-line="11" selection-end-column="45" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#2;n#div#1;n#article#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#5279#5285#0#HTML" expanded="true" />
-            <element signature="e#5311#5317#0#HTML" expanded="true" />
-            <element signature="e#5317#5323#0#HTML" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#a#0;n#p#2;n#div#0;n#div#3;n#div#2;n#div#1;n#article#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#5498#5502#0#HTML" expanded="true" />
-            <element signature="e#5502#5506#0#HTML" expanded="true" />
-            <element signature="e#5594#5600#0#HTML" expanded="true" />
-            <element signature="e#5601#5607#0#HTML" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#a#0;n#u#0;n#p#4;n#div#0;n#div#3;n#div#2;n#div#1;n#article#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/target/classes/templates/reception/about.ftl" />
     <entry file="file://$PROJECT_DIR$/target/classes/templates/500.ftl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="297">
@@ -1229,9 +1124,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2508">
           <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-          <folding>
-            <element signature="e#0#11940#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1239,28 +1131,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1188">
           <caret line="364" lean-forward="true" selection-start-line="364" selection-end-line="364" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/target/classes/com/share/shiro/realm/CustomRealm.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#2894#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/target/classes/static/js/plugins/codemirror/mode/clojure/clojure.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-693">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
+        <state relative-caret-position="-693" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/target/classes/mapper/ShareBlogsCommentReplyMapper.xml">
@@ -1288,9 +1167,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="549">
           <caret line="60" selection-start-line="60" selection-end-line="60" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1298,9 +1174,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="495">
           <caret line="57" column="5" lean-forward="true" selection-start-line="57" selection-start-column="5" selection-end-line="57" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1325,13 +1198,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="13893">
-          <caret line="421" column="7" lean-forward="true" selection-start-line="421" selection-start-column="7" selection-end-line="421" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index.ftl" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/background/email/email_hairList.ftl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-624">
@@ -1400,10 +1267,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
           <caret line="65" column="19" selection-start-line="65" selection-start-column="19" selection-end-line="65" selection-end-column="19" />
-          <folding>
-            <element signature="e#2437#2438#0" expanded="true" />
-            <element signature="e#2504#2505#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1502,10 +1365,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-429">
           <caret line="381" lean-forward="true" selection-start-line="381" selection-end-line="381" />
-          <folding>
-            <element signature="e#14335#14336#0" expanded="true" />
-            <element signature="e#14392#14393#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1513,10 +1372,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1617">
           <caret line="457" column="9" lean-forward="true" selection-start-line="457" selection-start-column="9" selection-end-line="457" selection-end-column="9" />
-          <folding>
-            <element signature="e#11139#11140#0" expanded="true" />
-            <element signature="e#11200#11201#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
