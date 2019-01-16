@@ -6,7 +6,7 @@
     <#assign basePath=springMacroRequestContext.contextPath>
 
   <#include "comm/script.ftl">
-   <#-- <#include "../background/comm/script.ftl">-->
+<#-- <#include "../background/comm/script.ftl">-->
     <link rel="shortcut icon" href="favicon.ico">
     <link href="${basePath}/css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
     <link href="${basePath}/css/font-awesome.min.css?v=4.4.0" rel="stylesheet">
@@ -37,30 +37,35 @@
 <body>
 <#include "comm/head.ftl">
 <article>
-    <div  class="ibox float-e-margins">
+    <div class="ibox float-e-margins">
         <h3 align="center" style="color: #999999">分享你遇到的有趣的事情吧</h3>
-        <div class="ibox-content no-padding"  style="background-color: #efefef;"  id="EditorDiv">
+        <div class="ibox-content no-padding" style="background-color: #efefef;" id="EditorDiv">
             <textarea class="summernote"></textarea>
         </div>
     </div>
     <div class="row">
-        <div class="col-md-2"><h3>帖子分类</h3></div>
-        <div class="col-md-3 col-md-offset-4">
+        <div class="col-md-2 "><h3>帖子分类</h3></div>
+        <div class="col-md-3 col-md-pull-1">
             <select class="form-control">
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
+                <option value="">--请选择--</option>
+                <#list classifyList as li>
+                    <option value="${li.id}">${li.classifyName}</option>
+                </#list>
             </select>
         </div>
-
+        <div class="col-md-5">
+            <span>封面图片</span>
+            <input type="file" />
+        </div>
+        <div class="col-md-2 pull-right col-md-pull-2">
+            <button class="btn">完成</button>
+        </div>
     </div>
-   <center>
-       <div  class="ibox float-e-margins">
+    <center>
+        <div class="ibox float-e-margins">
 
-       </div>
-   </center>
+        </div>
+    </center>
 </article>
 <#include "comm/footer.ftl">
 </body>

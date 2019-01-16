@@ -6,6 +6,8 @@ import com.share.invitation.service.SharedlClassifyService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 /**
  * <p>
  *  服务实现类
@@ -17,4 +19,8 @@ import org.springframework.stereotype.Service;
 @Service
 public class SharedlClassifyServiceImpl extends ServiceImpl<SharedlClassifyMapper, SharedlClassify> implements SharedlClassifyService {
 
+    @Override
+    public List<SharedlClassify> findSharedlClassifyList() {
+        return super.list();
+    }
 }

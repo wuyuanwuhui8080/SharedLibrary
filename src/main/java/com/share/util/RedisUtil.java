@@ -76,14 +76,15 @@ public class RedisUtil {
      * @param key 可以传一个值 或多个
      */
     @SuppressWarnings("unchecked")
-    public void del(String... key) {
+    public Boolean del(String... key) {
         if (key != null && key.length > 0) {
             if (key.length == 1) {
-                redisTemplate.delete(key[0]);
+                return redisTemplate.delete(key[0]);
             } else {
-                redisTemplate.delete(CollectionUtils.arrayToList(key));
+                return redisTemplate.delete(CollectionUtils.arrayToList(key)) > 0 ? true : false;
             }
         }
+        return false;
     }
 
     //============================String=============================
@@ -380,10 +381,11 @@ public class RedisUtil {
 
     /**
      * desc排序set
+     *
      * @param key
      * @return
      */
-    public Set<Object> descSet(String key){
+    public Set<Object> descSet(String key) {
         try {
             //zset 命令操作对象
             ZSetOperations zSetOperations = redisTemplate.opsForZSet();

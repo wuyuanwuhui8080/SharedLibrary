@@ -48,15 +48,6 @@
                         </li>
                     </ul>
                     <div class="m-t m-b" align="center">
-                    <#--<form enctype="multipart/form-data" method="post" action="${basePath}/sharedUsers/uploadHeadImg"  target="hiddenFrame" id="headImgFrom">
-                        <div id="drop_area" align="center"></div>
-                        <button style="margin-top: 20px;" onclick="sumitHeadImg();" class="btn btn-success text-right" id="uploadId" type="button"><i
-                                class="fa fa-upload"></i>&nbsp;&nbsp;<span class="bold">上传</span>
-
-                    </form>-->
-                    <#-- <div id="demo" class="demo"></div>
-                     <form class="container" enctype="multipart/form-data" method="post" id='formBox' name="form">
-                     </form>-->
                         <center>
                             <div class="up-img-cover" id="up-img-touch">
                                 <img class="am-circle" alt="点击图片上传" src="${basePath}/img/upload.png"

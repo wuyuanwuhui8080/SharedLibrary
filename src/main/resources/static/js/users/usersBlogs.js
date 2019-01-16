@@ -350,7 +350,7 @@ $(function () {
                             '                                           </div>'
                         )
                         ;
-                        obj.parent().prev().children().val("");
+                        obj.parent().prev().children().val(".messageCode").html();
                         $("#textareaFIstid").remove();
                         obj.parent().html(' <button class="btn btn-info btn-circle btn-lg btntoBlogsComm" blogsId="' + blogsId + '"\n' +
                             '                                            type="button"><i\n' +

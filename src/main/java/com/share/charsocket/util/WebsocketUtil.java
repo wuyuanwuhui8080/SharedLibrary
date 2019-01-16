@@ -99,7 +99,7 @@ public class WebsocketUtil {
 		// 把数据刷到客户端
 		NettyConfig.channels.writeAndFlush(new TextWebSocketFrame(msg));
 
-		List<Users> users = new ArrayList<>();
+		/*List<Users> users = new ArrayList<>();
 		// 获取map中全部的key
 		Set<Channel> setKeys = concurrentMap.keySet();
 		setKeys.forEach(channel -> {
@@ -114,7 +114,7 @@ public class WebsocketUtil {
 				MessageCodeConstant.SYSTEM_MESSAGE_CODE, null,
 				MessageCodeConstant.UPDATE_USERLIST_SYSTEM_MESSGAE_CODE, users);
 		// 刷新到客户端
-		NettyConfig.channels.writeAndFlush(new TextWebSocketFrame(msgList));
+		NettyConfig.channels.writeAndFlush(new TextWebSocketFrame(msgList));*/
 	}
 
 	/**

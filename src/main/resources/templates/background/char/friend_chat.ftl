@@ -24,7 +24,9 @@
             <div class="ibox chat-view">
                 <div class="ibox-title">
                     <small class="pull-right text-muted">最新消息：<span class="headTime">2015-02-02 18:39:23</span></small>
-                    <span class="charHeadName" id="charHeadName">聊天室</span>
+                    <span class="charHeadName" id="charHeadName" meId="" receiverId="" realName="">聊天室</span><span
+                        style="margin-left: 31%;"><a
+                        href="javascript:clirMessage(document.getElementById('charHeadName').getAttribute('meId'),document.getElementById('charHeadName').getAttribute('receiverId'),document.getElementById('charHeadName').getAttribute('realName'));">清空消息记录</a> </span>
                 </div>
                 <div class="ibox-content">
                     <div class="row">
@@ -44,18 +46,19 @@
                                                     class="charUserNum">0</span>人</span>
                                         </div>
                                     </div>
-
-
                                     <div class="users-lists">
-                                        <#list list as li>
-                                            <div class="chat-user">
-                                                <img class="chat-avatar" src="${basePath}/images/${li.headImg}" alt="">
-                                                <div class="chat-user-name">
-                                                    <a href="javascript:;" onclick="chooseUser('${li.realName}','${li.id}','${li.headImg}');">${li.realName}</a>
-                                                    <span class="label label-default" style="margin-left: 40%">离线
+                                        <#if list?? && (list?size > 0)>
+                                            <#list list as li>
+                                                <div class="chat-user chatMessageUser" id="charUser${li.id}">
+                                                    <img class="chat-avatar" src="${basePath}/images/${li.headImg}"
+                                                         alt="">
+                                                    <div class="chat-user-name">
+                                                        <a href="javascript:;"
+                                                           onclick="chooseUser('${li.realName}','${li.id}','${li.headImg}');">${li.realName}</a>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        </#list>
+                                            </#list>
+                                        </#if>
                                     </div>
                                 </div>
                             </div>

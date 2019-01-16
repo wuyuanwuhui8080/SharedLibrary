@@ -422,9 +422,10 @@
 </html>
 <script>
     $(function () {
-        var userIndividual = "${users.individual}";
+/*
         if (userIndividual.length > 15){
             $(".p_individual").html("<b>个人签名:</b>"+userIndividual.substring(0,15)+"....");
         }
+*/
     });
 </script>

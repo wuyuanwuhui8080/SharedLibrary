@@ -62,26 +62,19 @@ $(function () {
                             break;
                         // 更新用户
                         case UPDATE_USERLIST_SYSTEM_MESSGAE_CODE:
-                            /*var userList = '';
-                            var userid = new Array();
-                            //  "'" + obj.body.obj[i].realName + "'";
-                            var realName = new Array();
-
-                            var receiverHeadImgs = new Array();
+                            var userList = '';
                             // 循环赋值
+                            /*var userIds = new Array();
                             for (var i = 0; i < obj.body.obj.length; i++) {
-                                receiverHeadImgs[i] = "'" + obj.body.obj[i].headImg + "'";
-                                userid[i] = "'" + obj.body.obj[i].id + "'";
-                                realName[i] = "'" + obj.body.obj[i].realName + "'";
-                                userList += ' <div class="chat-user" id="' + obj.body.obj[i].id + '">\n' +
-                                    '       <img class="chat-avatar" src="' + path + '/images/' + obj.body.obj[i].headImg + '" alt="">\n' +
-                                    '           <div class="chat-user-name">\n' +
-                                    '              <a href="javascript:;" onclick="chooseUser(' + realName[i] +
-                                    ',' + userid[i] + ',' + receiverHeadImgs[i] + ')">' + obj.body.obj[i].realName + '</a>\n' +
-                                    '            </div>\n' +
-                                    '   </div>';
-                            }
-                            $(".users-lists").html(userList);*/
+                                userIds[i] = obj.body.obj[i].id;
+                                if(app.isNotNull($("#charUser"+userIds[i]+""))){
+                                    $("#charUser"+userIds[i]+"").children().find(".messageCode").html("<span style='margin-left: 40%' class='label label-primary'>在线</span>");
+                                    continue;
+                                }else if(app.isNull($("#charUser"+userIds[i]+"")) && (i + 1) == obj.body.obj.length){
+                                    obj.children().find(".messageCode").html('<span class="label label-default" style="margin-left: 40%">离线</span>');
+                                    break;
+                                }
+                            }*/
                             break;
                     }
                     break;
@@ -139,8 +132,14 @@ $(function () {
                             '         </div>\n' +
                             '     </div>' +
                             '</div>';
+                        setTimeout(function () {
+                            $.gritter.add({
+                                text: obj.user.realName + ":" + obj.message,
+                                time: 2500
+                            });
+                        }, 100);
                         $("#chatDiv" + obj.user.id + "").append(privateMessageMyuser);
-                        $('.messageChar').scrollTop($('.messageChar')[0].scrollHeight);
+                        $('.messageChar').scrollTop($("#chatDiv" + obj.user.id + "")[0].scrollHeight);
                     } else {
                         let friendforUserDiv = '' +
                             '<div class="col-md-7 pull-right">' +
@@ -382,8 +381,58 @@ function chooseUser(realName, id, receiverHeadImg) {
         });
 
         var charHeadName = document.getElementById("charHeadName");
+        charHeadName.setAttribute("meId", userId);
+        charHeadName.setAttribute("receiverId", id);
+        charHeadName.setAttribute("realName", realName);
         charHeadName.innerHTML = "<span>" + realName + "</span>";
         var sumitCharMassage = document.getElementById("sumitCharMassage");
         sumitCharMassage.setAttribute("byUserid", id);
     }
 }
+
+/**
+ *
+ * 清空聊天记录操作 / 单聊、聊天室
+ *
+ * 需要注意这个地方，meId和receiverId不传入就代表是聊天室的内容，所以会清空div内容
+ * 如果传入，就代表是和好友聊天，会根据传入的myid和receiverId删除redis对应的key
+ *
+ * @param meId 自己的id
+ * @param receiverId 朋友的id
+ * @author 博博大人
+ * @time 2019/1/13 19:37
+ */
+function clirMessage(meId, receiverId, realName) {
+    // 代表聊天室
+    if (app.isNull(meId) && app.isNull(receiverId)) {
+        if (confirm("您确认要清空聊天室的聊天记录吗？")) {
+            $("#GroupmessageChar").html("");
+        }
+        // 代表私聊
+    } else {
+        if (confirm("确认要清空您和" + realName + "的聊天记录吗？")) {
+            $.ajax({
+                type: "post",
+                url: path + "/char/deleteMessage/" + meId + "/" + receiverId,
+                dataType: "json",
+                beforeSend: function () {
+                    $("body").append(app.loads());
+                },
+                success: function (date) {
+                    if (date.status == 200) {
+                        $("#chatDiv" + receiverId + "").html("");
+                    } else {
+                        swal("清空失败！", null, "warning");
+                    }
+                },
+                error: function () {
+                    swal("网络超时..", null, "error");
+                },
+                complete: function () {
+                    $("#ibox").remove();
+                }
+            });
+        }
+    }
+}
+
