@@ -4,197 +4,7 @@
     <option name="GROUP_BY_SEVERITY" value="true" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a0d261ad-a2f4-4e31-bd12-bdaf4948317b" name="默认更改列表" comment="修改了登录的体验，增加了好友的请求。修复了博客的bug，增加了添加更多，增加了一个表字段，以及若干">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/res/css/full.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/res/css/global.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/res/css/iconfont.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/res/css/iconfont.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/res/css/iconfont.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/res/css/iconfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/res/images/avatar/0.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/res/images/avatar/00.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/res/images/avatar/1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/res/images/avatar/10.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/res/images/avatar/11.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/res/images/avatar/2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/res/images/avatar/3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/res/images/avatar/4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/res/images/avatar/5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/res/images/avatar/6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/res/images/avatar/7.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/res/images/avatar/8.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/res/images/avatar/9.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/res/images/avatar/default.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/res/images/case.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/res/images/fly.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/res/images/logo-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/res/images/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/res/images/other/1437100018023.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/res/images/other/study-a.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/res/images/weixin.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/res/layui/css/layui.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/res/layui/css/layui.mobile.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/res/layui/css/modules/code.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/res/layui/css/modules/laydate/default/laydate.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/res/layui/css/modules/layer/default/icon-ext.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/res/layui/css/modules/layer/default/icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/res/layui/css/modules/layer/default/layer.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/res/layui/css/modules/layer/default/loading-0.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/res/layui/css/modules/layer/default/loading-1.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/res/layui/css/modules/layer/default/loading-2.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/res/layui/font/iconfont.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/res/layui/font/iconfont.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/res/layui/font/iconfont.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/res/layui/font/iconfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/res/layui/images/face/0.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/res/layui/images/face/1.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/res/layui/images/face/10.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/res/layui/images/face/11.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/res/layui/images/face/12.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/res/layui/images/face/13.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/res/layui/images/face/14.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/res/layui/images/face/15.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/res/layui/images/face/16.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/res/layui/images/face/17.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/res/layui/images/face/18.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/res/layui/images/face/19.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/res/layui/images/face/2.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/res/layui/images/face/20.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/res/layui/images/face/21.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/res/layui/images/face/22.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/res/layui/images/face/23.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/res/layui/images/face/24.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/res/layui/images/face/25.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/res/layui/images/face/26.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/res/layui/images/face/27.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/res/layui/images/face/28.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/res/layui/images/face/29.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/res/layui/images/face/3.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/res/layui/images/face/30.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/res/layui/images/face/31.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/res/layui/images/face/32.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/res/layui/images/face/33.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/res/layui/images/face/34.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/res/layui/images/face/35.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/res/layui/images/face/36.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/res/layui/images/face/37.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/res/layui/images/face/38.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/res/layui/images/face/39.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/res/layui/images/face/4.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/res/layui/images/face/40.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/res/layui/images/face/41.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/res/layui/images/face/42.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/res/layui/images/face/43.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/res/layui/images/face/44.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/res/layui/images/face/45.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/res/layui/images/face/46.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/res/layui/images/face/47.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/res/layui/images/face/48.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/res/layui/images/face/49.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/res/layui/images/face/5.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/res/layui/images/face/50.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/res/layui/images/face/51.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/res/layui/images/face/52.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/res/layui/images/face/53.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/res/layui/images/face/54.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/res/layui/images/face/55.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/res/layui/images/face/56.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/res/layui/images/face/57.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/res/layui/images/face/58.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/res/layui/images/face/59.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/res/layui/images/face/6.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/res/layui/images/face/60.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/res/layui/images/face/61.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/res/layui/images/face/62.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/res/layui/images/face/63.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/res/layui/images/face/64.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/res/layui/images/face/65.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/res/layui/images/face/66.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/res/layui/images/face/67.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/res/layui/images/face/68.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/res/layui/images/face/69.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/res/layui/images/face/7.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/res/layui/images/face/70.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/res/layui/images/face/71.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/res/layui/images/face/8.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/res/layui/images/face/9.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/res/layui/lay/modules/carousel.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/res/layui/lay/modules/code.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/res/layui/lay/modules/element.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/res/layui/lay/modules/flow.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/res/layui/lay/modules/form.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/res/layui/lay/modules/jquery.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/res/layui/lay/modules/laydate.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/res/layui/lay/modules/layedit.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/res/layui/lay/modules/layer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/res/layui/lay/modules/laypage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/res/layui/lay/modules/laytpl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/res/layui/lay/modules/mobile.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/res/layui/lay/modules/table.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/res/layui/lay/modules/tree.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/res/layui/lay/modules/upload.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/res/layui/lay/modules/util.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/res/layui/layui.all.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/res/layui/layui.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/res/mods/case.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/res/mods/face.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/res/mods/head.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/res/mods/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/res/mods/jie.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/res/mods/user.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/reception/comm/column.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/reception/comm/filter.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/reception/comm/footer.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/reception/comm/header.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/reception/comm/link.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/reception/comm/tail.ftl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/reception/comm/user-nav.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/reception/index.ftl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/reception/jie/add.ftl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/reception/jie/detail.ftl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/reception/jie/index.ftl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/reception/user/activate.ftl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/reception/user/forget.ftl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/reception/user/home.ftl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/reception/user/login.ftl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/reception/user/message.ftl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/reception/user/reg.ftl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/reception/user/set.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/cd69b849-2e95-4f2f-8c2b-336a150feb92.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/cd69b849-2e95-4f2f-8c2b-336a150feb92.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/share/ControllerUtil/IndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/share/ControllerUtil/IndexController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/share/forum/controller/SharediForumCommentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/share/forum/controller/SharediForumCommentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/share/forum/controller/SharediForumController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/share/forum/controller/SharediForumController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/share/shiro/config/ShiroConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/share/shiro/config/ShiroConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/share/users/controller/SharedUsersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/share/users/controller/SharedUsersController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/403.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/403.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/500.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/500.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/background/index.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/background/index.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/background/users/login.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/background/users/login.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.ftl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/reception/about.ftl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/reception/comm/footer.ftl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/reception/comm/head.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/reception/comm/head.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/reception/comm/script.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/reception/comm/script.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/reception/fengmian.ftl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/reception/info.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/reception/list.ftl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/reception/share.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/reception/time.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/reception/write_forum.ftl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/share/ControllerUtil/IndexController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/share/ControllerUtil/IndexController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/share/shiro/config/ShiroConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/share/shiro/config/ShiroConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/share/users/controller/SharedUsersController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/share/users/controller/SharedUsersController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/403.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/403.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/500.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/500.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/background/index.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/background/index.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/background/users/login.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/background/users/login.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/index.ftl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/reception/about.ftl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/reception/comm/footer.ftl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/reception/comm/script.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/reception/comm/script.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/reception/list.ftl" beforeDir="false" />
-    </list>
+    <list default="true" id="a0d261ad-a2f4-4e31-bd12-bdaf4948317b" name="默认更改列表" comment="修改了登录的体验，增加了好友的请求。修复了博客的bug，增加了添加更多，增加了一个表字段，以及若干" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -375,8 +185,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/share/forum/controller/SharediForumController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="369">
-              <caret line="33" column="5" lean-forward="true" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
+            <state relative-caret-position="336">
+              <caret line="32" column="38" lean-forward="true" selection-start-line="32" selection-start-column="38" selection-end-line="32" selection-end-column="38" />
               <folding>
                 <element signature="e#750#751#0" expanded="true" />
                 <element signature="e#775#776#0" expanded="true" />
@@ -573,11 +383,10 @@
   <component name="MavenRunner">
     <option name="jreName" value="1.8" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="288" />
-    <option name="y" value="-13" />
-    <option name="width" value="1934" />
-    <option name="height" value="1027" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="960" />
+    <option name="width" value="960" />
+    <option name="height" value="1046" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -1105,7 +914,7 @@
       <workItem from="1547529503749" duration="7931000" />
       <workItem from="1547539096736" duration="1282000" />
       <workItem from="1547605020348" duration="5283000" />
-      <workItem from="1547618492462" duration="5836000" />
+      <workItem from="1547618492462" duration="6082000" />
     </task>
     <task id="LOCAL-00001" summary="完成邮箱查询,邮箱表增加字段state,页面展示成功">
       <created>1544780773011</created>
@@ -1195,7 +1004,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="182285000" />
+    <option name="totallyTimeSpent" value="182531000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1208,7 +1017,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1064" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.46746576" visible="true" weight="0.17874396" />
       <window_info id="Structure" order="1" weight="0.25" />
@@ -1227,11 +1035,11 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32796317" />
       <window_info anchor="bottom" id="FindBugs-IDEA" order="7" weight="0.3290398" />
-      <window_info active="true" anchor="bottom" id="调试" order="8" sideWeight="0.49597424" visible="true" weight="0.33179724" />
+      <window_info anchor="bottom" id="调试" order="8" sideWeight="0.49597424" weight="0.33179724" />
       <window_info anchor="bottom" id="Java Enterprise" order="9" weight="0.32796317" />
       <window_info anchor="bottom" id="Version Control" order="10" sideWeight="0.49356222" weight="0.7108295" />
       <window_info anchor="bottom" id="Spring" order="11" weight="0.3290398" />
-      <window_info anchor="bottom" id="Terminal" order="12" weight="0.287687" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="12" visible="true" weight="0.28686637" />
       <window_info anchor="bottom" id="Event Log" order="13" sideWeight="0.50402576" side_tool="true" weight="0.3406214" />
       <window_info anchor="bottom" id="JRebel Console" order="14" sideWeight="0.5104167" side_tool="true" weight="0.3265306" />
       <window_info anchor="bottom" id="Messages" order="15" sideWeight="0.49704778" weight="0.4251152" />
@@ -1730,8 +1538,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/share/forum/controller/SharediForumController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="369">
-          <caret line="33" column="5" lean-forward="true" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
+        <state relative-caret-position="336">
+          <caret line="32" column="38" lean-forward="true" selection-start-line="32" selection-start-column="38" selection-end-line="32" selection-end-column="38" />
           <folding>
             <element signature="e#750#751#0" expanded="true" />
             <element signature="e#775#776#0" expanded="true" />
