@@ -85,10 +85,6 @@ public class SharedUsersController {
     /**
      * 执行登录操作
      *
-     * @param userName 用户名
-     * @param password 密码
-     * @param captcha  验证码
-     * @param session  成功后放进session
      * @return
      */
     @PostMapping("/doLogin")
@@ -114,7 +110,6 @@ public class SharedUsersController {
         try {
             // 执行登录
             subject.login(usernamePasswordToken);
-
             // 查看是否认证成功 成功 true 否则false
             if (subject.isAuthenticated()) {
                 SharedUsers users = usersService

@@ -21,7 +21,7 @@ import com.share.shiro.realm.CustomRealm;
  * @author 博博大人
  * @time 2018/11/18 19:17
  */
-@Configuration
+/*@Configuration*/
 public class ShiroConfig {
 
     // 下面两个方法对 注解权限起作用有很大的关系，请把这两个方法，放在配置的最上面
@@ -88,6 +88,9 @@ public class ShiroConfig {
         linkedHashMap.put("/background/users/register.ftl", "anon");
         linkedHashMap.put("/background/comm/script.ftl", "anon");
         linkedHashMap.put("/index.ftl", "anon");
+        linkedHashMap.put("/sharediForum/tologin", "anon");
+        linkedHashMap.put("/sharediForum/goIndex", "anon");
+        linkedHashMap.put("/sharediForum/goWriteForum", "anon");
         linkedHashMap.put("/loginOut", "logout");
         //css开放
         linkedHashMap.put("/css/**", "anon");
@@ -96,9 +99,11 @@ public class ShiroConfig {
         linkedHashMap.put("/fonts/**", "anon");
         linkedHashMap.put("/blue/**", "anon");
         linkedHashMap.put("/docs/**", "anon");
+
         linkedHashMap.put("/__MACOSX/**", "anon");
         linkedHashMap.put("/plugins/**", "anon");
         linkedHashMap.put("/js/**", "anon");
+        linkedHashMap.put("/res/**", "anon");
 
         //其他接口全部拦截
         linkedHashMap.put("/**", "authc");
@@ -173,7 +178,6 @@ public class ShiroConfig {
     public SessionIdGenerator sessionIdGenerator() {
         return new JavaUuidSessionIdGenerator();
     }*/
-
 
 
 }

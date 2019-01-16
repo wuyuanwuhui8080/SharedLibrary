@@ -23,7 +23,7 @@
         <div class="error-desc">
             你没有权限访问这个页面
             <br/>您可以返回主页看看
-            <br/><a href="index.ftl" class="btn btn-primary m-t">主页</a>
+            <br/><a href="reception/index.ftl" class="btn btn-primary m-t">主页</a>
         </div>
     </div>
 

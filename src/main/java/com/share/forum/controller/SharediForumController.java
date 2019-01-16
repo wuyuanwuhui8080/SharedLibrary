@@ -1,10 +1,17 @@
 package com.share.forum.controller;
 
 
+import com.share.pojo.SharedUsers;
+import com.share.users.controller.SharedUsersController;
+import com.share.users.service.SharedUsersService;
+import com.share.util.ReturnResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import org.springframework.stereotype.Controller;
+
+import javax.annotation.Resource;
+import javax.servlet.http.HttpSession;
 
 /**
  * <p>
@@ -18,15 +25,22 @@ import org.springframework.stereotype.Controller;
 @RequestMapping("/sharediForum")
 public class SharediForumController {
 
+    @Resource
+    private SharedUsersController sharedUsersController;
+
+    @RequestMapping("/tologin")
+    public String goLogin() {
+        return "reception/user/login";
+    }
+
     /**
      * 跳转首页
      *
      * @return
      */
-    @GetMapping("/goIndex")
+    @RequestMapping("/goIndex")
     public String goIndex() {
-
-        return "index";
+        return "reception/index";
     }
 
     /**
@@ -34,9 +48,9 @@ public class SharediForumController {
      *
      * @return
      */
-    @GetMapping("/goWriteInvitation")
-    public String goWriteInvitation() {
-        return "reception/write_forum";
+    @RequestMapping("/goWriteForum")
+    public String goWriteForum() {
+        return "reception/jie/add";
     }
 }
 

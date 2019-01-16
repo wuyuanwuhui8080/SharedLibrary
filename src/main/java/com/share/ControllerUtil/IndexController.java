@@ -16,7 +16,7 @@ public class IndexController {
 
 	@GetMapping("/")
 	public String Index() {
-		return "index";
+		return "/main/resources/templates/reception/index.ftl";
 	}
 
 }

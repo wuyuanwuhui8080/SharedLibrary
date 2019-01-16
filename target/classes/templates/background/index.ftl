@@ -105,7 +105,7 @@
                         <li><a class="J_menuItem" href="${basePath}/sharedReceiveMail/emailCompose">写信</a></li>
                     </ul>
                 </li>
-                <li>
+                <#--<li>
                     <a href="#">
                         <i class="fa fa-road"></i>
                         <span class="nav-label">论坛管理</span>
@@ -113,11 +113,12 @@
                     </a>
                     <ul class="nav nav-second-level">
                         <li><a class="J_menuItem" href="${basePath}/sharediForum/goWriteInvitation">写博客</a></li>
-                    <#--// TODO: 2019\1\15 0015 判断权限显示-->
+                    &lt;#&ndash;// TODO: 2019\1\15 0015 判断权限显示&ndash;&gt;
+                        <li><a class="J_menuItem" hrefreception="${basePath}/sharediForum/#">写论坛</a></li>
                         <li><a class="J_menuItem" href="${basePath}/sharediForum/#">管理论坛</a></li>
                         <li><a class="J_menuItem" href="${basePath}/sharediForum/#">管理论坛分类</a></li>
                     </ul>
-                </li>
+                </li>-->
                 <li>
                     <a href="#"><i class="fa fa-edit"></i> <span class="nav-label">用户管理</span>
                         <span class="fa arrow"></span></a>
