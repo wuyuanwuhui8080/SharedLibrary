@@ -314,10 +314,9 @@
     <option name="jreName" value="1.8" />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="288" />
-    <option name="y" value="-13" />
-    <option name="width" value="1934" />
-    <option name="height" value="1027" />
+    <option name="x" value="960" />
+    <option name="width" value="960" />
+    <option name="height" value="1046" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -591,7 +590,7 @@
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://C:/Users/Administrator/Desktop/SharedLibrary/src/main/java/com/share/controller/SharedEmailController.java&#10;page&#9;PSI&#9;JAVA://com.github.pagehelper.Page&#10;emailIndex&#9;PSI&#9;JAVA://com.share.controller.SharedEmailController#emailIndex&#10;getSharedUsersByUserName&#9;ACTION&#9;null&#10;doLogin&#9;PSI&#9;JAVA://com.share.controller.SharedUsersController#doLogin&#10;login&#9;null&#9;null" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547376504395" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547625467003" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/SQL Dialect" value="MySQL" />
     <property name="last_opened_file_path" value="$USER_HOME$/Desktop/eclipsePuls.xml" />
     <property name="project.structure.last.edited" value="模块" />
@@ -606,18 +605,18 @@
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.share" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\博博\Desktop\SharedLibrary\src\main\resources\mapper" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.share.vo" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\ideaxm\SharedLibrary\src\main\resources\templates\background\comm" />
       <recent name="E:\ideaxm\SharedLibrary\src\main\resources\templates\background\users" />
       <recent name="E:\ideaxm\SharedLibrary\src\main\resources\static\js\users" />
       <recent name="E:\ideaxm\SharedLibrary\src\main\java\com\share\controller" />
       <recent name="C:\Users\Administrator\Desktop\SharedLibrary\src\main\resources\templates\background\email" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.share.vo" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\博博\Desktop\SharedLibrary\src\main\resources\mapper" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -891,7 +890,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="140953000" />
+    <option name="totallyTimeSpent" value="141033000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -903,9 +902,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1064" extended-state="6" />
+    <frame x="960" y="0" width="960" height="1046" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.46746576" visible="true" weight="0.17874396" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.46746576" visible="true" weight="0.3762712" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="JRebel" order="3" sideWeight="0.53253424" side_tool="true" weight="0.26979166" />
@@ -926,7 +925,7 @@
       <window_info anchor="bottom" id="Java Enterprise" order="9" weight="0.32796317" />
       <window_info anchor="bottom" id="Version Control" order="10" sideWeight="0.49356222" weight="0.36520737" />
       <window_info anchor="bottom" id="Spring" order="11" weight="0.3290398" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="12" visible="true" weight="0.28801844" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="12" visible="true" weight="0.30487806" />
       <window_info anchor="bottom" id="Event Log" order="13" sideWeight="0.5024155" side_tool="true" weight="0.32681242" />
       <window_info anchor="bottom" id="JRebel Console" order="14" sideWeight="0.5104167" side_tool="true" weight="0.3265306" />
       <window_info anchor="bottom" id="Messages" order="15" sideWeight="0.49758455" weight="0.2324511" />

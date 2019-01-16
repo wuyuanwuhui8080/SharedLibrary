@@ -1,5 +1,5 @@
 # Created by .ignore support plugin (hsz.mobi)
-/.mvn/
-/.idea/
+/.mvn/**
+/.idea/**
 /SharedLibrary.iml
-/target/
+/target/**
