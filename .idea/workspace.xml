@@ -117,9 +117,9 @@
         <counts>
           <entry key="class" value="16" />
           <entry key="ftl" value="17" />
-          <entry key="gitignore" value="4" />
+          <entry key="gitignore" value="5" />
           <entry key="iml" value="1" />
-          <entry key="java" value="53" />
+          <entry key="java" value="55" />
           <entry key="js" value="3" />
           <entry key="sql" value="1" />
           <entry key="xml" value="4" />
@@ -129,9 +129,9 @@
         <counts>
           <entry key="CLASS" value="16" />
           <entry key="FTL" value="17" />
-          <entry key="Git file" value="4" />
+          <entry key="Git file" value="5" />
           <entry key="IDEA_MODULE" value="1" />
-          <entry key="JAVA" value="53" />
+          <entry key="JAVA" value="55" />
           <entry key="JavaScript" value="3" />
           <entry key="SQL" value="1" />
           <entry key="XML" value="4" />
@@ -140,7 +140,7 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="ftl" value="113" />
-          <entry key="gitignore" value="1" />
+          <entry key="gitignore" value="7" />
           <entry key="iml" value="4" />
           <entry key="java" value="602" />
           <entry key="xml" value="10" />
@@ -149,7 +149,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="FTL" value="113" />
-          <entry key="Git file" value="1" />
+          <entry key="Git file" value="7" />
           <entry key="IDEA_MODULE" value="4" />
           <entry key="JAVA" value="602" />
           <entry key="SQL" value="1" />
@@ -164,7 +164,26 @@
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/share/forum/controller/SharediForumCommentController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="325">
+              <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/share/forum/controller/SharediForumController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="397">
+              <caret line="46" column="12" lean-forward="true" selection-start-line="46" selection-start-column="12" selection-end-line="46" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -257,7 +276,6 @@
         <option value="$PROJECT_DIR$/target/classes/templates/reception/about.ftl" />
         <option value="$PROJECT_DIR$/src/main/java/com/share/config/RedisConfig.java" />
         <option value="$PROJECT_DIR$/SharedLibrary.iml" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/main/java/com/share/charsocket/handler/CharHandler.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/share/charsocket/util/MessageUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/share/charsocket/util/WebsocketUtil.java" />
@@ -272,6 +290,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/share/util/JsonUtils.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/share/users/controller/SharedUsersController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/background/users/timeline.ftl" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -505,7 +524,7 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="share" type="462c0819:PsiDirectoryNode" />
-              <item name="shiro" type="462c0819:PsiDirectoryNode" />
+              <item name="forum" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SharedLibrary" type="b2602c69:ProjectViewProjectNode" />
@@ -515,61 +534,8 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="share" type="462c0819:PsiDirectoryNode" />
-              <item name="shiro" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SharedLibrary" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SharedLibrary" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="share" type="462c0819:PsiDirectoryNode" />
-              <item name="users" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SharedLibrary" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SharedLibrary" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="share" type="462c0819:PsiDirectoryNode" />
-              <item name="users" type="462c0819:PsiDirectoryNode" />
+              <item name="forum" type="462c0819:PsiDirectoryNode" />
               <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SharedLibrary" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SharedLibrary" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SharedLibrary" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SharedLibrary" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SharedLibrary" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SharedLibrary" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SharedLibrary" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SharedLibrary" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="reception" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -890,7 +856,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="141033000" />
+    <option name="totallyTimeSpent" value="141590000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -902,9 +868,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="960" y="0" width="960" height="1046" extended-state="0" />
+    <frame x="-9" y="-9" width="1938" height="1064" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.46746576" visible="true" weight="0.3762712" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.46746576" visible="true" weight="0.17874396" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="JRebel" order="3" sideWeight="0.53253424" side_tool="true" weight="0.26979166" />
@@ -925,7 +892,7 @@
       <window_info anchor="bottom" id="Java Enterprise" order="9" weight="0.32796317" />
       <window_info anchor="bottom" id="Version Control" order="10" sideWeight="0.49356222" weight="0.36520737" />
       <window_info anchor="bottom" id="Spring" order="11" weight="0.3290398" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="12" visible="true" weight="0.30487806" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="12" visible="true" weight="0.28801844" />
       <window_info anchor="bottom" id="Event Log" order="13" sideWeight="0.5024155" side_tool="true" weight="0.32681242" />
       <window_info anchor="bottom" id="JRebel Console" order="14" sideWeight="0.5104167" side_tool="true" weight="0.3265306" />
       <window_info anchor="bottom" id="Messages" order="15" sideWeight="0.49758455" weight="0.2324511" />
@@ -1102,12 +1069,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/page.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/page2.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/target/classes/templates/reception/about.ftl" />
     <entry file="file://$PROJECT_DIR$/target/classes/templates/500.ftl">
       <provider selected="true" editor-type-id="text-editor">
@@ -1252,13 +1213,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4257">
           <caret line="243" column="37" lean-forward="true" selection-start-line="243" selection-start-column="37" selection-end-line="243" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
         </state>
       </provider>
     </entry>
@@ -1426,6 +1380,27 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="205">
           <caret line="298" column="24" lean-forward="true" selection-start-line="298" selection-start-column="24" selection-end-line="298" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/share/forum/controller/SharediForumCommentController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/share/forum/controller/SharediForumController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="397">
+          <caret line="46" column="12" lean-forward="true" selection-start-line="46" selection-start-column="12" selection-end-line="46" selection-end-column="12" />
         </state>
       </provider>
     </entry>
