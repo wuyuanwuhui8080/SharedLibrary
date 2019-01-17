@@ -190,5 +190,4 @@ public class WebsocketUtil {
             channes.writeAndFlush(textWebSocketFrame);
         }
     }
-
 }

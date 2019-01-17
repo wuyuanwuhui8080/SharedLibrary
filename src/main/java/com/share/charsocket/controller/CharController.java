@@ -2,10 +2,8 @@ package com.share.charsocket.controller;
 
 import com.share.charsocket.util.FriendAndMyIdKey;
 import com.share.util.RedisUtil;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import com.share.util.ReturnResult;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import java.util.Set;
@@ -40,5 +38,14 @@ public class CharController {
         String charKey = FriendAndMyIdKey.CharKey(myId, receiverId);
         return redisUtil.sGet(charKey);
     }
+
+    @PostMapping("/deleteMessage/{myId}/{receiverId}")
+    public ReturnResult deleteMessage(@PathVariable String myId,
+                                      @PathVariable String receiverId) {
+        // 生成key
+        String charKey = FriendAndMyIdKey.CharKey(myId, receiverId);
+        return redisUtil.del(charKey) == true ? ReturnResult.ok() : ReturnResult.error();
+    }
+
 
 }

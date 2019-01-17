@@ -30,7 +30,7 @@ window.app = {
     },
 
     isNull: function (str) { //是否为null
-        if (str == null || str == "" || str.length == 0 || str == undefined) {
+        if (str == null || str == "" || str.length == 0 || str == undefined || str == "null") {
             return true;
         }
         return false;
