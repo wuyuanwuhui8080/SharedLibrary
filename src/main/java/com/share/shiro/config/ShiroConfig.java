@@ -21,7 +21,7 @@ import com.share.shiro.realm.CustomRealm;
  * @author 博博大人
  * @time 2018/11/18 19:17
  */
-/*@Configuration*/
+@Configuration
 public class ShiroConfig {
 
     // 下面两个方法对 注解权限起作用有很大的关系，请把这两个方法，放在配置的最上面
@@ -65,7 +65,7 @@ public class ShiroConfig {
         //必须设置securityManager 登录登出什么的
         shiroFilterFactoryBean.setSecurityManager(securityManager);
         //setLoginUrl 如果不设置值，默认会寻找web工程下的/login.jsp 页面或者/login映射
-        shiroFilterFactoryBean.setLoginUrl("/sharediForum/goIndex");
+        shiroFilterFactoryBean.setLoginUrl("/sharedForum/goIndex");
         //登录成功跳转的urls
 //        shiroFilterFactoryBean.setSuccessUrl("/sharedUsers/goIndex");
         //设置无权限时跳转的url;
