@@ -76,9 +76,6 @@
                             <a class="J_menuItem" href="${basePath}/sharedFriends/goListFriendList/${users.id}">全部好友</a>
                         </li>
                         <li>
-                            <a class="J_menuItem" href="${basePath}/shareBlogs/goBlos/${users.id}">好友博客</a>
-                        </li>
-                        <li>
                             <a class="J_menuItem"
                                href="${basePath}/sharedlFriendRequest/goFirendRequest/${Session.users.id}/1">好友请求</a>
                         </li>
@@ -89,6 +86,19 @@
                         <li>
                             <a class="J_menuItem" href="${basePath}/sharedFriends/goChar/${Session.users.id}">好友聊天</a>
                         </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="glyphicon glyphicon-send"></i>
+                        <span class="nav-label">博客管理</span>
+                        <span class="fa arrow"></span>
+                    </a>
+                    <ul class="nav nav-second-level">
+                        <li>
+                            <a class="J_menuItem" href="${basePath}/shareBlogs/goBlos/${users.id}">好友博客</a>
+                        </li>
+                        <li>
                         <li>
                             <a class="J_menuItem" href="${basePath}/shareBlogs/goEditorsBlos">写博客</a>
                         </li>
