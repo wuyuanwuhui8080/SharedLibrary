@@ -1,0 +1,709 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="a0d261ad-a2f4-4e31-bd12-bdaf4948317b" name="默认更改列表" comment="修改了登录的体验，增加了好友的请求。修复了博客的bug，增加了添加更多，增加了一个表字段，以及若干">
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/share/forum/controller/SharediForumController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/share/shiro/config/ShiroConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/share/users/controller/SharedUsersController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/share/charsocket/constant/WebSocketConstant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/share/charsocket/constant/WebSocketConstant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/share/config/RedisConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/share/config/RedisConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/share/shiro/config/ShiroConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/share/shiro/config/ShiroConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/share/users/controller/SharedUsersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/share/users/controller/SharedUsersController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/chars/friend_chat.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/chars/friend_chat.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/res/mods/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/res/mods/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/background/users/login.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/background/users/login.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/reception/comm/head.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/reception/comm/head.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/reception/user/login.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/reception/user/login.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/background/users/login.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/background/users/login.ftl" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/target/" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CompilerWorkspaceConfiguration">
+    <option name="MAKE_PROJECT_ON_SAVE" value="true" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="-929049463">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="6" />
+          <entry key="project.open.time.12" value="1" />
+          <entry key="project.open.time.17" value="2" />
+          <entry key="project.open.time.2" value="1" />
+          <entry key="project.open.time.52" value="1" />
+          <entry key="project.open.time.575" value="1" />
+          <entry key="project.open.time.61" value="1" />
+          <entry key="project.opened" value="7" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="class" value="20" />
+          <entry key="ftl" value="23" />
+          <entry key="gitignore" value="1" />
+          <entry key="html" value="2" />
+          <entry key="java" value="65" />
+          <entry key="js" value="1" />
+          <entry key="png" value="1" />
+          <entry key="sql" value="1" />
+          <entry key="xml" value="7" />
+          <entry key="yml" value="4" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="CLASS" value="20" />
+          <entry key="FTL" value="23" />
+          <entry key="HTML" value="2" />
+          <entry key="Image" value="1" />
+          <entry key="JAVA" value="65" />
+          <entry key="JavaScript" value="1" />
+          <entry key="PLAIN_TEXT" value="1" />
+          <entry key="Scratch" value="1" />
+          <entry key="XML" value="7" />
+          <entry key="YAML" value="4" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="ftl" value="354" />
+          <entry key="java" value="666" />
+          <entry key="txt" value="35" />
+          <entry key="xml" value="65" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="FTL" value="354" />
+          <entry key="JAVA" value="666" />
+          <entry key="PLAIN_TEXT" value="35" />
+          <entry key="SQL" value="3" />
+          <entry key="XML" value="62" />
+        </counts>
+      </usages-collector>
+    </session>
+    <session id="-968340122">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="7" />
+          <entry key="project.open.time.206" value="1" />
+          <entry key="project.open.time.28" value="1" />
+          <entry key="project.open.time.31" value="1" />
+          <entry key="project.open.time.41" value="1" />
+          <entry key="project.open.time.50" value="1" />
+          <entry key="project.open.time.6" value="1" />
+          <entry key="project.open.time.76" value="2" />
+          <entry key="project.opened" value="8" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="class" value="24" />
+          <entry key="css" value="1" />
+          <entry key="ftl" value="43" />
+          <entry key="gitignore" value="5" />
+          <entry key="html" value="1" />
+          <entry key="iml" value="1" />
+          <entry key="java" value="97" />
+          <entry key="js" value="17" />
+          <entry key="sql" value="1" />
+          <entry key="xml" value="4" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="CLASS" value="24" />
+          <entry key="CSS" value="1" />
+          <entry key="FTL" value="43" />
+          <entry key="Git file" value="5" />
+          <entry key="HTML" value="1" />
+          <entry key="IDEA_MODULE" value="1" />
+          <entry key="JAVA" value="97" />
+          <entry key="JavaScript" value="17" />
+          <entry key="SQL" value="1" />
+          <entry key="XML" value="4" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="dummy" value="5" />
+          <entry key="ftl" value="789" />
+          <entry key="gitignore" value="7" />
+          <entry key="iml" value="4" />
+          <entry key="java" value="1359" />
+          <entry key="js" value="29" />
+          <entry key="xml" value="10" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="FTL" value="789" />
+          <entry key="Git file" value="7" />
+          <entry key="IDEA_MODULE" value="4" />
+          <entry key="JAVA" value="1359" />
+          <entry key="JavaScript" value="29" />
+          <entry key="PLAIN_TEXT" value="5" />
+          <entry key="SQL" value="1" />
+          <entry key="XML" value="9" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.vcs.git.usages">
+        <counts>
+          <entry key="git.branch.checkout.local" value="1" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/share/forum/service/SharedForumCommentGiveService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="350">
+              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/share/config/RedisConfig.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="279">
+              <caret line="26" column="45" selection-start-line="26" selection-start-column="45" selection-end-line="26" selection-end-column="45" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/main/java/com/share/constant/PageConstant.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/share/users/controller/SharedFriendsController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/background/users/show_user.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/background/users/show_user.ftl" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/js/users/usersBlogs.js" />
+        <option value="$PROJECT_DIR$/src/main/java/com/share/shiro/realm/CustomRealm.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/share/vo/SharedUsersVO.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/background/users/user_list_modifier.ftl" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/background/users/add_users.ftl" />
+        <option value="$PROJECT_DIR$/src/main/java/com/share/vo/SharedUsersJSONVO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/share/users/mapper/SharedUsersMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/SharedUsersMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/js/users/userListJs.js" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/js/users/users_modifier.js" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/js/comm/page.js" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/background/comm/page.ftl" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/background/users/userList.ftl" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/background/index.ftl" />
+        <option value="$PROJECT_DIR$/target/classes/templates/reception/about.ftl" />
+        <option value="$PROJECT_DIR$/SharedLibrary.iml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/share/charsocket/handler/CharHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/share/charsocket/util/MessageUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/share/charsocket/util/WebsocketUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/share/ControllerUtil/SharedFriendControllerUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/share/users/service/SharedlFriendRequestService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/share/users/mapper/SharedlFriendRequestMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/share/users/service/impl/SharedlFriendRequestServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/SharedlFriendRequestMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/share/util/RedisUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/share/recent_events/Recent_Events.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/share/users/controller/SharedlFriendRequestController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/share/util/JsonUtils.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/background/users/timeline.ftl" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/res/layui/lay/modules/util.js" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/js/plugins/sweetalert/sweetalert.min.js" />
+        <option value="$PROJECT_DIR$/src/main/java/com/share/util/LoginUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/res/mods/index.js" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/reception/comm/script.ftl" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/reception/user/login.ftl" />
+        <option value="$PROJECT_DIR$/src/main/java/com/share/util/ReturnResult.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/share/users/service/SharedUsersService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/share/users/service/impl/SharedUsersServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/background/users/login.ftl" />
+        <option value="$PROJECT_DIR$/src/main/java/com/share/forum/controller/SharediForumController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/share/users/controller/SharedUsersController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/reception/comm/head.ftl" />
+        <option value="$PROJECT_DIR$/src/main/java/com/share/shiro/config/ShiroConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/share/charsocket/constant/WebSocketConstant.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/js/chars/friend_chat.js" />
+        <option value="$PROJECT_DIR$/src/main/java/com/share/config/RedisConfig.java" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="sharedlibrary" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="width" value="960" />
+    <option name="height" value="1046" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="添加" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <hideEmptyPackages ProjectPane="true" />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="SharedLibrary" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SharedLibrary" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SharedLibrary" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SharedLibrary" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SharedLibrary" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SharedLibrary" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SharedLibrary" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SharedLibrary" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SharedLibrary" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SharedLibrary" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="share" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SharedLibrary" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SharedLibrary" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="share" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="project.structure.last.edited" value="模块" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="SharedlibraryApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="SharedLibrary" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.share.SharedlibraryApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a0d261ad-a2f4-4e31-bd12-bdaf4948317b" name="默认更改列表" comment="" />
+      <created>1544520636180</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1544520636180</updated>
+      <workItem from="1544520645865" duration="1913000" />
+      <workItem from="1544522676650" duration="559000" />
+      <workItem from="1544523335403" duration="2101000" />
+      <workItem from="1544578452004" duration="436000" />
+      <workItem from="1544663942570" duration="2134000" />
+      <workItem from="1544670963660" duration="4590000" />
+      <workItem from="1544764816146" duration="15524000" />
+      <workItem from="1544793532232" duration="454000" />
+      <workItem from="1544798939099" duration="413000" />
+      <workItem from="1544799391503" duration="844000" />
+      <workItem from="1544857466379" duration="9842000" />
+      <workItem from="1544882840325" duration="1779000" />
+      <workItem from="1544884654110" duration="111000" />
+      <workItem from="1544884805844" duration="356000" />
+      <workItem from="1544885200499" duration="81000" />
+      <workItem from="1544885307546" duration="1183000" />
+      <workItem from="1544934395306" duration="326000" />
+      <workItem from="1544935173378" duration="11190000" />
+      <workItem from="1544949625226" duration="17558000" />
+      <workItem from="1546660096415" duration="200000" />
+      <workItem from="1546663166335" duration="16676000" />
+      <workItem from="1546754207039" duration="19396000" />
+      <workItem from="1546784282498" duration="681000" />
+      <workItem from="1546821743477" duration="4000" />
+      <workItem from="1546831789404" duration="8454000" />
+      <workItem from="1547362101903" duration="14219000" />
+      <workItem from="1547638500773" duration="344000" />
+      <workItem from="1547682731458" duration="7454000" />
+      <workItem from="1547691726258" duration="11286000" />
+      <workItem from="1547772196646" duration="2193000" />
+      <workItem from="1547775879099" duration="771000" />
+      <workItem from="1547776830748" duration="2228000" />
+      <workItem from="1547779309940" duration="685000" />
+    </task>
+    <task id="LOCAL-00001" summary="完成邮箱查询,邮箱表增加字段state,页面展示成功">
+      <created>1544780773011</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1544780773011</updated>
+    </task>
+    <task id="LOCAL-00002" summary="完成邮箱查询,邮箱表增加字段state,页面展示成功">
+      <created>1544781355211</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1544781355211</updated>
+    </task>
+    <task id="LOCAL-00003" summary="完成邮箱查询,邮箱表增加字段state,页面展示成功">
+      <created>1544781690773</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1544781690773</updated>
+    </task>
+    <task id="LOCAL-00004" summary="完成邮箱查询,邮箱表增加字段state,页面展示成功">
+      <created>1544800152373</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1544800152373</updated>
+    </task>
+    <task id="LOCAL-00005" summary="完善了个人资料页面，好友查找的页面，优化了动态页面">
+      <created>1544946963106</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1544946963106</updated>
+    </task>
+    <task id="LOCAL-00006" summary="完善了个人资料页面，好友查找的页面，优化了动态页面">
+      <created>1544949160716</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1544949160716</updated>
+    </task>
+    <task id="LOCAL-00007" summary="修改了登录的体验，增加了好友的请求。修复了博客的bug，增加了添加更多，增加了一个表字段，以及若干">
+      <created>1546584980317</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1546584980317</updated>
+    </task>
+    <task id="LOCAL-00008" summary="修改了登录的体验，增加了好友的请求。修复了博客的bug，增加了添加更多，增加了一个表字段，以及若干">
+      <created>1546595682752</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1546595682752</updated>
+    </task>
+    <task id="LOCAL-00009" summary="修改了登录的体验，增加了好友的请求。修复了博客的bug，增加了添加更多，增加了一个表字段，以及若干">
+      <created>1546604780711</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1546604780711</updated>
+    </task>
+    <task id="LOCAL-00010" summary="修改了登录的体验，增加了好友的请求。修复了博客的bug，增加了添加更多，增加了一个表字段，以及若干">
+      <created>1546675416768</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1546675416768</updated>
+    </task>
+    <task id="LOCAL-00011" summary="修改了登录的体验，增加了好友的请求。修复了博客的bug，增加了添加更多，增加了一个表字段，以及若干">
+      <created>1546675799344</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1546675799344</updated>
+    </task>
+    <task id="LOCAL-00012" summary="修复了邮箱问题，查询好友问题">
+      <created>1546690263763</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1546690263763</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="167323000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="0" width="960" height="1046" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.46746576" weight="0.5141243" />
+      <window_info id="Structure" order="1" weight="0.25" />
+      <window_info id="Capture Tool" order="2" />
+      <window_info id="JRebel" order="3" sideWeight="0.53253424" side_tool="true" weight="0.26979166" />
+      <window_info id="Image Layers" order="4" />
+      <window_info id="Web" order="5" side_tool="true" />
+      <window_info id="设计器" order="6" />
+      <window_info id="Favorites" order="7" side_tool="true" />
+      <window_info id="UI Designer" order="8" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32949308" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49791667" weight="0.32977462" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4914163" visible="true" weight="0.38875878" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32796317" />
+      <window_info anchor="bottom" id="FindBugs-IDEA" order="7" weight="0.3290398" />
+      <window_info anchor="bottom" id="调试" order="8" sideWeight="0.49543747" weight="0.23384254" />
+      <window_info anchor="bottom" id="Java Enterprise" order="9" weight="0.32796317" />
+      <window_info anchor="bottom" id="Version Control" order="10" sideWeight="0.49356222" weight="0.40161106" />
+      <window_info anchor="bottom" id="Spring" order="11" weight="0.3290398" />
+      <window_info anchor="bottom" id="Terminal" order="12" sideWeight="0.49704778" weight="0.31530493" />
+      <window_info anchor="bottom" id="Event Log" order="13" sideWeight="0.50456256" side_tool="true" weight="0.4223245" />
+      <window_info anchor="bottom" id="JRebel Console" order="14" sideWeight="0.5104167" side_tool="true" weight="0.3265306" />
+      <window_info anchor="bottom" id="Messages" order="15" sideWeight="0.49758455" weight="0.27272728" />
+      <window_info anchor="bottom" id="Problems" order="16" weight="0.32796317" />
+      <window_info anchor="bottom" id="JRebel Executor" order="17" sideWeight="0.49166667" weight="0.32858837" />
+      <window_info anchor="bottom" id="MyBatis Sql Log" order="18" weight="0.32779098" />
+      <window_info anchor="bottom" id="Run with VisualVM" order="19" />
+      <window_info anchor="bottom" id="Database Changes" order="20" weight="0.32911393" />
+      <window_info anchor="bottom" id="Debug with VisualVM" order="21" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="1" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
+      <window_info anchor="right" id="Key Promoter X" order="3" />
+      <window_info anchor="right" id="调色板" order="4" />
+      <window_info anchor="right" id="JRebel Setup Guide" order="5" weight="0.3203125" />
+      <window_info anchor="right" id="Database" order="6" weight="0.32957596" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Capture Analysis" order="8" />
+      <window_info anchor="right" id="Bean Validation" order="9" />
+      <window_info anchor="right" id="Theme Preview" order="10" />
+      <window_info anchor="right" id="Maven Projects" order="11" weight="0.3290392" />
+      <window_info anchor="right" id="Mybatis datasource" order="12" side_tool="true" />
+    </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.46746576" visible="true" weight="0.5141243" />
+      <window_info id="Structure" order="1" weight="0.25" />
+      <window_info id="Capture Tool" order="2" />
+      <window_info id="JRebel" order="3" sideWeight="0.53253424" side_tool="true" weight="0.26979166" />
+      <window_info id="Image Layers" order="4" />
+      <window_info id="Web" order="5" side_tool="true" />
+      <window_info id="设计器" order="6" />
+      <window_info id="Favorites" order="7" side_tool="true" />
+      <window_info id="UI Designer" order="8" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32949308" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49791667" weight="0.32977462" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4914163" visible="true" weight="0.38875878" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32796317" />
+      <window_info anchor="bottom" id="FindBugs-IDEA" order="7" weight="0.3290398" />
+      <window_info anchor="bottom" id="调试" order="8" sideWeight="0.49543747" visible="true" weight="0.23384254" />
+      <window_info anchor="bottom" id="Java Enterprise" order="9" weight="0.32796317" />
+      <window_info anchor="bottom" id="Version Control" order="10" sideWeight="0.49356222" weight="0.40161106" />
+      <window_info anchor="bottom" id="Spring" order="11" weight="0.3290398" />
+      <window_info anchor="bottom" id="Terminal" order="12" sideWeight="0.49704778" weight="0.31530493" />
+      <window_info anchor="bottom" id="Event Log" order="13" sideWeight="0.50456256" side_tool="true" weight="0.4223245" />
+      <window_info anchor="bottom" id="JRebel Console" order="14" sideWeight="0.5104167" side_tool="true" weight="0.3265306" />
+      <window_info anchor="bottom" id="Messages" order="15" sideWeight="0.49758455" weight="0.27272728" />
+      <window_info anchor="bottom" id="Problems" order="16" weight="0.32796317" />
+      <window_info anchor="bottom" id="JRebel Executor" order="17" sideWeight="0.49166667" weight="0.32858837" />
+      <window_info anchor="bottom" id="MyBatis Sql Log" order="18" weight="0.32779098" />
+      <window_info anchor="bottom" id="Run with VisualVM" order="19" />
+      <window_info anchor="bottom" id="Database Changes" order="20" weight="0.32911393" />
+      <window_info anchor="bottom" id="Debug with VisualVM" order="21" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="1" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
+      <window_info anchor="right" id="Key Promoter X" order="3" />
+      <window_info anchor="right" id="调色板" order="4" />
+      <window_info anchor="right" id="JRebel Setup Guide" order="5" weight="0.3203125" />
+      <window_info anchor="right" id="Database" order="6" weight="0.32957596" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Capture Analysis" order="8" />
+      <window_info anchor="right" id="Bean Validation" order="9" />
+      <window_info anchor="right" id="Theme Preview" order="10" />
+      <window_info anchor="right" id="Maven Projects" order="11" weight="0.3290392" />
+      <window_info anchor="right" id="Mybatis datasource" order="12" side_tool="true" />
+    </layout-to-restore>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/share/forum/service/SharedForumCommentGiveService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/share/config/RedisConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="26" column="45" selection-start-line="26" selection-start-column="45" selection-end-line="26" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.7</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>SharedLibrary</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: aopalliance:aopalliance:1.0</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

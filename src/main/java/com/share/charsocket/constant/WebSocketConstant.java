@@ -12,7 +12,7 @@ public class WebSocketConstant {
     /**
      * 访问路径
      */
-    public static final String WEB_SOCKET_URL = "ws://127.0.0.1:8090/ws";
+    public static final String WEB_SOCKET_URL = "ws://192.168.43.92:8090/ws";
 
     /**
      * 启动端口

@@ -100,7 +100,6 @@ public class SharedUsersController {
         if (null == captcha || !captcha.equalsIgnoreCase(sessionCaptcha)) {
             return ReturnResult.error("验证码错误！");
         }
-
         // 把账号密码塞入UsernamePasswordToken里
         UsernamePasswordToken usernamePasswordToken = new UsernamePasswordToken(
                 userName, password);
@@ -285,7 +284,7 @@ public class SharedUsersController {
     public String loginOut() {
         Subject subject = SecurityUtils.getSubject();
         subject.logout();
-        return "redirect:/sharedUsers/goLogin";
+        return "redirect:/sharediForum/goIndex";
     }
 
     /**

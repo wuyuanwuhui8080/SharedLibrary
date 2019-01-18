@@ -84,13 +84,12 @@
         dataType: "json",
         success: function (date) {
             if (date.status == 200) {
-                    location.href = "/sharedUsers/goIndex";
+                location.href = "/sharediForum/goIndex";
             } else {
                 swal({
                     title: date.msg,
                     type: "error"
                 });
-
                 document.getElementById("captcha").value = "";
                 refreshCaptcha();
             }

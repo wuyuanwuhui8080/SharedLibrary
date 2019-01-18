@@ -25,7 +25,7 @@ const UPDATE_USERLIST_SYSTEM_MESSGAE_CODE = 3002;
 // 获取个人信息的系统信息
 const PERSONAL_SYSTEM_MESSGAE_CODE = 3003;
 
-const WEB_SOCKET_URL = "ws://127.0.01:8090/ws";
+const WEB_SOCKET_URL = "ws://192.168.43.92:8090/ws";
 
 var socket = null;
 $(function () {
