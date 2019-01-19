@@ -6,7 +6,7 @@ package com.share.constant;
  * @author 牛自豪
  * @date 2019-01-09-16:51
  */
-public class EventConstant {
+public final class EventConstant {
     /**
      * 好友事件
      */

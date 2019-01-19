@@ -79,6 +79,8 @@ public class ShiroConfig {
         Map<String, String> linkedHashMap = new LinkedHashMap<>();
         //开放登录接口
         linkedHashMap.put("/sharedUsers/doLogin", "anon");
+        linkedHashMap.put("/sharedUsers/goForumLogin", "anon");
+        linkedHashMap.put("/sharedUsers/goForumRegister", "anon");
         linkedHashMap.put("/sharedUsers/goLogin", "anon");
         linkedHashMap.put("/sharedUsers/goRegister", "anon");
         linkedHashMap.put("/sharedUsers/saveNorsalUsers", "anon");
@@ -89,6 +91,7 @@ public class ShiroConfig {
         linkedHashMap.put("/background/comm/script.ftl", "anon");
         linkedHashMap.put("/index.ftl", "anon");
         linkedHashMap.put("/sharediForum/goIndex", "anon");
+        linkedHashMap.put("/sharedForum/goForumDetailed/**", "anon");
         linkedHashMap.put("/loginOut", "logout");
         //css开放
         linkedHashMap.put("/css/**", "anon");

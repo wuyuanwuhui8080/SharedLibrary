@@ -1,18 +1,22 @@
 package com.share.pojo;
 
 import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.extension.activerecord.Model;
+
 import java.time.LocalDateTime;
+
 import com.baomidou.mybatisplus.annotation.TableId;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
+import java.util.Date;
 
 /**
  * <p>
- *  帖子实体类
+ * 帖子实体类
  * </p>
  *
  * @author 博博大人
@@ -44,18 +48,43 @@ public class SharedForum extends Model<SharedForum> {
     /**
      * 创建时间
      */
-    private LocalDateTime creationDate;
+    private Date creationDate;
 
     /**
      * 修改时间
      */
-    private LocalDateTime updateDate;
+    private Date updateDate;
 
     /**
      * 分类id
      */
     private String classId;
 
+    /**
+     * 标题
+     */
+    private String title;
+
+    @TableField("type_id")
+    private Integer typeId;
+
+    /**
+     * 额外字段，用于存放每个帖子的用户信息
+     */
+    @TableField(exist = false)
+    private SharedUsers sharedUsers;
+
+    /**
+     * 用于存放帖子下的回复和评论的次数
+     */
+    @TableField(exist = false)
+    private Integer commCounts;
+
+    /**
+     * 用于存放每个帖子的类型
+     */
+    @TableField(exist = false)
+    private SharedForumType forumType;
 
     @Override
     protected Serializable pkVal() {

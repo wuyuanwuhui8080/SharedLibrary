@@ -140,7 +140,7 @@ window.app = {
         }
     },
     loads: function () {
-        return '<div class="ibox-content" id="ibox" style="position:fixed;top:30%;z-index:1200;background:url(/wap/images/loading.gif) top center no-repeat;width:100%;height:140px;margin:auto auto;">\n' +
+        return '<div class="ibox-content" id="ibox" style="position:fixed;top:30%;z-index:1200;background:url(../wap/images/loading.gif) top center no-repeat;width:100%;height:140px;margin:auto auto;">\n' +
             '                        <div class="spiner-example">\n' +
             '                            <div class="sk-spinner sk-spinner-three-bounce">\n' +
             '                                <div class="sk-bounce1"></div>\n' +
@@ -171,5 +171,15 @@ window.app = {
             .replace(/ss/g, preArr[sec] || sec);
 
         return newTime;
+    },
+    contrastTime: function (start) {//判断当前选择时间是否小于是当前实际时间
+        /*var evalue = document.getElementById(start).value;*/
+        var dB = new Date(start.replace(/-/g, "/"));//获取当前选择日期
+        var d = new Date();
+        var str = d.getFullYear() + "-" + (d.getMonth() + 1) + "-" + d.getDate();//获取当前实际日期
+        if (Date.parse(str) > Date.parse(dB)) {//时间戳对比
+            return true;
+        }
+        return false;
     }
 };

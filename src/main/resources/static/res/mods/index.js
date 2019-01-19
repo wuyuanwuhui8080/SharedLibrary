@@ -97,7 +97,6 @@ layui.define(['layer', 'laytpl', 'form', 'element', 'upload', 'util'], function 
         , layEditor: function (options) {
             var html = ['<div class="layui-unselect fly-edit">'
                 , '<span type="face" title="插入表情"><i class="iconfont icon-yxj-expression" style="top: 1px;"></i></span>'
-                , '<span type="picture" title="插入图片：img[src]"><i class="iconfont icon-tupian"></i></span>'
                 , '<span type="href" title="超链接格式：a(href)[text]"><i class="iconfont icon-lianjie"></i></span>'
                 , '<span type="code" title="插入代码或引用"><i class="iconfont icon-emwdaima" style="top: 1px;"></i></span>'
                 , '<span type="hr" title="插入水平线">hr</span>'
@@ -122,58 +121,6 @@ layui.define(['layer', 'laytpl', 'form', 'element', 'upload', 'util'], function 
                     $('#LAY-editface li').on('click', function () {
                         var title = $(this).attr('title') + ' ';
                         layui.focusInsert(editor[0], 'face' + title);
-                    });
-                }
-                , picture: function (editor) { //插入图片
-                    layer.open({
-                        type: 1
-                        , id: 'fly-jie-upload'
-                        , title: '插入图片'
-                        , area: 'auto'
-                        , shade: false
-                        , area: '465px'
-                        , fixed: false
-                        , offset: [
-                            editor.offset().top - $(window).scrollTop() + 'px'
-                            , editor.offset().left + 'px'
-                        ]
-                        , skin: 'layui-layer-border'
-                        , content: ['<ul class="layui-form layui-form-pane" style="margin: 20px;">'
-                            , '<li class="layui-form-item">'
-                            , '<label class="layui-form-label">URL</label>'
-                            , '<div class="layui-input-inline">'
-                            , '<input required name="image" placeholder="支持直接粘贴远程图片地址" value="" class="layui-input">'
-                            , '</div>'
-                            , '<button type="button" class="layui-btn layui-btn-primary" id="uploadImg"><i class="layui-icon">&#xe67c;</i>上传图片</button>'
-                            , '</li>'
-                            , '<li class="layui-form-item" style="text-align: center;">'
-                            , '<button type="button" lay-submit lay-filter="uploadImages" class="layui-btn">确认</button>'
-                            , '</li>'
-                            , '</ul>'].join('')
-                        , success: function (layero, index) {
-                            var image = layero.find('input[name="image"]');
-
-                            //执行上传实例
-                            upload.render({
-                                elem: '#uploadImg'
-                                , url: '/api/upload/'
-                                , size: 200
-                                , done: function (res) {
-                                    if (res.status == 0) {
-                                        image.val(res.url);
-                                    } else {
-                                        layer.msg(res.msg, {icon: 5});
-                                    }
-                                }
-                            });
-
-                            form.on('submit(uploadImages)', function (data) {
-                                var field = data.field;
-                                if (!field.image) return image.focus();
-                                layui.focusInsert(editor[0], 'img[' + field.image + '] ');
-                                layer.close(index);
-                            });
-                        }
                     });
                 }
                 , href: function (editor) { //超链接

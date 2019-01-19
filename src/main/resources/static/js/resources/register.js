@@ -1,4 +1,14 @@
-var path = document.getElementById("path").value;
+$(function () {
+    $("#Sumitres").click(function () {
+        var captcha = $("#captcha").val();
+        if(app.isNull(captcha)){
+            swal("验证码不能空！",null,"warning");
+            return false;
+        }
+        sumitfrom();
+        return false;
+    });
+});
 
 /**
  * 制定提交和返回格式，并执行业务!
@@ -14,13 +24,17 @@ var option = {
                 title: "注册成功！",
                 type: "success",
             }, function () {
-                location.href = path + "/sharedUsers/goLogin";
+                location.href = path + "/sharedUsers/goForumLogin";
             });
         } else {
             swal({
                 title: date.msg,
                 type: "error",
             });
+            $("#captcha").val("");
+            refreshCaptcha();
+
+
         }
     },
     error: function () {
@@ -30,6 +44,7 @@ var option = {
         });
     }
 }
+
 
 /**
  *  执行ajax登录
@@ -151,14 +166,14 @@ function birthdayblur() {
     var birthday = document.getElementById("birthday").value;
     if (!app.isNull(birthday)) {
         if (app.checkStr(birthday, "date")) {
-            if(!app.contrastTime(birthday)){
+            if (!app.contrastTime(birthday)) {
                 document.getElementById("birthdaySpanId").innerHTML = "<font color='red'>不能超过当前时间！</font>";
                 return false;
-            }else{
+            } else {
                 document.getElementById("birthdaySpanId").innerHTML = "";
                 return true;
             }
-        }else if(!app.checkStr(birthday, "date")){
+        } else if (!app.checkStr(birthday, "date")) {
             document.getElementById("birthdaySpanId").innerHTML = "<font color='red'>格式不正确！</font>";
         }
     } else {
@@ -184,4 +199,9 @@ function phoneblur() {
     } else {
         return false;
     }
+}
+
+
+function refreshCaptcha() {
+    $("#captcha_img").attr("src", "/Captcha.jpg?id=" + new Date() + Math.floor(Math.random() * 24));
 }

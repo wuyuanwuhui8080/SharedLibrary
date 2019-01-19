@@ -4,17 +4,60 @@
 
     <!-- 通用查询映射结果 -->
     <resultMap id="BaseResultMap" type="com.share.pojo.SharedForum">
-        <id column="id" property="id" />
-        <result column="user_id" property="userId" />
-        <result column="content" property="content" />
-        <result column="creation_date" property="creationDate" />
-        <result column="update_date" property="updateDate" />
-        <result column="class_id" property="classId" />
+        <id column="id" property="id"/>
+        <result column="user_id" property="userId"/>
+        <result column="content" property="content"/>
+        <result column="creation_date" property="creationDate"/>
+        <result column="update_date" property="updateDate"/>
+        <result column="class_id" property="classId"/>
+    </resultMap>
+
+    <!--帖子查询外部查询-->
+    <resultMap id="findListMap" type="com.share.pojo.SharedForum">
+        <id column="F_ID" property="id"/>
+        <result column="F_CLASS_ID" property="classId"/>
+        <result column="COUNTREPLY" property="commCounts"/>
+        <result column="F_CREATIONTIME" property="creationDate"/>
+        <result column="F_TITLE" property="title"/>
+        <!--用户信息-->
+        <association property="sharedUsers" javaType="com.share.pojo.SharedUsers">
+            <id column="U_ID" property="id"/>
+            <result column="U_REALNAME" property="realName"/>
+            <result column="U_USERIMG" property="headImg"/>
+        </association>
+        <!--帖子类型-->
+        <association property="forumType" javaType="com.share.pojo.SharedForumType">
+            <id column="TYPE_ID" property="id"/>
+            <result column="TYPE_NAME" property="forumType"/>
+        </association>
     </resultMap>
 
     <!-- 通用查询结果列 -->
     <sql id="Base_Column_List">
         id, user_id, content, creation_date, update_date, class_id
     </sql>
+    <select id="findList" resultMap="findListMap">
+            SELECT
+                f.id AS F_ID,
+                f.title AS F_TITLE,
+                f.creation_date AS F_CREATIONTIME,
+                f.class_id AS F_CLASS_ID,
+                forum_user.head_img AS U_USERIMG,
+                forum_user.realName AS U_REALNAME,
+                forum_user.id AS U_ID,
+                forum_type_id.forum_type AS TYPE_NAME,
+                forum_type_id.id AS TYPE_ID,
+	            (SELECT COUNT(1)
+	                          + (SELECT COUNT(1)
+	                                  FROM shared_forum_comment_reply r
+	                                  WHERE r.comment_id = m.id)
+	                   FROM shared_forum_comment m
+	                   WHERE m.forum_id = f.id) AS COUNTREPLY
+            FROM shared_forum f
+            LEFT JOIN shared_users forum_user
+            ON forum_user.id = f.user_id
+            LEFT JOIN shared_forum_type forum_type_id
+            ON forum_type_id.id = f.type_id
+    </select>
 
 </mapper>

@@ -273,7 +273,7 @@
                     </li>
                 </ul>
             </div>
-            <a href="${basePath}/sharediForum/goIndex" class="roll-nav roll-right J_tabExit"><i
+            <a href="${basePath}/sharedForum/goIndex" class="roll-nav roll-right J_tabExit"><i
                     class="fa fa fa-sign-out"></i> 论坛</a>
         </div>
         <div class="row J_mainContent" id="content-main">

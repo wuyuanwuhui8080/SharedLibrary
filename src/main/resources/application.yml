@@ -38,6 +38,10 @@ spring:
     static-locations: classpath:/META-INF/resources/,classpath:/resources/,classpath:/static/,classpath:/public/,file:${web.upload-path}
   mvc:
     static-path-pattern: /**
+  data:
+    elasticsearch:
+      cluster-name: myes
+      cluster-nodes: 127.0.0.1:9300
 #设置tomcat端口
 server:
   port: 8080
