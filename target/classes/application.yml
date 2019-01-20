@@ -38,6 +38,10 @@ spring:
     static-locations: classpath:/META-INF/resources/,classpath:/resources/,classpath:/static/,classpath:/public/,file:${web.upload-path}
   mvc:
     static-path-pattern: /**
+  data:
+    elasticsearch:
+      cluster-name: myes
+      cluster-nodes: 127.0.0.1:9300
 #设置tomcat端口
 server:
   port: 8080
@@ -54,6 +58,8 @@ logging:
        invitation:
          mapper: debug
        users:
+         mapper: debug
+       forum:
          mapper: debug
 #  global-config:
     #主键类型  0:"数据库ID自增", 1:"用户输入ID",2:"全局唯一ID (数字类型唯一ID)", 3:"全局唯一ID UUID";

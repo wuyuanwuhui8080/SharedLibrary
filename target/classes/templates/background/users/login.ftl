@@ -1,68 +1,64 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-    <title>登录</title>
-    <meta name="keywords" content="H+后台主题,后台bootstrap框架,会员中心主题,后台HTML,响应式后台">
-    <meta name="description" content="H+是一个完全响应式，基于Bootstrap3最新版本开发的扁平化主题，她采用了主流的左右两栏式布局，使用了Html5+CSS3等现代技术">
-
+    <title>H+ 后台主题UI框架 - 登录</title>
     <#include "../comm/script.ftl">
-    <!--[if lt IE 9]>
-    <meta http-equiv="refresh" content="0;ie.html"/>
-    <![endif]-->
-    <script>if (window.top !== window.self) {
-        window.top.location = window.location;
-    }</script>
+    <link href="${basePath}/css/login.css" rel="stylesheet">
+    <script>
+        if (window.top !== window.self) {
+            window.top.location = window.location;
+        }
+    </script>
+
 </head>
 
-<body class="gray-bg">
-
-<div class="middle-box text-center loginscreen  animated fadeInDown">
-    <div>
-        <div>
-
-            <h1 class="logo-name">V</h1>
-
+<body class="signin">
+<div class="signinpanel">
+    <div class="row">
+        <div class="col-sm-7">
+            <div class="signin-info">
+                <div class="logopanel m-b">
+                    <h1>共享资源库</h1>
+                </div>
+                <div class="m-b"></div>
+                <h4>欢迎使用 <strong>共享资源库</strong></h4>
+                <ul class="m-b">
+                    <li><i class="fa fa-arrow-circle-o-right m-r-xs"></i> 可以进行实时聊天</li>
+                    <li><i class="fa fa-arrow-circle-o-right m-r-xs"></i> 可以发布问题</li>
+                    <li><i class="fa fa-arrow-circle-o-right m-r-xs"></i> 可以增加公司人员的交流</li>
+                    <li><i class="fa fa-arrow-circle-o-right m-r-xs"></i> 无聊的时候可以玩小游戏</li>
+                </ul>
+                <strong>还没有账号？<a href="${basePath}/sharedUsers/goRegister">立即注册&raquo;</a> </strong>
+            </div>
         </div>
-        <h3>欢迎使用内部博客</h3>
-
-        <form class="m-t" method="post" role="form" action="${basePath}/sharedUsers/doLogin">
-            <div class="form-group">
-                <input type="text" class="form-control" name="userName" id="userName" placeholder="用户名" required="">
-            </div>
-            <i id='icon'></i>
-            <div class="form-group">
-                <input type="password" class="form-control" name="password" id="password" placeholder="密码" required="">
-            </div>
-            <div class="form-group">
-                验证码：<input type="text" id="captcha" name="captcha"/><a href="javascript:refreshCaptcha()"><img alt="验证码"
-                                                                                                               src="${basePath}/Captcha.jpg"
-                                                                                                               title="点击更换"
-                                                                                                               id="captcha_img"/></a>
-            </div>
-            <button type="submit" id="sumitIdLogin" class="btn btn-primary block full-width m-b">登 录</button>
-        </form>
-        <p class="text-muted text-center"><a href="login.ftl#">
-            <small>忘记密码了？</small>
-        </a> | <a href="${basePath}/sharedUsers/goRegister">注册一个新账号</a>
-        </p>
+        <div class="col-sm-5">
+            <form  method="post" role="form" action="${basePath}/sharedUsers/doLogin">
+                <h4 class="no-margins">登录：</h4>
+                <p class="m-t-md">登录到共享资源库后台</p>
+                <input type="text" class="form-control uname" name="userName" id="userName" placeholder="用户名"/>
+                <input type="password" class="form-control pword m-b" name="password" id="password" placeholder="密码"/>
+                <input type="text" id="captcha" class="form-control pword m-b" placeholder="验证码" name="captcha"/>
+                <p> <a style="margin-left: 30%" href="javascript:refreshCaptcha()"><img alt="验证码"
+                                                                                        src="${basePath}/Captcha.jpg"
+                                                                                        title="点击更换"
+                                                                                        id="captcha_img"/></a></p>
+                <a href="">忘记密码了？</a>
+                <button type="submit" id="sumitIdLogin" class="btn btn-success btn-block">登录</button>
+            </form>
+        </div>
+    </div>
+    <div class="signup-footer">
+        <div class="pull-left">
+            &copy; 2019 All Rights Reserved 第一小组
+        </div>
     </div>
 </div>
-
 </body>
-<#-- <div class="ibox-content">
-                        <div class="spiner-example">
-                            <div class="sk-spinner sk-spinner-three-bounce">
-                                <div class="sk-bounce1"></div>
-                                <div class="sk-bounce2"></div>
-                                <div class="sk-bounce3"></div>
-                            </div>
-                        </div>
-                    </div>-->
+
 </html>
 <script>
     $(function () {
@@ -84,7 +80,7 @@
         dataType: "json",
         success: function (date) {
             if (date.status == 200) {
-                location.href = "/sharediForum/goIndex";
+                location.href = "${basePath}/sharedUsers/goIndex";
             } else {
                 swal({
                     title: date.msg,

@@ -6,7 +6,7 @@ var path = document.getElementById("path").value;
  * @time 2018/12/13 14:03
  */
 var option = {
-    type : "post",
+    type: "post",
     dataType: "json",
     success: function (date) {
         if (date.status == 200) {
@@ -51,6 +51,7 @@ function sumitfrom() {
 
 
 var falg = 1;
+
 /**
  *  校验用户名是否合法
  * @author 博博大人
@@ -61,9 +62,9 @@ function userNameblur() {
     if (!app.isNull(userName)) {
         if (app.checkStr(userName, "username")) {
             getUserName();
-            if(falg == 1){
+            if (falg == 1) {
                 return false;
-            }else  if(falg == 0){
+            } else if (falg == 0) {
                 return true;
             }
         } else {
@@ -76,9 +77,9 @@ function userNameblur() {
 
 };
 
-function  getUserName() {
+function getUserName() {
     var userName = document.getElementById("userName").value;
-    if(app.isNull()){
+    if (app.isNull()) {
         $.ajax({
             type: "get",
             data: {userName: userName},
@@ -87,14 +88,14 @@ function  getUserName() {
             success: function (date) {
                 if (date.status == 200) {
                     document.getElementById("userNameSpanId").innerHTML = "<font color='green'>用户名可以使用！</font>";
-                    falg =  0;
+                    falg = 0;
                 } else {
                     document.getElementById("userNameSpanId").innerHTML = "<font color='red'>用户名重复，请重新输入！</font>";
-                    falg =  1;
+                    falg = 1;
                 }
             },
             error: function () {
-                falg =  1;
+                falg = 1;
             }
         });
     }
@@ -150,11 +151,15 @@ function birthdayblur() {
     var birthday = document.getElementById("birthday").value;
     if (!app.isNull(birthday)) {
         if (app.checkStr(birthday, "date")) {
-            document.getElementById("birthdaySpanId").innerHTML = "";
-            return true;
-        } else {
-            document.getElementById("birthdaySpanId").innerHTML = "<font color='red'>日期格式不正确！</font>";
-            return false;
+            if(!app.contrastTime(birthday)){
+                document.getElementById("birthdaySpanId").innerHTML = "<font color='red'>不能超过当前时间！</font>";
+                return false;
+            }else{
+                document.getElementById("birthdaySpanId").innerHTML = "";
+                return true;
+            }
+        }else if(!app.checkStr(birthday, "date")){
+            document.getElementById("birthdaySpanId").innerHTML = "<font color='red'>格式不正确！</font>";
         }
     } else {
         return false;
