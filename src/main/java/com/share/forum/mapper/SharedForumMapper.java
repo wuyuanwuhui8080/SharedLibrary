@@ -1,7 +1,9 @@
 package com.share.forum.mapper;
 
+import com.share.forum.vo.ForumAndComment;
 import com.share.pojo.SharedForum;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -16,10 +18,20 @@ import java.util.List;
  */
 public interface SharedForumMapper extends BaseMapper<SharedForum> {
 
-    /**
-     * 查询全部帖子
-     * @return
-     */
-    List<SharedForum> findList();
+	/**
+	 * 查询全部帖子
+	 * 
+	 * @return
+	 */
+	List<SharedForum> findList();
+
+	/**
+	 * 查询单个帖子
+	 * 
+	 * @param forumId
+	 *            传入的帖子的id
+	 * @return
+	 */
+	ForumAndComment findListByForumId(@Param("forumId") String forumId);
 
 }

@@ -3,6 +3,7 @@ package com.share.forum.service.impl;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.share.forum.mapper.SharedForumVOReposiory;
+import com.share.forum.vo.ForumAndComment;
 import com.share.forum.vo.SharedForumVO;
 import com.share.pojo.SharedForum;
 import com.share.forum.mapper.SharedForumMapper;
@@ -28,65 +29,83 @@ import java.util.Date;
  * @since 2019-01-17
  */
 @Service
-public class SharedForumServiceImpl extends ServiceImpl<SharedForumMapper, SharedForum> implements SharedForumService {
+public class SharedForumServiceImpl
+		extends ServiceImpl<SharedForumMapper, SharedForum>
+		implements SharedForumService {
 
-    @Resource
-    private SharedForumVOReposiory sharedForumVOReposiory;
+	@Resource
+	private SharedForumVOReposiory sharedForumVOReposiory;
 
-    @Resource
-    private SharedForumMapper sharedForumMapper;
+	@Resource
+	private SharedForumMapper sharedForumMapper;
 
-    @Resource
-    private ElasticsearchTemplate elasticsearchTemplate;
+	@Resource
+	private ElasticsearchTemplate elasticsearchTemplate;
 
-    /**
-     * 添加数据库数据并且添加es数据
-     *
-     * @param sharedForum
-     * @return
-     */
-    @Override
-    public Boolean saveForum(SharedForum sharedForum) {
-        Session session = SecurityUtils.getSubject().getSession();
-        // 设置当前时间
-        sharedForum.setCreationDate(new Date());
-        sharedForum.setUserId(((SharedUsers) session.getAttribute("users")).getId());
-        // 检验是否添加成功
-        try {
-            if (super.save(sharedForum)) {
-                // 组装es数据
-                SharedForumVO sharedForumVO = new SharedForumVO();
-                sharedForumVO.setId(sharedForum.getId());
-                sharedForumVO.setContent(sharedForum.getContent());
-                sharedForumVO.setClassId(sharedForum.getClassId());
-                sharedForumVO.setCreationDate(LocalDateTime.now());
-                sharedForumVO.setTitle(sharedForum.getTitle());
-                sharedForumVO.setUserId(sharedForum.getUserId());
-                // 判断是否添加成功！ 只要没有发生异常就代表添加成功
-                sharedForumVOReposiory.save(sharedForumVO);
-                return true;
-            }
-        } catch (Exception e) {
-            TransactionAspectSupport.currentTransactionStatus()
-                    .setRollbackOnly();
-            return false;
-        }
-        return false;
-    }
+	/**
+	 * 添加数据库数据并且添加es数据
+	 *
+	 * @param sharedForum
+	 * @return
+	 */
+	@Override
+	public Boolean saveForum(SharedForum sharedForum) {
+		Session session = SecurityUtils.getSubject().getSession();
+		// 设置当前时间
+		sharedForum.setCreationDate(new Date());
+		sharedForum.setUserId(
+				((SharedUsers) session.getAttribute("users")).getId());
+		// 检验是否添加成功
+		try {
+			if (super.save(sharedForum)) {
+				// 组装es数据
+				SharedForumVO sharedForumVO = new SharedForumVO();
+				sharedForumVO.setId(sharedForum.getId());
+				sharedForumVO.setContent(sharedForum.getContent());
+				sharedForumVO.setClassId(sharedForum.getClassId());
+				sharedForumVO.setCreationDate(new Date());
+				sharedForumVO.setTitle(sharedForum.getTitle());
+				sharedForumVO.setUserId(sharedForum.getUserId());
+				// 判断是否添加成功！ 只要没有发生异常就代表添加成功
+				sharedForumVOReposiory.save(sharedForumVO);
+				return true;
+			}
+		} catch (Exception e) {
+			TransactionAspectSupport.currentTransactionStatus()
+					.setRollbackOnly();
+			return false;
+		}
+		return false;
+	}
 
-    /**
-     * 查询 pageSize 条帖子
-     *
-     * @param pageIndex 起始页
-     * @param pageSize  每页的页数
-     * @return
-     */
-    @Override
-    public PageInfo<SharedForum> findList(Integer pageIndex, Integer pageSize) {
-        // 拦截语句并分页
-        PageHelper.startPage(pageIndex,pageSize);
+	/**
+	 * 查询 pageSize 条帖子
+	 *
+	 * @param pageIndex
+	 *            起始页
+	 * @param pageSize
+	 *            每页的页数
+	 * @return
+	 */
+	@Override
+	public PageInfo<SharedForum> findList(Integer pageIndex, Integer pageSize) {
+		// 拦截语句并分页
+		PageHelper.startPage(pageIndex, pageSize);
 
-        PageInfo<SharedForum> pageInfo = new PageInfo<>(sharedForumMapper.findList());
-        return pageInfo;
-    }
+		PageInfo<SharedForum> pageInfo = new PageInfo<>(
+				sharedForumMapper.findList());
+		return pageInfo;
+	}
+
+	/**
+	 * 查询单个帖子
+	 * 
+	 * @param forumId
+	 *            传入的帖子的id
+	 * @return
+	 */
+	@Override
+	public ForumAndComment findListByForumId(String forumId) {
+		return sharedForumMapper.findListByForumId(forumId);
+	}
 }

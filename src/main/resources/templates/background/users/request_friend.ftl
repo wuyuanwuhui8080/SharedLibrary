@@ -53,7 +53,16 @@
                                     </address>
                                     <address>
                                         <strong>请求状态</strong><br>
-                                        <button class="btn">${li.friendRequestStatus.statusName}</button>
+                                        <#if (li.status == 1)>
+                                            <button class="btn btn-primary toSuccess" requestId="${li.id}"
+                                                    miId="${li.meId}"
+                                                    byrequestId="${li.requestId}">同意
+                                            </button>
+                                             <button class="btn btn-info toError" requestId="${li.id}" style="margin-left: 20px;">拒绝
+                                             </button>
+                                        <#else >
+                                            <button class="btn">${li.friendRequestStatus.statusName}</button>
+                                        </#if>
                                         <br>
                                     </address>
 
@@ -84,7 +93,8 @@
     </#if>
 </#list>-->
      <#if page.hasNextPage>
-            <li><a href="/sharedlFriendRequest/goRequestFirend/${Session.users.id}/${page.pageNum + 1}">下一页 &rarr;</a></li>
+            <li><a href="/sharedlFriendRequest/goRequestFirend/${Session.users.id}/${page.pageNum + 1}">下一页 &rarr;</a>
+            </li>
      <#else>
             <li class="disabled"><a href="javascript:;">下一页 &rarr;</a></li>
      </#if>

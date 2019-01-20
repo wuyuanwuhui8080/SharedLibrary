@@ -50,7 +50,7 @@
                 <!-- 登入后的状态 -->
                 <li class="layui-nav-item">
                     <a class="fly-nav-avatar" href="javascript:;">
-                        <cite class="layui-hide-xs">${Session.users.userName}</cite>
+                        <cite class="layui-hide-xs">${Session.users.realName}</cite>
                         <img src="${basePath}/images/${users.headImg}">
                     </a>
                     <dl class="layui-nav-child">

@@ -32,32 +32,109 @@
         </association>
     </resultMap>
 
+    <!--查询单个帖子外部查询-->
+    <resultMap id="findListByForumIdMap" type="com.share.forum.vo.ForumAndComment">
+        <id column="F_ID" property="forumId"/>
+        <result column="CLASS_NAME" property="classifyName"/>
+        <result column="FORUM_TYPENAME" property="typeName"/>
+        <result column="F_CONTENT" property="forumContent"/>
+        <result column="F_CREATIME" property="forumCreationDate"/>
+        <result column="F_TITLE" property="forumTitle"/>
+        <result column="F_TYPE" property="forumTypeId"/>
+        <result column="F_CLASSID" property="classId"/>
+        <result column="FORUM_USER_ID" property="forumUsersId"/>
+        <result column="FORUM_USER_HEADIMG" property="forumUsersHeadImg"/>
+        <result column="FORUM_USER_REALNAME" property="forumUsersRealName"/>
+        <result column="COUNTREPLY" property="countReply"/>
+        <collection property="commentBOList" ofType="com.share.forum.bo.CommentBO">
+            <id column="COMMENT_ID" property="commentId"/>
+            <result column="COMMENT_CONTENT" property="commentContent"/>
+            <result column="COMMENTGIVE" property="commentGive"/>
+            <result column="COMMENT_USER_HEADIMG" property="commentUsersHeadImg"/>
+            <result column="COMMENT_USER_ID" property="commentUsersId"/>
+            <result column="COMMENT_USER_REALNAME" property="commentUsersRealName"/>
+            <result column="COMMENT_USER_POSITIONID" property="commentUsersPositionid"/>
+            <result column="COMMENT_CREATIONTIME" property="commentCreationTime"/>
+        </collection>
+        <collection property="commentGiveBOList" ofType="com.share.forum.bo.CommentGiveBO">
+            <result column="GIVE_USER_ID" property="userId"/>
+            <result column="COMMENT_GIVE_ID" property="commentId" />
+        </collection>
+    </resultMap>
+
     <!-- 通用查询结果列 -->
     <sql id="Base_Column_List">
         id, user_id, content, creation_date, update_date, class_id
     </sql>
     <select id="findList" resultMap="findListMap">
             SELECT
-                f.id AS F_ID,
-                f.title AS F_TITLE,
-                f.creation_date AS F_CREATIONTIME,
-                f.class_id AS F_CLASS_ID,
-                forum_user.head_img AS U_USERIMG,
-                forum_user.realName AS U_REALNAME,
-                forum_user.id AS U_ID,
-                forum_type_id.forum_type AS TYPE_NAME,
-                forum_type_id.id AS TYPE_ID,
-	            (SELECT COUNT(1)
-	                          + (SELECT COUNT(1)
-	                                  FROM shared_forum_comment_reply r
-	                                  WHERE r.comment_id = m.id)
-	                   FROM shared_forum_comment m
-	                   WHERE m.forum_id = f.id) AS COUNTREPLY
-            FROM shared_forum f
-            LEFT JOIN shared_users forum_user
-            ON forum_user.id = f.user_id
-            LEFT JOIN shared_forum_type forum_type_id
-            ON forum_type_id.id = f.type_id
+              f.id                     AS F_ID,
+              f.title                  AS F_TITLE,
+              f.creation_date          AS F_CREATIONTIME,
+              f.class_id               AS F_CLASS_ID,
+              forum_user.head_img      AS U_USERIMG,
+              forum_user.realName      AS U_REALNAME,
+              forum_user.id            AS U_ID,
+              forum_type_id.forum_type AS TYPE_NAME,
+              forum_type_id.id         AS TYPE_ID,
+             (SELECT COUNT(1) + (SELECT COUNT(1)
+                                        FROM shared_forum_comment_reply r
+                                           WHERE r.comment_id = m.id)
+                 FROM shared_forum_comment m
+                 WHERE m.forum_id = f.id) AS COUNTREPLY
+             FROM shared_forum f
+                  LEFT JOIN shared_users forum_user
+                    ON forum_user.id = f.user_id
+                  LEFT JOIN shared_forum_type forum_type_id
+                    ON forum_type_id.id = f.type_id
+    </select>
+
+    <!--查询单个帖子-->
+    <select id="findListByForumId" resultMap="findListByForumIdMap">
+        SELECT
+              (SELECT
+                 COUNT(1)
+               FROM shared_forum_comment_give g
+               WHERE g.forum_comment_id = comment_id.id) AS COMMENTGIVE,
+              (SELECT COUNT(1) + (SELECT COUNT(1)
+                                        FROM shared_forum_comment_reply r
+                                           WHERE r.comment_id = m.id)
+                 FROM shared_forum_comment m
+                 WHERE m.forum_id = f.id) AS COUNTREPLY,
+              f.id                          AS F_ID,
+              f.class_id                    AS F_CLASSID,
+              f.content                     AS F_CONTENT,
+              f.creation_date               AS F_CREATIME,
+              f.title                       AS F_TITLE,
+              f.type_id                     AS F_TYPE,
+              forum_users.realName          AS FORUM_USER_REALNAME,
+              forum_users.head_img          AS FORUM_USER_HEADIMG,
+              forum_users.id                AS FORUM_USER_ID,
+              classify.classify_name        AS CLASS_NAME,
+              forum_type.forum_type         AS FORUM_TYPENAME,
+              comment_id.content            AS COMMENT_CONTENT,
+              comment_id.id                 AS COMMENT_ID,
+              comment_users.head_img        AS COMMENT_USER_HEADIMG,
+              comment_users.realName        AS COMMENT_USER_REALNAME,
+              comment_users.id              AS COMMENT_USER_ID,
+              comment_users.position_id     AS COMMENT_USER_POSITIONID,
+              comment_id.creation_date      AS COMMENT_CREATIONTIME,
+              comment_give.user_id          AS GIVE_USER_ID,
+              comment_give.forum_comment_id AS COMMENT_GIVE_ID
+        FROM shared_forum f
+          LEFT JOIN shared_forum_comment comment_id
+            ON comment_id.forum_id = f.id
+          LEFT JOIN shared_users forum_users
+            ON forum_users.id = f.user_id
+          LEFT JOIN shared_users comment_users
+            ON comment_users.id = comment_id.user_id
+          LEFT JOIN sharedl_classify classify
+            ON classify.id = f.class_id
+          LEFT JOIN shared_forum_type forum_type
+            ON forum_type.id = f.type_id
+          LEFT JOIN shared_forum_comment_give comment_give
+            ON comment_id.id = comment_give.forum_comment_id
+        WHERE f.id = #{forumId}
     </select>
 
 </mapper>

@@ -4,6 +4,7 @@ import com.github.pagehelper.PageInfo;
 import com.share.constant.PageConstant;
 import com.share.forum.service.SharedForumService;
 import com.share.forum.service.SharedlClassifyService;
+import com.share.forum.vo.ForumAndComment;
 import com.share.pojo.SharedForum;
 import com.share.pojo.SharedlClassify;
 import com.share.util.ReturnResult;
@@ -53,8 +54,19 @@ public class SharedForumController {
 		return "reception/index";
 	}
 
+	/**
+	 * 看帖子详细
+	 * 
+	 * @param id
+	 *            帖子id
+	 * @param model
+	 * @return
+	 */
 	@GetMapping("/goForumDetailed/{id}")
 	public String goForumDetailed(@PathVariable String id, Model model) {
+		// 执行查询
+		ForumAndComment forumAndComment = forumService.findListByForumId(id);
+		model.addAttribute("forumAndComment", forumAndComment);
 		return "reception/jie/detail";
 	}
 
