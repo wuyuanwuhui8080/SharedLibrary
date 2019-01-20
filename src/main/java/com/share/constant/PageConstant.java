@@ -1,7 +1,6 @@
 package com.share.constant;
 
 /**
- *
  * 分页常量类
  *
  * @author 博博
@@ -11,13 +10,19 @@ package com.share.constant;
  */
 public class PageConstant {
 
-	private PageConstant() {
+    private PageConstant() {
 
-	}
+    }
 
-	/**
-	 * 分页的每页个数
-	 */
-	public static final Integer PAGESIZE = 5;
+    /**
+     * 分页的每页个数
+     */
+    public static final Integer PAGESIZE = 5;
+
+    /**
+     * 粉丝分页每页个数
+     */
+    public static final Integer FENPAGESIZE = 9;
+
 
 }

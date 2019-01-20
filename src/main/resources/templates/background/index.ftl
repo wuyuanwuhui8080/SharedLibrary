@@ -34,7 +34,7 @@
                         <ul class="dropdown-menu animated fadeInRight m-t-xs">
                             <li><a id="modal-926547" href="${basePath}/sharedUsers/goUpload" class="J_menuItem">修改头像</a>
                             </li>
-                            <li><a class="J_menuItem" href="${basePath}/sharedUsers/lookProfile/${users.id}">个人资料</a>
+                            <li><a class="J_menuItem" href="${basePath}/sharedUsers/personalnformatIion/${users.id}">个人资料</a>
                             </li>
                             <li><a class="J_menuItem" href="${basePath}/sharedUsers/goUpdateUsers">修改资料</a>
                             </li>
@@ -105,6 +105,21 @@
                     </ul>
                 </li>
                 <li>
+                    <a href="#">
+                        <i class="glyphicon glyphicon-heart-empty"></i>
+                        <span class="nav-label">粉丝管理</span>
+                        <span class="fa arrow"></span>
+                    </a>
+                    <ul class="nav nav-second-level">
+                        <li>
+                            <a class="J_menuItem" href="${basePath}/sharedFans/findMeattention">我关注的</a>
+                        </li>
+                        <li>
+                            <a class="J_menuItem" href="${basePath}/sharedFans/findMeFenList">查看粉丝</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
                     <a href="mailbox.html"><i class="fa fa-envelope"></i>
                         <span class="nav-label">信箱
                             <span class="fa arrow"></span>
@@ -115,20 +130,20 @@
                         <li><a class="J_menuItem" href="${basePath}/sharedReceiveMail/emailCompose">写信</a></li>
                     </ul>
                 </li>
-                <#--<li>
-                    <a href="#">
-                        <i class="fa fa-road"></i>
-                        <span class="nav-label">论坛管理</span>
-                        <span class="fa arrow"></span>
-                    </a>
-                    <ul class="nav nav-second-level">
-                        <li><a class="J_menuItem" href="${basePath}/sharediForum/goWriteInvitation">写博客</a></li>
-                    &lt;#&ndash;// TODO: 2019\1\15 0015 判断权限显示&ndash;&gt;
-                        <li><a class="J_menuItem" hrefreception="${basePath}/sharediForum/#">写论坛</a></li>
-                        <li><a class="J_menuItem" href="${basePath}/sharediForum/#">管理论坛</a></li>
-                        <li><a class="J_menuItem" href="${basePath}/sharediForum/#">管理论坛分类</a></li>
-                    </ul>
-                </li>-->
+            <#--<li>
+                <a href="#">
+                    <i class="fa fa-road"></i>
+                    <span class="nav-label">论坛管理</span>
+                    <span class="fa arrow"></span>
+                </a>
+                <ul class="nav nav-second-level">
+                    <li><a class="J_menuItem" href="${basePath}/sharediForum/goWriteInvitation">写博客</a></li>
+                &lt;#&ndash;// TODO: 2019\1\15 0015 判断权限显示&ndash;&gt;
+                    <li><a class="J_menuItem" hrefreception="${basePath}/sharediForum/#">写论坛</a></li>
+                    <li><a class="J_menuItem" href="${basePath}/sharediForum/#">管理论坛</a></li>
+                    <li><a class="J_menuItem" href="${basePath}/sharediForum/#">管理论坛分类</a></li>
+                </ul>
+            </li>-->
                 <li>
                     <a href="#"><i class="fa fa-edit"></i> <span class="nav-label">用户管理</span>
                         <span class="fa arrow"></span></a>

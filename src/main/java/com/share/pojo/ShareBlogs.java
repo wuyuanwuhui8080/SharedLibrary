@@ -56,19 +56,19 @@ public class ShareBlogs extends Model<ShareBlogs> {
 
 
     @TableField(exist = false)
-    private SharedUsers  users;
+    private SharedUsers users;
 
-	/**
-	 * 点赞表对象
-	 */
-	@TableField(exist = false)
-	private List<ShareBlogsGive> blogsGive;
+    /**
+     * 点赞表对象
+     */
+    @TableField(exist = false)
+    private List<ShareBlogsGive> blogsGive;
 
-	/**
-	 * 点赞数
-	 */
-	@TableField(exist = false)
-	private Integer blogsGiveCount;
+    /**
+     * 点赞数
+     */
+    @TableField(exist = false)
+    private Integer blogsGiveCount;
 
     @Override
     protected Serializable pkVal() {

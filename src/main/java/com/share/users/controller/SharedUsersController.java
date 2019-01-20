@@ -249,14 +249,44 @@ public class SharedUsersController {
     }
 
     /**
+     * 查看个人资料
+     *
+     * @return
+     */
+    @GetMapping("/personalnformatIion/{usersId}")
+    public String personalnformatIion(@PathVariable String usersId, Model model) {
+        // 查询多少个粉丝
+        Integer getFensCuont = fansService.getFensCount(usersId);
+        // 查询多少个关注的
+        Integer getAttention = attentionService.getUsersIdAttention(usersId);
+        // 查询发了多少个博客
+        Integer getBlogs = blogsService.getCountForBlogsByUsersId(usersId);
+        // 查询博客
+        List<ShareBlogs> blogsList = blogsService
+                .findListFriendsByUsersId(usersId);
+        SharedUsers users = usersService.getUserById(usersId);
+        // 数据统一发送到页面
+        model.addAttribute("getFensCuont", getFensCuont);
+        model.addAttribute("blogsList", blogsList);
+        model.addAttribute("users", users);
+        model.addAttribute("getBlogs", getBlogs);
+        model.addAttribute("getAttention", getAttention);
+        return "background/users/profile";
+    }
+
+    /**
      * 查看用户资料
      *
      * @return
      */
     @GetMapping("/lookProfile/{usersId}")
     public String lookProfile(@PathVariable String usersId, Model model) {
+        //获取当前用户
+        SharedUsers user = (SharedUsers) SecurityUtils.getSubject().getSession().getAttribute("users");
         // 查询多少个粉丝
         Integer getFensCuont = fansService.getFensCount(usersId);
+        // TODO: 2019\1\18 0018 查询当前登录用户是否是查看用户的粉丝
+        boolean IsFans = fansService.IsFans(user.getId(), usersId);
         // 查询多少个关注的
         Integer getAttention = attentionService.getUsersIdAttention(usersId);
         // 查询发了多少个博客
@@ -269,10 +299,11 @@ public class SharedUsersController {
         // 数据统一发送到页面
         model.addAttribute("getFensCuont", getFensCuont);
         model.addAttribute("blogsList", blogsList);
+        model.addAttribute("IsFans", IsFans);
         model.addAttribute("users", users);
         model.addAttribute("getBlogs", getBlogs);
         model.addAttribute("getAttention", getAttention);
-        return "background/users/profile";
+        return "background/users/frien_information";
     }
 
     /**

@@ -51,27 +51,24 @@
             <div id="MyfendList">
 <#list friendsList as li>
     <div class="col-sm-4">
-        <div class="contact-box">
-            <a href="${basePath}/sharedUsers/lookProfile/${li.id}">
-                <div class="col-sm-4">
-                    <div class="text-center">
-                        <img alt="image" class="img-circle m-t-xs img-responsive"
-                             src="${basePath}/images/${li.headImg}">
-                        <div class="m-t-xs font-bold"></div>
-                    </div>
+        <button class="btn-primary toFriem" href="${basePath}/sharedUsers/lookProfile/${li.id}">
+            <div class="col-sm-4">
+                <div class="text-center">
+                    <img alt="image" class="img-circle m-t-xs img-responsive"
+                         src="${basePath}/images/${li.headImg}">
+                    <div class="m-t-xs font-bold"></div>
                 </div>
-                <div class="col-sm-8">
-                    <h3><strong>${li.realName}</strong></h3>
-                    <address>
-                        <strong>个性签名</strong><br>
-                        ${li.individual}
-                        <br>
-                    </address>
-                </div>
-            </a>
-            <div class="clearfix"></div>
-
-        </div>
+            </div>
+            <div class="col-sm-8">
+                <h3><strong>${li.realName}</strong></h3>
+                <address>
+                    <strong>个性签名</strong><br>
+                    ${li.individual}
+                    <br>
+                </address>
+            </div>
+        </button>
+        <div class="clearfix"></div>
     </div>
 </#list>
             </div>
@@ -82,13 +79,22 @@
         </#if>
     </div>
 </div>
-
+<input value="${basePath}" type="hidden" id="basePath"/>
 <script>
+    var path = document.getElementById("basePath").value;
     $(document).ready(function () {
         $('.contact-box').each(function () {
             animationHover(this, 'pulse');
         });
     });
+
+    $(".toFriem").click(function () {
+        var dataUrl = $(this).attr('href'),
+                dataIndex = $(this).data('index'),
+                menuName = "好友资料";
+        parent.addMenuTab(dataUrl, menuName, dataIndex);
+    });
+
     var userid = document.getElementById("userid").value;
     //百度搜索测试
     var baiduBsSuggest = $("#baidu").bsSuggest({
