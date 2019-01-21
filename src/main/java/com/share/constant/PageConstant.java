@@ -11,7 +11,6 @@ package com.share.constant;
 public final class PageConstant {
 
     private PageConstant() {
-
     }
 
     /**
@@ -19,4 +18,8 @@ public final class PageConstant {
      */
     public static final Integer PAGESIZE = 5;
 
+    /**
+     * 粉丝分页每页个数
+     */
+    public static final Integer FENPAGESIZE = 9;
 }

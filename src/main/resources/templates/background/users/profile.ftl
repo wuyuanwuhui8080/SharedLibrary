@@ -5,10 +5,7 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
     <title>个人资料</title>
-
     <#include "../comm/script.ftl">
     <!-- Peity -->
     <script src="${basePath}/js/plugins/peity/jquery.peity.min.js"></script>

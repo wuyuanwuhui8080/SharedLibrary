@@ -5,7 +5,7 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>个人资料</title>
+    <title>用户资料</title>
     <#include "../comm/script.ftl">
     <!-- Peity -->
     <script src="${basePath}/js/plugins/peity/jquery.peity.min.js"></script>
@@ -18,9 +18,30 @@
     <div class="row animated fadeInRight">
         <div class="col-sm-4">
             <div class="ibox float-e-margins">
-                <div class="ibox-title">
-                    <h5>个人资料</h5>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <h3>用户资料</h3>
+                    </div>
+                    <div class="col-sm-push-4 col-sm-4">
+                        <input id="userID" type="hidden" value="${users.id}"/>
+                        <#if IsFans??>
+                            <#if IsFans==true>
+                            <#--返回真,显示取消关注-->
+                             <button onclick="unsubscribeClock()" id="unsubscribe" class="btn btn-info dim"
+                                     type="button">取消关注
+                             </button>
+                            <#else >
+                            <#--返回假,显示关注-->
+                            <button onclick="attentionClock()" id="attention" class="btn btn-info dim"
+                                    type="button">关注TA
+                            </button>
+                            </#if>
+                        </#if>
+
+
+                    </div>
                 </div>
+
                 <div>
                     <div class="ibox-content no-padding border-left-right">
                         <img alt="image" class="img-responsive" src="${basePath}/images/${users.headImg}">
@@ -158,10 +179,72 @@
         </div>
     </div>
 </div>
+<input id="basePath" type="hidden" value="${basePath}"/>
 </body>
 <script>
+    var path = document.getElementById("basePath").value;
+
     function goBlos() {
         location.href = '${basePath}/shareBlogs/goBlos/${Session.users.id}';
     }
+
+    //查看用户的id
+    var userID = document.getElementById("userID").value;
+
+    /**
+     * 关注用户
+     * @param id 被关注者Id
+     */
+
+    function attentionClock() {
+        $.ajax({
+            url: path + "/sharedFans/addFans/" + userID,
+            dataType: "json",
+            success: function (date) {
+                if (date.status == 200) {
+                    location.reload();
+                } else {
+                    swal({
+                        title: date.msg,
+                        type: "error",
+                    });
+                }
+            },
+            error: function () {
+                swal({
+                    title: "服务器出错，请联系管理员!",
+                    type: "error",
+                });
+            }
+        });
+    }
+
+    /**
+     * 取消关注用户
+     * @param id 被关注者Id
+     */
+    function unsubscribeClock() {
+        $.ajax({
+            url: path + "/sharedFans/delFans/" + userID,
+            dataType: "json",
+            success: function (date) {
+                if (date.status == 200) {
+                    location.reload();
+                } else {
+                    swal({
+                        title: date.msg,
+                        type: "error",
+                    });
+                }
+            },
+            error: function () {
+                swal({
+                    title: "服务器出错，请联系管理员!",
+                    type: "error",
+                });
+            }
+        });
+    }
+
 </script>
 </html>

@@ -91,7 +91,6 @@ public class SharedForumServiceImpl
 	public PageInfo<SharedForum> findList(Integer pageIndex, Integer pageSize) {
 		// 拦截语句并分页
 		PageHelper.startPage(pageIndex, pageSize);
-
 		PageInfo<SharedForum> pageInfo = new PageInfo<>(
 				sharedForumMapper.findList());
 		return pageInfo;

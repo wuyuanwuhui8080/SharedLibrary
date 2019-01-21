@@ -54,7 +54,7 @@ public class SharedReceiveMailServiceImpl
         wrapper.orderByDesc(SharedReceiveMail::getCreationDate);
         // 拦截条件
         PageHelper.startPage(pageIndex, pageSize);
-        PageInfo<SharedReceiveMail> pageInfo = new PageInfo<SharedReceiveMail>(super.list(wrapper));
+        PageInfo<SharedReceiveMail> pageInfo = new PageInfo<>(super.list(wrapper));
         return pageInfo;
     }
 
