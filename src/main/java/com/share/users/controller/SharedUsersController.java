@@ -7,6 +7,8 @@ import javax.annotation.Resource;
 import javax.servlet.http.HttpSession;
 
 import com.github.pagehelper.PageInfo;
+import com.share.forum.service.SharedForumService;
+import com.share.pojo.SharedForum;
 import com.share.recent_events.Event;
 import com.share.recent_events.Recent_Events;
 import com.share.constant.PageConstant;
@@ -66,6 +68,9 @@ public class SharedUsersController {
 
     @Resource
     private SharedlPositionService positionServicel;
+
+    @Resource
+    private SharedForumService forumService;
 
     @GetMapping("/adminUser")
     public String index() {
@@ -203,7 +208,7 @@ public class SharedUsersController {
     public String goUserList(
             @RequestParam(value = "name", required = false) String name,
             @RequestParam(value = "position", required = false) Integer position,
-            @RequestParam(value = "pageIndex", required = false, defaultValue = "1") Integer pageIndex,
+            @RequestParam(value = "pageIndex", required = false, defaultValue = "0") Integer pageIndex,
             Model model) {
         // 查询所有职位
         List<SharedlPosition> positionList = positionServicel.findList();
@@ -233,7 +238,7 @@ public class SharedUsersController {
     public ReturnResult jsonUserList(
             @RequestParam(value = "name", required = false) String name,
             @RequestParam(value = "position", required = false) Integer position,
-            @RequestParam(value = "pageIndex", required = false, defaultValue = "1") Integer pageIndex,
+            @RequestParam(value = "pageIndex", required = false, defaultValue = "0") Integer pageIndex,
             Model model) {
         // 查询用户
         PageInfo<SharedUsersJSONVO> page = usersService
@@ -315,7 +320,7 @@ public class SharedUsersController {
     public String loginOut() {
         Subject subject = SecurityUtils.getSubject();
         subject.logout();
-        return "redirect:/sharediForum/goIndex";
+        return "redirect:/sharedForum/goIndex";
     }
 
     /**
@@ -605,5 +610,8 @@ public class SharedUsersController {
     public String goForumRegister(@ModelAttribute("users") SharedUsers users) {
         return "reception/user/reg";
     }
+
+
+
 
 }

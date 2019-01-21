@@ -48,7 +48,7 @@ public class SharedReceiveMailController {
      */
     @GetMapping("/emailIndex")
     public String emailIndex(
-            @RequestParam(value = "pageIndex", required = false, defaultValue = "1") Integer pageIndex,
+            @RequestParam(value = "pageIndex", required = false, defaultValue = "0") Integer pageIndex,
             Model model) {
         Session session = SecurityUtils.getSubject().getSession();
         SharedUsers users = (SharedUsers) session.getAttribute("users");
@@ -110,7 +110,7 @@ public class SharedReceiveMailController {
     @RequestMapping("/emailState/{state}")
     public String getMajorEmail(@PathVariable String state,
                                 Model model,
-                                @RequestParam(value = "pageIndex", required = false, defaultValue = "1") Integer pageIndex) {
+                                @RequestParam(value = "pageIndex", required = false, defaultValue = "0") Integer pageIndex) {
         Session session = SecurityUtils.getSubject().getSession();
         SharedUsers users = (SharedUsers) session.getAttribute("users");
         PageInfo<SharedEmail> iPage;

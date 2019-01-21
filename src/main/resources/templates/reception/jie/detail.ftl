@@ -58,18 +58,18 @@
                 <ul class="jieda" id="jieda">
                     <#if forumAndComment.commentBOList?? && (forumAndComment.commentBOList?size > 0)>
                         <#list forumAndComment.commentBOList as li>
-                            <li data-id="111" class="jieda-daan">
-                                <a name="item-1111111111"></a>
-                                <div class="detail-about detail-about-reply">
-                                    <a class="fly-avatar" href="">
-                                        <img src="${basePath}/images/${li.commentUsersHeadImg}"
-                                             alt=" ">
-                                    </a>
-                                    <div class="fly-detail-user">
-                                        <a href="" class="fly-link">
-                                            <cite>${li.commentUsersRealName}</cite>
+                                <li data-id="111" class="jieda-daan">
+                                    <a name="item-1111111111"></a>
+                                    <div class="detail-about detail-about-reply">
+                                        <a class="fly-avatar" href="">
+                                            <img src="${basePath}/images/${li.commentUsersHeadImg}"
+                                                 alt=" ">
                                         </a>
-                                        <span>
+                                        <div class="fly-detail-user">
+                                            <a href="" class="fly-link">
+                                                <cite>${li.commentUsersRealName}</cite>
+                                            </a>
+                                            <span>
                                             <#--校验是否是自己-->
                                             <#if li.commentUsersId == forumAndComment.forumUsersId>
                                                 (楼主)
@@ -80,21 +80,21 @@
                                             <#else >
                                             </#if>
                                             </span>
-                                        <!--
-                                        <span style="color:#999">（该号已被封）</span>
-                                        -->
-                                    </div>
+                                            <!--
+                                            <span style="color:#999">（该号已被封）</span>
+                                            -->
+                                        </div>
 
-                                    <div class="detail-hits">
-                                        <span>${li.commentCreationTime?datetime}</span>
-                                    </div>
+                                        <div class="detail-hits">
+                                            <span>${li.commentCreationTime?datetime}</span>
+                                        </div>
 
-                                    <i class="iconfont icon-caina" title="最佳答案"></i>
-                                </div>
-                                <div class="detail-body jieda-body photos">
-                                    <p>${li.commentContent!}</p>
-                                </div>
-                                <div class="jieda-reply">
+                                        <i class="iconfont icon-caina" title="最佳答案"></i>
+                                    </div>
+                                    <div class="detail-body jieda-body photos">
+                                        <p>${li.commentContent!}</p>
+                                    </div>
+                                    <div class="jieda-reply">
                                       <span class="jieda-zan zanok" type="zan">
                                           <#--点赞-->
                                           <#--判断当前评论有没有点赞-->
@@ -121,7 +121,7 @@
                                                           <#else >
                                                           <i class="iconfont icon-zan" style="color: #999999;"></i>
                                                             <em>${li.commentGive}</em>
-                                                          <#break >
+                                                              <#break >
                                                           </#if>
                                                       </#if>
                                                   </#list>
@@ -130,21 +130,21 @@
                                                             <em>${li.commentGive}</em>
                                               </#if>
                                       </span>
-                                    <span type="reply">
+                                        <span type="reply">
                                         <i class="iconfont icon-svgmoban53"></i>
                                         回复
                                       </span>
-                                    <div class="jieda-admin">
-                                        <span type="edit">编辑</span>
-                                        <span type="del">删除</span>
-                                        <!-- <span class="jieda-accept" type="accept">采纳</span> -->
+                                        <div class="jieda-admin">
+                                            <span type="edit">编辑</span>
+                                            <span type="del">删除</span>
+                                            <!-- <span class="jieda-accept" type="accept">采纳</span> -->
+                                        </div>
                                     </div>
-                                </div>
-                            </li>
+                                </li>
                         </#list>
                     <#else >
-                    <!-- 无数据时 -->
-                     <li class="fly-none">消灭零回复</li>
+                     <!-- 无数据时 -->
+                        <li class="fly-none">消灭零回复</li>
                     </#if>
                 </ul>
 
