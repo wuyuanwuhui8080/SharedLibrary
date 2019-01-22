@@ -8,6 +8,8 @@ import org.apache.ibatis.annotations.Param;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
+
 /**
  * <p>
  * 帖子业务逻辑层
@@ -46,5 +48,15 @@ public interface SharedForumService extends IService<SharedForum> {
 	 * @return
 	 */
 	ForumAndComment findListByForumId(@Param("forumId") String forumId);
+
+    /**
+     * 个人页面中获取帖子集合
+     *
+     * @param userId    用户id
+     * @param pageIndex 分页数
+     * @return
+     */
+    List<SharedForum> findForymByUserId(String userId, Integer pageIndex);
+
 
 }

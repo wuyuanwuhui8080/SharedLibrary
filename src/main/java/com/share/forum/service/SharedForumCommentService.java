@@ -3,6 +3,8 @@ package com.share.forum.service;
 import com.share.pojo.SharedForumComment;
 import com.baomidou.mybatisplus.extension.service.IService;
 
+import java.util.List;
+
 /**
  * <p>
  * 评论表服务类
@@ -16,7 +18,7 @@ public interface SharedForumCommentService
 
 	/**
 	 * 添加评论
-	 * 
+	 *
 	 * @param comment
 	 *            传入的实体
 	 * @return
@@ -25,11 +27,19 @@ public interface SharedForumCommentService
 
 	/**
 	 * 删除一条评论
-	 * 
+	 *
 	 * @param commentId
 	 *            传入的id
 	 * @return
 	 */
 	boolean deleteComment(String commentId);
 
+    /**
+     * 个人页面根据userid获取最近的回帖
+     *
+     * @param userId    用户Id
+     * @param pageIndex 分页查看
+     * @return 最近的回帖
+     */
+    List<SharedForumComment> findForymCommentByUserID(String userId, Integer pageIndex);
 }

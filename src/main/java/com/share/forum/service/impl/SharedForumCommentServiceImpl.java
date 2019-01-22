@@ -9,9 +9,12 @@ import org.springframework.stereotype.Service;
 import javax.annotation.Resource;
 import java.util.Date;
 
+import javax.annotation.Resource;
+import java.util.List;
+
 /**
  * <p>
- * 服务实现类
+ *  服务实现类
  * </p>
  *
  * @author 博博大人
@@ -27,7 +30,7 @@ public class SharedForumCommentServiceImpl
 
 	/**
 	 * 添加一个回复
-	 * 
+	 *
 	 * @param comment
 	 *            传入的实体
 	 * @return
@@ -48,4 +51,16 @@ public class SharedForumCommentServiceImpl
 	public boolean deleteComment(String commentId) {
 		return forumCommentMapper.deleteComment(commentId) > 0 ? true : false;
 	}
+    /**
+     * 个人页面根据userid获取最近的回帖
+     *
+     * @param userId    用户Id
+     * @param pageIndex 分页查看
+     * @return 最近的回帖
+     */
+    @Override
+    public List<SharedForumComment> findForymCommentByUserID(String userId, Integer pageIndex) {
+        List<SharedForumComment> forumComments = forumCommentMapper.findForymCommentByUserID(userId, pageIndex, PageConstant.PAGESIZE);
+        return forumComments;
+    }
 }

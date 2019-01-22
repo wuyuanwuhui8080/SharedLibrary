@@ -1,9 +1,15 @@
 package com.share.pojo;
 
 import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.extension.activerecord.Model;
+
 import java.time.LocalDateTime;
+
 import com.baomidou.mybatisplus.annotation.TableId;
+import com.share.forum.mapper.SharedForumMapper;
+import com.share.forum.service.SharedForumService;
+import com.share.forum.service.impl.SharedForumServiceImpl;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -13,7 +19,7 @@ import java.util.Date;
 
 /**
  * <p>
- *  帖子评论实体
+ * 帖子评论实体
  * </p>
  *
  * @author 博博大人
@@ -52,5 +58,10 @@ public class SharedForumComment extends Model<SharedForumComment> {
      */
     private String forumId;
 
+    /**
+     * 论坛实体
+     */
+    @TableField(exist = false)
+    private SharedForum sharedForum;
 
 }

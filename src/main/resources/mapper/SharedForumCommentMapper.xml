@@ -9,7 +9,22 @@
         <result column="content" property="content"/>
         <result column="creation_date" property="creationDate"/>
         <result column="forum_id" property="forumId"/>
+        <association property="sharedForum" javaType="com.share.pojo.SharedForum">
+            <id property="id" column="id"/>
+            <result property="title" column="f_title"/>
+            <result property="content" column="f_content"/>
+        </association>
     </resultMap>
+
+    <select id="findForymCommentByUserID" resultMap="BaseResultMap">
+        SELECT c.id, c.user_id, c.forum_id, c.creation_date, c.content, f.title AS f_title, f.content AS f_content
+        FROM shared_forum_comment AS c,
+                shared_forum AS f
+                WHERE c.forum_id = f.id
+                AND c.user_id = #{userId}
+                LIMIT #{pageIndex}, #{forumpagesize}
+    </select>
+
 
     <!-- 通用查询结果列 -->
     <sql id="Base_Column_List">
@@ -25,5 +40,6 @@
             ON g.forum_comment_id = c.id
         WHERE c.id = #{id}
     </delete>
+
 
 </mapper>

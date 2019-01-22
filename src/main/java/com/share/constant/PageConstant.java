@@ -22,4 +22,10 @@ public final class PageConstant {
      * 粉丝分页每页个数
      */
     public static final Integer FENPAGESIZE = 9;
+
+    /**
+     * 帖子个人页面分页每页个数
+     */
+    public static final Integer FORUMPAGESIZE = 12;
+
 }

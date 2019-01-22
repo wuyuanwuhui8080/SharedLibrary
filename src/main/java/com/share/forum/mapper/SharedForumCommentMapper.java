@@ -1,6 +1,9 @@
 package com.share.forum.mapper;
 
 import com.share.pojo.SharedForumComment;
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;import org.apache.ibatis.annotations.Param;
+
+import java.util.List;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Param;
 
@@ -17,11 +20,20 @@ public interface SharedForumCommentMapper
 
 	/**
 	 * 删除评论以及点赞
-	 * 
+	 *
 	 * @param id
 	 *            评论的id
 	 * @return
 	 */
 	Integer deleteComment(@Param("id") String id);
 
+    /**
+     * 个人页面根据userid获取最近的回帖
+     *
+     * @param userId        用户Id
+     * @param pageIndex     分页起始页
+     * @param forumpagesize 每页数量
+     * @return 最近的回帖
+     */
+    List<SharedForumComment> findForymCommentByUserID(@Param("userId")String userId, @Param("pageIndex")Integer pageIndex, @Param("forumpagesize")Integer forumpagesize);
 }

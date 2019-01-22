@@ -7,6 +7,8 @@ import javax.annotation.Resource;
 import javax.servlet.http.HttpSession;
 
 import com.github.pagehelper.PageInfo;
+import com.share.forum.service.SharedForumService;
+import com.share.pojo.SharedForum;
 import com.share.recent_events.Event;
 import com.share.recent_events.Recent_Events;
 import com.share.constant.PageConstant;
@@ -617,5 +619,8 @@ public class SharedUsersController {
         subject.logout();
         return  "redirect:/sharedForum/goIndex";
     }
+
+
+
 
 }

@@ -3,10 +3,12 @@ package com.share.forum.controller;
 import com.github.pagehelper.PageInfo;
 import com.share.ControllerUtil.CaptchaController;
 import com.share.constant.PageConstant;
+import com.share.forum.service.SharedForumCommentService;
 import com.share.forum.service.SharedForumService;
 import com.share.forum.service.SharedlClassifyService;
 import com.share.forum.vo.ForumAndComment;
 import com.share.pojo.SharedForum;
+import com.share.pojo.SharedForumComment;
 import com.share.pojo.SharedlClassify;
 import com.share.util.ReturnResult;
 import org.apache.shiro.SecurityUtils;
@@ -34,8 +36,11 @@ public class SharedForumController {
 	@Resource
 	private SharedlClassifyService classifyService;
 
-	@Resource
-	private SharedForumService forumService;
+    @Resource
+    private SharedForumService forumService;
+    @Resource
+    private SharedForumCommentService forumCommentService;
+
 
 	/**
 	 * 初始化主页
@@ -114,5 +119,21 @@ public class SharedForumController {
 		}
 		return ReturnResult.error("发布失败！");
 	}
+
+    /**
+     * 前台页面跳转个人主页
+     *
+     * @return
+     */
+    @RequestMapping("/gohome/{userId}")
+    public String gohome(@PathVariable String userId,
+                         @RequestParam(value = "pageIndex", required = false, defaultValue = "0") Integer pageIndex,
+                         Model model) {
+        List<SharedForum> foryms = forumService.findForymByUserId(userId, pageIndex);
+        List<SharedForumComment> forumComments = forumCommentService.findForymCommentByUserID(userId, pageIndex);
+        model.addAttribute("foryms", foryms);
+        model.addAttribute("forumComments", forumComments);
+        return "reception/user/home";
+    }
 
 }
