@@ -57,19 +57,19 @@
 
                 <ul class="jieda" id="jieda">
                     <#if forumAndComment.commentBOList?? && (forumAndComment.commentBOList?size > 0)>
-                        <#list forumAndComment.commentBOList as li>
-                                <li data-id="111" class="jieda-daan">
-                                    <a name="item-1111111111"></a>
-                                    <div class="detail-about detail-about-reply">
-                                        <a class="fly-avatar" href="">
-                                            <img src="${basePath}/images/${li.commentUsersHeadImg}"
-                                                 alt=" ">
+                        <#list forumAndComment.commentBOList?sort_by("commentCreationTime") as li>
+                            <li data-id="111" class="jieda-daan" id="comm${li.commentId}">
+                                <a name="item-1111111111"></a>
+                                <div class="detail-about detail-about-reply">
+                                    <a class="fly-avatar" href="">
+                                        <img src="${basePath}/images/${li.commentUsersHeadImg}"
+                                             alt=" ">
+                                    </a>
+                                    <div class="fly-detail-user">
+                                        <a href="" class="fly-link">
+                                            <cite>${li.commentUsersRealName} (${li.commentUsersUserName})</cite>
                                         </a>
-                                        <div class="fly-detail-user">
-                                            <a href="" class="fly-link">
-                                                <cite>${li.commentUsersRealName}</cite>
-                                            </a>
-                                            <span>
+                                        <span>
                                             <#--校验是否是自己-->
                                             <#if li.commentUsersId == forumAndComment.forumUsersId>
                                                 (楼主)
@@ -80,24 +80,24 @@
                                             <#else >
                                             </#if>
                                             </span>
-                                            <!--
-                                            <span style="color:#999">（该号已被封）</span>
-                                            -->
-                                        </div>
-
-                                        <div class="detail-hits">
-                                            <span>${li.commentCreationTime?datetime}</span>
-                                        </div>
-
-                                        <i class="iconfont icon-caina" title="最佳答案"></i>
+                                        <!--
+                                        <span style="color:#999">（该号已被封）</span>
+                                        -->
                                     </div>
-                                    <div class="detail-body jieda-body photos">
-                                        <p>${li.commentContent!}</p>
+
+                                    <div class="detail-hits">
+                                        <span>${li.commentCreationTime?datetime}</span>
                                     </div>
-                                    <div class="jieda-reply">
-                                      <span class="jieda-zan zanok" type="zan">
-                                          <#--点赞-->
-                                          <#--判断当前评论有没有点赞-->
+
+                                    <i class="iconfont icon-caina" title="最佳答案"></i>
+                                </div>
+                                <div class="detail-body jieda-body photos">
+                                    <p>${li.commentContent!}</p>
+                                </div>
+                                <div class="jieda-reply">
+                                    <span class="GiveDIv">
+                                    <#--点赞-->
+                                    <#--判断当前评论有没有点赞-->
                                               <#if li.commentGive?? && li.commentGive != 0>
                                               <#--循环所有点赞-->
                                                   <#list forumAndComment.commentGiveBOList as reply>
@@ -107,62 +107,74 @@
                                                           <#if Session.users??>
                                                           <#--判断点赞的用户是不是当前登录用户，如果是就代表是自己点的赞-->
                                                               <#if reply.userId == Session.users.id>
-                                                                <i class="iconfont icon-zan" style="color: red"></i>
+                                                               <span class="jieda-zan zanok CommentGive">
+                                                                <i class="iconfont icon-zan"
+                                                                   commentId="${li.commentId!}"
+                                                                   giveId="${reply.giveId!}" style="color: red"></i>
                                                                     <em>${li.commentGive}</em>
+                                                              </span>
                                                               <#--结束循环-->
                                                                   <#break >
                                                               <#else >
                                                               <#--如果不是当前用户就判断有没有到最大的索引，如果到了最大的索引就代表，没有点赞-->
                                                                   <#if (reply_index+1) == forumAndComment.commentGiveBOList?size>
-                                                              <i class="iconfont icon-zan" style="color: #999999;"></i>
-                                                            <em>${li.commentGive}</em>
+                                                                  <span class="jieda-zan zanok NoCommentGive">
+                                                              <i class="iconfont icon-zan" commentId="${li.commentId}"
+                                                                 style="color: #999999;"></i>
+                                                                       <em>${li.commentGive}</em>
+                                                                  </span>
                                                                   </#if>
                                                               </#if>
                                                           <#else >
-                                                          <i class="iconfont icon-zan" style="color: #999999;"></i>
+                                                          <span class="jieda-zan zanok NoCommentGive">
+                                                          <i class="iconfont icon-zan" commentId="${li.commentId}"
+                                                             style="color: #999999;"></i>
                                                             <em>${li.commentGive}</em>
+                                                          </span>
                                                               <#break >
                                                           </#if>
                                                       </#if>
                                                   </#list>
                                               <#else >
-                                                 <i class="iconfont icon-zan" style="color: #999999;"></i>
+                                              <span class="jieda-zan zanok NoCommentGive">
+                                                 <i class="iconfont icon-zan" commentId="${li.commentId}"
+                                                    style="color: #999999;"></i>
                                                             <em>${li.commentGive}</em>
+                                              </span>
                                               </#if>
-                                      </span>
-                                        <span type="reply">
+                                    </span>
+                                    <span class="CommentSpan" commentuserlName="${li.commentUsersUserName}">
                                         <i class="iconfont icon-svgmoban53"></i>
                                         回复
                                       </span>
-                                        <div class="jieda-admin">
-                                            <span type="edit">编辑</span>
-                                            <span type="del">删除</span>
-                                            <!-- <span class="jieda-accept" type="accept">采纳</span> -->
-                                        </div>
+                                    <div class="jieda-admin">
+                                        <span type="edit">编辑</span>
+                                        <span class="commentDel" commentId="${li.commentId}">删除</span>
+                                        <!-- <span class="jieda-accept" type="accept">采纳</span> -->
                                     </div>
-                                </li>
+                                </div>
+                            </li>
                         </#list>
                     <#else >
-                     <!-- 无数据时 -->
-                        <li class="fly-none">消灭零回复</li>
+                    <!-- 无数据时 -->
+                     <li class="fly-none">消灭零回复</li>
                     </#if>
                 </ul>
 
                 <div class="layui-form layui-form-pane">
-                    <form action="/jie/reply/" method="post">
-                        <div class="layui-form-item layui-form-text">
-                            <a name="comment"></a>
-                            <div class="layui-input-block">
+                    <div class="layui-form-item layui-form-text">
+                        <a name="comment"></a>
+                        <div class="layui-input-block">
                                 <textarea id="L_content" name="content" required lay-verify="required"
                                           placeholder="请输入内容" class="layui-textarea fly-editor"
-                                          style="height: 150px;"></textarea>
-                            </div>
+                                          style="height: 200px;resize:none"></textarea>
                         </div>
-                        <div class="layui-form-item">
-                            <input type="hidden" name="jid" value="123">
-                            <button class="layui-btn" lay-filter="*" lay-submit>提交回复</button>
-                        </div>
-                    </form>
+                    </div>
+                    <div class="layui-form-item">
+                        <button class="layui-btn" id="sumitComment" forumUserId="${forumAndComment.forumUsersId}" forumId="${forumAndComment.forumId}" lay-filter="*">
+                            提交回复
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -234,7 +246,25 @@
     </div>
 </div>
 <script src="${basePath}/res/layui/layui.js"></script>
+<script src="${basePath}/js/reception/detail.js"></script>
 <script>
+
+    var falg = false;
+
+    var path = "${basePath}";
+
+    <#if Session.users??>
+            var userId = "${Session.users.id}";
+            falg = true;
+            var headImg = "${Session.users.headImg}";
+
+            var userName = "${Session.users.userName}";
+
+            var realName = "${Session.users.realName}";
+
+            var positionId = "${Session.users.positionId}";
+    </#if>
+
     layui.cache.page = 'jie';
     layui.cache.user = {
         username: '游客'

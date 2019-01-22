@@ -60,4 +60,10 @@ public class CommentBO {
 	private Date commentCreationTime;
 
 
+	/**
+	 * 回复者的用户名
+	 */
+	private String commentUsersUserName;
+
+
 }

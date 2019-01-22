@@ -14,6 +14,8 @@
     <sql id="Base_Column_List">
         id, blogs_id, give_user_id, creation_date
     </sql>
+
+    <!--点赞-->
     <insert id="saveBlogGive" useGeneratedKeys="true" keyProperty="id">
         insert into share_blogs_give
 	    (id,

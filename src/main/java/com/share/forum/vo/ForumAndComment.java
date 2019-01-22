@@ -63,6 +63,7 @@ public class ForumAndComment {
 	 */
 	private String forumUsersHeadImg;
 
+
 	/**
 	 * 分类中文名称
 	 */

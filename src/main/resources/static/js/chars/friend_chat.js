@@ -299,6 +299,9 @@ function chooseUser(realName, id, receiverHeadImg) {
         charHeadName.innerHTML = "<span>聊天室</span>";
         var sumitCharMassage = document.getElementById("sumitCharMassage");
         sumitCharMassage.setAttribute("byUserid", null);
+        charHeadName.removeAttribute("meId");
+        charHeadName.removeAttribute("receiverId");
+        charHeadName.removeAttribute("realName");
         $("#GroupmessageChar").show();
     } else {
         // 先获取看看页面是否有这个div

@@ -19,10 +19,7 @@ var option = {
         if (date.status == 200) {
             location.href = path + "/sharedForum/goIndex";
         } else {
-            swal({
-                title: date.msg,
-                type: "error"
-            });
+            layer.msg(date.msg);
             document.getElementById("captcha").value = "";
             refreshCaptcha();
         }
@@ -31,7 +28,7 @@ var option = {
         $("#ibox").remove();
     },
     error: function () {
-        swal("服务器出错，请联系管理员!",null,"error");
+        layer.msg("服务器出错，请联系管理员!");
     }
 }
 
@@ -40,22 +37,13 @@ function sumitFrom() {
     var password = document.getElementById("password").value;
     var captcha = document.getElementById("captcha").value;
     if (app.isNull(userName)) {
-        swal({
-            title: "用户名不能为空！",
-            type: "warning"
-        });
+        layer.msg("用户名不能为空！", {shift: 6});
         return false;
     } else if (app.isNull(password)) {
-        swal({
-            title: "密码不能为空！",
-            type: "warning"
-        });
+        layer.msg("密码不能为空！", {shift: 6});
         return false;
     } else if (app.isNull(captcha)) {
-        swal({
-            title: "验证码不能为空！",
-            type: "warning"
-        });
+        layer.msg("验证码不能为空！", {shift: 6});
         return false;
     } else {
         $("form").ajaxSubmit(option);

@@ -15,6 +15,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
+import java.util.Date;
 
 /**
  * <p>
@@ -50,7 +51,7 @@ public class SharedForumComment extends Model<SharedForumComment> {
     /**
      * 创建时间
      */
-    private LocalDateTime creationDate;
+    private Date creationDate;
 
     /**
      * 论坛id(shared_forum )id

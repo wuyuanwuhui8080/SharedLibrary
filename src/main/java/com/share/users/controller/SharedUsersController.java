@@ -69,9 +69,6 @@ public class SharedUsersController {
     @Resource
     private SharedlPositionService positionServicel;
 
-    @Resource
-    private SharedForumService forumService;
-
     @GetMapping("/adminUser")
     public String index() {
         return "background/index";
@@ -208,7 +205,7 @@ public class SharedUsersController {
     public String goUserList(
             @RequestParam(value = "name", required = false) String name,
             @RequestParam(value = "position", required = false) Integer position,
-            @RequestParam(value = "pageIndex", required = false, defaultValue = "0") Integer pageIndex,
+            @RequestParam(value = "pageIndex", required = false, defaultValue = "1") Integer pageIndex,
             Model model) {
         // 查询所有职位
         List<SharedlPosition> positionList = positionServicel.findList();
@@ -238,7 +235,7 @@ public class SharedUsersController {
     public ReturnResult jsonUserList(
             @RequestParam(value = "name", required = false) String name,
             @RequestParam(value = "position", required = false) Integer position,
-            @RequestParam(value = "pageIndex", required = false, defaultValue = "0") Integer pageIndex,
+            @RequestParam(value = "pageIndex", required = false, defaultValue = "1") Integer pageIndex,
             Model model) {
         // 查询用户
         PageInfo<SharedUsersJSONVO> page = usersService
@@ -320,7 +317,7 @@ public class SharedUsersController {
     public String loginOut() {
         Subject subject = SecurityUtils.getSubject();
         subject.logout();
-        return "redirect:/sharedForum/goIndex";
+        return "redirect:/sharediForum/goIndex";
     }
 
     /**
@@ -609,6 +606,18 @@ public class SharedUsersController {
     @GetMapping("/goForumRegister")
     public String goForumRegister(@ModelAttribute("users") SharedUsers users) {
         return "reception/user/reg";
+    }
+
+
+    /**
+     * 论坛中的注销
+     * @return
+     */
+    @GetMapping("/forumLoginOut")
+    public String forumLoginOut(){
+        Subject subject = SecurityUtils.getSubject();
+        subject.logout();
+        return  "redirect:/sharedForum/goIndex";
     }
 
 

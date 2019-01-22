@@ -3,7 +3,7 @@
     <img src="${basePath}/images/${users.headImg}" alt="${users.userName}">
     <h1>
     ${users.userName}(${users.realName})
-        <#if users.sex==1>
+        <#if (users.sex==1)>
             <i class="iconfont icon-nan"></i>
         <#else >
         <i class="iconfont icon-nv"></i>
@@ -12,7 +12,7 @@
     <p class="fly-home-info">
         <i class="iconfont icon-shijian"></i><span>${users.creationDate?date} 加入</span>
     </p>
-
+    <br>
     <#if users.individual?? && users.individual!=''>
         ${users.individual}
     <#else >
@@ -22,7 +22,6 @@
     <div class="fly-sns" data-user="">
         <a href="javascript:;" class="layui-btn layui-btn-primary fly-imActive" data-type="addFriend">加为好友</a>
     </div>
-
 </div>
 
 <div class="layui-container">
@@ -57,7 +56,7 @@
                         <#list forumComments?sort_by("creationDate")?reverse as forumComment>
                              <li>
                                  <p>
-                                     <span>${forumComment.creationDate}</span>
+                                     <span>${forumComment.creationDate?datetime}</span>
                                      在<a href="${basePath}/sharedForum/goForumDetailed/${forumComment.forumId}"
                                          target="_blank">${forumComment.sharedForum.title}</a>中回答：
                                  </p>
