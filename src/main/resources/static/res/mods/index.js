@@ -474,8 +474,7 @@ layui.define(['layer', 'laytpl', 'form', 'element', 'upload', 'util'], function 
                 layer.alert('已成功将激活链接发送到了您的邮箱，接受可能会稍有延迟，请注意查收。', {
                     icon: 1
                 });
-            }
-            ;
+            };
         });
     };
     $('#LAY-activate').on('click', function () {
@@ -485,7 +484,7 @@ layui.define(['layer', 'laytpl', 'form', 'element', 'upload', 'util'], function 
     //点击@
     $('body').on('click', '.fly-aite', function () {
         var othis = $(this), text = othis.text();
-        if (othis.attr('href') !== 'javascript:;') {
+        if (othis.attr('href') != 'javascript:;') {
             return;
         }
         text = text.replace(/^@|（[\s\S]+?）/g, '');

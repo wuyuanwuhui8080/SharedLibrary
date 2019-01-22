@@ -5,6 +5,8 @@ import com.share.forum.vo.ForumAndComment;
 import com.share.pojo.SharedForum;
 import com.baomidou.mybatisplus.extension.service.IService;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
 
 /**
  * <p>
@@ -22,6 +24,7 @@ public interface SharedForumService extends IService<SharedForum> {
 	 * @param sharedForum
 	 * @return
 	 */
+	@Transactional(propagation = Propagation.REQUIRED,rollbackFor = Exception.class)
 	Boolean saveForum(SharedForum sharedForum);
 
 	/**

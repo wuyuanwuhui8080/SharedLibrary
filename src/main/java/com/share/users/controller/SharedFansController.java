@@ -39,7 +39,7 @@ public class SharedFansController {
      * @return 视图
      */
     @RequestMapping("/findMeattention")
-    public String findMeattention(@RequestParam(value = "pageIndex", required = false, defaultValue = "1") Integer pageIndex, Model model) {
+    public String findMeattention(@RequestParam(value = "pageIndex", required = false, defaultValue = "0") Integer pageIndex, Model model) {
         SharedUsers users = (SharedUsers) SecurityUtils.getSubject().getSession().getAttribute("users");
         PageInfo<SharedFans> pageInfo = sharedFansService.findMeattention(users.getId(), pageIndex);
         model.addAttribute("page", pageInfo);
@@ -55,7 +55,7 @@ public class SharedFansController {
      * @return 视图
      */
     @RequestMapping("/findMeFenList")
-    public String findMeFenList(@RequestParam(value = "pageIndex", required = false, defaultValue = "1") Integer pageIndex, Model model) {
+    public String findMeFenList(@RequestParam(value = "pageIndex", required = false, defaultValue = "0") Integer pageIndex, Model model) {
         SharedUsers users = (SharedUsers) SecurityUtils.getSubject().getSession().getAttribute("users");
         PageInfo<SharedFans> pageInfo = sharedFansService.findMeFenList(users.getId(), pageIndex);
         model.addAttribute("page", pageInfo);

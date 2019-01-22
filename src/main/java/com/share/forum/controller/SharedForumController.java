@@ -1,6 +1,7 @@
 package com.share.forum.controller;
 
 import com.github.pagehelper.PageInfo;
+import com.share.ControllerUtil.CaptchaController;
 import com.share.constant.PageConstant;
 import com.share.forum.service.SharedForumService;
 import com.share.forum.service.SharedlClassifyService;
@@ -8,6 +9,8 @@ import com.share.forum.vo.ForumAndComment;
 import com.share.pojo.SharedForum;
 import com.share.pojo.SharedlClassify;
 import com.share.util.ReturnResult;
+import org.apache.shiro.SecurityUtils;
+import org.apache.shiro.session.Session;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
@@ -66,6 +69,10 @@ public class SharedForumController {
 	public String goForumDetailed(@PathVariable String id, Model model) {
 		// 执行查询
 		ForumAndComment forumAndComment = forumService.findListByForumId(id);
+		// 如果没有回复，就直接弄空，不然前台处问题
+		if (forumAndComment.getCommentBOList().get(0).getCommentId() == null) {
+			forumAndComment.setCommentBOList(null);
+		}
 		model.addAttribute("forumAndComment", forumAndComment);
 		return "reception/jie/detail";
 	}
@@ -94,7 +101,14 @@ public class SharedForumController {
 	 */
 	@PostMapping("/saveForum")
 	@ResponseBody
-	public ReturnResult saveForum(SharedForum sharedForum) {
+	public ReturnResult saveForum(SharedForum sharedForum, String captcha) {
+		Session session = SecurityUtils.getSubject().getSession();
+		// session中的验证码
+		String sessionCaptcha = (String) session
+				.getAttribute(CaptchaController.KEY_CAPTCHA);
+		if (null == captcha || !captcha.equalsIgnoreCase(sessionCaptcha)) {
+			return ReturnResult.error("验证码错误！");
+		}
 		if (forumService.saveForum(sharedForum)) {
 			return ReturnResult.ok(sharedForum.getId());
 		}

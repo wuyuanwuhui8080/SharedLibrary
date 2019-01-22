@@ -42,12 +42,12 @@ public class SharedForumVO {
     /**
      * 创建时间
      */
-    private Date creationDate;
+    private LocalDateTime creationDate;
 
     /**
      * 修改时间
      */
-    private Date updateDate;
+    private LocalDateTime updateDate;
 
     /**
      * 分类id

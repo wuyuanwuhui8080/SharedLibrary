@@ -160,7 +160,7 @@
                     <#if page.list?? && (page.list?size>0)>
                         <#list page.list as forum>
                         <li>
-                            <a href="${basePath}/sharedForum/goForumDetailed?forumss=${forum.id}" class="fly-avatar">
+                            <a href="${basePath}/sharedForum/goForumDetailed/${forum.id}" class="fly-avatar">
                                 <img src="${basePath}/images/${forum.sharedUsers.headImg}"
                                      alt="${forum.sharedUsers.realName}">
                             </a>

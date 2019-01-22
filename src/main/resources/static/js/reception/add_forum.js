@@ -12,18 +12,26 @@ $(function () {
         var content = editor.txt.html();
         // 获取类别id
         var classId = $(".selectClassId").val();
+        // 获取验证码
+        var captcha = $("#captcha").val();
 
         if (app.isNull(title)) {
-            swal("标题不能为空...", null, "warning");
+            layer.msg("标题不能为空...", {shift: 6});
+            return false;
         } else if (content.length == 11) {
-            swal("内容不能为空!", null, "warning");
+            layer.msg("内容不能为空!", {shift: 6});
+            return false;
         } else if (app.isNull(classId)) {
-            swal("请选择专栏！", null, "warning");
+            layer.msg("请选择专栏！", {shift: 6});
+            return false;
+        } else if (app.isNull(captcha)) {
+            layer.msg("请输入验证码！", {shift: 6});
+            return false;
         } else {
             $.ajax({
                 type: "post",
                 url: path + "/sharedForum/saveForum",
-                data: {content: content, classId: classId, title: title},
+                data: {content: content, classId: classId, title: title, captcha: captcha},
                 dataType: "json",
                 timeout: 1000,
                 beforeSend: function () {
@@ -34,11 +42,11 @@ $(function () {
                         alert("发帖成功.");
                         // 跳转到详细页面
                     } else {
-                        swal(date.msg, null, "error");
+                        layer.msg(date.msg, {shift: 6});
                     }
                 },
                 error: function () {
-                    swal("网络连接超时!", null, "error");
+                    layer.msg("网络连接超时!", {shift: 6});
                 },
                 complete: function () {
                     $("#ibox").remove();
