@@ -54,17 +54,22 @@
                         <img src="${basePath}/images/${users.headImg}">
                     </a>
                     <dl class="layui-nav-child">
-                    <#--<dd><a href="../user/message.html">
-                        <i class="iconfont icon-tongzhi" style="top: 4px;"></i>我的消息</a>
-                    </dd>-->
+
                         <dd><a href="${basePath}/sharedUsers/goIndex">
                             <i class="layui-icon" style="margin-left: 2px; font-size: 22px;">&#xe68e;</i>进入后台</a>
                         </dd>
                         <dd>
-                            <a href="/sharedForum/gohome/${users.id}">
-                                <i class="layui-icon" style="margin-left: 2px; font-size: 22px;">&#xe68e;</i>我的主页
+                            <a href="${basePath}/sharedForum/gohome/${users.id}">
+                                <i class="layui-icon">&#xe609;</i>我的主页
                             </a>
                         </dd>
+                        <dd><a href="${basePath}/sharedForum/goUserIndex">
+                            <i class="layui-icon">&#xe612;</i>用户中心</a>
+                        </dd>
+                        <dd><a href="${basePath}/sharedForum/goMessage">
+                            <i class="iconfont icon-tongzhi" style="top: 4px;"></i>我的消息</a>
+                        </dd>
+
                         <hr style="margin: 5px 0;">
                         <dd><a href="${basePath}/sharedUsers/loginOut" style="text-align: center;">退出</a></dd>
                     </dl>
@@ -72,7 +77,7 @@
             <#else >
                 <!-- 未登入的状态 -->
                 <li class="layui-nav-item">
-                    <a class="iconfont icon-touxiang layui-hide-xs" href="user/login.html"></a>
+                    <a class="iconfont icon-touxiang layui-hide-xs" href="/sharedUsers/goForumLogin"></a>
                 </li>
                 <li class="layui-nav-item">
                     <a href="/sharedUsers/goForumLogin">登入</a>

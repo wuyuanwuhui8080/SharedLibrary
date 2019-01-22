@@ -8,14 +8,17 @@ import com.share.forum.service.SharedlClassifyService;
 import com.share.forum.vo.ForumAndComment;
 import com.share.pojo.SharedForum;
 import com.share.pojo.SharedForumComment;
+import com.share.pojo.SharedUsers;
 import com.share.pojo.SharedlClassify;
 import com.share.util.ReturnResult;
+import org.apache.shiro.SecurityUtils;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import org.springframework.stereotype.Controller;
 
 import javax.annotation.Resource;
+import java.security.Security;
 import java.util.List;
 
 /**
@@ -120,6 +123,30 @@ public class SharedForumController {
         model.addAttribute("foryms", foryms);
         model.addAttribute("forumComments", forumComments);
         return "reception/user/home";
+    }
+
+    /**
+     * 转我的帖子页面
+     *
+     * @return
+     */
+    @RequestMapping("/goUserIndex")
+    public String goUserIndex(@RequestParam(value = "pageIndex", required = false, defaultValue = "0") Integer pageIndex
+            , Model model) {
+        SharedUsers user = (SharedUsers) SecurityUtils.getSubject().getSession().getAttribute("users");
+        List<SharedForum> foryms = forumService.findForymByUserId(user.getId(), pageIndex);
+        model.addAttribute("foryms", foryms);
+        return "reception/user/index";
+    }
+
+    /**
+     * 转我的消息页面
+     *
+     * @return
+     */
+    @RequestMapping("/goMessage")
+    public String goMessage() {
+        return "reception/user/message";
     }
 
 }
