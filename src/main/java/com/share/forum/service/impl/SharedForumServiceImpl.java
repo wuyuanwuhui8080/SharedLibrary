@@ -22,6 +22,7 @@ import org.springframework.transaction.interceptor.TransactionAspectSupport;
 import javax.annotation.Resource;
 import java.time.LocalDateTime;
 import java.util.Date;
+import java.util.List;
 
 /**
  * <p>
@@ -79,56 +80,24 @@ public class SharedForumServiceImpl
 		}
 		return false;
 	}
-    /**
-     * 个人页面中获取帖子集合
-     *
-     * @param userId    用户id
-     * @param pageIndex 分页数
-     * @return
-     */
-    public List<SharedForum> findForymByUserId(String userId, Integer pageIndex) {
-        QueryWrapper<SharedForum> queryWrapper = new QueryWrapper<>();
-        queryWrapper.eq("user_id", userId);
-        PageHelper.startPage(pageIndex, PageConstant.FORUMPAGESIZE);
-        List<SharedForum> list = super.list(queryWrapper);
-        return list;
-    }
 
-    /**
-     * 添加数据库数据并且添加es数据
-     *
-     * @param sharedForum
-     * @return
-     */
-    @Override
-    public Boolean saveForum(SharedForum sharedForum) {
-        Session session = SecurityUtils.getSubject().getSession();
-        // 设置当前时间
-        sharedForum.setCreationDate(new Date());
-        sharedForum.setUserId(
-                ((SharedUsers) session.getAttribute("users")).getId());
-        // 检验是否添加成功
-        try {
-            if (super.save(sharedForum)) {
-                // 组装es数据
-                SharedForumVO sharedForumVO = new SharedForumVO();
-                sharedForumVO.setId(sharedForum.getId());
-                sharedForumVO.setContent(sharedForum.getContent());
-                sharedForumVO.setClassId(sharedForum.getClassId());
-                sharedForumVO.setCreationDate(new Date());
-                sharedForumVO.setTitle(sharedForum.getTitle());
-                sharedForumVO.setUserId(sharedForum.getUserId());
-                // 判断是否添加成功！ 只要没有发生异常就代表添加成功
-                sharedForumVOReposiory.save(sharedForumVO);
-                return true;
-            }
-        } catch (Exception e) {
-            TransactionAspectSupport.currentTransactionStatus()
-                    .setRollbackOnly();
-            return false;
-        }
-        return false;
-    }
+	/**
+	 * 个人页面中获取帖子集合
+	 *
+	 * @param userId
+	 *            用户id
+	 * @param pageIndex
+	 *            分页数
+	 * @return
+	 */
+	public List<SharedForum> findForymByUserId(String userId,
+			Integer pageIndex) {
+		QueryWrapper<SharedForum> queryWrapper = new QueryWrapper<>();
+		queryWrapper.eq("user_id", userId);
+		PageHelper.startPage(pageIndex, PageConstant.FORUMPAGESIZE);
+		List<SharedForum> list = super.list(queryWrapper);
+		return list;
+	}
 
 	/**
 	 * 查询 pageSize 条帖子

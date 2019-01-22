@@ -1,5 +1,6 @@
 package com.share.forum.service.impl;
 
+import com.share.constant.PageConstant;
 import com.share.pojo.SharedForumComment;
 import com.share.forum.mapper.SharedForumCommentMapper;
 import com.share.forum.service.SharedForumCommentService;

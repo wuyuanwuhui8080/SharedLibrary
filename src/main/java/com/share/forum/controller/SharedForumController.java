@@ -9,8 +9,12 @@ import com.share.forum.service.SharedlClassifyService;
 import com.share.forum.vo.ForumAndComment;
 import com.share.pojo.SharedForum;
 import com.share.pojo.SharedForumComment;
+import com.share.pojo.SharedUsers;
 import com.share.pojo.SharedlClassify;
+import com.share.users.service.SharedUsersService;
+import com.share.util.CopyUtils;
 import com.share.util.ReturnResult;
+import com.share.vo.SharedUsersVO;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.session.Session;
 import org.springframework.ui.Model;
@@ -40,6 +44,9 @@ public class SharedForumController {
     private SharedForumService forumService;
     @Resource
     private SharedForumCommentService forumCommentService;
+
+    @Resource
+    private SharedUsersService usersService;
 
 
 	/**
@@ -128,10 +135,14 @@ public class SharedForumController {
     @RequestMapping("/gohome/{userId}")
     public String gohome(@PathVariable String userId,
                          @RequestParam(value = "pageIndex", required = false, defaultValue = "0") Integer pageIndex,
-                         Model model) {
-        List<SharedForum> foryms = forumService.findForymByUserId(userId, pageIndex);
+                         Model model) throws Exception {
+		SharedUsers user = usersService.getUserById(userId);
+		SharedUsersVO sharedUsersVO = new SharedUsersVO();
+		CopyUtils.Copy(user,sharedUsersVO);
+		List<SharedForum> foryms = forumService.findForymByUserId(userId, pageIndex);
         List<SharedForumComment> forumComments = forumCommentService.findForymCommentByUserID(userId, pageIndex);
         model.addAttribute("foryms", foryms);
+        model.addAttribute("users", sharedUsersVO);
         model.addAttribute("forumComments", forumComments);
         return "reception/user/home";
     }
