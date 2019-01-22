@@ -122,4 +122,9 @@ public class SharedForumController {
         return "reception/user/home";
     }
 
+    @RequestMapping("/goSetting")
+    public String goSetting(){
+        return "reception/user/set";
+    }
+
 }

@@ -62,7 +62,13 @@
                         </dd>
                         <dd>
                             <a href="/sharedForum/gohome/${users.id}">
-                                <i class="layui-icon" style="margin-left: 2px; font-size: 22px;">&#xe68e;</i>我的主页
+                                <i class="iconfont icon-touxiang layui-hide-xs"
+                                   style="margin-left: 2px; font-size: 22px;"></i>我的主页
+                            </a>
+                        </dd>
+                        <dd>
+                            <a href="${basePath}/sharedForum/goSetting">
+                                <i class="layui-icon"></i>账号设置
                             </a>
                         </dd>
                         <hr style="margin: 5px 0;">
@@ -72,7 +78,7 @@
             <#else >
                 <!-- 未登入的状态 -->
                 <li class="layui-nav-item">
-                    <a class="iconfont icon-touxiang layui-hide-xs" href="user/login.html"></a>
+                    <a class="iconfont icon-touxiang layui-hide-xs" href="/sharedUsers/goForumLogin"></a>
                 </li>
                 <li class="layui-nav-item">
                     <a href="/sharedUsers/goForumLogin">登入</a>
