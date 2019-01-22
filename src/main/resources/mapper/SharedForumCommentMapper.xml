@@ -4,16 +4,26 @@
 
     <!-- 通用查询映射结果 -->
     <resultMap id="BaseResultMap" type="com.share.pojo.SharedForumComment">
-        <id column="id" property="id" />
-        <result column="user_id" property="userId" />
-        <result column="content" property="content" />
-        <result column="creation_date" property="creationDate" />
-        <result column="forum_id" property="forumId" />
+        <id column="id" property="id"/>
+        <result column="user_id" property="userId"/>
+        <result column="content" property="content"/>
+        <result column="creation_date" property="creationDate"/>
+        <result column="forum_id" property="forumId"/>
     </resultMap>
 
     <!-- 通用查询结果列 -->
     <sql id="Base_Column_List">
         id, user_id, content, creation_date, forum_id
     </sql>
+
+    <!--删除评论以及点赞-->
+    <delete id="deleteComment">
+        DELETE c,
+          g
+        FROM shared_forum_comment c
+          LEFT JOIN shared_forum_comment_give g
+            ON g.forum_comment_id = c.id
+        WHERE c.id = #{id}
+    </delete>
 
 </mapper>

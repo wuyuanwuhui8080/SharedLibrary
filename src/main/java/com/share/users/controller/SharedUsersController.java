@@ -606,4 +606,16 @@ public class SharedUsersController {
         return "reception/user/reg";
     }
 
+
+    /**
+     * 论坛中的注销
+     * @return
+     */
+    @GetMapping("/forumLoginOut")
+    public String forumLoginOut(){
+        Subject subject = SecurityUtils.getSubject();
+        subject.logout();
+        return  "redirect:/sharedForum/goIndex";
+    }
+
 }

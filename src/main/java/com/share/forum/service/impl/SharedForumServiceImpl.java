@@ -56,24 +56,23 @@ public class SharedForumServiceImpl
 		sharedForum.setUserId(
 				((SharedUsers) session.getAttribute("users")).getId());
 		// 检验是否添加成功
-		try {
-			if (super.save(sharedForum)) {
-				// 组装es数据
-				SharedForumVO sharedForumVO = new SharedForumVO();
-				sharedForumVO.setId(sharedForum.getId());
-				sharedForumVO.setContent(sharedForum.getContent());
-				sharedForumVO.setClassId(sharedForum.getClassId());
-				sharedForumVO.setCreationDate(new Date());
-				sharedForumVO.setTitle(sharedForum.getTitle());
-				sharedForumVO.setUserId(sharedForum.getUserId());
-				// 判断是否添加成功！ 只要没有发生异常就代表添加成功
-				sharedForumVOReposiory.save(sharedForumVO);
-				return true;
+		if (super.save(sharedForum)) {
+			// 组装es数据
+			SharedForumVO sharedForumVO = new SharedForumVO();
+			sharedForumVO.setId(sharedForum.getId());
+			sharedForumVO.setContent(sharedForum.getContent());
+			sharedForumVO.setClassId(sharedForum.getClassId());
+			sharedForumVO.setCreationDate(LocalDateTime.now());
+			sharedForumVO.setTitle(sharedForum.getTitle());
+			sharedForumVO.setUserId(sharedForum.getUserId());
+			// 判断是否添加成功！ 只要没有发生异常就代表添加成功
+			SharedForumVO save = sharedForumVOReposiory.save(sharedForumVO);
+			if (save == null) {
+				TransactionAspectSupport.currentTransactionStatus()
+						.setRollbackOnly();
+				return false;
 			}
-		} catch (Exception e) {
-			TransactionAspectSupport.currentTransactionStatus()
-					.setRollbackOnly();
-			return false;
+			return true;
 		}
 		return false;
 	}

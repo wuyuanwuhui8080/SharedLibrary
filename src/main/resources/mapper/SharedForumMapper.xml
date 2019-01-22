@@ -55,10 +55,12 @@
             <result column="COMMENT_USER_REALNAME" property="commentUsersRealName"/>
             <result column="COMMENT_USER_POSITIONID" property="commentUsersPositionid"/>
             <result column="COMMENT_CREATIONTIME" property="commentCreationTime"/>
+            <result column="COMMENT_USER_USERNAME" property="commentUsersUserName" />
         </collection>
         <collection property="commentGiveBOList" ofType="com.share.forum.bo.CommentGiveBO">
             <result column="GIVE_USER_ID" property="userId"/>
             <result column="COMMENT_GIVE_ID" property="commentId" />
+            <result column="GIVE_ID" property="giveId" />
         </collection>
     </resultMap>
 
@@ -117,10 +119,12 @@
               comment_users.head_img        AS COMMENT_USER_HEADIMG,
               comment_users.realName        AS COMMENT_USER_REALNAME,
               comment_users.id              AS COMMENT_USER_ID,
+              comment_users.userName        AS COMMENT_USER_USERNAME,
               comment_users.position_id     AS COMMENT_USER_POSITIONID,
               comment_id.creation_date      AS COMMENT_CREATIONTIME,
               comment_give.user_id          AS GIVE_USER_ID,
-              comment_give.forum_comment_id AS COMMENT_GIVE_ID
+              comment_give.forum_comment_id AS COMMENT_GIVE_ID,
+              comment_give.id               AS GIVE_ID
         FROM shared_forum f
           LEFT JOIN shared_forum_comment comment_id
             ON comment_id.forum_id = f.id

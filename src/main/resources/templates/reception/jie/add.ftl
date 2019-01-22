@@ -44,7 +44,7 @@
                             <div class="layui-form-item">
                                 <label for="L_vercode" class="layui-form-label">人类验证</label>
                                 <div class="layui-input-inline">
-                                    <input type="text" id="L_vercode" name="vercode"
+                                    <input type="text" id="captcha" name="captcha"
                                            placeholder="请输入验证码" autocomplete="off" class="layui-input">
                                 </div>
                                 <div class="layui-form-mid">

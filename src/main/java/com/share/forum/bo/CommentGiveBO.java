@@ -28,4 +28,9 @@ public class CommentGiveBO {
 	 */
 	private String userId;
 
+	/**
+	 * 点赞id
+	 */
+	private String giveId;
+
 }

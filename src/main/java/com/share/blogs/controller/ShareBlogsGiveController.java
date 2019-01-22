@@ -44,7 +44,6 @@ public class ShareBlogsGiveController {
             if (blogsGiveService.saveBlogGive(shareBlogsGive)) {
                 Integer count = blogsGiveService
                         .getCount(shareBlogsGive.getBlogsId());
-                // 这里0是向前端发送状态，0表示这是一个没有点赞过的
                 myMap.put("blogGiveId", shareBlogsGive.getId());
                 myMap.put("blogId", shareBlogsGive.getBlogsId());
                 myMap.put("count", count);
