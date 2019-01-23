@@ -340,21 +340,6 @@ layui.define(['laypage', 'fly', 'element', 'flow'], function(exports){
       });
     });
 
-    //删除全部
-    $('#LAY_delallmsg').on('click', function(){
-      var othis = $(this);
-      layer.confirm('确定清空吗？', function(index){
-        fly.json('/message/remove/', {
-          all: true
-        }, function(res){
-          if(res.status === 0){
-            layer.close(index);
-            othis.addClass('layui-hide');
-            delEnd(true);
-          }
-        });
-      });
-    });
 
   };
 

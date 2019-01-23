@@ -2,9 +2,9 @@ package com.share.recent_events;
 
 import com.share.blogs.mapper.ShareBlogsMapper;
 import com.share.constant.EventConstant;
-import com.share.pojo.ShareBlogs;
-import com.share.pojo.SharedUsers;
-import com.share.pojo.SharedlFriendRequest;
+import com.share.forum.mapper.SharedForumCommentMapper;
+import com.share.forum.mapper.SharedForumMapper;
+import com.share.pojo.*;
 import com.share.users.mapper.SharedFriendsMapper;
 import com.share.users.mapper.SharedUsersMapper;
 import com.share.users.mapper.SharedlFriendRequestMapper;
@@ -55,6 +55,18 @@ public class Recent_Events {
     @Resource
     private SharedFriendsMapper friendsMapper;
 
+    /**
+     * 帖子回复Mapper
+     */
+    @Resource
+    private SharedForumCommentMapper forumCommentMapper;
+
+    /**
+     * 帖子
+     */
+    @Resource
+    private SharedForumMapper forumMapper;
+
 
     /**
      * 添加事件
@@ -67,6 +79,7 @@ public class Recent_Events {
         //补全对象字段
         event.setEventid(EventObjectId);
         event.setEventTime(new Date());
+        event.setType(type);
         if (EventConstant.FRIEND_EVENT.equals(type)) {
             //添加好友事件
             setFriendRequest(type, EventObjectId, event);
@@ -77,7 +90,45 @@ public class Recent_Events {
             //论坛事件
             event.setEventName("论坛动态");
             event.setType(type);
+        } else if (EventConstant.REPLY_EVENT.equals(type)) {
+            //回复事件
+            setReply(type, EventObjectId, event);
         }
+    }
+
+    private void setReply(String type, String EventObjectId, Event event) {
+        event.setEventName("论坛回复");
+        //获取帖子回复对象
+        SharedForumComment forumComment = forumCommentMapper.selectById(EventObjectId);
+        //获取帖子回复用户
+        SharedUsers sharedUsers = sharedUsersMapper.selectById(forumComment.getUserId());
+        //获取帖子对象
+        SharedForum sharedForum = forumMapper.selectById(forumComment.getForumId());
+        //获取发帖用户
+        SharedUsers users = sharedUsersMapper.selectById(sharedForum.getUserId());
+        //获取详细信息,调用方法
+        String reply = getReply(sharedUsers, sharedForum);
+        event.setEventDescription(reply);
+        //添加入Redis,key使用用户的UserName+Reply
+        redisUtil.sSet(users.getUserName() + "Reply", JsonUtils.JSONString(event));
+
+    }
+
+    /**
+     * 获取帖子回复事件描述
+     *
+     * @param sharedUsers 帖子回复的用户
+     * @param sharedForum 帖子
+     * @return 描述
+     */
+    private String getReply(SharedUsers sharedUsers, SharedForum sharedForum) {
+        StringBuffer sb = new StringBuffer();
+        sb.append(sharedUsers.getUserName());
+        sb.append("(");
+        sb.append(sharedUsers.getRealName());
+        sb.append("),回答了您的求解,");
+        sb.append(sharedForum.getTitle());
+        return sb.toString();
     }
 
     /**
@@ -89,7 +140,6 @@ public class Recent_Events {
      */
     private void setFriendRequest(String type, String EventObjectId, Event event) {
         event.setEventName("添加好友");
-        event.setType(type);
         //好友请求事件
         //强转好友请求对象
         SharedlFriendRequest sharedlFriendRequest = friendRequestMapper.selectById(EventObjectId);
@@ -116,7 +166,6 @@ public class Recent_Events {
     private void setBlog(String type, String EventObjectId, Event event) {
         //博客事件
         event.setEventName("博客动态");
-        event.setType(type);
         //获得博客对象
         ShareBlogs shareBlogs = blogsMapper.selectById(EventObjectId);
         //获取用户对象,并放入博客对象中
@@ -151,7 +200,7 @@ public class Recent_Events {
         event.setEventDescription(getRequestFriendDetails(sharedlFriendRequest, requestUsers, 2));
         event.setType(EventConstant.FRIEND_EVENT);
         String mag = JsonUtils.JSONString(event);
-        //添加进redis,有序集合,获取此集合最大值+1
+        //添加进redis
         redisUtil.sSet(RequestedUserName, mag);
     }
 
@@ -192,4 +241,6 @@ public class Recent_Events {
         sb.append(shareBlogs.getContent());
         return sb.toString();
     }
+
+
 }

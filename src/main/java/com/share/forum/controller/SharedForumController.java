@@ -1,5 +1,6 @@
 package com.share.forum.controller;
 
+import com.alibaba.druid.sql.visitor.functions.If;
 import com.github.pagehelper.PageInfo;
 import com.share.ControllerUtil.CaptchaController;
 import com.share.constant.PageConstant;
@@ -11,8 +12,11 @@ import com.share.pojo.SharedForum;
 import com.share.pojo.SharedForumComment;
 import com.share.pojo.SharedUsers;
 import com.share.pojo.SharedlClassify;
+import com.share.recent_events.Event;
 import com.share.users.service.SharedUsersService;
 import com.share.util.CopyUtils;
+import com.share.util.JsonUtils;
+import com.share.util.RedisUtil;
 import com.share.util.ReturnResult;
 import com.share.vo.SharedUsersVO;
 import org.apache.shiro.SecurityUtils;
@@ -43,9 +47,10 @@ public class SharedForumController {
     private SharedForumService forumService;
     @Resource
     private SharedForumCommentService forumCommentService;
-
     @Resource
     private SharedUsersService usersService;
+    @Resource
+    private RedisUtil redisUtil;
 
 
     /**
@@ -74,7 +79,7 @@ public class SharedForumController {
      * @param model
      * @return
      */
-    @GetMapping("/goForumDetailed/{id}")
+    @RequestMapping("/goForumDetailed/{id}")
     public String goForumDetailed(@PathVariable String id, Model model) {
         // 执行查询
         ForumAndComment forumAndComment = forumService.findListByForumId(id);
@@ -162,8 +167,44 @@ public class SharedForumController {
      * @return
      */
     @RequestMapping("/goMessage")
-    public String goMessage() {
+    public String goMessage(Model model) {
+        SharedUsers users = (SharedUsers) SecurityUtils.getSubject().getSession().getAttribute("users");
+        String event = redisUtil.sGet(users.getUserName() + "Reply").toString();
+        List<Event> list = (List<Event>) JsonUtils.JSONList(event, Event.class);
+        model.addAttribute("Reply", list);
         return "reception/user/message";
+    }
+
+    /**
+     * 删除说有消息
+     *
+     * @return
+     */
+    @RequestMapping("/delAllMessage")
+    public String delAllMessage() {
+        SharedUsers users = (SharedUsers) SecurityUtils.getSubject().getSession().getAttribute("users");
+        redisUtil.del(users.getUserName() + "Reply");
+        return "redirect:/sharedForum/goMessage";
+    }
+
+    /**
+     * 删除单个消息
+     *
+     * @param eventId
+     * @return
+     */
+    @RequestMapping("/delMessage/{eventId}")
+    public String delMessage(@PathVariable String eventId) {
+        SharedUsers users = (SharedUsers) SecurityUtils.getSubject().getSession().getAttribute("users");
+        String mag = redisUtil.sGet(users.getUserName() + "Reply").toString();
+        List<Event> list = (List<Event>) JsonUtils.JSONList(mag, Event.class);
+        for (Event e : list) {
+            if (e.getEventid().equals(eventId)) {
+                String s = JsonUtils.JSONString(e);
+                redisUtil.setRemove(users.getUserName() + "Reply", s);
+            }
+        }
+        return "redirect:/sharedForum/goMessage";
     }
 
 }

@@ -1,8 +1,13 @@
 package com.share.forum.controller;
 
 import com.share.forum.service.SharedForumCommentService;
+import com.share.forum.service.SharedForumService;
+import com.share.forum.vo.ForumAndComment;
+import com.share.pojo.SharedForum;
 import com.share.pojo.SharedForumComment;
 import com.share.util.ReturnResult;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -19,41 +24,49 @@ import javax.annotation.Resource;
  * @author 博博大人
  * @since 2019-01-17
  */
-@RestController
+@Controller
 @RequestMapping("/sharedForumComment")
 public class SharedForumCommentController {
 
-	@Resource
-	private SharedForumCommentService forumCommentService;
+    @Resource
+    private SharedForumCommentService forumCommentService;
 
-	/**
-	 * 添加一条回复
-	 * 
-	 * @param comment
-	 *            回复实体
-	 * @return
-	 */
-	@PostMapping("/saveComment")
-	public ReturnResult saveComment(SharedForumComment comment) {
-		if (forumCommentService.saveComment(comment)) {
-			return ReturnResult.ok(comment);
-		}
-		return ReturnResult.error("回复失败！");
-	}
+    @Resource
+    private SharedForumService forumService;
 
-	/**
-	 * 删除评论
-	 * 
-	 * @param commentId
-	 *            传入的id'
-	 * @return
-	 */
-	@PostMapping("/deleteComment")
-	public ReturnResult deleteComment(String commentId) {
-		if (forumCommentService.deleteComment(commentId)) {
-			return ReturnResult.ok();
-		}
-		return ReturnResult.error();
-	}
+    /**
+     * 添加一条回复
+     *
+     * @param comment 回复实体
+     * @return
+     */
+    @PostMapping("/saveComment")
+    public ReturnResult saveComment(SharedForumComment comment) {
+        if (forumCommentService.saveComment(comment)) {
+            return ReturnResult.ok(comment);
+        }
+        return ReturnResult.error("回复失败！");
+    }
+
+    /**
+     * 删除评论
+     *
+     * @param commentId 传入的id'
+     * @return
+     */
+    @PostMapping("/deleteComment")
+    public ReturnResult deleteComment(String commentId) {
+        if (forumCommentService.deleteComment(commentId)) {
+            return ReturnResult.ok();
+        }
+        return ReturnResult.error();
+    }
+
+    @RequestMapping("/toForumDetailed/{comment}")
+    public String toForumDetailed(@PathVariable String comment) {
+        SharedForumComment byId = forumCommentService.getById(comment);
+        return "redirect:/sharedForum/goForumDetailed/" + byId.getForumId();
+    }
+
 
 }

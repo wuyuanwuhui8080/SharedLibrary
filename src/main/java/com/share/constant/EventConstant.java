@@ -8,6 +8,10 @@ package com.share.constant;
  */
 public final class EventConstant {
     /**
+     * 回复事件
+     */
+    public static final String REPLY_EVENT = "REPLY_EVENT";
+    /**
      * 好友事件
      */
     public static final String FRIEND_EVENT = "FRIEND_REQUEST_EVENT";
