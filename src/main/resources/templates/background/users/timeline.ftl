@@ -24,7 +24,7 @@
                     <div class="ibox float-e-margins">
                         <div class="" id="ibox-content">
                             <div id="vertical-timeline" class="vertical-container light-timeline">
-                                <#if (events?size>0) >
+                                <#if events?? && (events?size>0) >
                                 <#--集合根据时间倒序输出-->
                                     <#list events?sort_by("eventTime")?reverse as event>
                                     <#--好友事件-->
@@ -101,7 +101,7 @@
                 </div>
             </div>
         </div>
-         <#if (events?size>0) >
+         <#if events?? &&(events?size>0) >
              <div class="text-center float-e-margins p-md">
                  <span>预览：</span>
                  <a href="#" class="btn btn-xs btn-primary" id="lightVersion">浅色</a>

@@ -2,13 +2,13 @@
 <#include "../comm/head.ftl">
   <div class="fly-panel fly-panel-user" pad20>
       <div class="layui-tab layui-tab-brief" lay-filter="user" id="LAY_msg" style="margin-top: 15px;">
-          <a class="layui-btn layui-btn-danger" href="${basePath}/sharedForum/delAllMessage"
-             id="LAY_delallmsg">清空全部消息
-          </a>
           <div id="LAY_minemsg" style="margin-top: 10px;">
 
               <ul class="mine-msg">
-                  <#if (Reply?size>0) >
+                  <#if Reply?? && (Reply?size>0) >
+                      <a class="layui-btn layui-btn-danger" href="${basePath}/sharedForum/delAllMessage"
+                         id="LAY_delallmsg">清空全部消息
+                      </a>
                       <#list Reply?sort_by("eventTime")?reverse as reply>
                           <li data-id="123">
                               <blockquote class="layui-elem-quote">

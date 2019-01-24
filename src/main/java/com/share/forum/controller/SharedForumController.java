@@ -14,10 +14,7 @@ import com.share.pojo.SharedUsers;
 import com.share.pojo.SharedlClassify;
 import com.share.recent_events.Event;
 import com.share.users.service.SharedUsersService;
-import com.share.util.CopyUtils;
-import com.share.util.JsonUtils;
-import com.share.util.RedisUtil;
-import com.share.util.ReturnResult;
+import com.share.util.*;
 import com.share.vo.SharedUsersVO;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.session.Session;
@@ -169,8 +166,12 @@ public class SharedForumController {
     @RequestMapping("/goMessage")
     public String goMessage(Model model) {
         SharedUsers users = (SharedUsers) SecurityUtils.getSubject().getSession().getAttribute("users");
-        String event = redisUtil.sGet(users.getUserName() + "Reply").toString();
-        List<Event> list = (List<Event>) JsonUtils.JSONList(event, Event.class);
+        boolean key = redisUtil.hasKey(users.getUserName() + "Reply");
+        List<Event> list = null;
+        if(key){
+            String event = redisUtil.sGet(users.getUserName() + "Reply").toString();
+            list = (List<Event>) JsonUtils.JSONList(event, Event.class);
+        }
         model.addAttribute("Reply", list);
         return "reception/user/message";
     }

@@ -24,7 +24,7 @@ import redis.clients.jedis.JedisPoolConfig;
 @Configuration
 public class RedisConfig {
 
-    private String hostName = "192.168.25.133";
+    private String hostName = "127.0.0.1";
     private Integer host = 6379;
 
     /**
