@@ -5,6 +5,7 @@ import java.util.List;
 
 import javax.annotation.Resource;
 
+import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.interceptor.TransactionAspectSupport;
 
@@ -74,6 +75,23 @@ public class SharedFriendsServiceImpl
 					.setRollbackOnly();
 			return false;
 		}
+	}
+
+	/**
+	 * 查询是否有该好友的
+	 * 
+	 * @param meId
+	 *            自己的id
+	 * @param firendId
+	 *            朋友的id
+	 * @return
+	 */
+	@Override
+	public Integer getCountByMeIdAndFriendId(String meId, String firendId) {
+		LambdaQueryWrapper<SharedFriends> wrapper = new LambdaQueryWrapper<>();
+		wrapper.eq(SharedFriends::getMeId, meId);
+		wrapper.eq(SharedFriends::getFriendsId, firendId);
+		return super.count(wrapper);
 	}
 
 }

@@ -13,6 +13,7 @@ import com.share.forum.service.SharedForumService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.share.pojo.SharedForumComment;
 import com.share.pojo.SharedUsers;
+import com.share.util.StringUtils;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.session.Session;
 import org.springframework.data.elasticsearch.core.ElasticsearchTemplate;
@@ -127,5 +128,21 @@ public class SharedForumServiceImpl
 	@Override
 	public ForumAndComment findListByForumId(String forumId) {
 		return sharedForumMapper.findListByForumId(forumId);
+	}
+
+	/**
+	 * 删除帖子
+	 * 
+	 * @param id
+	 *            传入的id
+	 * @return
+	 */
+	@Override
+	public boolean deleteForum(String id) {
+		if (sharedForumMapper.deleteForum(id) > 0) {
+			sharedForumVOReposiory.deleteById(id);
+			return true;
+		}
+		return false;
 	}
 }

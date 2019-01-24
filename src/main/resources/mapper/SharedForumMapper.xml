@@ -55,12 +55,12 @@
             <result column="COMMENT_USER_REALNAME" property="commentUsersRealName"/>
             <result column="COMMENT_USER_POSITIONID" property="commentUsersPositionid"/>
             <result column="COMMENT_CREATIONTIME" property="commentCreationTime"/>
-            <result column="COMMENT_USER_USERNAME" property="commentUsersUserName" />
+            <result column="COMMENT_USER_USERNAME" property="commentUsersUserName"/>
         </collection>
         <collection property="commentGiveBOList" ofType="com.share.forum.bo.CommentGiveBO">
             <result column="GIVE_USER_ID" property="userId"/>
-            <result column="COMMENT_GIVE_ID" property="commentId" />
-            <result column="GIVE_ID" property="giveId" />
+            <result column="COMMENT_GIVE_ID" property="commentId"/>
+            <result column="GIVE_ID" property="giveId"/>
         </collection>
     </resultMap>
 
@@ -140,5 +140,14 @@
             ON comment_id.id = comment_give.forum_comment_id
         WHERE f.id = #{forumId}
     </select>
-
+    <!--删除帖子-->
+    <delete id="deleteForum">
+        DELETE f,forum_comment,g
+        FROM shared_forum f
+        LEFT JOIN shared_forum_comment forum_comment
+        ON forum_comment.forum_id = f.id
+        LEFT JOIN shared_forum_comment_give g
+        ON g.forum_comment_id = forum_comment.id
+        WHERE f.id = #{forumId}
+    </delete>
 </mapper>

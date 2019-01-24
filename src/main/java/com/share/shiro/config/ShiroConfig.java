@@ -90,8 +90,8 @@ public class ShiroConfig {
         linkedHashMap.put("/background/users/register.ftl", "anon");
         linkedHashMap.put("/background/comm/script.ftl", "anon");
         linkedHashMap.put("/index.ftl", "anon");
-        linkedHashMap.put("/sharediForum/goIndex", "anon");
         linkedHashMap.put("/sharedForum/goForumDetailed/**", "anon");
+        linkedHashMap.put("/sharedForum/goAthome/**", "anon");
         linkedHashMap.put("/loginOut", "logout");
         //css开放
         linkedHashMap.put("/css/**", "anon");

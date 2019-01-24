@@ -2,10 +2,8 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>基于 layui 的极简社区页面模版</title>
+    <title>共享资源库</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="keywords" content="fly,layui,前端社区">
-    <meta name="description" content="Fly社区是模块化前端UI框架Layui的官网社区，致力于为web开发提供强劲动力">
     <#include "script.ftl">
     <style>
 
@@ -71,7 +69,7 @@
                         </dd>
 
                         <hr style="margin: 5px 0;">
-                        <dd><a href="${basePath}/sharedUsers/loginOut" style="text-align: center;">退出</a></dd>
+                        <dd><a href="${basePath}/sharedUsers/forumLoginOut" style="text-align: center;">退出</a></dd>
                     </dl>
                 </li>
             <#else >
@@ -109,11 +107,18 @@
         </ul>
         <div class="fly-column-right layui-hide-xs">
             <span class="fly-search"><i class="layui-icon"></i></span>
-            <a href="${basePath}/sharedForum/goWriteForum" class="layui-btn">发表新帖</a>
+            <a href="javascript:;" class="layui-btn goWrite_forum">发表新帖</a>
         </div>
         <div class="layui-hide-sm layui-show-xs-block"
              style="margin-top: -10px; padding-bottom: 10px; text-align: center;">
-            <a href="/sharediForum/goWriteForum" class="layui-btn">发表新帖</a>
+            <a href="javascript:;" class="layui-btn goWrite_forum">发表新帖</a>
         </div>
     </div>
 </div>
+<script>
+    var forumWirte = false;
+    <#if Session.users??>
+    var paths = "${basePath}";
+        forumWirte = true;
+    </#if>
+</script>

@@ -15,6 +15,8 @@ $(function () {
         // 获取验证码
         var captcha = $("#captcha").val();
 
+        var typeId = $(".selecttypeId").val();
+
         if (app.isNull(title)) {
             layer.msg("标题不能为空...", {shift: 6});
             return false;
@@ -28,28 +30,33 @@ $(function () {
             layer.msg("请输入验证码！", {shift: 6});
             return false;
         } else {
+            var loadIndex = null;
             $.ajax({
                 type: "post",
                 url: path + "/sharedForum/saveForum",
-                data: {content: content, classId: classId, title: title, captcha: captcha},
+                data: {content: content, classId: classId, title: title, captcha: captcha, typeIds: typeId},
                 dataType: "json",
-                timeout: 1000,
                 beforeSend: function () {
-                    $("body").append(app.loads());
+                    loadIndex = layer.load(1, {shade: 0.8});
                 },
                 success: function (date) {
                     if (date.status == 200) {
-                        alert("发帖成功.");
+                        layer.msg("发帖成功.");
                         // 跳转到详细页面
+                        location.href = path + "/sharedForum/goForumDetailed/" + date.obj;
                     } else {
+                        $("#captcha").val("");
+                        refreshCaptcha();
                         layer.msg(date.msg, {shift: 6});
                     }
                 },
                 error: function () {
+                    $("#captcha").val("");
+                    refreshCaptcha();
                     layer.msg("网络连接超时!", {shift: 6});
                 },
                 complete: function () {
-                    $("#ibox").remove();
+                    layer.close(loadIndex);
                 }
             });
         }

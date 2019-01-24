@@ -25,7 +25,7 @@
                               <p>
                                   <span>${reply.eventTime?datetime}</span>
                                   <a href="${basePath}/sharedForum/delMessage/${reply.eventid}"
-                                     class="layui-btn layui-btn-small layui-btn-danger fly-delete">
+                                     class="layui-btn layui-btn-small layui-btn-danger">
                                       删除
                                   </a>
                               </p>

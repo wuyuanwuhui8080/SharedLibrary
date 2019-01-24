@@ -1,21 +1,14 @@
 package com.share.users.controller;
 
 import java.io.FileNotFoundException;
-import java.util.*;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpSession;
 
-import com.github.pagehelper.PageInfo;
-import com.share.forum.service.SharedForumService;
-import com.share.pojo.SharedForum;
-import com.share.recent_events.Event;
-import com.share.recent_events.Recent_Events;
-import com.share.constant.PageConstant;
-import com.share.constant.PositionConstant;
-import com.share.util.*;
-import com.share.vo.SharedUsersJSONVO;
-import com.share.vo.SharedUsersVO;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.IncorrectCredentialsException;
 import org.apache.shiro.authc.UnknownAccountException;
@@ -27,16 +20,23 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
+import com.github.pagehelper.PageInfo;
 import com.share.ControllerUtil.CaptchaController;
 import com.share.blogs.service.ShareBlogsService;
 import com.share.constant.HTTPStutusConstant;
+import com.share.constant.PageConstant;
+import com.share.constant.PositionConstant;
 import com.share.pojo.ShareBlogs;
 import com.share.pojo.SharedUsers;
 import com.share.pojo.SharedlPosition;
+import com.share.recent_events.Event;
 import com.share.users.service.SharedAttentionService;
 import com.share.users.service.SharedFansService;
 import com.share.users.service.SharedUsersService;
 import com.share.users.service.SharedlPositionService;
+import com.share.util.*;
+import com.share.vo.SharedUsersJSONVO;
+import com.share.vo.SharedUsersVO;
 
 import lombok.extern.log4j.Log4j2;
 
@@ -180,47 +180,47 @@ public class SharedUsersController {
 		}
 	}
 
-	/**
-	 * 根据用户名或者真实姓名判断
-	 *
-	 * @param name
-	 * @return
-	 */
-	@GetMapping("/getUserNamorRealName")
-	@ResponseBody
-	public ReturnResult getUserNamorRealName(String name) {
-		if (usersService.getUserByUserNameOrRealName(name)) {
-			return ReturnResult.error();
-		} else {
-			return ReturnResult.ok();
-		}
-	}
+    /**
+     * 根据用户名或者真实姓名判断
+     *
+     * @param name
+     * @return
+     */
+    @GetMapping("/getUserNamorRealName")
+    @ResponseBody
+    public ReturnResult getUserNamorRealName(String name) {
+        if (usersService.getUserByUserNameOrRealName(name)) {
+            return ReturnResult.error();
+        } else {
+            return ReturnResult.ok();
+        }
+    }
 
-	/**
-	 * 根据条件查询 有则查询条件， 无则查询所有
-	 *
-	 * @author cll 马汇博
-	 * @time 2018/12/15 15:49
-	 */
-	@GetMapping("/goUserList")
-	public String goUserList(
-			@RequestParam(value = "name", required = false) String name,
-			@RequestParam(value = "position", required = false) Integer position,
-			@RequestParam(value = "pageIndex", required = false, defaultValue = "1") Integer pageIndex,
-			Model model) {
-		// 查询所有职位
-		List<SharedlPosition> positionList = positionServicel.findList();
+    /**
+     * 根据条件查询 有则查询条件， 无则查询所有
+     *
+     * @author cll 马汇博
+     * @time 2018/12/15 15:49
+     */
+    @GetMapping("/goUserList")
+    public String goUserList(
+            @RequestParam(value = "name", required = false) String name,
+            @RequestParam(value = "position", required = false) Integer position,
+            @RequestParam(value = "pageIndex", required = false, defaultValue = "1") Integer pageIndex,
+            Model model) {
+        // 查询所有职位
+        List<SharedlPosition> positionList = positionServicel.findList();
 
-		// 查询用户
-		PageInfo<SharedUsersJSONVO> page = usersService
-				.findUsersListByUserNameOrRealName(name, position, pageIndex,
-						PageConstant.PAGESIZE);
-		model.addAttribute("page", page);
-		model.addAttribute("positionList", positionList);
-		model.addAttribute("position", position);
-		model.addAttribute("name", name);
-		return "background/users/userList";
-	}
+        // 查询用户
+        PageInfo<SharedUsersJSONVO> page = usersService
+                .findUsersListByUserNameOrRealName(name, position, pageIndex,
+                        PageConstant.PAGESIZE);
+        model.addAttribute("page", page);
+        model.addAttribute("positionList", positionList);
+        model.addAttribute("position", position);
+        model.addAttribute("name", name);
+        return "background/users/userList";
+    }
 
 	/**
 	 * 用来json查询的方法
@@ -304,27 +304,27 @@ public class SharedUsersController {
 				.findListFriendsByUsersId(usersId);
 		SharedUsers users = usersService.getUserById(usersId);
 
-		// 数据统一发送到页面
-		model.addAttribute("getFensCuont", getFensCuont);
-		model.addAttribute("blogsList", blogsList);
-		model.addAttribute("IsFans", IsFans);
-		model.addAttribute("users", users);
-		model.addAttribute("getBlogs", getBlogs);
-		model.addAttribute("getAttention", getAttention);
-		return "background/users/frien_information";
-	}
+        // 数据统一发送到页面
+        model.addAttribute("getFensCuont", getFensCuont);
+        model.addAttribute("blogsList", blogsList);
+        model.addAttribute("IsFans", IsFans);
+        model.addAttribute("users", users);
+        model.addAttribute("getBlogs", getBlogs);
+        model.addAttribute("getAttention", getAttention);
+        return "background/users/frien_information";
+    }
 
-	/**
-	 * 执行用户注销操作 注销成功后重定向到登录页面
-	 *
-	 * @return
-	 */
-	@GetMapping("/loginOut")
-	public String loginOut() {
-		Subject subject = SecurityUtils.getSubject();
-		subject.logout();
-		return "redirect:/sharedForum/goIndex";
-	}
+    /**
+     * 执行用户注销操作 注销成功后重定向到登录页面
+     *
+     * @return
+     */
+    @GetMapping("/loginOut")
+    public String loginOut() {
+        Subject subject = SecurityUtils.getSubject();
+        subject.logout();
+        return "background/users/login";
+    }
 
 	/**
 	 * 跳转主页面
@@ -348,15 +348,16 @@ public class SharedUsersController {
 		return "background/users/timeline";
 	}
 
-	/**
-	 * 转到修改头像的页面
-	 *
-	 * @return
-	 */
-	@GetMapping("/goUpload")
-	public String goUpload() {
-		return "background/users/user_headImg";
-	}
+
+    /**
+     * 转到修改头像的页面
+     *
+     * @return
+     */
+    @GetMapping("/goUpload")
+    public String goUpload() {
+        return "background/users/user_headImg";
+    }
 
 	/**
 	 * 提交修改头像的操作
@@ -376,7 +377,7 @@ public class SharedUsersController {
 				.base64ToMultipart(image);
 		// 执行上传操作
 		ReturnResult returnResult = FileUtil.fileUpload(file, userImg);
-		if (returnResult.getStatus() != HTTPStutusConstant.SUCCESS_STRUTS) {
+		if (!returnResult.getStatus().equals(HTTPStutusConstant.SUCCESS_STRUTS)) {
 			return returnResult;
 		} else {
 			// 实例化users实体并把id和头像名称塞入
@@ -397,59 +398,59 @@ public class SharedUsersController {
 		}
 	}
 
-	/**
-	 * 跳转修改页面
-	 *
-	 * @param userId
-	 * @param model
-	 * @return
-	 */
-	@GetMapping("/goUpdateUsers")
-	public String goUpdateUsers(String userId, Model model) {
-		// 根据id查询用户信息
-		SharedUsers users = usersService.getUserById(userId);
-		model.addAttribute("users", users);
-		return "background/users/user_modifier";
-	}
+    /**
+     * 跳转修改页面
+     *
+     * @param userId
+     * @param model
+     * @return
+     */
+    @GetMapping("/goUpdateUsers")
+    public String goUpdateUsers(String userId, Model model) {
+        // 根据id查询用户信息
+        SharedUsers users = usersService.getUserById(userId);
+        model.addAttribute("users", users);
+        return "background/users/user_modifier";
+    }
 
-	/**
-	 * 修改个人资料
-	 *
-	 * @param users
-	 * @return
-	 */
-	@PostMapping("/updateUsers")
-	@ResponseBody
-	public ReturnResult updateUsers(SharedUsers users, String captcha) {
-		// session中的验证码
-		String sessionCaptcha = (String) SecurityUtils.getSubject().getSession()
-				.getAttribute(CaptchaController.KEY_CAPTCHA);
-		if (null == captcha || !captcha.equalsIgnoreCase(sessionCaptcha)) {
-			return ReturnResult.error("验证码错误！");
-		}
-		if (usersService.updateUsers(users)) {
-			Session session = SecurityUtils.getSubject().getSession();
-			SharedUsers users1 = (SharedUsers) session.getAttribute("users");
-			if (users1 != null) {
-				session.removeAttribute("users");
-			}
-			SharedUsers users2 = usersService.getUserById(users.getId());
-			session.setAttribute("users", users2);
-			return ReturnResult.ok();
-		}
-		return ReturnResult.error("修改失败");
-	}
+    /**
+     * 修改个人资料
+     *
+     * @param users
+     * @return
+     */
+    @PostMapping("/updateUsers")
+    @ResponseBody
+    public ReturnResult updateUsers(SharedUsers users, String captcha) {
+        // session中的验证码
+        String sessionCaptcha = (String) SecurityUtils.getSubject().getSession()
+                .getAttribute(CaptchaController.KEY_CAPTCHA);
+        if (null == captcha || !captcha.equalsIgnoreCase(sessionCaptcha)) {
+            return ReturnResult.error("验证码错误！");
+        }
+        if (usersService.updateUsers(users)) {
+            Session session = SecurityUtils.getSubject().getSession();
+            SharedUsers users1 = (SharedUsers) session.getAttribute("users");
+            if (users1 != null) {
+                session.removeAttribute("users");
+            }
+            SharedUsers users2 = usersService.getUserById(users.getId());
+            session.setAttribute("users", users2);
+            return ReturnResult.ok();
+        }
+        return ReturnResult.error("修改失败");
+    }
 
-	/**
-	 * 跳转到旧密码页面
-	 *
-	 * @param userId
-	 * @return
-	 */
-	@GetMapping("/goOldPassword/{userId}")
-	public String goOldPassword(String userId) {
-		return "background/users/oldPassword";
-	}
+    /**
+     * 跳转到旧密码页面
+     *
+     * @param userId
+     * @return
+     */
+    @GetMapping("/goOldPassword/{userId}")
+    public String goOldPassword(String userId) {
+        return "background/users/oldPassword";
+    }
 
 	/**
 	 * 校验输入的老密码是否和当前登录用户的密码一致
@@ -627,7 +628,7 @@ public class SharedUsersController {
 
 	/**
 	 * 论坛中的注销
-	 * 
+	 *
 	 * @return
 	 */
 	@GetMapping("/forumLoginOut")
@@ -636,5 +637,8 @@ public class SharedUsersController {
 		subject.logout();
 		return "redirect:/sharedForum/goIndex";
 	}
+
+
+
 
 }

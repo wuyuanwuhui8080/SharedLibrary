@@ -15,6 +15,10 @@
     <script src="${basePath}/js/chars/friend_chat.js"></script>
     <!-- GITTER -->
     <script src="${basePath}/js/plugins/gritter/jquery.gritter.min.js"></script>
+    <script src="${basePath}/res/layui/layui.js"></script>
+    <link rel="stylesheet" href="${basePath}/res/layui/css/layui.css">
+    <script src="${basePath}/res/mods/index.js"></script>
+    <script src="${basePath}/res/mods/jie.js"></script>
 </head>
 
 <body class="gray-bg">
@@ -69,8 +73,8 @@
                             <form>
                                 <div class="chat-message-form" style="z-index: 99999999999999999999">
                                     <div class="form-group">
-                                    <textarea style="resize:none" class="form-control message-input "
-                                              id="sumitCharMassage" name="message" byUserid=""
+                                 <textarea style="resize:none" class="form-control message-input "
+                                              id="sumitCharMassage" name="message"
                                               placeholder="输入消息内容，按回车键发送"></textarea>
                                     </div>
                                 </div>

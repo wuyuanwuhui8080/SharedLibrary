@@ -7,12 +7,9 @@ import com.share.pojo.SharedForum;
 import com.share.pojo.SharedForumComment;
 import com.share.util.ReturnResult;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
 
@@ -41,6 +38,7 @@ public class SharedForumCommentController {
      * @return
      */
     @PostMapping("/saveComment")
+    @ResponseBody
     public ReturnResult saveComment(SharedForumComment comment) {
         if (forumCommentService.saveComment(comment)) {
             return ReturnResult.ok(comment);

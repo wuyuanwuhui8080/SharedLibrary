@@ -6,6 +6,7 @@
 <script src="${basePath}/js/jsUtil.js"></script>
 <script src="${basePath}/js/jquery-1.7.2.js"></script>
 <script src="${basePath}/js/jquery.form.js"></script>
+<script src="${basePath}/js/reception/head.js"></script>
  <!-- Sweet alert -->
     <script src="${basePath}/js/plugins/sweetalert/sweetalert.min.js"></script>
 <!-- Sweet Alert -->
