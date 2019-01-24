@@ -400,7 +400,7 @@
         </div>
     </div>
 </div>
-<#include "comm/tail.ftl">
+<#include "comm/footer.html">
 
 <script src="${basePath}/res/layui/layui.js"></script>
 <script>

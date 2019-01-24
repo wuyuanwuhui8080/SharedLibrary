@@ -18,10 +18,16 @@
     <#else >
         这人比较懒，暂时没有...
     </#if>
-
-    <div class="fly-sns" data-user="">
-        <a href="javascript:;" class="layui-btn layui-btn-primary fly-imActive" data-type="addFriend">加为好友</a>
-    </div>
+    <#if Session.users??>
+        <#if (Session.users.id != users.id)>
+            <#if (firendCount > 0)>
+            <#else >
+         <div class="fly-sns" data-user="">
+             <a href="javascript:;" class="layui-btn layui-btn-primary fly-imActive" data-type="addFriend">加为好友</a>
+         </div>
+            </#if>
+        </#if>
+    </#if>
 </div>
 
 <div class="layui-container">

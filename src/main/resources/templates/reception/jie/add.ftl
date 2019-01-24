@@ -41,7 +41,19 @@
                                     </div>
                                 </div>
                             </div>
+
                             <div class="layui-form-item">
+                             <#if (Session.users.positionId == 3)>
+                                <div class="layui-col-md3" style="margin-right: 20px;">
+                                    <label class="layui-form-label">帖子类型</label>
+                                    <div class="layui-input-block">
+                                        <select style="z-index: 999999999;" class="selecttypeId">
+                                            <option value=""></option>
+                                            <option value="4">公告</option>
+                                        </select>
+                                    </div>
+                                </div>
+                             </#if>
                                 <label for="L_vercode" class="layui-form-label">人类验证</label>
                                 <div class="layui-input-inline">
                                     <input type="text" id="captcha" name="captcha"
@@ -54,6 +66,7 @@
                                                                                                           id="captcha_img"/></a></span>
                                 </div>
                             </div>
+
                             <div class="layui-form-item">
                                 <button class="layui-btn" type="submit" id="sumitForum">立即发布</button>
                             </div>

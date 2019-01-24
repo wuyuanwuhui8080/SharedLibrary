@@ -34,4 +34,13 @@ public interface SharedForumMapper extends BaseMapper<SharedForum> {
 	 */
 	ForumAndComment findListByForumId(@Param("forumId") String forumId);
 
+	/**
+	 * 删除帖子
+	 * 
+	 * @param forumId
+	 *            传入的id
+	 * @return
+	 */
+	Integer deleteForum(@Param("forumId") String forumId);
+
 }

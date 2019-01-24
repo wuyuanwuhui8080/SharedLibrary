@@ -131,7 +131,13 @@ $(function () {
             var context = fly.content(html)
             var loadIndex = null;
 
-            $.ajax({
+          var ss =   fly.escape(html || '').replace(/@(\S+)(\s+?|$)/g, '@<a href="javascript:;" class="fly-aite">$1</a> $2');
+          $("#RelpyTest").html(ss);
+
+            $("#RelpyTest .fly-aite").each(function (index) {
+               alert('下标 '+$(this).html()+" "+index)
+            });
+           /* $.ajax({
                 type: "post",
                 url: path + "/sharedForumComment/saveComment",
                 data: {userId: userId, content: context, forumId: forumId},
@@ -183,6 +189,7 @@ $(function () {
                             '                                </div>\n' +
                             '                            </li>';
                         $("#jieda").append(div);
+                        $("#L_content").val("");
                     } else {
                         layer.msg(date.msg);
                     }
@@ -194,7 +201,7 @@ $(function () {
                     layer.close(loadIndex);
                 }
 
-            });
+            });*/
         }
     });
 
@@ -216,20 +223,20 @@ $(function () {
                 url: path + "/sharedForumComment/deleteComment",
                 data: {commentId: commentId},
                 dataType: "json",
-                beforeSend : function () {
+                beforeSend: function () {
                     loadIndex = layer.load(1, {shade: 0.8});
                 },
                 success: function (date) {
-                    if(date.status == 200){
-                        obj.parent().parents("#comm"+commentId+"").remove()
-                    }else{
+                    if (date.status == 200) {
+                        obj.parent().parents("#comm" + commentId + "").remove()
+                    } else {
                         layer.msg(date.msg, {shift: 6});
                     }
                 },
-                complete : function () {
+                complete: function () {
                     layer.close(loadIndex);
                 },
-                error : function () {
+                error: function () {
                     layer.msg("网络连接超时....", {shift: 6});
                 }
             });
@@ -237,5 +244,49 @@ $(function () {
 
     });
 
+
+    /**
+     * 删除帖子
+     * @author 博博大人
+     * @time 2019/1/22 15:24
+     */
+    $("#deleteForum").click(function () {
+        var obj = $(this);
+        var forumId = obj.attr("froumId");
+        var loadIndex = null;
+        layer.confirm("确认要删除这条帖子吗?", function (index) {
+            layer.close(index);
+            $.ajax({
+                type: "post",
+                url: path + "/sharedForum/deleteForum/" + forumId,
+                dataType: "json",
+                beforeSend: function () {
+                    loadIndex = layer.load(1, {shade: 0.8});
+                },
+                success: function (date) {
+                    if (date.status == 200) {
+                        location.href=path+"/sharedForum/goIndex";
+                    } else {
+                        layer.msg("删除失败...", {shift: 6});
+                    }
+                },
+                error: function () {
+                    layer.msg("网络连接超时...", {shift: 6});
+                },
+                complete: function () {
+                    layer.close(loadIndex);
+                }
+            });
+        })
+    });
+
+    /**
+     * 把帖子添加顶置
+     * @author 博博大人
+     * @time 2019/1/22 17:43
+     */
+    $(".forumOverhead").click(function () {
+        alert("ss")
+    });
 
 });

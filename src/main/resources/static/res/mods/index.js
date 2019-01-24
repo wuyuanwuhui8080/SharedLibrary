@@ -489,7 +489,7 @@ layui.define(['layer', 'laytpl', 'form', 'element', 'upload', 'util'], function 
         }
         text = text.replace(/^@|（[\s\S]+?）/g, '');
         othis.attr({
-            href: '/jump?username=' + text
+            href: '/sharedForum/goAthome/' + text
             , target: '_blank'
         });
     });
@@ -561,7 +561,11 @@ layui.define(['layer', 'laytpl', 'form', 'element', 'upload', 'util'], function 
         , bgcolor: '#009688'
         , click: function (type) {
             if (type === 'bar1') {
-                location.href = '/sharediForum/goWriteForum';
+                if (forumWirte) {
+                    location.href = paths + "/sharedForum/goWriteForum";
+                }else{
+                    layer.msg("请先登录.再去发帖..", {shift: 6});
+                }
             }
         }
     });

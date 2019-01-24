@@ -7,21 +7,26 @@
                 <h1>${forumAndComment.forumTitle!}</h1>
                 <div class="fly-detail-info">
                     <!-- <span class="layui-badge">审核中</span> -->
-                    <span class="layui-badge layui-bg-green fly-detail-column">动态</span>
+                    <span class="layui-badge layui-bg-green fly-detail-column">${forumAndComment.classifyName}</span>
+                    <span class="layui-badge" style="background-color: #00C1B3;">${forumAndComment.typeName}</span>
 
-                    <span class="layui-badge" style="background-color: #999;">未结</span>
+                <#-- <span class="layui-badge" style="background-color: #999;">未结</span>-->
                     <!-- <span class="layui-badge" style="background-color: #5FB878;">已结</span> -->
 
-                    <span class="layui-badge layui-bg-black">置顶</span>
-                    <span class="layui-badge layui-bg-red">精帖</span>
+                <#-- <span class="layui-badge layui-bg-black">置顶</span>
+                 <span class="layui-badge layui-bg-red">精帖</span>-->
 
                     <div class="fly-admin-box" data-id="123">
-                        <span class="layui-btn layui-btn-xs jie-admin" type="del">删除</span>
-
-                        <span class="layui-btn layui-btn-xs jie-admin" type="set" field="stick" rank="1">置顶</span>
+                        <#if Session.users??>
+                            <#if forumAndComment.forumUsersId == Session.users.id>
+                                 <span class="layui-btn layui-btn-xs jie-admin" style="background-color: red" froumId="${forumAndComment.forumId}" id="deleteForum">删除</span>
+                            </#if>
+                         <#--<span class="layui-btn layui-btn-xs jie-admin" type="set" field="status" rank="1">加精</span>-->
+                        <#if (Session.users.positionId == 3)>
+                           <span class="layui-btn layui-btn-xs jie-admin forumOverhead" >置顶</span>
+                        </#if>
+                        </#if>
                         <!-- <span class="layui-btn layui-btn-xs jie-admin" type="set" field="stick" rank="0" style="background-color:#ccc;">取消置顶</span> -->
-
-                        <span class="layui-btn layui-btn-xs jie-admin" type="set" field="status" rank="1">加精</span>
                         <!-- <span class="layui-btn layui-btn-xs jie-admin" type="set" field="status" rank="0" style="background-color:#ccc;">取消加精</span> -->
                     </div>
                     <span class="fly-list-nums">
@@ -41,7 +46,15 @@
                         <span>${forumAndComment.forumCreationDate?datetime}</span>
                     </div>
                     <div class="detail-hits" id="LAY_jieAdmin" data-id="123">
-                        <span class="layui-btn layui-btn-xs jie-admin" type="edit"><a href="add.html">编辑此贴</a></span>
+                    <#if Session.users??>
+                        <#if forumAndComment.forumUsersId == Session.users.id>
+                             <span class="layui-btn layui-btn-xs jie-admin" type="edit"><a href="add.html">编辑此贴</a></span>
+                        <#else >
+                            <span>欢迎您</span>
+                        </#if>
+                        <#else >
+                        <span>请登录在回复哦</span>
+                    </#if>
                     </div>
                 </div>
             <#--帖子内容-->
@@ -171,7 +184,8 @@
                         </div>
                     </div>
                     <div class="layui-form-item">
-                        <button class="layui-btn" id="sumitComment" forumUserId="${forumAndComment.forumUsersId}" forumId="${forumAndComment.forumId}" lay-filter="*">
+                        <button class="layui-btn" id="sumitComment" forumUserId="${forumAndComment.forumUsersId}"
+                                forumId="${forumAndComment.forumId}" lay-filter="*">
                             提交回复
                         </button>
                     </div>
@@ -243,6 +257,9 @@
         </div>-->
 
         </div>
+    </div>
+    <div style="display: none" id="RelpyTest">
+
     </div>
 </div>
 <script src="${basePath}/res/layui/layui.js"></script>

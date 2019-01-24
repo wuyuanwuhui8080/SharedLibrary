@@ -317,7 +317,7 @@ public class SharedUsersController {
     public String loginOut() {
         Subject subject = SecurityUtils.getSubject();
         subject.logout();
-        return "redirect:/sharediForum/goIndex";
+        return "background/users/login";
     }
 
     /**

@@ -36,53 +36,62 @@
 
     <!--删除用户以及用户下的所有东西-->
     <delete id="removeById">
-        DELETE u,e, att, fans, fans_fans, b, c, reply, give, invitation,
-                commm_invitation, invitation_give, invitation_reply,
-                friend_request_me, friend_request_frend, friends_me,
-                friends_friend, comment_user_id, commt_relpy_user, comm_user_id
-                , invitation_reply_users_id, invitation_reply_Byusers_id
+            DELETE u,
+                  e,
+                  att,
+                  fans,
+                  fans_fans,
+                  b,
+                  c,
+                  reply,
+                  give,
+                  invitation,
+                  commm_invitation,
+                  invitation_give,
+                  friend_request_me,
+                  friend_request_frend,
+                  friends_me,
+                  friends_friend,
+                  comment_user_id,
+                  commt_relpy_user,
+                  comm_user_id
                 FROM shared_users u
-                LEFT JOIN shared_email e
-                ON e.hair_id = u.id
-                LEFT JOIN shared_attention att
-                ON att.me_id = u.id
-                LEFT JOIN shared_fans fans
-                ON fans.me_id = u.id
-                LEFT JOIN shared_fans fans_fans
-                ON fans_fans.fans_id = u.id
-                LEFT JOIN share_blogs b
-                ON b.user_id = u.id
-                LEFT JOIN share_blogs_comment c ON c.blogs_id = b.id
-                LEFT JOIN share_blogs_comment_reply reply
-                ON reply.comment_id = c.id
-                LEFT JOIN share_blogs_give give
-                ON give.blogs_id = b.id
-                LEFT JOIN sharedi_invitation invitation
-                ON invitation.user_id = u.id
-                LEFT JOIN sharedi_invitation_comment commm_invitation
-                ON commm_invitation.invitation_id = invitation.id
-                LEFT JOIN sharedi_invitation_give invitation_give
-                ON invitation_give.invitataion_id = invitation.id
-                LEFT JOIN share_invitation_comment_reply invitation_reply
-                ON invitation_reply.invitation_comment_id = commm_invitation.id
-                LEFT JOIN sharedl_friend_request friend_request_me
-                ON friend_request_me.me_id = u.id
-                LEFT JOIN sharedl_friend_request friend_request_frend
-                ON friend_request_frend.request_id = u.id
-                LEFT JOIN shared_friends friends_me
-                ON friends_me.me_id = u.id
-                LEFT JOIN shared_friends friends_friend
-                ON friends_friend.friends_id = u.id
-                LEFT JOIN share_blogs_comment comment_user_id
-                ON comment_user_id.comment_user_id = u.id
-                LEFT JOIN share_blogs_comment_reply commt_relpy_user
-                ON commt_relpy_user.comment_byuser_id = u.id
-                LEFT JOIN sharedi_invitation_comment comm_user_id
-                ON comm_user_id.comment_user_id = u.id
-                LEFT JOIN share_invitation_comment_reply invitation_reply_users_id
-                ON invitation_reply_users_id.comment_user_id = u.id
-                LEFT JOIN share_invitation_comment_reply invitation_reply_Byusers_id
-                ON invitation_reply_Byusers_id.comment_byuser_id = u.id
+                  LEFT JOIN shared_email e
+                    ON e.hair_id = u.id
+                  LEFT JOIN shared_attention att
+                    ON att.me_id = u.id
+                  LEFT JOIN shared_fans fans
+                    ON fans.me_id = u.id
+                  LEFT JOIN shared_fans fans_fans
+                    ON fans_fans.fans_id = u.id
+                  LEFT JOIN share_blogs b
+                    ON b.user_id = u.id
+                  LEFT JOIN share_blogs_comment c
+                    ON c.blogs_id = b.id
+                  LEFT JOIN share_blogs_comment_reply reply
+                    ON reply.comment_id = c.id
+                  LEFT JOIN share_blogs_give give
+                    ON give.blogs_id = b.id
+                  LEFT JOIN shared_forum invitation
+                    ON invitation.user_id = u.id
+                  LEFT JOIN shared_forum_comment commm_invitation
+                    ON commm_invitation.forum_id = invitation.id
+                  LEFT JOIN shared_forum_comment_give invitation_give
+                    ON invitation_give.forum_comment_id = commm_invitation.id
+                  LEFT JOIN sharedl_friend_request friend_request_me
+                    ON friend_request_me.me_id = u.id
+                  LEFT JOIN sharedl_friend_request friend_request_frend
+                    ON friend_request_frend.request_id = u.id
+                  LEFT JOIN shared_friends friends_me
+                    ON friends_me.me_id = u.id
+                  LEFT JOIN shared_friends friends_friend
+                    ON friends_friend.friends_id = u.id
+                  LEFT JOIN share_blogs_comment comment_user_id
+                    ON comment_user_id.comment_user_id = u.id
+                  LEFT JOIN share_blogs_comment_reply commt_relpy_user
+                    ON commt_relpy_user.comment_byuser_id = u.id
+                  LEFT JOIN shared_forum_comment comm_user_id
+                    ON comm_user_id.user_id = u.id
                 WHERE u.id = #{userId}
     </delete>
 

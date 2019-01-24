@@ -7,6 +7,10 @@ import javax.annotation.Resource;
 
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
+import com.share.forum.mapper.SharedForumMapper;
+import com.share.forum.mapper.SharedForumVOReposiory;
+import com.share.forum.service.SharedForumService;
+import com.share.pojo.SharedForum;
 import com.share.vo.SharedUsersJSONVO;
 import org.springframework.stereotype.Service;
 
@@ -35,6 +39,12 @@ public class SharedUsersServiceImpl
 
 	@Resource
 	private SharedUsersMapper usersMapper;
+
+	@Resource
+	private SharedForumVOReposiory forumVOReposiory;
+
+	@Resource
+	private SharedForumMapper forumMapper;
 
 	/**
 	 * 执行添加普通用户 用户操作，使用shiro md5进行 1024次加密
@@ -206,6 +216,10 @@ public class SharedUsersServiceImpl
 	 */
 	@Override
 	public boolean deleteUsers(String userId) {
+		SharedForum forum = forumMapper
+				.selectOne(new LambdaQueryWrapper<SharedForum>()
+						.eq(SharedForum::getUserId, userId));
+		forumVOReposiory.deleteById(forum.getId());
 		return usersMapper.removeById(userId) > 0 ? true : false;
 	}
 

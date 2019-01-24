@@ -26,7 +26,7 @@ public interface SharedForumService extends IService<SharedForum> {
 	 * @param sharedForum
 	 * @return
 	 */
-	@Transactional(propagation = Propagation.REQUIRED,rollbackFor = Exception.class)
+	@Transactional(propagation = Propagation.REQUIRED, rollbackFor = Exception.class)
 	Boolean saveForum(SharedForum sharedForum);
 
 	/**
@@ -38,6 +38,7 @@ public interface SharedForumService extends IService<SharedForum> {
 	 *            每页的页数
 	 * @return
 	 */
+	@Transactional(propagation = Propagation.NOT_SUPPORTED)
 	PageInfo<SharedForum> findList(Integer pageIndex, Integer pageSize);
 
 	/**
@@ -47,16 +48,29 @@ public interface SharedForumService extends IService<SharedForum> {
 	 *            传入的帖子的id
 	 * @return
 	 */
+	@Transactional(propagation = Propagation.NOT_SUPPORTED)
 	ForumAndComment findListByForumId(@Param("forumId") String forumId);
 
-    /**
-     * 个人页面中获取帖子集合
-     *
-     * @param userId    用户id
-     * @param pageIndex 分页数
-     * @return
-     */
-    List<SharedForum> findForymByUserId(String userId, Integer pageIndex);
+	/**
+	 * 个人页面中获取帖子集合
+	 *
+	 * @param userId
+	 *            用户id
+	 * @param pageIndex
+	 *            分页数
+	 * @return
+	 */
+	@Transactional(propagation = Propagation.NOT_SUPPORTED)
+	List<SharedForum> findForymByUserId(String userId, Integer pageIndex);
 
+	/**
+	 * 删除一个帖子
+	 * 
+	 * @param id
+	 *            传入的id
+	 * @return
+	 */
+	@Transactional(propagation = Propagation.REQUIRED,rollbackFor = Exception.class)
+	boolean deleteForum(String id);
 
 }

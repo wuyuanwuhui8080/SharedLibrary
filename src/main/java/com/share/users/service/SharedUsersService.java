@@ -132,5 +132,6 @@ public interface SharedUsersService extends IService<SharedUsers> {
 	 *            传入的用户id
 	 * @return
 	 */
+	@Transactional(propagation = Propagation.REQUIRED,rollbackFor = Exception.class)
 	boolean deleteUsers(String userId);
 }
