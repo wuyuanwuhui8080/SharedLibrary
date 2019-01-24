@@ -7,9 +7,11 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="SharedLibrary" />
+        <module name="sharedlibrary" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="sharedlibrary" target="1.8" />
       <module name="SharedLibrary" target="1.8" />
     </bytecodeTargetLevel>
   </component>

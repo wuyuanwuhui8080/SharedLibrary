@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/SharedLibrary.iml" filepath="$PROJECT_DIR$/SharedLibrary.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/SharedLibrary.iml" filepath="$PROJECT_DIR$/.idea/SharedLibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sharedlibrary.iml" filepath="$PROJECT_DIR$/sharedlibrary.iml" />
     </modules>
   </component>
 </project>
