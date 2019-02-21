@@ -1,7 +1,5 @@
 package com.share.config;
 
-import com.share.util.RedisUtil;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.redis.connection.RedisConnectionFactory;
@@ -9,8 +7,10 @@ import org.springframework.data.redis.connection.jedis.JedisConnectionFactory;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.serializer.GenericJackson2JsonRedisSerializer;
 import org.springframework.data.redis.serializer.StringRedisSerializer;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.stereotype.Component;
+
+import com.share.constant.IpConstant;
+import com.share.util.RedisUtil;
+
 import redis.clients.jedis.JedisPoolConfig;
 
 /**
@@ -24,7 +24,6 @@ import redis.clients.jedis.JedisPoolConfig;
 @Configuration
 public class RedisConfig {
 
-    private String hostName = "127.0.0.1";
     private Integer host = 6379;
 
     /**
@@ -66,7 +65,7 @@ public class RedisConfig {
         //连接池
         jedisConnectionFactory.setPoolConfig(jedisPoolConfig);
         //IP地址
-        jedisConnectionFactory.setHostName(hostName);
+        jedisConnectionFactory.setHostName(IpConstant.LOCALHOSTIP);
         //端口号
         jedisConnectionFactory.setPort(host);
         //客户端超时时间单位是毫秒

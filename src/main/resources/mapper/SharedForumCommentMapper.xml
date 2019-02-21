@@ -16,6 +16,15 @@
         </association>
     </resultMap>
 
+    <resultMap id="findCountCommentForUser" type="com.share.pojo.SharedForumComment">
+        <result property="commentCount" column="COMMENTCOUNT"/>
+        <association property="sharedUsers" javaType="com.share.pojo.SharedUsers">
+            <id property="id" column="U_Id"/>
+            <result property="headImg" column="U_HEADIMG"/>
+            <result property="realName" column="U_REALNAME"/>
+        </association>
+    </resultMap>
+
     <select id="findForymCommentByUserID" resultMap="BaseResultMap">
         SELECT c.id, c.user_id, c.forum_id, c.creation_date, c.content, f.title AS f_title, f.content AS f_content
         FROM shared_forum_comment AS c,
@@ -23,6 +32,20 @@
                 WHERE c.forum_id = f.id
                 AND c.user_id = #{userId}
                 LIMIT #{pageIndex}, #{forumpagesize}
+    </select>
+
+    <!--获取前12位回复榜人物-->
+    <select id="findCountCommentForUser" resultMap="findCountCommentForUser">
+            SELECT
+              COUNT(1)   AS COMMENTCOUNT,
+              u.id       AS U_Id,
+              u.realName AS U_REALNAME,
+              u.head_img AS U_HEADIMG
+            FROM shared_forum_comment c
+              LEFT JOIN shared_users u
+                ON u.id = c.user_id
+            GROUP BY u.id
+            LIMIT 0,10
     </select>
 
 

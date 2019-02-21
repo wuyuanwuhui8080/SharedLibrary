@@ -144,7 +144,7 @@ public class SharedUsersController {
 	 * @return String
 	 */
 	@GetMapping("/goRegister")
-	public String goRegister(@ModelAttribute("users") SharedUsers users) {
+	public String goRegister(@ModelAttribute("sharedUsers") SharedUsers users) {
 		return "background/users/register";
 	}
 
@@ -157,8 +157,14 @@ public class SharedUsersController {
 	 */
 	@PostMapping("/saveNorsalUsers")
 	@ResponseBody
-	public ReturnResult saveNorsalUsers(SharedUsers users) {
-		if (usersService.saveNorsalSharedUsers(users)) {
+	public ReturnResult saveNorsalUsers(SharedUsers sharedUsers,String captcha) {
+		// session中的验证码
+		String sessionCaptcha = (String) SecurityUtils.getSubject().getSession()
+				.getAttribute(CaptchaController.KEY_CAPTCHA);
+		if (null == captcha || !captcha.equalsIgnoreCase(sessionCaptcha)) {
+			return ReturnResult.error("验证码错误！");
+		}
+		if (usersService.saveNorsalSharedUsers(sharedUsers)) {
 			return ReturnResult.ok();
 		}
 		return ReturnResult.error("添加失败！");

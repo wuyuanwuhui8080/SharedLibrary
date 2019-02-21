@@ -13,4 +13,5 @@ import java.util.List;
  * @time 2019/1/18 12:02
  */
 public interface SharedForumVOReposiory extends ElasticsearchRepository<SharedForumVO, String> {
+
 }

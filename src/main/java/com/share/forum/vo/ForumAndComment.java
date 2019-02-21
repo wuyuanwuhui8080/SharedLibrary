@@ -54,6 +54,11 @@ public class ForumAndComment {
 	private String forumUsersRealName;
 
 	/**
+	 * 帖子用户名
+	 */
+	private String forumUserName;
+
+	/**
 	 * 帖子用户id
 	 */
 	private String forumUsersId;
@@ -83,6 +88,11 @@ public class ForumAndComment {
 	 * 存储当前帖子的所有回复数
 	 */
 	private Integer countReply;
+
+	/**
+	 * 是否是顶置
+	 */
+	private boolean exitSpick;
 
 	/*-------------------------------上面是帖子属性-----------------------------------------------------------*/
 	/*-------------------------------下面是回复属性-----------------------------------------------------------*/

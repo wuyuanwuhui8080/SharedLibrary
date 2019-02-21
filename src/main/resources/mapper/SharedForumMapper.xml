@@ -46,6 +46,7 @@
         <result column="FORUM_USER_HEADIMG" property="forumUsersHeadImg"/>
         <result column="FORUM_USER_REALNAME" property="forumUsersRealName"/>
         <result column="COUNTREPLY" property="countReply"/>
+        <result column="FORUM_USERNAME" property="forumUserName"/>
         <collection property="commentBOList" ofType="com.share.forum.bo.CommentBO">
             <id column="COMMENT_ID" property="commentId"/>
             <result column="COMMENT_CONTENT" property="commentContent"/>
@@ -62,6 +63,12 @@
             <result column="COMMENT_GIVE_ID" property="commentId"/>
             <result column="GIVE_ID" property="giveId"/>
         </collection>
+    </resultMap>
+
+    <resultMap id="findWithinSevenDays" type="com.share.pojo.SharedForum">
+        <id column="F_ID" property="id"/>
+        <result column="F_TITLE" property="title"/>
+        <result column="COUNTREPLY" property="commCounts"/>
     </resultMap>
 
     <!-- 通用查询结果列 -->
@@ -89,6 +96,9 @@
                     ON forum_user.id = f.user_id
                   LEFT JOIN shared_forum_type forum_type_id
                     ON forum_type_id.id = f.type_id
+             <if test="typeId != null and typeId>0">
+                WHERE f.type_id = #{typeId}
+             </if>
     </select>
 
     <!--查询单个帖子-->
@@ -112,6 +122,7 @@
               forum_users.realName          AS FORUM_USER_REALNAME,
               forum_users.head_img          AS FORUM_USER_HEADIMG,
               forum_users.id                AS FORUM_USER_ID,
+              forum_users.userName          AS FORUM_USERNAME,
               classify.classify_name        AS CLASS_NAME,
               forum_type.forum_type         AS FORUM_TYPENAME,
               comment_id.content            AS COMMENT_CONTENT,
@@ -139,6 +150,52 @@
           LEFT JOIN shared_forum_comment_give comment_give
             ON comment_id.id = comment_give.forum_comment_id
         WHERE f.id = #{forumId}
+    </select>
+
+    <!--获取七天内热帖-->
+    <select id="findWithinSevenDays" resultMap="findWithinSevenDays">
+        SELECT
+            f.id                     AS F_ID,
+            f.title                  AS F_TITLE,
+            (SELECT COUNT(1) + (SELECT COUNT(1)
+                FROM shared_forum_comment_reply r
+                WHERE r.comment_id = m.id)
+                FROM shared_forum_comment m
+                WHERE m.forum_id = f.id) AS COUNTREPLY
+        FROM shared_forum f
+        LEFT JOIN shared_users forum_user
+          ON forum_user.id = f.user_id
+        WHERE DATE_SUB(CURDATE(),INTERVAL 7 DAY) &lt;= DATE(f.creation_date)
+        ORDER BY COUNTREPLY DESC
+        LIMIT 0,15
+    </select>
+
+    <!--根据传入的forumId集合进行条件查询-->
+    <select id="findListStick" resultMap="findListMap">
+        SELECT
+              f.id                     AS F_ID,
+              f.title                  AS F_TITLE,
+              f.creation_date          AS F_CREATIONTIME,
+              f.class_id               AS F_CLASS_ID,
+              forum_user.head_img      AS U_USERIMG,
+              forum_user.realName      AS U_REALNAME,
+              forum_user.id            AS U_ID,
+              forum_type_id.forum_type AS TYPE_NAME,
+              forum_type_id.id         AS TYPE_ID,
+             (SELECT COUNT(1) + (SELECT COUNT(1)
+                                        FROM shared_forum_comment_reply r
+                                           WHERE r.comment_id = m.id)
+                 FROM shared_forum_comment m
+                 WHERE m.forum_id = f.id) AS COUNTREPLY
+             FROM shared_forum f
+                  LEFT JOIN shared_users forum_user
+                    ON forum_user.id = f.user_id
+                  LEFT JOIN shared_forum_type forum_type_id
+                    ON forum_type_id.id = f.type_id
+             WHERE f.id IN
+            <foreach collection="forumIds" open="(" item="id" close=")" separator=",">
+                #{id}
+            </foreach>
     </select>
     <!--删除帖子-->
     <delete id="deleteForum">

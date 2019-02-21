@@ -5,6 +5,7 @@
     <title>共享资源库</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <#include "script.ftl">
+    <link rel="shortcut icon" type="image/x-icon" href="${basePath}/img/bold.ico" media="screen"/>
     <style>
 
         .sk-spinner-three-bounce.sk-spinner {
@@ -58,11 +59,11 @@
                         </dd>
                         <dd>
                             <a href="${basePath}/sharedForum/gohome/${users.id}">
-                                <i class="layui-icon">&#xe609;</i>我的主页
+                                <i class="layui-icon">&#xe612;</i>我的主页
                             </a>
                         </dd>
                         <dd><a href="${basePath}/sharedForum/goUserIndex">
-                            <i class="layui-icon">&#xe612;</i>用户中心</a>
+                            <i class="layui-icon">&#xe609;</i> 我的帖子</a>
                         </dd>
                         <dd><a href="${basePath}/sharedForum/goMessage">
                             <i class="iconfont icon-tongzhi" style="top: 4px;"></i>我的消息</a>
@@ -91,23 +92,54 @@
 <div class="fly-panel fly-column">
     <div class="layui-container">
         <ul class="layui-clear">
-            <li class="layui-hide-xs layui-this"><a href="${basePath}/sharedForum/goIndex">首页</a></li>
-            <li><a href="jie/index.html">提问</a></li>
-            <li><a href="jie/index.html">分享<span class="layui-badge-dot"></span></a></li>
-            <li><a href="jie/index.html">讨论</a></li>
-            <li><a href="jie/index.html">建议</a></li>
-            <li><a href="jie/index.html">公告</a></li>
-            <li><a href="jie/index.html">动态</a></li>
+        <#if typeId?? && (typeId == 1)>
+            <li class=""><a href="${basePath}/sharedForum/goIndex">首页</a></li>
+            <li class="layui-hide-xs layui-this"><a href="${basePath}/sharedForum/toListForum?typeId=1">原创</a></li>
+            <#--   <li><a href="jie/index.html">分享<span class="layui-badge-dot"></span></a></li>-->
+            <li><a href="${basePath}/sharedForum/toListForum?typeId=4">公告</a></li>
+        <#elseif typeId?? && (typeId == 4)>
+          <li class=""><a href="${basePath}/sharedForum/goIndex">首页</a></li>
+            <li ><a href="${basePath}/sharedForum/toListForum?typeId=1">原创</a></li>
+        <#--   <li><a href="jie/index.html">分享<span class="layui-badge-dot"></span></a></li>-->
+            <li class="layui-hide-xs layui-this"><a href="${basePath}/sharedForum/toListForum?typeId=4">公告</a></li>
+        <#else >
+          <li class="layui-hide-xs layui-this"><a href="${basePath}/sharedForum/goIndex">首页</a></li>
+            <li ><a href="${basePath}/sharedForum/toListForum?typeId=1">原创</a></li>
+        <#--   <li><a href="jie/index.html">分享<span class="layui-badge-dot"></span></a></li>-->
+            <li><a href="${basePath}/sharedForum/toListForum?typeId=4">公告</a></li>
+        </#if>
+            <#if (Session.users??)>
             <li class="layui-hide-xs layui-hide-sm layui-show-md-inline-block"><span class="fly-mid"></span></li>
-
             <!-- 用户登入后显示 -->
-            <li class="layui-hide-xs layui-hide-sm layui-show-md-inline-block"><a href="user/index.html">我发表的贴</a></li>
-            <li class="layui-hide-xs layui-hide-sm layui-show-md-inline-block"><a href="user/index.html#collection">我收藏的贴</a>
-            </li>
+            <li class="layui-hide-xs layui-hide-sm layui-show-md-inline-block"><a href="${basePath}/sharedForum/goUserIndex">我发表的贴</a></li>
+            <li class="layui-hide-xs layui-hide-sm layui-show-md-inline-block"><a href="${basePath}/sharedForum/goUserIndex#user=collection">我收藏的贴</a>
+            </#if>
+        </li>
         </ul>
-        <div class="fly-column-right layui-hide-xs">
-            <span class="fly-search"><i class="layui-icon"></i></span>
-            <a href="javascript:;" class="layui-btn goWrite_forum">发表新帖</a>
+        <div class="fly-column-right layui-hide-xs" style="margin-right: -30%;">
+            <form class="layui-form" action="">
+                <div class="layui-form-item">
+                    <div class="layui-inline">
+                        <div class="layui-input-inline">
+                            <input type="text" id="receiveName" class="layui-input baidu">
+                            <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownui"
+                                style="background-color: #333333;color: white;z-index: 999999999;" role="menu">
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="layui-inline">
+                        <div class="layui-input-inline">
+                            <button type="submit" class="layui-btn sarchSumitUser"><i class="layui-icon">&#xe615;</i>搜索
+                            </button>
+                        </div>
+                    </div>
+                    <div class="layui-inline">
+                        <div class="layui-input-inline">
+
+                        </div>
+                    </div>
+                </div>
+            </form>
         </div>
         <div class="layui-hide-sm layui-show-xs-block"
              style="margin-top: -10px; padding-bottom: 10px; text-align: center;">
@@ -115,10 +147,15 @@
         </div>
     </div>
 </div>
+
 <script>
     var forumWirte = false;
-    <#if Session.users??>
     var paths = "${basePath}";
+    <#if Session.users??>
         forumWirte = true;
+        var userName = "${users.userName}";
+        var headImg = "${users.headImg}";
+        var realName = "${users.realName}";
+        var userId = "${users.id}";
     </#if>
 </script>

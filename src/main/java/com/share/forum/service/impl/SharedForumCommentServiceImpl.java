@@ -25,51 +25,65 @@ import java.util.List;
  */
 @Service
 public class SharedForumCommentServiceImpl
-        extends ServiceImpl<SharedForumCommentMapper, SharedForumComment>
-        implements SharedForumCommentService {
+		extends ServiceImpl<SharedForumCommentMapper, SharedForumComment>
+		implements SharedForumCommentService {
 
-    @Resource
-    private SharedForumCommentMapper forumCommentMapper;
+	@Resource
+	private SharedForumCommentMapper forumCommentMapper;
 
-    @Resource
-    private Recent_Events recent_events;
+	@Resource
+	private Recent_Events recent_events;
 
-    /**
-     * 添加一个回复
-     *
-     * @param comment 传入的实体
-     * @return
-     */
-    @Override
-    public boolean saveComment(SharedForumComment comment) {
-        comment.setCreationDate(new Date());
-        boolean save = super.save(comment);
-        //调用回复事件,传入事件id
-        recent_events.setEvent(EventConstant.REPLY_EVENT, comment.getId());
-        return save;
-    }
+	/**
+	 * 添加一个回复
+	 *
+	 * @param comment
+	 *            传入的实体
+	 * @return
+	 */
+	@Override
+	public boolean saveComment(SharedForumComment comment) {
+		comment.setCreationDate(new Date());
+		return super.save(comment);
+	}
 
-    /**
-     * 删除评论以及回复
-     *
-     * @param commentId 传入的id
-     * @return
-     */
-    @Override
-    public boolean deleteComment(String commentId) {
-        return forumCommentMapper.deleteComment(commentId) > 0 ? true : false;
-    }
+	/**
+	 * 删除评论以及回复
+	 *
+	 * @param commentId
+	 *            传入的id
+	 * @return
+	 */
+	@Override
+	public boolean deleteComment(String commentId) {
+		return forumCommentMapper.deleteComment(commentId) > 0 ? true : false;
+	}
 
-    /**
-     * 个人页面根据userid获取最近的回帖
-     *
-     * @param userId    用户Id
-     * @param pageIndex 分页查看
-     * @return 最近的回帖
-     */
-    @Override
-    public List<SharedForumComment> findForymCommentByUserID(String userId, Integer pageIndex) {
-        List<SharedForumComment> forumComments = forumCommentMapper.findForymCommentByUserID(userId, pageIndex, PageConstant.PAGESIZE);
-        return forumComments;
-    }
+	/**
+	 * 个人页面根据userid获取最近的回帖
+	 *
+	 * @param userId
+	 *            用户Id
+	 * @param pageIndex
+	 *            分页查看
+	 * @return 最近的回帖
+	 */
+	@Override
+	public List<SharedForumComment> findForymCommentByUserID(String userId,
+			Integer pageIndex) {
+		List<SharedForumComment> forumComments = forumCommentMapper
+				.findForymCommentByUserID(userId, pageIndex,
+						PageConstant.PAGESIZE);
+		return forumComments;
+	}
+
+	/**
+	 * 获取前12位回复榜人物
+	 * 
+	 * @return
+	 */
+	@Override
+	public List<SharedForumComment> findCountCommentForUser() {
+		return forumCommentMapper.findCountCommentForUser();
+	}
 }

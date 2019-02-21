@@ -82,6 +82,12 @@ public class WebSocketMessage {
 		this.message = message;
 	}
 
+	public WebSocketMessage(Integer code, String message, Users user){
+		this.code = code;
+		this.user = user;
+		this.message = message;
+	}
+
 	public WebSocketMessage(){
 
     }

@@ -6,6 +6,7 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
+import java.util.Collection;
 import java.util.List;
 
 /**
@@ -23,7 +24,16 @@ public interface SharedForumMapper extends BaseMapper<SharedForum> {
 	 * 
 	 * @return
 	 */
-	List<SharedForum> findList();
+	List<SharedForum> findList(@Param("typeId") Integer typeId);
+
+	/**
+	 * 根据传入的forumId集合进行条件查询
+	 * 
+	 * @param forumIds
+	 *            id集合
+	 * @return
+	 */
+	List<SharedForum> findListStick(@Param("forumIds") Collection<Object> forumIds);
 
 	/**
 	 * 查询单个帖子
@@ -42,5 +52,12 @@ public interface SharedForumMapper extends BaseMapper<SharedForum> {
 	 * @return
 	 */
 	Integer deleteForum(@Param("forumId") String forumId);
+
+	/**
+	 * 获取七天内热帖
+	 * 
+	 * @return
+	 */
+	List<SharedForum> findWithinSevenDays();
 
 }

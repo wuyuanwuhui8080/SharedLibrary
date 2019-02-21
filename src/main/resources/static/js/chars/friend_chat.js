@@ -6,6 +6,8 @@ const GROUP_CHAT_CODE = 1002;
 const PRIVATE_CHAT_CODE = 1003;
 // pong 信息
 const PONG_CHAT_CODE = 1004;
+// 注销
+var LOGIN_OUT = 1001;
 /*------------上面是客户端传输到客户端的常量-----------*/
 // 群聊信息
 const GROUP_CHAT_MESSAGE_CODE = 2000;
@@ -51,7 +53,7 @@ $(function () {
                             break;
                         // 更新在线人数
                         case UPDATE_USERCOUNT_SYSTEM_MESSGAE_CODE:
-                            $(".charUserNum").html("" + obj.body.obj + "");
+                            // $(".charUserNum").html("" + obj.body.obj + "");
                             /*  setTimeout(function () {
                                   $.gritter.add({
                                       title: '有新用户加入了聊天室',
@@ -168,7 +170,9 @@ $(function () {
         }
 
         socket.onclose = function () {
-
+            var obj = {};
+            obj.code = LOGIN_OUT;
+            send(JSON.stringify(obj));
         }
 
     } else {

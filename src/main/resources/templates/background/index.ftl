@@ -153,6 +153,14 @@
                     </ul>
                 </li>
                 <li>
+                    <a href="#"><i class="fa fa-edit"></i> <span class="nav-label">帖子管理</span>
+                        <span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level">
+                        <li><a class="J_menuItem" href="${basePath}/sharedlClassify/goAddForumClass">添加分类</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
                     <a href="#"><i class="fa fa-picture-o"></i> <span class="nav-label">休闲游戏</span><span
                             class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">

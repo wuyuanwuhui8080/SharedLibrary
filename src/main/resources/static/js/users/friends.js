@@ -76,6 +76,8 @@ $(function () {
                         '                            </div>\n' +
                         '                        </div>';
                     $("#UserDivId").html(div);
+
+                    // 发送好友请求
                     $("#UserDivId").on("click", "#AddFriends", function () {
                         var userId = $("#userId").val();
                         $.ajax({
@@ -211,10 +213,7 @@ $(function () {
 });
 
 function goSendMsg() {
-    swal({
-        title: "好友页面暂时没有开发出来..",
-        type: "error"
-    });
+    location.href = app.path() + "/sharedFriends/goChar/" + userId;
 }
 
 function goMyIndex() {

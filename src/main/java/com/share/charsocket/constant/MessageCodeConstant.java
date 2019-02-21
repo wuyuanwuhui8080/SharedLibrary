@@ -17,6 +17,22 @@ public class MessageCodeConstant {
 	 * 登陆
 	 */
 	public static final int LOGIN_CODE = 1000;
+
+	/**
+	 * 注销
+	 */
+	public static final int LOGIN_OUT = 1001;
+
+	/**
+	 * 论坛登录
+	 */
+	public static  final  int FORUM_LOGIN_CODE = 10001;
+
+	/**
+	 * 论坛注销
+	 */
+	public static  final  int FORUM_LOGIN_OUT_CODE = 10002;
+
 	/**
 	 * 群聊
 	 */
@@ -69,4 +85,15 @@ public class MessageCodeConstant {
 	 * 获取个人信息的系统信息
 	 */
 	public static final int PERSONAL_SYSTEM_MESSGAE_CODE = 3003;
+
+
+	/**
+	 * 回复信息
+	 */
+	public static final int FORUM_MESSAGE_CODE = 20001;
+
+	/**
+	 * 推送给自己
+	 */
+	public static final int FORUM_MESSAGEBYME_CODE = 20002;
 }

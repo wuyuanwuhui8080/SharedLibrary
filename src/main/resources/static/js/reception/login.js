@@ -10,7 +10,8 @@ $(function () {
  * @author 博博大人
  * @time 2019/1/19 19:00
  */
-var option = {
+
+/*var option = {
     beforeSend: function () {
         $("body").append(app.loads());
     },
@@ -19,7 +20,7 @@ var option = {
         if (date.status == 200) {
             location.href = path + "/sharedForum/goIndex";
         } else {
-            layer.msg(date.msg);
+            layer.msg(date.msg, {shift: 6});
             document.getElementById("captcha").value = "";
             refreshCaptcha();
         }
@@ -28,9 +29,9 @@ var option = {
         $("#ibox").remove();
     },
     error: function () {
-        layer.msg("服务器出错，请联系管理员!");
+        layer.msg("服务器出错，请联系管理员!", {shift: 6});
     }
-}
+}*/
 
 function sumitFrom() {
     var userName = document.getElementById("userName").value;
@@ -46,7 +47,18 @@ function sumitFrom() {
         layer.msg("验证码不能为空！", {shift: 6});
         return false;
     } else {
-        $("form").ajaxSubmit(option);
+        app.loadJson(path + "/sharedUsers/doLogin", {
+            userName: userName,
+            password: password,
+            captcha: captcha
+        }, function (date) {
+            location.href = path + "/sharedForum/goIndex";
+        }, {
+            error: function () {
+                document.getElementById("captcha").value = "";
+                refreshCaptcha();
+            }
+        });
         return false;
     }
 }

@@ -111,134 +111,19 @@ $(function () {
         $("#L_content").val(aite + ' ' + val);
     });
 
-    /**
-     * 点击提交回复的时候操作
-     */
-    $("#sumitComment").click(function () {
-        if (falg == false) {
-            layer.msg("请先登录，在进行回复!", {shift: 6});
-            return false;
-        } else {
-            var fly = layui.fly;
-            var obj = $(this);
-            // 帖子id
-            var forumId = obj.attr("forumId");
-            // 回复内容
-            var html = $("#L_content").val();
-
-            var forumUserId = obj.attr("forumUserId");
-
-            var context = fly.content(html)
-            var loadIndex = null;
-
-          var ss =   fly.escape(html || '').replace(/@(\S+)(\s+?|$)/g, '@<a href="javascript:;" class="fly-aite">$1</a> $2');
-          $("#RelpyTest").html(ss);
-
-            $("#RelpyTest .fly-aite").each(function (index) {
-               alert('下标 '+$(this).html()+" "+index)
-            });
-           $.ajax({
-                type: "post",
-                url: path + "/sharedForumComment/saveComment",
-                data: {userId: userId, content: context, forumId: forumId},
-                dataType: "json",
-                beforeSend: function () {
-                    loadIndex = layer.load(1, {shade: 0.8});
-                },
-                success: function (date) {
-                    if (date.status == 200) {
-                        var div = '<li data-id="111" class="jieda-daan">\n' +
-                            '                                <a name="item-1111111111"></a>\n' +
-                            '                                <div class="detail-about detail-about-reply">\n' +
-                            '                                    <a class="fly-avatar" href="">\n' +
-                            '                                        <img src="' + path + '/images/' + headImg + '" alt="' + realName + '"\n' +
-                            '                                             alt=" ">\n' +
-                            '                                    </a>\n' +
-                            '                                    <div class="fly-detail-user">\n' +
-                            '                                        <a href="" class="fly-link">\n' +
-                            '                                            <cite>' + realName + "(" + userName + ")" + '</cite>\n' +
-                            '                                        </a>\n' +
-                            '                                        <span>\n';
-                        if (forumUserId == userId) {
-                            div += '                                                (楼主)\n';
-                        } else if (positionId == 2) {
-                            div += '                                                    <span style="color:#FF9E3F">（帖子管理员）</span>\n';
-                        } else if (positionId == 3) {
-                            div += '                                                    <span style="color:#5FB878">(系统管理员)</span>\n'
-                        }
-                        div += '                                            </span>\n' +
-                            '                                    </div>\n' +
-                            '                                    <div class="detail-hits">\n' +
-                            '                                        <span>' + app.dateTime(date.obj.creationDate, "YY-MM-DD hh:mm:ss") + '</span>\n' +
-                            '                                    </div>\n' +
-                            '                                </div>\n' +
-                            '                                <div class="detail-body jieda-body photos">\n' +
-                            '                                    <p>' + date.obj.content + '</p>\n' +
-                            '                                </div>\n' +
-                            '                                <div class="jieda-reply">\n' +
-                            '                                    <span class="GiveDIv">\n' +
-                            '                                                                  <span class="jieda-zan zanok NoCommentGive">\n' +
-                            '                                                              <i class="iconfont icon-zan" commentId="${li.commentId}"\n' +
-                            '                                                                 style="color: #999999;"></i>\n' +
-                            '                                                                       <em>0</em>\n' +
-                            '                                                                  </span>\n' +
-                            '                                    </span>\n' +
-                            '                                    <div class="jieda-admin">\n' +
-                            '                                        <span type="del">删除</span>\n' +
-                            '                                    </div>\n' +
-                            '                                </div>\n' +
-                            '                            </li>';
-                        $("#jieda").append(div);
-                        $("#L_content").val("");
-                    } else {
-                        layer.msg(date.msg);
-                    }
-                },
-                error: function () {
-                    layer.msg("网络连接超时...", {shift: 6});
-                },
-                complete: function () {
-                    layer.close(loadIndex);
-                }
-
-            });
-        }
-    });
-
 
     /**
      * 删除评论
      * @author 博博大人
      * @time 2019/1/21 21:53
      */
-    $(".commentDel").click(function () {
+    $("body").on("click", ".commentDel", function () {
         var obj = $(this);
         var commentId = obj.attr("commentId");
-
-        var loadIndex = null;
         layer.confirm("确认要删除这条回复吗？", function (index) {
             layer.close(index);
-            $.ajax({
-                type: "post",
-                url: path + "/sharedForumComment/deleteComment",
-                data: {commentId: commentId},
-                dataType: "json",
-                beforeSend: function () {
-                    loadIndex = layer.load(1, {shade: 0.8});
-                },
-                success: function (date) {
-                    if (date.status == 200) {
-                        obj.parent().parents("#comm" + commentId + "").remove()
-                    } else {
-                        layer.msg(date.msg, {shift: 6});
-                    }
-                },
-                complete: function () {
-                    layer.close(loadIndex);
-                },
-                error: function () {
-                    layer.msg("网络连接超时....", {shift: 6});
-                }
+            app.loadJson(path + "/sharedForumComment/deleteComment", {commentId: commentId}, function (date) {
+                obj.parent().parents("#comm" + commentId + "").remove();
             });
         })
 
@@ -256,26 +141,8 @@ $(function () {
         var loadIndex = null;
         layer.confirm("确认要删除这条帖子吗?", function (index) {
             layer.close(index);
-            $.ajax({
-                type: "post",
-                url: path + "/sharedForum/deleteForum/" + forumId,
-                dataType: "json",
-                beforeSend: function () {
-                    loadIndex = layer.load(1, {shade: 0.8});
-                },
-                success: function (date) {
-                    if (date.status == 200) {
-                        location.href=path+"/sharedForum/goIndex";
-                    } else {
-                        layer.msg("删除失败...", {shift: 6});
-                    }
-                },
-                error: function () {
-                    layer.msg("网络连接超时...", {shift: 6});
-                },
-                complete: function () {
-                    layer.close(loadIndex);
-                }
+            app.loadJson(path + "/sharedForum/deleteForum/" + forumId, null, function (date) {
+                location.href = path + "/sharedForum/goIndex";
             });
         })
     });
@@ -285,8 +152,71 @@ $(function () {
      * @author 博博大人
      * @time 2019/1/22 17:43
      */
-    $(".forumOverhead").click(function () {
-        alert("ss")
+    $("body").on("click", ".forumOverhead", function () {
+        var obj = $(this);
+        layer.confirm('确认要加入置顶?(最多存在四条置顶)', {icon: 3, title: '提示'}, function (index) {
+            layer.close(index);
+            var forumId = obj.attr("forumId");
+            // 发送ajax请求
+            app.loadJson(paths + "/sharedForum/doStick", {forumId: forumId}, function (date) {
+                layer.msg('置顶添加成功！', {icon: 6});
+                var div = ' <span class="layui-btn layui-btn-xs jie-admin cancelForumOverhead" forumId="' + forumId + '">取消置顶</span>';
+                $(".spickZHiding").html(div);
+            });
+        });
+    });
+
+    /**
+     * 取消顶置
+     */
+    $("body").on("click", ".cancelForumOverhead", function () {
+        var obj = $(this);
+        layer.confirm('确认取消顶置?', {icon: 3, title: '提示'}, function (index) {
+            layer.close(index);
+            var forumId = obj.attr("forumId");
+            // 发送ajax请求
+            app.loadJson(paths + "/sharedForum/cancelStick", {forumId: forumId}, function (date) {
+                layer.msg('置顶取消成功！', {icon: 6});
+                var div = ' <span class="layui-btn layui-btn-xs jie-admin forumOverhead" forumId = "' + forumId + '" >置顶</span>';
+                $(".spickZHiding").html(div);
+            });
+        });
+    });
+
+    /**
+     * 点击收藏
+     */
+    $("body").on("click", ".yesCollect", function () {
+        var obj = $(this);
+        layer.confirm("确认要收藏该文章吗?", {icon: 3, title: "提示"}, function (index) {
+            layer.close(index);
+            var forumId = obj.attr("forumId");
+            var title = $(".forumTitle").val();
+            app.loadJson(paths + "/sharedForum/confirmTheCollection", {
+                forumId: forumId,
+                userId: userId,
+                title: title
+            }, function (date) {
+                layer.msg("收藏成功！", {icon: 6});
+                $(".CollectSpan").html('<span class="layui-btn layui-btn-xs jie-admin noCollect"  forumId="' + forumId + '">取消收藏</span>');
+            });
+        });
+    });
+
+
+    /**
+     * 取消收藏
+     */
+    $("body").on("click", ".noCollect", function () {
+        var obj = $(this);
+        layer.confirm("确认要取消收藏该文章吗?", {icon: 3, title: "提示"}, function (index) {
+            layer.close(index);
+            var forumId = obj.attr("forumId");
+            app.loadJson(paths + "/sharedForum/cancelTheCollection", {forumId: forumId}, function (date) {
+                layer.msg("取消收藏成功!", {icon: 6});
+                $(".CollectSpan").html('<span class="layui-btn layui-btn-xs jie-admin yesCollect"  forumId="' + forumId + '">收藏此帖</span>');
+            });
+        });
     });
 
 });

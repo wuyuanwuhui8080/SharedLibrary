@@ -42,4 +42,11 @@ public interface SharedForumCommentService
      * @return 最近的回帖
      */
     List<SharedForumComment> findForymCommentByUserID(String userId, Integer pageIndex);
+
+	/**
+	 * 获取前12位回复榜人物
+	 *
+	 * @return
+	 */
+	List<SharedForumComment> findCountCommentForUser();
 }

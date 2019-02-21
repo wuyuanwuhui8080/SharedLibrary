@@ -95,6 +95,7 @@ i{font-style: normal;}
 a:hover{color: #009688; transition: all .3s;}
 pre{padding: 10px 15px; margin: 10px 0; font-size: 12px; border-left: 6px solid #009688;  background-color: #f8f8f8; font-family: Courier New; overflow: auto;}
 
+
 .layui-container{padding: 0;}
 .fly-main{width: 1079px; min-height: 600px; margin: 0 auto 15px;}
 .layui-badge{height: 20px; line-height: 20px; border-radius: 2px;}
@@ -102,7 +103,6 @@ pre{padding: 10px 15px; margin: 10px 0; font-size: 12px; border-left: 6px solid 
 .fly-link{color: #01AAED;}
 .fly-link:hover{color: #5FB878;}
 .fly-grey{color: #999;}
-
 .fly-msg, .fly-error{padding: 10px 15px; line-height: 24px;}
 .fly-msg{background-color:#F8F8F8; color:#666;}
 .fly-msg a{color:#4F99CF}

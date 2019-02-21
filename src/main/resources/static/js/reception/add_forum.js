@@ -30,35 +30,21 @@ $(function () {
             layer.msg("请输入验证码！", {shift: 6});
             return false;
         } else {
-            var loadIndex = null;
-            $.ajax({
-                type: "post",
-                url: path + "/sharedForum/saveForum",
-                data: {content: content, classId: classId, title: title, captcha: captcha, typeIds: typeId},
-                dataType: "json",
-                beforeSend: function () {
-                    loadIndex = layer.load(1, {shade: 0.8});
-                },
-                success: function (date) {
-                    if (date.status == 200) {
-                        layer.msg("发帖成功.");
-                        // 跳转到详细页面
-                        location.href = path + "/sharedForum/goForumDetailed/" + date.obj;
-                    } else {
-                        $("#captcha").val("");
-                        refreshCaptcha();
-                        layer.msg(date.msg, {shift: 6});
-                    }
-                },
-                error: function () {
+            app.loadJson(path + "/sharedForum/saveForum", {
+                    content: content,
+                    classId: classId,
+                    title: title,
+                    captcha: captcha,
+                    typeIds: typeId
+                }, function (date) {
+                    layer.msg("发帖成功.");
+                    // 跳转到详细页面
+                    location.href = path + "/sharedForum/goForumDetailed/" + date.obj;
+                },{error:function () {
                     $("#captcha").val("");
                     refreshCaptcha();
-                    layer.msg("网络连接超时!", {shift: 6});
-                },
-                complete: function () {
-                    layer.close(loadIndex);
-                }
-            });
+                }}
+            );
         }
 
         return false;

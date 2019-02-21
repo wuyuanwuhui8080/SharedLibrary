@@ -57,7 +57,11 @@ public class ShiroConfig {
         return myRealm;
     }
 
-    //设置过滤器
+    /**
+     * 设置过滤器
+     * @param securityManager
+     * @return
+     */
     @Bean
     public ShiroFilterFactoryBean shiroFilterFactoryBean(SecurityManager securityManager) {
         ShiroFilterFactoryBean shiroFilterFactoryBean = new ShiroFilterFactoryBean();
@@ -91,6 +95,9 @@ public class ShiroConfig {
         linkedHashMap.put("/background/comm/script.ftl", "anon");
         linkedHashMap.put("/index.ftl", "anon");
         linkedHashMap.put("/sharedForum/goForumDetailed/**", "anon");
+        linkedHashMap.put("/sharedForum/findListSarch", "anon");
+        linkedHashMap.put("/sharedForum/toListForum", "anon");
+        linkedHashMap.put("/sharedForum/gohome/**", "anon");
         linkedHashMap.put("/sharedForum/goAthome/**", "anon");
         linkedHashMap.put("/loginOut", "logout");
         //css开放

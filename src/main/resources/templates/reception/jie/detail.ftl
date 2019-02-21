@@ -5,6 +5,7 @@
         <div class="layui-col-md8 content detail">
             <div class="fly-panel detail-box">
                 <h1>${forumAndComment.forumTitle!}</h1>
+                <input type="hidden" class="forumTitle" value="${forumAndComment.forumTitle!}"/>
                 <div class="fly-detail-info">
                     <!-- <span class="layui-badge">审核中</span> -->
                     <span class="layui-badge layui-bg-green fly-detail-column">${forumAndComment.classifyName}</span>
@@ -19,13 +20,30 @@
                     <div class="fly-admin-box" data-id="123">
                         <#if Session.users??>
                             <#if forumAndComment.forumUsersId == Session.users.id>
-                                 <span class="layui-btn layui-btn-xs jie-admin" style="background-color: red" froumId="${forumAndComment.forumId}" id="deleteForum">删除</span>
+                                 <span class="layui-btn layui-btn-xs jie-admin" style="background-color: red"
+                                       froumId="${forumAndComment.forumId}" id="deleteForum">删除</span>
                             </#if>
-                         <#--<span class="layui-btn layui-btn-xs jie-admin" type="set" field="status" rank="1">加精</span>-->
-                        <#if (Session.users.positionId == 3)>
-                           <span class="layui-btn layui-btn-xs jie-admin forumOverhead" >置顶</span>
+                        <span class="spickZHiding">
+                        <#--<span class="layui-btn layui-btn-xs jie-admin" type="set" field="status" rank="1">加精</span>-->
+                            <#if (Session.users.positionId == 3) && !forumAndComment.exitSpick>
+                           <span class="layui-btn layui-btn-xs jie-admin forumOverhead"
+                                 forumId="${forumAndComment.forumId}">置顶</span>
+                            </#if>
+                            <#if (Session.users.positionId == 3) && forumAndComment.exitSpick>
+                           <span class="layui-btn layui-btn-xs jie-admin cancelForumOverhead"
+                                 forumId="${forumAndComment.forumId}">取消置顶</span>
+                            </#if>
+                    </span>
+                            <span class="CollectSpan">
+                            <#if collectionFalg>
+ <span class="layui-btn layui-btn-xs jie-admin noCollect" forumId="${forumAndComment.forumId}">取消收藏</span>
+                            <#else >
+                            <span class="layui-btn layui-btn-xs jie-admin yesCollect"
+                                  forumId="${forumAndComment.forumId}">收藏此帖</span>
+                            </#if>
+
                         </#if>
-                        </#if>
+                    </span>
                         <!-- <span class="layui-btn layui-btn-xs jie-admin" type="set" field="stick" rank="0" style="background-color:#ccc;">取消置顶</span> -->
                         <!-- <span class="layui-btn layui-btn-xs jie-admin" type="set" field="status" rank="0" style="background-color:#ccc;">取消加精</span> -->
                     </div>
@@ -35,12 +53,13 @@
           </span>
                 </div>
                 <div class="detail-about">
-                    <a class="fly-avatar" href="../user/home.html">
+                    <a class="fly-avatar" href="${basePath}/sharedForum/gohome/${forumAndComment.forumUsersId}">
                         <img src="${basePath}/images/${forumAndComment.forumUsersHeadImg}"
                              alt="贤心">
                     </a>
                     <div class="fly-detail-user">
-                        <a href="../user/home.html" class="fly-link">
+                        <input type="hidden" class="forumUserName" value="${forumAndComment.forumUserName}"/>
+                        <a href="${basePath}/sharedForum/gohome/${forumAndComment.forumUsersId}" class="fly-link">
                             <cite>${forumAndComment.forumUsersRealName!}</cite>
                         </a>
                         <span>${forumAndComment.forumCreationDate?datetime}</span>
@@ -48,11 +67,12 @@
                     <div class="detail-hits" id="LAY_jieAdmin" data-id="123">
                     <#if Session.users??>
                         <#if forumAndComment.forumUsersId == Session.users.id>
-                             <span class="layui-btn layui-btn-xs jie-admin" type="edit"><a href="add.html">编辑此贴</a></span>
+                             <span class="layui-btn layui-btn-xs jie-admin" type="edit"><a
+                                     href="add.html">编辑此贴</a></span>
                         <#else >
                             <span>欢迎您</span>
                         </#if>
-                        <#else >
+                    <#else >
                         <span>请登录在回复哦</span>
                     </#if>
                     </div>
@@ -74,12 +94,12 @@
                             <li data-id="111" class="jieda-daan" id="comm${li.commentId}">
                                 <a name="item-1111111111"></a>
                                 <div class="detail-about detail-about-reply">
-                                    <a class="fly-avatar" href="">
+                                    <a class="fly-avatar" href="${basePath}/sharedForum/gohome/${li.commentUsersId}">
                                         <img src="${basePath}/images/${li.commentUsersHeadImg}"
                                              alt=" ">
                                     </a>
                                     <div class="fly-detail-user">
-                                        <a href="" class="fly-link">
+                                        <a href="${basePath}/sharedForum/gohome/${li.commentUsersId}" class="fly-link">
                                             <cite>${li.commentUsersRealName} (${li.commentUsersUserName})</cite>
                                         </a>
                                         <span>
@@ -102,7 +122,7 @@
                                         <span>${li.commentCreationTime?datetime}</span>
                                     </div>
 
-                                    <i class="iconfont icon-caina" title="最佳答案"></i>
+                                <#--<i class="iconfont icon-caina" title="最佳答案"></i>-->
                                 </div>
                                 <div class="detail-body jieda-body photos">
                                     <p>${li.commentContent!}</p>
@@ -161,8 +181,13 @@
                                         回复
                                       </span>
                                     <div class="jieda-admin">
-                                        <span type="edit">编辑</span>
-                                        <span class="commentDel" commentId="${li.commentId}">删除</span>
+                                    <#--<span type="edit">编辑</span>-->
+                                           <#if (Session.users??)>
+                                               <#if forumAndComment.forumUsersId == Session.users.id>
+                                                    <span class="commentDel" commentId="${li.commentId}">删除</span>
+                                               </#if>
+                                           </#if>
+
                                         <!-- <span class="jieda-accept" type="accept">采纳</span> -->
                                     </div>
                                 </div>
@@ -195,51 +220,17 @@
         <div class="layui-col-md4">
             <dl class="fly-panel fly-list-one">
                 <dt class="fly-panel-title">本周热议</dt>
-                <dd>
-                    <a href="">基于 layui 的极简社区页面模版</a>
-                    <span><i class="iconfont icon-pinglun1"></i> 16</span>
-                </dd>
-                <dd>
-                    <a href="">基于 layui 的极简社区页面模版</a>
-                    <span><i class="iconfont icon-pinglun1"></i> 16</span>
-                </dd>
-                <dd>
-                    <a href="">基于 layui 的极简社区页面模版</a>
-                    <span><i class="iconfont icon-pinglun1"></i> 16</span>
-                </dd>
-                <dd>
-                    <a href="">基于 layui 的极简社区页面模版</a>
-                    <span><i class="iconfont icon-pinglun1"></i> 16</span>
-                </dd>
-                <dd>
-                    <a href="">基于 layui 的极简社区页面模版</a>
-                    <span><i class="iconfont icon-pinglun1"></i> 16</span>
-                </dd>
-                <dd>
-                    <a href="">基于 layui 的极简社区页面模版</a>
-                    <span><i class="iconfont icon-pinglun1"></i> 16</span>
-                </dd>
-                <dd>
-                    <a href="">基于 layui 的极简社区页面模版</a>
-                    <span><i class="iconfont icon-pinglun1"></i> 16</span>
-                </dd>
-                <dd>
-                    <a href="">基于 layui 的极简社区页面模版</a>
-                    <span><i class="iconfont icon-pinglun1"></i> 16</span>
-                </dd>
-                <dd>
-                    <a href="">基于 layui 的极简社区页面模版</a>
-                    <span><i class="iconfont icon-pinglun1"></i> 16</span>
-                </dd>
-                <dd>
-                    <a href="">基于 layui 的极简社区页面模版</a>
-                    <span><i class="iconfont icon-pinglun1"></i> 16</span>
-                </dd>
-
-                <!-- 无数据时 -->
-                <!--
-                <div class="fly-none">没有相关数据</div>
-                -->
+               <#if sevenDays?? && (sevenDays?size > 0)>
+                   <#list sevenDays as li>
+                        <dd>
+                            <a href="${basePath}/sharedForum/goForumDetailed/${li.id}">${li.title}</a>
+                            <span><i class="iconfont icon-pinglun1"></i> ${li.commCounts}</span>
+                        </dd>
+                   </#list>
+               <#--没有数据的时候-->
+               <#else >
+                 <div class="fly-none">没有相关数据</div>
+               </#if>
             </dl>
 
         <#--<div class="fly-panel">

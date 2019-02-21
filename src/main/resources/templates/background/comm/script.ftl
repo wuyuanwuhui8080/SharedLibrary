@@ -1,6 +1,6 @@
 <#-- 取得 应用的绝对根路径 -->
 <#assign basePath=springMacroRequestContext.contextPath>
- <link rel="shortcut icon" href="favicon.ico">
+<link rel="shortcut icon" type="image/x-icon" href="${basePath}/img/bold.ico" media="screen" />
 <link href="${basePath}/css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
     <link href="${basePath}/css/font-awesome.min.css?v=4.4.0" rel="stylesheet">
     <link href="${basePath}/css/animate.css" rel="stylesheet">
@@ -28,3 +28,23 @@
     <script src="${basePath}/js/plugins/sweetalert/sweetalert.min.js"></script>
 <!-- Sweet Alert -->
     <link href="${basePath}/css/plugins/sweetalert/sweetalert.css" rel="stylesheet">
+ <script src="${basePath}/js/chars/friend_chat.js"></script>
+  <link href="${basePath}/css/plugins/jsTree/style.min.css" rel="stylesheet">
+    <!-- Gritter -->
+    <link href="${basePath}/js/plugins/gritter/jquery.gritter.css" rel="stylesheet">
+    <!-- GITTER -->
+    <script src="${basePath}/js/plugins/gritter/jquery.gritter.min.js"></script>
+<script>
+    <#if Session.users??>
+          // 获取用户名
+    var userName = "${Session.users.userName}";
+    // 获取真实姓名
+    var realName = "${Session.users.realName}";
+    // 获取id
+    var userId = "${Session.users.id}";
+    // 获取头像
+    var headImg = "${Session.users.headImg}";
+
+    var path = "${basePath}";
+    </#if>
+</script>

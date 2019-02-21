@@ -2,6 +2,8 @@ package com.share.forum.service;
 
 import com.share.pojo.SharedlClassify;
 import com.baomidou.mybatisplus.extension.service.IService;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -22,4 +24,21 @@ public interface SharedlClassifyService extends IService<SharedlClassify> {
      */
     List<SharedlClassify> findSharedlClassifyList();
 
+
+    /**
+     * 添加分类
+     * @param className
+     * @return
+     */
+    @Transactional(propagation = Propagation.REQUIRED,rollbackFor = Exception.class)
+    boolean saveClassfy(String className);
+
+
+    /**
+     * 校验名称是否重复
+     * @param className
+     * @return
+     */
+    @Transactional(propagation = Propagation.NOT_SUPPORTED)
+    boolean getClassfyByName(String className);
 }

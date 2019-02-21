@@ -66,6 +66,14 @@
                                 <div class="layui-form-mid layui-word-aux" id="birthdaySpanId"></div>
                             </div>
                             <div class="layui-form-item">
+                                <label for="L_vercode" class="layui-form-label">性别</label>
+                                <div class="layui-input-inline">
+                                    <input type="radio" name="sex" value="1" title="男" checked>
+                                    <input type="radio" name="sex" value="2" title="女" >
+                                </div>
+                                <div class="layui-form-mid layui-word-aux" id="birthdaySpanId"></div>
+                            </div>
+                            <div class="layui-form-item">
                                 <label for="L_vercode" class="layui-form-label">人类验证</label>
                                 <div class="layui-input-inline">
                                     <input type="text"  id="captcha" name="captcha" required lay-verify="required"
@@ -79,7 +87,7 @@
                                 </div>
                             </div>
                             <div class="layui-form-item">
-                                <button class="layui-btn" id="Sumitres" type="submit" lay-submit>立即注册</button>
+                                <button class="layui-btn" id="Sumitres" type="submit" >立即注册</button>
                             </div>
                         </form>
                     </div>

@@ -16,7 +16,7 @@ public final class PageConstant {
     /**
      * 分页的每页个数
      */
-    public static final Integer PAGESIZE = 5;
+    public static final Integer PAGESIZE = 6;
 
     /**
      * 粉丝分页每页个数
@@ -27,5 +27,10 @@ public final class PageConstant {
      * 帖子个人页面分页每页个数
      */
     public static final Integer FORUMPAGESIZE = 12;
+
+    /**
+     * 起始页
+     */
+    public static  final Integer PAGEINDEX = 0;
 
 }

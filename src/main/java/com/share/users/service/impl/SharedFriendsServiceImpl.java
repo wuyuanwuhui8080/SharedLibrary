@@ -94,4 +94,5 @@ public class SharedFriendsServiceImpl
 		return super.count(wrapper);
 	}
 
+
 }

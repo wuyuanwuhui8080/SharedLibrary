@@ -23,7 +23,7 @@
             <#if (firendCount > 0)>
             <#else >
          <div class="fly-sns" data-user="">
-             <a href="javascript:;" class="layui-btn layui-btn-primary fly-imActive" data-type="addFriend">加为好友</a>
+             <a href="javascript:;" class="layui-btn layui-btn-primary fly-imActive">加为好友</a>
          </div>
             </#if>
         </#if>
@@ -34,7 +34,7 @@
     <div class="layui-row layui-col-space15">
         <div class="layui-col-md6 fly-home-jie">
             <div class="fly-panel">
-                <h3 class="fly-panel-title">${users.userName} 最近的提问</h3>
+                <h3 class="fly-panel-title">${users.realName} 最近的提问</h3>
                 <ul class="jie-row">
                     <#if (foryms?size > 0)>
                         <#list foryms?sort_by("creationDate")?reverse as forym>
@@ -56,7 +56,7 @@
 
         <div class="layui-col-md6 fly-home-da">
             <div class="fly-panel">
-                <h3 class="fly-panel-title">${users.userName} 最近的回答</h3>
+                <h3 class="fly-panel-title">${users.realName} 最近的回答</h3>
                 <ul class="home-jieda">
                     <#if (forumComments?size>0)>
                         <#list forumComments?sort_by("creationDate")?reverse as forumComment>

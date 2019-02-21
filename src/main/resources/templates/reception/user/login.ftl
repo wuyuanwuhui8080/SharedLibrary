@@ -9,7 +9,7 @@
       <div class="layui-form layui-tab-content" id="LAY_ucm" style="padding: 20px 0;">
         <div class="layui-tab-item layui-show">
           <div class="layui-form layui-form-pane">
-            <form  method="post"  action="${basePath}/sharedUsers/doLogin">
+            <form >
               <div class="layui-form-item">
                 <label for="L_email" class="layui-form-label">用户名</label>
                 <div class="layui-input-inline">

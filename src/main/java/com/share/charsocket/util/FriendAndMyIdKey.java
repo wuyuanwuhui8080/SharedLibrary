@@ -24,4 +24,15 @@ public class FriendAndMyIdKey {
 		return myId + "and" + receiverId;
 	}
 
+	/**
+	 * 生成帖子回复事件key
+	 * 
+	 * @param userName
+	 *            用户名
+	 * @return
+	 */
+	public static String ForumKey(String userName) {
+		return "forum::" + userName;
+	}
+
 }

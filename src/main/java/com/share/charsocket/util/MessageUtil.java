@@ -19,44 +19,71 @@ import java.util.Map;
  */
 public class MessageUtil {
 
-    /**
-     * 普通的系统消息序列化
-     *
-     * @param messageCode       用户传输状态信息
-     * @param message           消息信息
-     * @param systemMessageCode 系统传输状态信息
-     * @param object            需要序列化的任意类型
-     * @return String
-     */
-    public static String messageJSONStringFactory(int messageCode,
-                                                  String message, int systemMessageCode, Object object) {
-        // 初始化值
-        WebSocketMessage socketMessage = new WebSocketMessage(messageCode,
-                message, DateUtils.date2String(new Date()));
-        Map<String, Object> map = new HashMap<>();
-        map.put("systemMessageCode", systemMessageCode);
-        map.put("obj", object);
-        socketMessage.setBody(map);
-        // 进行json化
-        return JsonUtils.JSONObjectString(socketMessage);
-    }
+	/**
+	 * 普通的系统消息序列化
+	 *
+	 * @param messageCode
+	 *            用户传输状态信息
+	 * @param message
+	 *            消息信息
+	 * @param systemMessageCode
+	 *            系统传输状态信息
+	 * @param object
+	 *            需要序列化的任意类型
+	 * @return String
+	 */
+	public static String messageJSONStringFactory(int messageCode,
+			String message, int systemMessageCode, Object object) {
+		// 初始化值
+		WebSocketMessage socketMessage = new WebSocketMessage(messageCode,
+				message, DateUtils.date2String(new Date()));
+		Map<String, Object> map = new HashMap<>(1);
+		map.put("systemMessageCode", systemMessageCode);
+		map.put("obj", object);
+		socketMessage.setBody(map);
+		// 进行json化
+		return JsonUtils.JSONObjectString(socketMessage);
+	}
 
-    /**
-     * 给用户发信息
-     *
-     * @param messageCode 用户传输状态信息
-     * @param chatMessage 聊天信息
-     * @param user        用户信息
-     * @param receiverId  发送人的id
-     * @return String
-     */
-    public static String messageJSONStringFactory(int messageCode,
-                                                  String chatMessage, Users user, String receiverId) {
-        // 初始化WebSocketMessage信息
-        WebSocketMessage socketMessage = new WebSocketMessage(messageCode,
-                chatMessage, user, receiverId,
-                DateUtils.date2String(new Date()));
-        return JsonUtils.JSONObjectString(socketMessage);
-    }
+	/**
+	 * 给用户发信息
+	 *
+	 * @param messageCode
+	 *            用户传输状态信息
+	 * @param chatMessage
+	 *            聊天信息
+	 * @param user
+	 *            用户信息
+	 * @param receiverId
+	 *            发送人的id
+	 * @return String
+	 */
+	public static String messageJSONStringFactory(int messageCode,
+			String chatMessage, Users user, String receiverId) {
+		// 初始化WebSocketMessage信息
+		WebSocketMessage socketMessage = new WebSocketMessage(messageCode,
+				chatMessage, user, receiverId,
+				DateUtils.date2String(new Date()));
+		return JsonUtils.JSONObjectString(socketMessage);
+	}
+
+	/**
+	 * 论坛提示
+	 * 
+	 * @param messageCode
+	 *            状态
+	 * @param chatMessage
+	 *            消息
+	 * @param user
+	 *            用户
+	 * @return
+	 */
+	public static String messageJSONStringFactory(int messageCode,
+			String chatMessage, Users user) {
+		// 初始化WebSocketMessage信息
+		WebSocketMessage socketMessage = new WebSocketMessage(messageCode,
+				chatMessage, user);
+		return JsonUtils.JSONObjectString(socketMessage);
+	}
 
 }

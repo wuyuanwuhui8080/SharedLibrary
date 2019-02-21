@@ -1,6 +1,5 @@
 web:
   upload-path: E:/img
-
 spring:
   freemarker:
     charset: UTF-8
@@ -14,7 +13,7 @@ spring:
     filters: stat
     driver-class-name: com.mysql.jdbc.Driver
     #基本属性
-    url: jdbc:mysql://127.0.0.1:3306/sharedlibrary?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&serverTimezone=UTC
+    url: jdbc:mysql://127.0.0.1:3306/sharedlibrary?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&serverTimezone=UTC&autoReconnect=true
     username: root
     password: root
     #配置初始化大小/最小/最大

@@ -1,8 +1,8 @@
 $(function () {
     $("#Sumitres").click(function () {
         var captcha = $("#captcha").val();
-        if(app.isNull(captcha)){
-            swal("验证码不能空！",null,"warning");
+        if (app.isNull(captcha)) {
+            layer.msg("验证码不能空！", {shift: 6});
             return false;
         }
         sumitfrom();
@@ -20,28 +20,16 @@ var option = {
     dataType: "json",
     success: function (date) {
         if (date.status == 200) {
-            swal({
-                title: "注册成功！",
-                type: "success",
-            }, function () {
-                location.href = path + "/sharedUsers/goForumLogin";
-            });
+            alert("注册成功！");
+            location.href = path + "/sharedUsers/goForumLogin";
         } else {
-            swal({
-                title: date.msg,
-                type: "error",
-            });
+            layer.msg(date.msg, {shift: 6});
             $("#captcha").val("");
             refreshCaptcha();
-
-
         }
     },
     error: function () {
-        swal({
-            title: "服务器出错，请联系管理员!",
-            type: "error",
-        });
+        layer.msg("服务器出错，请联系管理员!", {shift: 6});
     }
 }
 
@@ -55,10 +43,7 @@ function sumitfrom() {
     if (userNameblur() && password1blur() && password2blur() && birthdayblur() && phoneblur()) {
         $("#registerFromId").ajaxSubmit(option);
     } else {
-        swal({
-            title: "格式不正确！",
-            type: "error",
-        });
+        layer.msg("格式不正确！", {shift: 6});
         return false;
     }
 

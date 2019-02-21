@@ -35,7 +35,7 @@ public interface SharedFriendsService extends IService<SharedFriends> {
 	 *            传入的参数
 	 * @return
 	 */
-	@Transactional(propagation = Propagation.NOT_SUPPORTED)
+	@Transactional(propagation = Propagation.NOT_SUPPORTED, readOnly = true)
 	List<String> getListUserIdByuserNameOrRealName(String userId, String name);
 
 	/**
@@ -56,7 +56,8 @@ public interface SharedFriendsService extends IService<SharedFriends> {
 	 *            朋友的id
 	 * @return
 	 */
-	@Transactional(propagation = Propagation.NOT_SUPPORTED)
+	@Transactional(propagation = Propagation.NOT_SUPPORTED, readOnly = true)
 	Integer getCountByMeIdAndFriendId(String meId, String firendId);
+
 
 }

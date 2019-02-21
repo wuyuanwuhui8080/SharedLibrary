@@ -9,16 +9,6 @@
 
     <title>好友聊天</title>
     <#include  "../comm/script.ftl">
-    <link href="${basePath}/css/plugins/jsTree/style.min.css" rel="stylesheet">
-    <!-- Gritter -->
-    <link href="${basePath}/js/plugins/gritter/jquery.gritter.css" rel="stylesheet">
-    <script src="${basePath}/js/chars/friend_chat.js"></script>
-    <!-- GITTER -->
-    <script src="${basePath}/js/plugins/gritter/jquery.gritter.min.js"></script>
-    <script src="${basePath}/res/layui/layui.js"></script>
-    <link rel="stylesheet" href="${basePath}/res/layui/css/layui.css">
-    <script src="${basePath}/res/mods/index.js"></script>
-    <script src="${basePath}/res/mods/jie.js"></script>
 </head>
 
 <body class="gray-bg">
@@ -46,8 +36,8 @@
                                         <img class="chat-avatar" src="${basePath}/img/chatroom.png" alt="">
                                         <div class="chat-user-name">
                                             <a href="javascript:;" onclick="chooseUser(null,null);">聊天室</a>
-                                            <span class="label label-default" style="margin-left: 40%">在线人数<span
-                                                    class="charUserNum">0</span>人</span>
+                                           <#-- <span class="label label-default" style="margin-left: 40%">在线人数<span
+                                                    class="charUserNum">0</span>人</span>-->
                                         </div>
                                     </div>
                                     <div class="users-lists">
@@ -88,16 +78,3 @@
 </div>
 </body>
 </html>
-<script>
-    // 获取用户名
-    var userName = "${Session.users.userName}";
-    // 获取真实姓名
-    var realName = "${Session.users.realName}";
-    // 获取id
-    var userId = "${Session.users.id}";
-    // 获取头像
-    var headImg = "${Session.users.headImg}";
-
-    var path = "${basePath}";
-
-</script>

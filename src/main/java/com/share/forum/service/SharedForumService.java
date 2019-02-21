@@ -2,12 +2,14 @@ package com.share.forum.service;
 
 import com.github.pagehelper.PageInfo;
 import com.share.forum.vo.ForumAndComment;
+import com.share.forum.vo.SharedForumVO;
 import com.share.pojo.SharedForum;
 import com.baomidou.mybatisplus.extension.service.IService;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.Collection;
 import java.util.List;
 
 /**
@@ -39,7 +41,7 @@ public interface SharedForumService extends IService<SharedForum> {
 	 * @return
 	 */
 	@Transactional(propagation = Propagation.NOT_SUPPORTED)
-	PageInfo<SharedForum> findList(Integer pageIndex, Integer pageSize);
+	PageInfo<SharedForum> findList(Integer typeId,Integer pageIndex, Integer pageSize);
 
 	/**
 	 * 查询单个帖子
@@ -61,7 +63,7 @@ public interface SharedForumService extends IService<SharedForum> {
 	 * @return
 	 */
 	@Transactional(propagation = Propagation.NOT_SUPPORTED)
-	List<SharedForum> findForymByUserId(String userId, Integer pageIndex);
+	PageInfo<SharedForum> findForymByUserId(String userId, Integer pageIndex);
 
 	/**
 	 * 删除一个帖子
@@ -70,7 +72,40 @@ public interface SharedForumService extends IService<SharedForum> {
 	 *            传入的id
 	 * @return
 	 */
-	@Transactional(propagation = Propagation.REQUIRED,rollbackFor = Exception.class)
+	@Transactional(propagation = Propagation.REQUIRED, rollbackFor = Exception.class)
 	boolean deleteForum(String id);
+
+	/**
+	 * 根據文字进行全文引擎搜索
+	 * 
+	 * @param name
+	 *            文字
+	 * @param pageIndex
+	 *            起始页
+	 * @param pageSize
+	 *            结束
+	 * @return
+	 */
+	@Transactional(propagation = Propagation.NOT_SUPPORTED, readOnly = true)
+	List<SharedForumVO> findListByName(String name, Integer pageIndex,
+			Integer pageSize);
+
+	/**
+	 * 获取七天内热帖
+	 *
+	 * @return
+	 */
+	@Transactional(propagation = Propagation.NOT_SUPPORTED, readOnly = true)
+	List<SharedForum> findWithinSevenDays();
+
+	/**
+	 * 根据传入的集合获取 帖子集合
+	 * 
+	 * @param forumId
+	 *            id集合
+	 * @return
+	 */
+	@Transactional(propagation = Propagation.NOT_SUPPORTED, readOnly = true)
+	List<SharedForum> findListStipk(Collection<Object> forumId);
 
 }
